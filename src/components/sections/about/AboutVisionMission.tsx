@@ -24,7 +24,7 @@ export default function AboutVisionMission() {
                 </h3>
 
                 {/* Description Paragraph */}
-                <p className="text-slate-700 text-[13.5px] sm:text-[14px] leading-relaxed mt-2.5 sm:mt-3">
+                <p className="text-slate-700 text-[14px] sm:text-[15px] lg:text-[16px] lg:leading-[26px] mt-2.5 sm:mt-3">
                   To create a nurturing environment where every student can learn, explore, innovate and lead, becoming confident individuals who contribute positively to society.
                 </p>
               </div>
@@ -66,7 +66,7 @@ export default function AboutVisionMission() {
                 </h3>
 
                 {/* Description Paragraph */}
-                <p className="text-slate-700 text-[13.5px] sm:text-[14px] leading-relaxed mt-2.5 sm:mt-3">
+                <p className="text-slate-700 text-[14px] sm:text-[15px] lg:text-[16px] lg:leading-[26px] mt-2.5 sm:mt-3">
                   To provide a balanced education combining academic excellence, human values, creativity, innovation and real-world skills, preparing every child for a brighter future.
                 </p>
               </div>

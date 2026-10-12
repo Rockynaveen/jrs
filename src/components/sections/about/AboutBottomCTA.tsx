@@ -83,12 +83,12 @@ export default function AboutBottomCTA({
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl lg:max-w-2xl py-12 sm:py-16 lg:py-24 space-y-4 sm:space-y-5">
           {/* Left Column: CTA Content */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-[1.3] sm:leading-[1.35]">
+          <h2 className="text-2xl sm:text-3xl md:text-[36px] md:leading-[46px] lg:text-[42px] lg:leading-[52px] font-bold text-white tracking-tight">
             Give Your Child a Strong <br />
             Foundation <span className="text-[#f59e0b]">for Tomorrow</span>
           </h2>
 
-          <p className="text-slate-300 text-[14px] leading-relaxed max-w-lg opacity-90">
+          <p className="text-slate-300 text-sm sm:text-[15px] lg:text-[16px] lg:leading-[26px] max-w-lg opacity-90">
             Join JRS International School and be a part of a nurturing environment that shapes confident, responsible and future-ready individuals.
           </p>
 

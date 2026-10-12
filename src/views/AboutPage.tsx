@@ -35,14 +35,14 @@ export default function AboutPage() {
         {/* 3. Key Metrics Floating White Card (2021, 3630478, 1:25, 5 Core Pillars) */}
         <AboutStats />
 
-        {/* 4. Our Story (Journey of Learning & Human Values, Indian Ethos, Int'l Standards, Interactive, Real-World) */}
+        {/* 4. Our Story / About JRS (A Legacy of Excellence in Education) */}
         <AboutStory />
 
-        {/* 5. Campus Tour & Video Showcase (Inline Framed Player & Welcome Section) */}
-        <AboutVideo />
-
-        {/* 6. Our Vision & Our Mission Dual Cards with Custom Mountain Flag & Rocket Launch Illustrations */}
+        {/* 5. Our Vision & Our Mission Dual Cards */}
         <AboutVisionMission />
+
+        {/* 6. Campus Tour & Video Showcase (Glassmorphism Section) */}
+        <AboutVideo />
 
         {/* 7. Why Choose JRS? What Makes JRS Different? (5 Top Feature Cards + 8 Compact Badges) */}
         <AboutWhyChoose />

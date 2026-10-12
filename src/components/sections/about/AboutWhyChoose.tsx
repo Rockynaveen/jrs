@@ -96,7 +96,7 @@ export default function AboutWhyChoose() {
               WHY CHOOSE JRS
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-[36px] md:leading-[46px] lg:text-[42px] lg:leading-[52px] font-bold text-[#031c3f] tracking-tight">
             What Makes JRS <span className="text-[#e31e24]">Different?</span>
           </h2>
         </div>

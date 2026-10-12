@@ -116,7 +116,7 @@ export default function PageHero({
           </nav>
 
           {/* Main Title */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[42px] font-bold tracking-tight text-white leading-[1.25] break-words">
+          <h1 className="text-2xl sm:text-3xl md:text-[38px] md:leading-[48px] lg:text-[42px] lg:leading-[52px] xl:text-[42px] xl:leading-[52px] font-bold tracking-tight text-white break-words">
             {title}{' '}
             {titleHighlight && (
               <span className="text-[#f59e0b] font-bold">{titleHighlight}</span>
@@ -132,7 +132,7 @@ export default function PageHero({
 
           {/* Description Paragraph */}
           {description && (
-            <p className="text-slate-200 text-sm md:text-[15px] lg:text-base max-w-xl opacity-90 leading-relaxed mt-2.5 sm:mt-3.5">
+            <p className="text-slate-200 text-sm md:text-[16px] md:leading-[26px] lg:text-[16px] lg:leading-[26px] max-w-xl opacity-90 mt-2.5 sm:mt-3.5">
               {description}
             </p>
           )}

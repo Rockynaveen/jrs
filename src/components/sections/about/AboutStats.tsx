@@ -1,13 +1,105 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { GraduationCap, Users, Star } from 'lucide-react'
 
+interface StatItem {
+  icon: React.ReactNode
+  value: number
+  prefix?: string
+  suffix?: string
+  label: string
+  duration?: number
+}
+
+function CountUpNumber({
+  value,
+  prefix = '',
+  suffix = '',
+  start = false,
+  duration = 2000,
+}: {
+  value: number
+  prefix?: string
+  suffix?: string
+  start: boolean
+  duration?: number
+}) {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!start) {
+      setCount(0)
+      return
+    }
+
+    let startTime: number | null = null
+    let animationFrameId: number
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime
+      const elapsed = currentTime - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      // Ease out cubic formula for smooth count-up from 0 to value
+      const easedProgress = 1 - Math.pow(1 - progress, 3)
+      const currentVal = Math.min(value, Math.round(easedProgress * value))
+      setCount(currentVal)
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(animate)
+      } else {
+        setCount(value)
+      }
+    }
+
+    animationFrameId = requestAnimationFrame(animate)
+    return () => cancelAnimationFrame(animationFrameId)
+  }, [start, value, duration])
+
+  return (
+    <span>
+      {prefix}
+      {count}
+      {suffix}
+    </span>
+  )
+}
+
 export default function AboutStats() {
-  const stats = [
+  const [isVisible, setIsVisible] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const node = containerRef.current
+    if (!node) return
+
+    if (!('IntersectionObserver' in window)) {
+      setIsVisible(true)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1, rootMargin: '40px' }
+    )
+
+    observer.observe(node)
+
+    return () => observer.disconnect()
+  }, [])
+
+  const stats: StatItem[] = [
     {
       icon: <GraduationCap className="w-8 h-8 text-[#0a1931]" />,
-      value: '2021',
+      value: 2021,
+      prefix: '',
+      suffix: '',
+      duration: 2000,
       label: 'Year of Establishment',
     },
     {
@@ -26,23 +118,35 @@ export default function AboutStats() {
           <path d="m9 15 2 2 4-4" />
         </svg>
       ),
-      value: '3630478',
+      value: 3630478,
+      prefix: '',
+      suffix: '',
+      duration: 2200,
       label: 'CBSE Affiliation No.',
     },
     {
       icon: <Users className="w-8 h-8 text-[#e31e24]" />,
-      value: '1:25',
+      value: 25,
+      prefix: '1:',
+      suffix: '',
+      duration: 1800,
       label: 'Teacher-Student Ratio',
     },
     {
       icon: <Star className="w-8 h-8 text-[#eab308] fill-[#eab308]" />,
-      value: '5',
+      value: 5,
+      prefix: '',
+      suffix: '',
+      duration: 1500,
       label: 'Core Pillars',
     },
   ]
 
   return (
-    <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 -mt-10 sm:-mt-12">
+    <div
+      ref={containerRef}
+      className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 -mt-10 sm:-mt-12"
+    >
       <div className="bg-white rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.08)] border border-slate-100 py-6 sm:py-8 px-4 sm:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-4 divide-y md:divide-y-0 md:divide-x divide-slate-100">
           {stats.map((item, index) => (
@@ -57,9 +161,15 @@ export default function AboutStats() {
                 {item.icon}
               </div>
 
-              {/* Number Value */}
-              <span className="text-2xl sm:text-3xl font-extrabold text-[#031c3f] tracking-tight">
-                {item.value}
+              {/* Number Value with smooth count-up animation */}
+              <span className="text-2xl sm:text-3xl font-extrabold text-[#031c3f] tracking-tight tabular-nums">
+                <CountUpNumber
+                  value={item.value}
+                  prefix={item.prefix}
+                  suffix={item.suffix}
+                  duration={item.duration}
+                  start={isVisible}
+                />
               </span>
 
               {/* Label */}
