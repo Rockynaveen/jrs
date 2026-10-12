@@ -53,7 +53,7 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className={`relative overflow-hidden bg-[#031c3f] text-white -mt-16 sm:-mt-20 md:-mt-[122px] pt-16 sm:pt-20 md:pt-[122px] h-[100vh] min-h-[100vh] h-[100dvh] min-h-[100dvh] flex flex-col justify-center pb-3 sm:pb-5 ${className || ''}`}>
+    <section className={`relative overflow-hidden bg-[#031c3f] text-white -mt-16 sm:-mt-20 md:-mt-[122px] pt-16 sm:pt-20 md:pt-[122px] h-[100vh] min-h-[100vh] h-[100dvh] min-h-[100dvh] flex flex-col justify-between ${className || ''}`}>
       {/* Background Campus Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -107,152 +107,159 @@ export default function PageHero({
         </svg>
       </div>
 
-      {/* Hero Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-1 sm:pb-2 w-full">
-        <div className={rightElement ? "grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center" : ""}>
-          <div className={rightElement ? "lg:col-span-8 max-w-xl md:max-w-2xl" : "max-w-xl md:max-w-2xl"} data-aos="fade-right">
-            {/* Breadcrumb Navigation */}
-            <nav
-              aria-label="Breadcrumb"
-              className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2.5"
-            >
-              <Link href="/" className="hover:text-white transition-colors">
-                Home
-              </Link>
-              <span className="text-slate-400 font-normal">›</span>
-              <span className="text-white font-semibold">{breadcrumb}</span>
-            </nav>
-
-            {/* Main Title */}
-            <h1
-              style={titleStyle}
-              className={`text-2xl sm:text-3xl md:text-[38px] md:leading-[48px] lg:text-[42px] lg:leading-[52px] xl:text-[42px] xl:leading-[52px] font-bold tracking-tight text-white break-words ${titleClassName || ''}`}
-            >
-              {title}{' '}
-              {titleHighlight && (
-                <span className="text-[#f59e0b] font-bold" style={{ lineHeight: 'inherit' }}>{titleHighlight}</span>
-              )}
-            </h1>
-
-            {/* Subtitle */}
-            {subtitle && (
-              <p className="text-sm sm:text-base md:text-lg font-medium text-white/90 mt-1 sm:mt-2 tracking-tight leading-snug">
-                {subtitle}
-              </p>
-            )}
-
-            {/* Description Paragraph */}
-            {description && (
-              <p
-                style={{ lineHeight: '24px', ...descriptionStyle }}
-                className={`text-slate-200 text-xs sm:text-sm md:text-[15px] md:leading-[24px] max-w-xl opacity-90 mt-2 sm:mt-2.5 ${descriptionClassName || ''}`}
+      {/* Hero Content Container: Spans vertical height with main content in upper/middle and stats bar at bottom */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-8 lg:pb-9">
+        {/* Upper/Middle Content Area */}
+        <div className="my-auto pt-2 sm:pt-4">
+          <div className={rightElement ? "grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center" : ""}>
+            <div className={rightElement ? "lg:col-span-8 max-w-xl md:max-w-2xl" : "max-w-xl md:max-w-2xl"} data-aos="fade-right">
+              {/* Breadcrumb Navigation */}
+              <nav
+                aria-label="Breadcrumb"
+                className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2.5"
               >
-                {description}
-              </p>
-            )}
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+                <span className="text-slate-400 font-normal">›</span>
+                <span className="text-white font-semibold">{breadcrumb}</span>
+              </nav>
 
-            {/* Action Buttons */}
-            {(primaryButton || secondaryButton) && (
-              <div className="flex flex-row flex-wrap items-center gap-2.5 sm:gap-4 mt-3 sm:mt-4">
-                {/* Primary Button */}
-                {primaryButton &&
-                  (primaryButton.href ? (
-                    primaryButton.href.startsWith('http') || primaryButton.href.startsWith('tel:') ? (
-                      <a
-                        href={primaryButton.href}
-                        onClick={primaryButton.onClick}
-                        className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
-                      >
-                        <span>{primaryButton.text}</span>
-                        <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-                      </a>
-                    ) : (
-                      <Link
-                        href={primaryButton.href}
-                        onClick={primaryButton.onClick}
-                        className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
-                      >
-                        <span>{primaryButton.text}</span>
-                        <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-                      </Link>
-                    )
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={primaryButton.onClick}
-                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
-                    >
-                      <span>{primaryButton.text}</span>
-                      <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-                    </button>
-                  ))}
+              {/* Main Title */}
+              <h1
+                style={titleStyle}
+                className={`text-2xl sm:text-3xl md:text-[38px] md:leading-[48px] lg:text-[42px] lg:leading-[52px] xl:text-[42px] xl:leading-[52px] font-bold tracking-tight text-white break-words ${titleClassName || ''}`}
+              >
+                {title}{' '}
+                {titleHighlight && (
+                  <span className="text-[#f59e0b] font-bold" style={{ lineHeight: 'inherit' }}>{titleHighlight}</span>
+                )}
+              </h1>
 
-                {/* Secondary Button */}
-                {secondaryButton &&
-                  (secondaryButton.href ? (
-                    secondaryButton.href.startsWith('http') || secondaryButton.href.startsWith('tel:') ? (
-                      <a
-                        href={secondaryButton.href}
-                        onClick={secondaryButton.onClick}
-                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
-                      >
-                        <span>{secondaryButton.text}</span>
-                        {secondaryButton.icon === 'phone' ? (
-                          <PhoneCall className="w-3.5 h-3.5 text-[#f59e0b]" />
-                        ) : (
-                          <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white flex items-center justify-center">
-                            <Play className="w-1.5 h-1.5 sm:w-2 sm:h-2 fill-white ml-0.5" />
-                          </div>
-                        )}
-                      </a>
-                    ) : (
-                      <Link
-                        href={secondaryButton.href}
-                        onClick={secondaryButton.onClick}
-                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
-                      >
-                        <span>{secondaryButton.text}</span>
-                        {secondaryButton.icon === 'phone' ? (
-                          <PhoneCall className="w-3.5 h-3.5 text-[#f59e0b]" />
-                        ) : (
-                          <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white flex items-center justify-center">
-                            <Play className="w-1.5 h-1.5 sm:w-2 sm:h-2 fill-white ml-0.5" />
-                          </div>
-                        )}
-                      </Link>
-                    )
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={secondaryButton.onClick}
-                      className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center cursor-pointer"
-                    >
-                      <span>{secondaryButton.text}</span>
-                      {secondaryButton.icon === 'phone' ? (
-                        <PhoneCall className="w-3.5 h-3.5 text-[#f59e0b]" />
+              {/* Subtitle */}
+              {subtitle && (
+                <p className="text-sm sm:text-base md:text-lg font-medium text-white/90 mt-1 sm:mt-2 tracking-tight leading-snug">
+                  {subtitle}
+                </p>
+              )}
+
+              {/* Description Paragraph */}
+              {description && (
+                <p
+                  style={{ lineHeight: '24px', ...descriptionStyle }}
+                  className={`text-slate-200 text-xs sm:text-sm md:text-[15px] md:leading-[24px] max-w-xl opacity-90 mt-2 sm:mt-2.5 ${descriptionClassName || ''}`}
+                >
+                  {description}
+                </p>
+              )}
+
+              {/* Action Buttons */}
+              {(primaryButton || secondaryButton) && (
+                <div className="flex flex-row flex-wrap items-center gap-2.5 sm:gap-4 mt-3.5 sm:mt-5">
+                  {/* Primary Button */}
+                  {primaryButton &&
+                    (primaryButton.href ? (
+                      primaryButton.href.startsWith('http') || primaryButton.href.startsWith('tel:') ? (
+                        <a
+                          href={primaryButton.href}
+                          onClick={primaryButton.onClick}
+                          className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
+                        >
+                          <span>{primaryButton.text}</span>
+                          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
+                        </a>
                       ) : (
-                        <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white flex items-center justify-center">
-                          <Play className="w-1.5 h-1.5 sm:w-2 sm:h-2 fill-white ml-0.5" />
-                        </div>
-                      )}
-                    </button>
-                  ))}
+                        <Link
+                          href={primaryButton.href}
+                          onClick={primaryButton.onClick}
+                          className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
+                        >
+                          <span>{primaryButton.text}</span>
+                          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
+                        </Link>
+                      )
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={primaryButton.onClick}
+                        className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
+                      >
+                        <span>{primaryButton.text}</span>
+                        <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
+                      </button>
+                    ))}
+
+                  {/* Secondary Button */}
+                  {secondaryButton &&
+                    (secondaryButton.href ? (
+                      secondaryButton.href.startsWith('http') || secondaryButton.href.startsWith('tel:') ? (
+                        <a
+                          href={secondaryButton.href}
+                          onClick={secondaryButton.onClick}
+                          className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
+                        >
+                          <span>{secondaryButton.text}</span>
+                          {secondaryButton.icon === 'phone' ? (
+                            <PhoneCall className="w-3.5 h-3.5 text-[#f59e0b]" />
+                          ) : (
+                            <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white flex items-center justify-center">
+                              <Play className="w-1.5 h-1.5 sm:w-2 sm:h-2 fill-white ml-0.5" />
+                            </div>
+                          )}
+                        </a>
+                      ) : (
+                        <Link
+                          href={secondaryButton.href}
+                          onClick={secondaryButton.onClick}
+                          className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
+                        >
+                          <span>{secondaryButton.text}</span>
+                          {secondaryButton.icon === 'phone' ? (
+                            <PhoneCall className="w-3.5 h-3.5 text-[#f59e0b]" />
+                          ) : (
+                            <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white flex items-center justify-center">
+                              <Play className="w-1.5 h-1.5 sm:w-2 sm:h-2 fill-white ml-0.5" />
+                            </div>
+                          )}
+                        </Link>
+                      )
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={secondaryButton.onClick}
+                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center cursor-pointer"
+                      >
+                        <span>{secondaryButton.text}</span>
+                        {secondaryButton.icon === 'phone' ? (
+                          <PhoneCall className="w-3.5 h-3.5 text-[#f59e0b]" />
+                        ) : (
+                          <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white flex items-center justify-center">
+                            <Play className="w-1.5 h-1.5 sm:w-2 sm:h-2 fill-white ml-0.5" />
+                          </div>
+                        )}
+                      </button>
+                    ))}
+                </div>
+              )}
+            </div>
+
+            {rightElement && (
+              <div
+                className="hidden lg:flex lg:col-span-4 justify-end items-center pr-4"
+                data-aos="fade-left"
+              >
+                {rightElement}
               </div>
             )}
           </div>
-
-          {rightElement && (
-            <div
-              className="hidden lg:flex lg:col-span-4 justify-end items-center pr-4"
-              data-aos="fade-left"
-            >
-              {rightElement}
-            </div>
-          )}
         </div>
 
-        {/* Optional Children slot (e.g. highlight cards / floating stats bar) */}
-        {children && <div className="mt-3 sm:mt-4 md:mt-5">{children}</div>}
+        {/* Bottom Floating Stats Bar Slot: Pushed below with mt-auto */}
+        {children && (
+          <div className="w-full mt-auto pt-4 sm:pt-6">
+            {children}
+          </div>
+        )}
       </div>
     </section>
   )
