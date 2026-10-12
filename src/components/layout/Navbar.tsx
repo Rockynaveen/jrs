@@ -118,45 +118,45 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
         {/* Top Bar: Above Header Navigation (hidden on mobile devices) */}
         <div
           style={{ backgroundColor: 'rgb(240, 244, 250)', fontFamily: "'Inter', sans-serif" }}
-          className="hidden md:block text-[#031c3f] border-b border-slate-200/80 relative z-20 font-['Inter',sans-serif] font-normal"
+          className="hidden md:block text-slate-700 border-b border-slate-200/80 relative z-20 font-['Inter',sans-serif] font-medium"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2 font-['Inter',sans-serif] font-normal">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2 font-['Inter',sans-serif] font-medium">
             {/* Left Contact & Affiliation Info */}
-            <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-[#031c3f] font-normal font-['Inter',sans-serif] min-w-0 shrink">
+            <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-slate-700 font-medium font-['Inter',sans-serif] min-w-0 shrink">
               <a
                 href="tel:+9191574043210"
-                className="inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0 font-['Inter',sans-serif]"
+                className="inline-flex items-center gap-1.5 text-slate-700 hover:text-[#e31e24] transition-colors font-medium shrink-0 font-['Inter',sans-serif]"
               >
                 <Phone className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal whitespace-nowrap">+91 915740 43210</span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium whitespace-nowrap">+91 915740 43210</span>
               </a>
 
               <span className="text-slate-400 hidden md:inline shrink-0">•</span>
 
               <a
                 href="mailto:info@jrsinternationalschool.com"
-                className="hidden md:inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink truncate max-w-[200px] lg:max-w-none font-['Inter',sans-serif]"
+                className="hidden md:inline-flex items-center gap-1.5 text-slate-700 hover:text-[#e31e24] transition-colors font-medium shrink truncate max-w-[200px] lg:max-w-none font-['Inter',sans-serif]"
               >
                 <Mail className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal truncate">info@jrsinternationalschool.com</span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium truncate">info@jrsinternationalschool.com</span>
               </a>
 
               <span className="text-slate-400 hidden xl:inline shrink-0">•</span>
 
-              <span className="hidden xl:inline-flex items-center gap-1.5 text-[#031c3f] font-normal shrink-0 font-['Inter',sans-serif] whitespace-nowrap">
+              <span className="hidden xl:inline-flex items-center gap-1.5 text-slate-700 font-medium shrink-0 font-['Inter',sans-serif] whitespace-nowrap">
                 <Award className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">CBSE Affiliated School</span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium">CBSE Affiliated School</span>
               </span>
             </div>
 
             {/* Right: Mandatory Disclosure & Quick links */}
-            <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-[#031c3f] font-normal shrink-0 font-['Inter',sans-serif]">
+            <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-slate-700 font-medium shrink-0 font-['Inter',sans-serif]">
               <Link
                 href="/mandatory-disclosure"
-                className="inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap"
+                className="inline-flex items-center gap-1.5 font-medium text-slate-700 hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap"
               >
                 <FileText className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">Mandatory Disclosure</span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium">Mandatory Disclosure</span>
               </Link>
 
               <span className="text-slate-400 hidden sm:inline shrink-0">•</span>
@@ -165,10 +165,10 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 href="https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap"
+                className="hidden sm:inline-flex items-center gap-1.5 font-medium text-slate-700 hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap"
               >
                 <Download className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">School Prospectus</span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium">School Prospectus</span>
               </a>
             </div>
           </div>
