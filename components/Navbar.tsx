@@ -120,40 +120,40 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           style={{ backgroundColor: 'rgb(240, 244, 250)', fontFamily: "'Inter', sans-serif" }}
           className="hidden md:block text-[#031c3f] border-b border-slate-200/80 relative z-20 font-['Inter',sans-serif] font-normal"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2 font-['Inter',sans-serif] font-normal">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2 font-['Inter',sans-serif] font-normal">
             {/* Left Contact & Affiliation Info */}
-            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-[#031c3f] font-normal font-['Inter',sans-serif]">
+            <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-[#031c3f] font-normal font-['Inter',sans-serif] min-w-0 shrink">
               <a
                 href="tel:+9191574043210"
                 className="inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0 font-['Inter',sans-serif]"
               >
                 <Phone className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">+91 915740 43210</span>
+                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal whitespace-nowrap">+91 915740 43210</span>
               </a>
 
               <span className="text-slate-400 hidden md:inline shrink-0">•</span>
 
               <a
                 href="mailto:info@jrsinternationalschool.com"
-                className="hidden md:inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0 font-['Inter',sans-serif]"
+                className="hidden md:inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink truncate max-w-[200px] lg:max-w-none font-['Inter',sans-serif]"
               >
                 <Mail className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">info@jrsinternationalschool.com</span>
+                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal truncate">info@jrsinternationalschool.com</span>
               </a>
 
-              <span className="text-slate-400 hidden lg:inline shrink-0">•</span>
+              <span className="text-slate-400 hidden xl:inline shrink-0">•</span>
 
-              <span className="hidden lg:inline-flex items-center gap-1.5 text-[#031c3f] font-normal shrink-0 font-['Inter',sans-serif]">
+              <span className="hidden xl:inline-flex items-center gap-1.5 text-[#031c3f] font-normal shrink-0 font-['Inter',sans-serif] whitespace-nowrap">
                 <Award className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
                 <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">CBSE Affiliated School</span>
               </span>
             </div>
 
             {/* Right: Mandatory Disclosure & Quick links */}
-            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-[#031c3f] font-normal shrink-0 font-['Inter',sans-serif]">
+            <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-[#031c3f] font-normal shrink-0 font-['Inter',sans-serif]">
               <Link
                 href="/mandatory-disclosure"
-                className="inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif]"
+                className="inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap"
               >
                 <FileText className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
                 <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">Mandatory Disclosure</span>
@@ -165,7 +165,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 href="https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif]"
+                className="hidden sm:inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap"
               >
                 <Download className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
                 <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">School Prospectus</span>
@@ -175,20 +175,20 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
         </div>
 
         {/* Main Navigation */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 xl:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-2 lg:gap-3 xl:gap-4">
           {/* Logo Area */}
-          <Link href="/" className="flex items-center group py-1">
+          <Link href="/" className="flex items-center group py-1 shrink-0">
             <img
               src="/images/logo.png"
               alt="JRS International School"
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain group-hover:scale-[1.02] transition-transform duration-200"
+              className="h-9 sm:h-11 md:h-12 lg:h-11 xl:h-13 2xl:h-14 w-auto object-contain shrink-0 group-hover:scale-[1.02] transition-transform duration-200"
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden xl:flex items-center gap-6 2xl:gap-8">
+          {/* Desktop Navigation Links (Responsive from laptops: lg through 2xl) */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2.5 2xl:gap-5 shrink-0">
             {navLinks.map((link) => {
               const isActive =
                 link.id === activePage ||
@@ -208,12 +208,12 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                   <div key={link.name} className="relative group">
                     <Link
                       href={link.href}
-                      className={`inline-flex items-center gap-1 text-[15px] font-medium transition-colors hover:text-red-600 py-2 ${
+                      className={`inline-flex items-center gap-0.5 xl:gap-1 text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
                         isActive ? 'text-red-600 font-semibold' : 'text-slate-700'
                       }`}
                     >
                       <span>{link.name}</span>
-                      <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 text-slate-400 group-hover:text-red-600" />
+                      <ChevronDown className="w-3 h-3 xl:w-3.5 xl:h-3.5 transition-transform duration-200 group-hover:rotate-180 text-slate-400 group-hover:text-red-600 shrink-0" />
                     </Link>
 
                     {/* Desktop Dropdown Menu */}
@@ -270,7 +270,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-[15px] font-medium transition-colors hover:text-red-600 ${
+                  className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
                     isActive ? 'text-red-600 font-semibold' : 'text-slate-700'
                   }`}
                 >
@@ -281,17 +281,17 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           </nav>
 
           {/* Enquire Now CTA Button */}
-          <div className="hidden sm:flex items-center">
+          <div className="hidden sm:flex items-center shrink-0">
             <Link
               href="/admissions#enquiry-form"
-              className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] active:scale-95 shadow-md shadow-red-500/20 transition-all duration-200"
+              className="inline-flex items-center justify-center px-3.5 py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 rounded-full text-xs lg:text-[13px] xl:text-sm font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] active:scale-95 shadow-md shadow-red-500/20 transition-all duration-200 whitespace-nowrap"
             >
               Enquire Now
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex items-center xl:hidden">
+          <div className="flex items-center lg:hidden shrink-0">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-slate-700 hover:text-red-600 hover:bg-slate-100 transition-colors focus:outline-none"
@@ -305,7 +305,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-white border-b border-slate-200 shadow-xl px-4 pt-3 pb-6 space-y-2 max-h-[calc(100vh-4.5rem)] overflow-y-auto">
+        <div className="lg:hidden bg-white border-b border-slate-200 shadow-xl px-4 pt-3 pb-6 space-y-2 max-h-[calc(100dvh-4.5rem)] overflow-y-auto">
           {navLinks.map((link) => {
             const isActive =
               link.id === activePage ||
@@ -315,7 +315,10 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                   activePage === 'educational-society' ||
                   activePage === 'school-management-committee' ||
                   activePage === 'certificates')) ||
-              (link.id === 'gallery' && (activePage === 'gallery' || activePage === 'media'))
+              (link.id === 'gallery' &&
+                (activePage === 'gallery' ||
+                  activePage === 'media' ||
+                  activePage === '360-degree-campus'))
 
             if (link.dropdown) {
               return (

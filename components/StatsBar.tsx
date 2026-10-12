@@ -117,7 +117,7 @@ export default function StatsBar() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-10 overflow-hidden text-white"
+      className="relative py-12 sm:py-16 overflow-hidden text-white"
     >
       {/* Background Image with Project Navy Overlay */}
       <div className="absolute inset-0 z-0">
@@ -140,7 +140,7 @@ export default function StatsBar() {
                 key={idx}
                 data-aos="fade-up"
                 data-aos-delay={idx * 80}
-                className="flex flex-col items-center justify-center text-center p-4 sm:p-4.5 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] backdrop-blur-md border border-white/20 hover:border-white/35 transition-all duration-300 shadow-xl group"
+                className="flex flex-col items-center justify-center text-center px-4 py-8 sm:px-5 sm:py-9 lg:py-10 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] backdrop-blur-md border border-white/20 hover:border-white/35 transition-all duration-300 shadow-xl group"
               >
                 {/* Icon above count */}
                 <div className="text-[#facc15] group-hover:scale-110 transition-transform duration-300 mb-2.5">
