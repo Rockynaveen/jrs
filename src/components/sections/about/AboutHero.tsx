@@ -27,7 +27,7 @@ export default function AboutHero() {
           onClick: () => setIsVideoModalOpen(true),
           icon: 'play',
         }}
-        className="!h-[90vh] !min-h-[90vh] !h-[90dvh] !min-h-[90dvh]"
+        className="!-mt-16 sm:!-mt-20 md:!-mt-[122px] !pt-16 sm:!pt-20 md:!pt-[122px] !h-[100vh] !min-h-[100vh] !h-[100dvh] !min-h-[100dvh]"
       >
         <AboutStats />
       </PageHero>
