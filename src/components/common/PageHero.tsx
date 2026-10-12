@@ -116,7 +116,7 @@ export default function PageHero({
           </nav>
 
           {/* Main Title */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[42px] font-bold tracking-tight text-white leading-[1.2] break-words">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[42px] font-bold tracking-tight text-white leading-[1.25] break-words">
             {title}{' '}
             {titleHighlight && (
               <span className="text-[#f59e0b] font-bold">{titleHighlight}</span>

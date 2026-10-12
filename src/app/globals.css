@@ -46,7 +46,7 @@
     max-width: 100%;
     width: 100%;
     position: relative;
-    line-height: var(--leading-relaxed);
+    line-height: 1.5em;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 400;
   }
@@ -56,23 +56,26 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Body copy across entire website: Inter font with 400 weight */
+  /* Body copy across entire website: Inter font with 400 weight and 1.5em line-height */
   body, p, li, dd, dt, figcaption, blockquote {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 400;
+    line-height: 1.5em;
     text-wrap: pretty;
   }
 
-  /* Headings: Manrope font with 600 weight */
+  /* Headings: Manrope font with 600 weight and capitalize */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     font-weight: 600 !important;
+    text-transform: capitalize !important;
     text-wrap: balance;
   }
 
   h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
     font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     font-weight: 600 !important;
+    text-transform: capitalize !important;
   }
 
   /* Section eyebrows / tracking-widest / tracking-wider uppercase headings (e.g. "WHY CHOOSE JRS") */
