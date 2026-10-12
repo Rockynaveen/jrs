@@ -109,17 +109,20 @@ export default function AcademicsSection() {
 
           <h2
             style={{ lineHeight: '58px' }}
-            className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#031c3f] tracking-tight leading-[58px] sm:leading-[58px] lg:leading-[58px] !leading-[58px]"
+            className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#031c3f] tracking-tight leading-[58px] sm:leading-[58px] lg:leading-[58px]"
           >
             Shaping <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Inquiring Minds</span> at Every Stage
           </h2>
-          <p className="text-slate-600 text-xs sm:text-base mt-2.5 sm:mt-3 max-w-2xl mx-auto leading-relaxed">
+          <p
+            style={{ margin: '10px auto', lineHeight: '26px', textAlign: 'center' }}
+            className="text-slate-600 text-xs sm:text-base my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
+          >
             Our progressive CBSE curriculum combines academic rigor, experiential STEM learning, and holistic character development from early years to middle school graduation.
           </p>
         </div>
 
         {/* Academic Stage Cards with On-Scroll Sticky Stacking */}
-        <div className="space-y-6 sm:space-y-10 lg:space-y-12 pb-20 sm:pb-28 lg:pb-36">
+        <div className="space-y-6 sm:space-y-10 lg:space-y-12 pb-2 sm:pb-4">
           {stages.map((stage, index) => (
             <div
               key={index}

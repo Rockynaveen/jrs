@@ -46,9 +46,12 @@ export default function EventsSection() {
                   LATEST EVENTS
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
+              <h2
+                style={{ lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
                 What's Happening <br className="hidden sm:block" />
-                at <span className="text-[#e31e24]">JRS</span>
+                at <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>JRS</span>
               </h2>
             </div>
 
