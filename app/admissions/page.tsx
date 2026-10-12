@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import AdmissionsPage from '../../components/AdmissionsPage'
+import AdmissionsPage from '@/views/AdmissionsPage'
 
 export const metadata: Metadata = {
   title: 'Admissions 2026-2027 | JRS International School, Hyderabad',

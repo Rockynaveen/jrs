@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import MediaPage from '../../../components/MediaPage'
+import MediaPage from '@/views/MediaPage'
 
 export const metadata: Metadata = {
   title: 'News & Media | JRS International School, Hyderabad',

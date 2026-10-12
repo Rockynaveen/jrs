@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import Campus360Page from '../../../components/Campus360Page'
+import Campus360Page from '@/views/Campus360Page'
 
 export const metadata: Metadata = {
   title: '360 Degree Campus | JRS International School, Hyderabad',

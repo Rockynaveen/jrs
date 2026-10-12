@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import BeyondClassroomPage from '../../components/BeyondClassroomPage'
+import BeyondClassroomPage from '@/views/BeyondClassroomPage'
 
 export const metadata: Metadata = {
   title: 'Beyond Classroom — Co-Curricular Excellence | JRS International School, Hyderabad',

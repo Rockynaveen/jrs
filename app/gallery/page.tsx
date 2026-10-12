@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import GalleryPage from '../../components/GalleryPage'
+import GalleryPage from '@/views/GalleryPage'
 
 export const metadata: Metadata = {
   title: 'Campus & Event Photo Gallery | JRS International School, Hyderabad',

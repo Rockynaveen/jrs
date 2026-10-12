@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import EducationalSocietyPage from '../../components/EducationalSocietyPage'
+import EducationalSocietyPage from '@/views/EducationalSocietyPage'
 
 export const metadata: Metadata = {
   title: 'Educational Society — Managing Committee | JRS International School',

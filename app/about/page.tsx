@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import AboutPage from '../../components/AboutPage'
+import AboutPage from '@/views/AboutPage'
 
 export const metadata: Metadata = {
   title: 'About Us | JRS International School, Hyderabad',

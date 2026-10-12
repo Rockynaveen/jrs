@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import ChairmanPage from '../../components/ChairmanPage'
+import ChairmanPage from '@/views/ChairmanPage'
 
 export const metadata: Metadata = {
   title: 'Chairman of JRS | JRS International School, Hyderabad',

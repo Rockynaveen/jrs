@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import './globals.css'
+import '@/styles/globals.css'
 import 'aos/dist/aos.css'
 
 export const viewport: Viewport = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'JRS International School, Uppal, Hyderabad. Committed to providing quality education with CBSE curriculum, world-class infrastructure, and holistic development.',
 }
 
-import WhatsAppButton from '../components/WhatsAppButton'
+import WhatsAppButton from '@/components/common/WhatsAppButton'
 import Script from 'next/script'
 
 export default function RootLayout({

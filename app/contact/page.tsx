@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import ContactPage from '../../components/ContactPage'
+import ContactPage from '@/views/ContactPage'
 
 export const metadata: Metadata = {
   title: 'Contact Us | JRS International School, Narapally, Hyderabad',

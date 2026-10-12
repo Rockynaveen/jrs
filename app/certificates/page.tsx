@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import CertificatesPage from '../../components/CertificatesPage'
+import CertificatesPage from '@/views/CertificatesPage'
 
 export const metadata: Metadata = {
   title: 'Certificates & Mandatory Disclosure | JRS International School, Hyderabad',

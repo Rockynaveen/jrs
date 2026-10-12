@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import SchoolManagementCommitteePage from '../../components/SchoolManagementCommitteePage'
+import SchoolManagementCommitteePage from '@/views/SchoolManagementCommitteePage'
 
 export const metadata: Metadata = {
   title: 'School Management Committee (SMC) | JRS International School, Hyderabad',

@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import PrincipalPage from '../../components/PrincipalPage'
+import PrincipalPage from '@/views/PrincipalPage'
 
 export const metadata: Metadata = {
   title: "Principal's Message | JRS International School, Hyderabad",
