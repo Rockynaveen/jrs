@@ -158,12 +158,18 @@ export default function FacilitiesSection() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
-            World-Class <span className="text-[#e31e24]">Infrastructure</span>
+          <h2
+            style={{ lineHeight: '50px' }}
+            className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+          >
+            World-Class <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Infrastructure</span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-slate-600 text-[15px] sm:text-base mt-2.5 leading-relaxed">
+          <p
+            style={{ margin: 0, lineHeight: '26px' }}
+            className="text-slate-600 text-[15px] sm:text-base m-0 leading-[26px] sm:leading-[26px]"
+          >
             Modern facilities designed to inspire, explore and grow
           </p>
         </div>

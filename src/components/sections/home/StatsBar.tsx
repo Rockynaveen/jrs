@@ -117,7 +117,7 @@ export default function StatsBar() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-12 sm:py-16 overflow-hidden text-white"
+      className="relative py-10 overflow-hidden text-white"
     >
       {/* Background Image with Project Navy Overlay */}
       <div className="absolute inset-0 z-0">

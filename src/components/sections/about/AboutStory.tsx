@@ -191,7 +191,7 @@ export default function AboutStory() {
               </span>
               <h2
                 style={{ lineHeight: '50px' }}
-                className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight !leading-[50px]"
+                className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight leading-[50px] sm:leading-[50px]"
               >
                 A Journey of Learning <br className="hidden sm:inline" />
                 and <span className="text-[#e31e24]">Human Values</span>
