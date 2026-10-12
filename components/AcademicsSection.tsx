@@ -101,7 +101,10 @@ export default function AcademicsSection() {
         <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-16">
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="w-6 sm:w-8 h-[2px] bg-[#e31e24]" />
-            <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24]">
+            <span
+              style={{ lineHeight: '52px' }}
+              className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] leading-[52px] sm:leading-[52px]"
+            >
               ACADEMIC PROGRAMMES
             </span>
             <span className="w-6 sm:w-8 h-[2px] bg-[#e31e24]" />

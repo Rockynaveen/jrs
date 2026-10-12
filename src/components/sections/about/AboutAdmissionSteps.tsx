@@ -2,6 +2,7 @@
 
 import React from 'react'
 import {
+  Users,
   FileText,
   UserCheck,
   FileEdit,
@@ -14,249 +15,204 @@ export default function AboutAdmissionSteps() {
   const steps = [
     {
       step: '01',
+      isEven: false,
       title: 'Meet the Admission Officer',
       description:
         'Visit the school campus and meet our admission officer for guidance.',
-      bgGradient: 'from-[#031c3f] to-[#0a1931]',
-      badgeBg: 'bg-[#031c3f]',
-      icon: (
-        <svg
-          className="w-10 h-10 text-white"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          {/* Two people sitting at table */}
-          <circle cx="6" cy="6" r="2.5" />
-          <path d="M2 15v-1a4 4 0 0 1 4-4h2" />
-          <circle cx="18" cy="6" r="2.5" />
-          <path d="M22 15v-1a4 4 0 0 0-4-4h-2" />
-          <rect x="8" y="11" width="8" height="5" rx="1" />
-          <line x1="9" y1="16" x2="9" y2="21" />
-          <line x1="15" y1="16" x2="15" y2="21" />
-          <line x1="4" y1="18" x2="4" y2="21" />
-          <line x1="20" y1="18" x2="20" y2="21" />
-        </svg>
-      ),
+      icon: <Users className="w-9 h-9 text-[#031c3f] stroke-[1.8]" />,
     },
     {
       step: '02',
+      isEven: true,
       title: 'Procure the Application Form',
       description:
         'Collect the application form from the school or download it as provided.',
-      bgGradient: 'from-[#dc2626] to-[#b91c1c]',
-      badgeBg: 'bg-[#dc2626]',
-      icon: <FileText className="w-10 h-10 text-white stroke-[2]" />,
+      icon: <FileText className="w-9 h-9 text-[#e31e24] stroke-[1.8]" />,
     },
     {
       step: '03',
-      title: 'Register with Us',
+      isEven: false,
+      title: 'Register With Us',
       description:
         'Submit the completed application form with the required details.',
-      bgGradient: 'from-[#031c3f] to-[#081730]',
-      badgeBg: 'bg-[#031c3f]',
-      icon: <UserCheck className="w-10 h-10 text-white stroke-[2]" />,
+      icon: <UserCheck className="w-9 h-9 text-[#031c3f] stroke-[1.8]" />,
     },
     {
       step: '04',
-      title: 'Appear for the Admission Test',
+      isEven: true,
+      title: 'Appear For The Admission Test',
       description:
         'The student needs to appear for the admission test as per the grade.',
-      bgGradient: 'from-[#f59e0b] to-[#d97706]',
-      badgeBg: 'bg-[#f59e0b]',
-      icon: <FileEdit className="w-10 h-10 text-white stroke-[2]" />,
+      icon: <FileEdit className="w-9 h-9 text-[#e31e24] stroke-[1.8]" />,
     },
     {
       step: '05',
-      title: 'Appear for the Personal Interview',
+      isEven: false,
+      title: 'Appear For The Personal Interview',
       description:
         'The student and parents may be called for a personal interview.',
-      bgGradient: 'from-[#031c3f] to-[#0a2559]',
-      badgeBg: 'bg-[#031c3f]',
-      icon: <MessagesSquare className="w-10 h-10 text-white stroke-[2]" />,
+      icon: <MessagesSquare className="w-9 h-9 text-[#031c3f] stroke-[1.8]" />,
     },
     {
       step: '06',
+      isEven: true,
       title: 'Pay Fee',
       description:
         'Upon selection, complete the fee payment to confirm admission.',
-      bgGradient: 'from-[#dc2626] to-[#991b1b]',
-      badgeBg: 'bg-[#dc2626]',
-      icon: <CreditCard className="w-10 h-10 text-white stroke-[2]" />,
+      icon: <CreditCard className="w-9 h-9 text-[#e31e24] stroke-[1.8]" />,
     },
   ]
 
   return (
-    <section id="admission-process" className="py-10 bg-white relative overflow-hidden">
+    <section id="admission-steps" className="py-10 bg-white relative overflow-hidden">
       {/* Subtle Graduation Cap Watermark in Top Right */}
-      <div className="absolute top-4 right-6 pointer-events-none opacity-[0.06] select-none hidden md:block">
-        <GraduationCap className="w-72 h-72 text-slate-900" />
+      <div className="absolute -top-4 right-4 lg:right-12 pointer-events-none opacity-[0.05] select-none hidden md:block">
+        <GraduationCap className="w-80 h-80 text-slate-900" strokeWidth={1} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <div className="flex items-center justify-center gap-2.5 mb-2.5">
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
-            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
-              STEPS OF ADMISSION
-            </span>
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          {/* Dual-color pill indicator */}
+          <div className="flex items-center justify-center mb-3">
+            <div className="flex h-1.5 w-10 rounded-full overflow-hidden shadow-2xs">
+              <span className="w-1/2 bg-[#031c3f]" />
+              <span className="w-1/2 bg-[#e31e24]" />
+            </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
-            Admission <span className="text-[#e31e24]">Process</span>
+
+          <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-1">
+            STEPS OF
+          </span>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#031c3f] tracking-tight leading-tight">
+            ADMISSION <span className="text-[#e31e24]">PROCESS</span>
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
+          <p className="text-slate-600 text-[14px] sm:text-[15px] font-normal mt-2.5 max-w-xl mx-auto">
             Follow these simple steps to complete the admission process at JRS.
           </p>
         </div>
 
-        {/* Desktop / Large Screen 6-Step Visual Flow */}
-        <div className="hidden lg:grid grid-cols-6 gap-3 xl:gap-5 relative">
-          {/* Wavy Dashed Connecting Lines Between Steps */}
-          {/* Arrow 1 -> 2 (Arcs High) */}
-          <div className="absolute top-5 left-[12%] w-[12%] h-12 pointer-events-none z-0">
-            <svg viewBox="0 0 100 40" className="w-full h-full fill-none overflow-visible">
-              <path
-                d="M 5 28 Q 50 -10 95 18"
-                stroke="#0091df"
-                strokeWidth="2"
-                strokeDasharray="4 4"
-              />
-              <polygon points="98,18 90,13 94,22" fill="#0091df" />
-            </svg>
+        {/* Desktop 6-Step Visual Stepper with Horizontal Connector Bar */}
+        <div className="hidden lg:block">
+          {/* Horizontal Timeline Connector Bar */}
+          <div className="grid grid-cols-6 gap-3.5 xl:gap-5 relative mb-0">
+            {/* Continuous horizontal connecting line spanning from column 1 center to column 6 center */}
+            <div className="absolute top-[6px] left-[8.33%] right-[8.33%] h-[1.5px] bg-slate-300/80 z-0" />
+
+            {steps.map((item, idx) => (
+              <div key={idx} className="flex flex-col items-center relative z-10">
+                {/* Circle dot node on the horizontal line */}
+                <div
+                  className={`w-3.5 h-3.5 rounded-full ${
+                    item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                  } border-2 border-white shadow-xs`}
+                />
+                {/* Vertical line connecting down to the card */}
+                <div className="w-[1.5px] h-6 bg-slate-300/80" />
+              </div>
+            ))}
           </div>
 
-          {/* Arrow 2 -> 3 (Arcs Low) */}
-          <div className="absolute top-16 left-[28%] w-[12%] h-12 pointer-events-none z-0">
-            <svg viewBox="0 0 100 40" className="w-full h-full fill-none overflow-visible">
-              <path
-                d="M 5 10 Q 50 42 95 15"
-                stroke="#071938"
-                strokeWidth="2"
-                strokeDasharray="4 4"
-              />
-              <polygon points="98,15 91,10 93,20" fill="#071938" />
-            </svg>
-          </div>
+          {/* 6 Step Cards Grid */}
+          <div className="grid grid-cols-6 gap-3.5 xl:gap-5 items-stretch">
+            {steps.map((item, index) => (
+              <div
+                key={index}
+                className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 p-4 xl:p-5 pt-5 pb-6 flex flex-col items-center text-center overflow-hidden h-full group"
+              >
+                {/* Top-Left Corner Accent Swoop */}
+                <div className="absolute top-0 left-0 w-12 xl:w-14 h-12 xl:h-14 pointer-events-none z-10">
+                  <svg
+                    viewBox="0 0 56 56"
+                    className={`w-full h-full ${item.isEven ? 'text-[#e31e24]' : 'text-[#031c3f]'}`}
+                    fill="currentColor"
+                  >
+                    <path d="M 0 0 L 46 0 C 38 18, 18 38, 0 46 Z" />
+                  </svg>
+                </div>
 
-          {/* Arrow 3 -> 4 (Arcs High) */}
-          <div className="absolute top-5 left-[45%] w-[12%] h-12 pointer-events-none z-0">
-            <svg viewBox="0 0 100 40" className="w-full h-full fill-none overflow-visible">
-              <path
-                d="M 5 28 Q 50 -10 95 18"
-                stroke="#1a66ff"
-                strokeWidth="2"
-                strokeDasharray="4 4"
-              />
-              <polygon points="98,18 90,13 94,22" fill="#1a66ff" />
-            </svg>
-          </div>
-
-          {/* Arrow 4 -> 5 (Arcs Low) */}
-          <div className="absolute top-16 left-[62%] w-[12%] h-12 pointer-events-none z-0">
-            <svg viewBox="0 0 100 40" className="w-full h-full fill-none overflow-visible">
-              <path
-                d="M 5 10 Q 50 42 95 15"
-                stroke="#071938"
-                strokeWidth="2"
-                strokeDasharray="4 4"
-              />
-              <polygon points="98,15 91,10 93,20" fill="#071938" />
-            </svg>
-          </div>
-
-          {/* Arrow 5 -> 6 (Arcs High) */}
-          <div className="absolute top-5 left-[78%] w-[12%] h-12 pointer-events-none z-0">
-            <svg viewBox="0 0 100 40" className="w-full h-full fill-none overflow-visible">
-              <path
-                d="M 5 28 Q 50 -10 95 18"
-                stroke="#0091df"
-                strokeWidth="2"
-                strokeDasharray="4 4"
-              />
-              <polygon points="98,18 90,13 94,22" fill="#0091df" />
-            </svg>
-          </div>
-
-          {steps.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center relative z-10 group">
-              {/* Hexagon Box with Top Badge */}
-              <div className="relative pt-4 w-full flex justify-center">
                 {/* Number Badge at Top Center */}
                 <div
-                  className={`absolute top-0 z-20 w-8 h-8 rounded-full ${item.badgeBg} text-white text-xs font-extrabold flex items-center justify-center border-2 border-white shadow-md`}
+                  className={`w-9 h-9 rounded-full ${
+                    item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                  } text-white text-xs font-black flex items-center justify-center shadow-xs mb-4 border-2 border-white relative z-10 group-hover:scale-105 transition-transform`}
                 >
                   {item.step}
                 </div>
 
-                {/* Hexagon Container */}
-                <div
-                  className={`w-full max-w-[170px] aspect-[1.32/1] bg-gradient-to-br ${item.bgGradient} flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-105`}
-                  style={{
-                    clipPath:
-                      'polygon(16% 0%, 84% 0%, 100% 50%, 84% 100%, 16% 100%, 0% 50%)',
-                  }}
-                >
-                  <div className="transform transition-transform duration-200 group-hover:scale-110">
-                    {item.icon}
-                  </div>
+                {/* Icon */}
+                <div className="mb-3.5 flex items-center justify-center h-12 group-hover:scale-110 transition-transform duration-300">
+                  {item.icon}
                 </div>
+
+                {/* Title */}
+                <h3 className="text-[14px] xl:text-[15px] font-bold text-[#031c3f] leading-snug min-h-[42px] flex items-center justify-center">
+                  {item.title}
+                </h3>
+
+                {/* Accent Divider Dash */}
+                <div
+                  className={`w-6 h-[2px] ${
+                    item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                  } rounded-full my-2.5 mx-auto`}
+                />
+
+                {/* Description */}
+                <p className="text-slate-600 text-[12px] xl:text-[12.5px] leading-[18px] xl:leading-[19px] font-normal flex-1">
+                  {item.description}
+                </p>
               </div>
-
-              {/* Dotted Vertical Connector Line with Point */}
-              <div className="flex flex-col items-center my-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#031c3f]" />
-                <div className="w-[1px] h-5 border-l-2 border-dashed border-slate-300" />
-                <div className="w-1.5 h-1.5 rounded-full bg-[#031c3f]" />
-              </div>
-
-              {/* Step Title */}
-              <h4 className="text-xs sm:text-[14px] font-bold text-[#031c3f] leading-snug px-1">
-                {item.title}
-              </h4>
-
-              {/* Step Description */}
-              <p className="text-[11px] sm:text-xs text-slate-700 leading-relaxed mt-2 px-1">
-                {item.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* Tablet & Mobile Layout: Responsive 2-Col or 3-Col Cards with Connectors */}
-        <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+        {/* Tablet & Mobile Layout: Responsive Grid Cards with Matching Aesthetics */}
+        <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {steps.map((item, index) => (
             <div
               key={index}
-              className="bg-slate-50/70 border border-slate-100 rounded-2xl p-5 flex flex-col items-center text-center shadow-sm"
+              className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 p-5 pt-6 pb-6 flex flex-col items-center text-center overflow-hidden"
             >
-              {/* Hexagon Icon */}
-              <div className="relative pt-3 mb-2">
-                <div
-                  className={`absolute top-0 left-1/2 -translate-x-1/2 z-20 w-7 h-7 rounded-full ${item.badgeBg} text-white text-[11px] font-extrabold flex items-center justify-center border-2 border-white shadow`}
+              {/* Top-Left Corner Accent Swoop */}
+              <div className="absolute top-0 left-0 w-14 h-14 pointer-events-none z-10">
+                <svg
+                  viewBox="0 0 56 56"
+                  className={`w-full h-full ${item.isEven ? 'text-[#e31e24]' : 'text-[#031c3f]'}`}
+                  fill="currentColor"
                 >
-                  {item.step}
-                </div>
-                <div
-                  className={`w-32 h-24 bg-gradient-to-br ${item.bgGradient} flex items-center justify-center shadow`}
-                  style={{
-                    clipPath:
-                      'polygon(16% 0%, 84% 0%, 100% 50%, 84% 100%, 16% 100%, 0% 50%)',
-                  }}
-                >
-                  {item.icon}
-                </div>
+                  <path d="M 0 0 L 46 0 C 38 18, 18 38, 0 46 Z" />
+                </svg>
               </div>
 
-              {/* Text */}
-              <h4 className="text-sm font-bold text-[#031c3f] mt-3 leading-snug">
+              {/* Number Badge at Top Center */}
+              <div
+                className={`w-9 h-9 rounded-full ${
+                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                } text-white text-xs font-black flex items-center justify-center shadow-xs mb-3.5 border-2 border-white relative z-10`}
+              >
+                {item.step}
+              </div>
+
+              {/* Icon */}
+              <div className="mb-3 flex items-center justify-center h-12">
+                {item.icon}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-[15px] font-bold text-[#031c3f] leading-snug">
                 {item.title}
-              </h4>
-              <p className="text-xs text-slate-700 leading-relaxed mt-1.5">
+              </h3>
+
+              {/* Accent Divider Dash */}
+              <div
+                className={`w-6 h-[2px] ${
+                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                } rounded-full my-2.5 mx-auto`}
+              />
+
+              {/* Description */}
+              <p className="text-slate-600 text-[13px] leading-[20px] font-normal">
                 {item.description}
               </p>
             </div>

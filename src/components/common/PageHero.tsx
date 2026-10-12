@@ -24,6 +24,10 @@ export interface PageHeroProps {
   primaryButton?: PageHeroButton
   secondaryButton?: PageHeroButton
   rightElement?: React.ReactNode
+  titleClassName?: string
+  titleStyle?: React.CSSProperties
+  descriptionClassName?: string
+  descriptionStyle?: React.CSSProperties
   className?: string
   children?: React.ReactNode
 }
@@ -42,6 +46,10 @@ export default function PageHero({
   secondaryButton,
   rightElement,
   className,
+  titleClassName,
+  titleStyle,
+  descriptionClassName,
+  descriptionStyle,
   children,
 }: PageHeroProps) {
   return (
@@ -116,10 +124,13 @@ export default function PageHero({
           </nav>
 
           {/* Main Title */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[42px] font-bold tracking-tight text-white leading-[1.25] break-words">
+          <h1
+            style={titleStyle}
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[42px] font-bold tracking-tight text-white leading-[1.25] break-words ${titleClassName || ''}`}
+          >
             {title}{' '}
             {titleHighlight && (
-              <span className="text-[#f59e0b] font-bold">{titleHighlight}</span>
+              <span className="text-[#f59e0b] font-bold" style={{ lineHeight: 'inherit' }}>{titleHighlight}</span>
             )}
           </h1>
 
@@ -132,7 +143,10 @@ export default function PageHero({
 
           {/* Description Paragraph */}
           {description && (
-            <p className="text-slate-200 text-sm md:text-[15px] lg:text-base max-w-xl opacity-90 leading-relaxed mt-2.5 sm:mt-3.5">
+            <p
+              style={{ lineHeight: '26px', ...descriptionStyle }}
+              className={`text-slate-200 text-sm md:text-[15px] lg:text-base max-w-xl opacity-90 leading-[26px] sm:leading-[26px] mt-2.5 sm:mt-3.5 ${descriptionClassName || ''}`}
+            >
               {description}
             </p>
           )}
