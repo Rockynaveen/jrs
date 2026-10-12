@@ -64,12 +64,18 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* Floating Video Card with border radius */}
+              {/* Floating Glassmorphism Video Card with Reduced Black Transparent Overlay */}
               <div
-                className="col-span-12 sm:col-span-auto sm:absolute sm:bottom-0 sm:right-0 sm:left-[28%] z-20 bg-white p-4 sm:p-5 mt-3 sm:mt-0 transition-transform duration-300 hover:-translate-y-1 rounded-2xl border border-slate-100"
-                style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
+                className="col-span-12 sm:col-span-auto sm:absolute sm:bottom-0 sm:right-0 sm:left-[28%] z-20 p-4 sm:p-5 mt-3 sm:mt-0 transition-all duration-300 hover:-translate-y-1 rounded-2xl"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.42)',
+                  backdropFilter: 'blur(16px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(16px) saturate(180%)',
+                  border: '1px solid rgba(255, 255, 255, 0.22)',
+                  boxShadow: '0 16px 36px 0 rgba(0, 0, 0, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2)',
+                }}
               >
-                <p className="text-[13px] sm:text-sm font-bold text-[#031c3f] leading-snug mb-3">
+                <p className="text-[13px] sm:text-sm font-bold text-white drop-shadow-sm leading-snug mb-3">
                   Watch a video about how we work and try for our students
                 </p>
 
@@ -77,22 +83,22 @@ export default function AboutSection() {
                   <button
                     type="button"
                     onClick={() => setIsVideoModalOpen(true)}
-                    className="text-xs sm:text-[13px] font-medium text-slate-700 hover:text-[#031c3f] transition-colors cursor-pointer shrink-0"
+                    className="text-xs sm:text-[13px] font-semibold text-white/90 hover:text-[#e31e24] transition-colors cursor-pointer shrink-0"
                   >
                     Play video
                   </button>
 
                   {/* Horizontal line */}
-                  <div className="flex-1 h-[1px] bg-slate-200 mx-2" />
+                  <div className="flex-1 h-[1px] bg-white/20 mx-2" />
 
                   {/* Circular Play Button */}
                   <button
                     type="button"
                     onClick={() => setIsVideoModalOpen(true)}
                     aria-label="Play campus tour video"
-                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#031c3f] hover:bg-[#e31e24] text-white flex items-center justify-center transition-all duration-200 shadow-md hover:scale-105 cursor-pointer shrink-0"
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#e31e24] hover:bg-white hover:text-[#e31e24] text-white flex items-center justify-center transition-all duration-200 shadow-md hover:scale-105 cursor-pointer shrink-0"
                   >
-                    <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white ml-0.5" />
+                    <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current ml-0.5" />
                   </button>
                 </div>
               </div>
@@ -103,27 +109,31 @@ export default function AboutSection() {
           {/* Right Column: Standardized typography & theme styling */}
           <div className="lg:col-span-6 space-y-5 lg:pl-4" data-aos="fade-left">
             <div>
-              {/* Eyebrow: — ABOUT JRS */}
+              {/* Eyebrow: — ABOUT JRS — */}
               <div className="flex items-center gap-2.5 mb-2.5">
                 <span className="w-8 h-[2px] bg-[#e31e24]" />
                 <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
                   ABOUT JRS
                 </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
               </div>
 
               {/* Main Heading */}
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight sm:leading-snug lg:leading-[1.18]">
+              <h2
+                style={{ lineHeight: '50px' }}
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight !leading-[50px]"
+              >
                 A Legacy of Excellence <span className="text-[#e31e24]">in Education</span>
               </h2>
             </div>
 
             {/* Paragraph 1 */}
-            <p className="text-slate-600 text-[14px] sm:text-[15px] leading-relaxed">
+            <p className="text-slate-600 text-[14px] sm:text-[15px] leading-[25px]">
               JRS International School, Uppal, Hyderabad is committed to providing quality education with a perfect blend of academics, values and co-curricular activities. We focus on developing confident, responsible and compassionate individuals who are prepared for a constantly evolving world.
             </p>
 
             {/* Paragraph 2 */}
-            <p className="text-slate-600 text-[14px] sm:text-[15px] leading-relaxed">
+            <p className="text-slate-600 text-[14px] sm:text-[15px] leading-[25px]">
               Rooted in rich Indian ethos and empowered by global pedagogical standards, our campus provides modern smart classrooms, advanced robotics and science laboratories, sports coaching, and a holistic environment where every student thrives.
             </p>
 

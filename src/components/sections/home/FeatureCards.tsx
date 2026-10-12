@@ -69,18 +69,18 @@ export default function FeatureCards() {
               >
                 {/* Circular Badge Icon */}
                 <div
-                  className={`w-12 h-12 rounded-2xl ${item.bgColor} ${item.iconShadow} text-white flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 rounded-2xl ${item.bgColor} ${item.iconShadow} text-white flex items-center justify-center m-0 shadow-md group-hover:scale-110 transition-transform duration-300`}
                 >
                   <Icon className="w-6 h-6 stroke-[2]" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[15px] sm:text-base font-bold text-slate-900 mb-2 leading-snug min-h-[44px] flex items-center justify-center text-center">
+                <h3 className="text-[15px] sm:text-base font-bold text-slate-900 m-0 leading-snug min-h-[44px] flex items-center justify-center text-center">
                   {item.title}
                 </h3>
 
                 {/* Subtitle */}
-                <p className="text-[13px] sm:text-sm text-slate-600 leading-relaxed max-w-[210px] mt-auto">
+                <p className="text-[13px] sm:text-sm text-slate-600 leading-relaxed max-w-[210px] m-0">
                   {item.subtitle}
                 </p>
               </div>

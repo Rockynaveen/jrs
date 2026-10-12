@@ -107,8 +107,11 @@ export default function AcademicsSection() {
             <span className="w-6 sm:w-8 h-[2px] bg-[#e31e24]" />
           </div>
 
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#031c3f] tracking-tight leading-tight">
-            Shaping <span className="text-[#e31e24]">Inquiring Minds</span> at Every Stage
+          <h2
+            style={{ lineHeight: '58px' }}
+            className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#031c3f] tracking-tight leading-[58px] sm:leading-[58px] lg:leading-[58px] !leading-[58px]"
+          >
+            Shaping <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Inquiring Minds</span> at Every Stage
           </h2>
           <p className="text-slate-600 text-xs sm:text-base mt-2.5 sm:mt-3 max-w-2xl mx-auto leading-relaxed">
             Our progressive CBSE curriculum combines academic rigor, experiential STEM learning, and holistic character development from early years to middle school graduation.

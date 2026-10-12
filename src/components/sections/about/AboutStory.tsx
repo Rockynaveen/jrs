@@ -189,14 +189,17 @@ export default function AboutStory() {
               <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24]">
                 OUR STORY
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight leading-[1.18]">
+              <h2
+                style={{ lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight !leading-[50px]"
+              >
                 A Journey of Learning <br className="hidden sm:inline" />
                 and <span className="text-[#e31e24]">Human Values</span>
               </h2>
             </div>
 
             {/* Description Paragraph */}
-            <p className="text-slate-700 text-[14px] leading-relaxed">
+            <p className="text-slate-700 text-[14px] leading-[25px]">
               JRS International School, Narapally, Near Uppal Depot, Hyderabad has been committed to the field of education and human values since 2021. We follow the CBSE/NCERT curriculum and strive to provide a perfect blend of academics, values and co-curricular activities. Our aim is to nurture confident, responsible and compassionate individuals who are prepared for a global future.
             </p>
 
