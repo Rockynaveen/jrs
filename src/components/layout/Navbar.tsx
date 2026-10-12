@@ -120,7 +120,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           style={{ backgroundColor: 'rgb(240, 244, 250)', fontFamily: "'Inter', sans-serif" }}
           className="hidden md:block text-slate-700 border-b border-slate-200/80 relative z-20 font-['Inter',sans-serif] font-medium"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2 font-['Inter',sans-serif] font-medium">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2 font-['Inter',sans-serif] font-medium">
             {/* Left Contact & Affiliation Info */}
             <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-slate-700 font-medium font-['Inter',sans-serif] min-w-0 shrink">
               <a
@@ -185,133 +185,131 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
         </div>
 
         {/* Main Navigation */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 xl:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20 gap-2 lg:gap-3 xl:gap-4">
-          {/* Logo Area */}
-          <Link href="/" className="flex items-center group py-1 shrink-0">
-            <img
-              src="/images/logo.png"
-              alt="JRS International School"
-              className="h-9 sm:h-11 md:h-12 lg:h-11 xl:h-13 2xl:h-14 w-auto object-contain shrink-0 group-hover:scale-[1.02] transition-transform duration-200"
-              style={{ imageRendering: '-webkit-optimize-contrast' }}
-            />
-          </Link>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4 lg:gap-6 w-full">
+            {/* Logo Area */}
+            <Link href="/" className="flex items-center group py-1 shrink-0">
+              <img
+                src="/images/logo.png"
+                alt="JRS International School"
+                className="h-9 sm:h-11 md:h-11 lg:h-10 xl:h-12 2xl:h-13 w-auto object-contain shrink-0 group-hover:scale-[1.02] transition-transform duration-200"
+                style={{ imageRendering: '-webkit-optimize-contrast' }}
+              />
+            </Link>
 
-          {/* Desktop Navigation Links (Responsive from laptops: lg through 2xl) */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2.5 2xl:gap-5 shrink-0">
-            {navLinks.map((link) => {
-              const isActive =
-                link.id === activePage ||
-                (link.id === 'about' &&
-                  (activePage === 'chairman' ||
-                    activePage === 'principal' ||
-                    activePage === 'educational-society' ||
-                    activePage === 'school-management-committee' ||
-                    activePage === 'certificates')) ||
-                (link.id === 'gallery' &&
-                  (activePage === 'gallery' ||
-                    activePage === 'media' ||
-                    activePage === '360-degree-campus'))
+            {/* Desktop Navigation Links (Responsive from laptops: lg through 2xl) */}
+            <nav className="hidden lg:flex items-center gap-[10px] shrink-0">
+              {navLinks.map((link) => {
+                const isActive =
+                  link.id === activePage ||
+                  (link.id === 'about' &&
+                    (activePage === 'chairman' ||
+                      activePage === 'principal' ||
+                      activePage === 'educational-society' ||
+                      activePage === 'school-management-committee' ||
+                      activePage === 'certificates')) ||
+                  (link.id === 'gallery' &&
+                    (activePage === 'gallery' ||
+                      activePage === 'media' ||
+                      activePage === '360-degree-campus'))
 
-              if (link.dropdown) {
-                return (
-                  <div key={link.name} className="relative group">
-                    <Link
-                      href={link.href}
-                      className={`inline-flex items-center gap-0.5 xl:gap-1 text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
-                        isActive ? 'text-red-600 font-semibold' : 'text-slate-700'
-                      }`}
-                    >
-                      <span>{link.name}</span>
-                      <ChevronDown className="w-3 h-3 xl:w-3.5 xl:h-3.5 transition-transform duration-200 group-hover:rotate-180 text-slate-400 group-hover:text-red-600 shrink-0" />
-                    </Link>
+                if (link.dropdown) {
+                  return (
+                    <div key={link.name} className="relative group">
+                      <Link
+                        href={link.href}
+                        className={`inline-flex items-center gap-1 text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
+                          isActive ? 'text-red-600 font-semibold' : 'text-slate-700'
+                        }`}
+                      >
+                        <span>{link.name}</span>
+                        <ChevronDown className="w-3 h-3 xl:w-3.5 xl:h-3.5 transition-transform duration-200 group-hover:rotate-180 text-slate-400 group-hover:text-red-600 shrink-0" />
+                      </Link>
 
-                    {/* Desktop Dropdown Menu */}
-                    <div className="absolute top-full left-0 pt-1.5 hidden group-hover:block z-50 min-w-[210px]">
-                      <div className="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 overflow-visible ring-1 ring-black/5 animate-fade-in">
-                        {link.dropdown.map((subItem) => {
-                          if (subItem.subItems) {
-                            return (
-                              <div key={subItem.name} className="relative group/sub">
-                                <div className="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-red-50/60 transition-colors cursor-pointer">
-                                  <span>{subItem.name}</span>
-                                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover/sub:text-red-600 group-hover/sub:translate-x-0.5 transition-transform" />
-                                </div>
+                      {/* Desktop Dropdown Menu */}
+                      <div className="absolute top-full left-0 pt-1.5 hidden group-hover:block z-50 min-w-[210px]">
+                        <div className="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 overflow-visible ring-1 ring-black/5 animate-fade-in">
+                          {link.dropdown.map((subItem) => {
+                            if (subItem.subItems) {
+                              return (
+                                <div key={subItem.name} className="relative group/sub">
+                                  <div className="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-red-50/60 transition-colors cursor-pointer">
+                                    <span>{subItem.name}</span>
+                                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover/sub:text-red-600 group-hover/sub:translate-x-0.5 transition-transform" />
+                                  </div>
 
-                                {/* Desktop Nested Flyout Submenu */}
-                                <div className="absolute left-full top-0 -ml-1 pl-2 hidden group-hover/sub:block z-50 min-w-[260px]">
-                                  <div className="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 overflow-hidden ring-1 ring-black/5 animate-fade-in">
-                                    {subItem.subItems.map((nested) => (
-                                      <Link
-                                        key={nested.name}
-                                        href={nested.href}
-                                        target={nested.target}
-                                        rel={nested.rel}
-                                        className="block px-4 py-2.5 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-red-50/60 transition-colors whitespace-nowrap"
-                                      >
-                                        {nested.name}
-                                      </Link>
-                                    ))}
+                                  {/* Desktop Nested Flyout Submenu */}
+                                  <div className="absolute left-full top-0 -ml-1 pl-2 hidden group-hover/sub:block z-50 min-w-[260px]">
+                                    <div className="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 overflow-hidden ring-1 ring-black/5 animate-fade-in">
+                                      {subItem.subItems.map((nested) => (
+                                        <Link
+                                          key={nested.name}
+                                          href={nested.href}
+                                          target={nested.target}
+                                          rel={nested.rel}
+                                          className="block px-4 py-2.5 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-red-50/60 transition-colors whitespace-nowrap"
+                                        >
+                                          {nested.name}
+                                        </Link>
+                                      ))}
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            )
-                          }
+                              )
+                            }
 
-                          return (
-                            <Link
-                              key={subItem.name}
-                              href={subItem.href}
-                              target={subItem.target}
-                              rel={subItem.rel}
-                              className="block px-4 py-2.5 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-red-50/60 transition-colors"
-                            >
-                              {subItem.name}
-                            </Link>
-                          )
-                        })}
+                            return (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                target={subItem.target}
+                                rel={subItem.rel}
+                                className="block px-4 py-2.5 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-red-50/60 transition-colors"
+                              >
+                                {subItem.name}
+                              </Link>
+                            )
+                          })}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )
+                }
+
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
+                      isActive ? 'text-red-600 font-semibold' : 'text-slate-700'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
                 )
-              }
+              })}
+            </nav>
 
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
-                    isActive ? 'text-red-600 font-semibold' : 'text-slate-700'
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              )
-            })}
-          </nav>
+            {/* Right Side Actions: Enquire CTA & Mobile Toggle Button */}
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+              <Link
+                href="/admissions#enquiry-form"
+                className="inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 xl:px-5 xl:py-2.5 rounded-full text-xs sm:text-[13px] xl:text-sm font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] active:scale-95 shadow-md shadow-red-500/20 transition-all duration-200 whitespace-nowrap"
+              >
+                Enquire Now
+              </Link>
 
-          {/* Enquire Now CTA Button */}
-          <div className="hidden sm:flex items-center shrink-0">
-            <Link
-              href="/admissions#enquiry-form"
-              className="inline-flex items-center justify-center px-3.5 py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 rounded-full text-xs lg:text-[13px] xl:text-sm font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] active:scale-95 shadow-md shadow-red-500/20 transition-all duration-200 whitespace-nowrap"
-            >
-              Enquire Now
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="flex items-center lg:hidden shrink-0">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 hover:text-red-600 hover:bg-slate-100 transition-colors focus:outline-none"
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              {/* Mobile menu toggle button */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-1.5 sm:p-2 rounded-lg text-slate-700 hover:text-red-600 hover:bg-slate-100 transition-colors focus:outline-none lg:hidden shrink-0"
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
