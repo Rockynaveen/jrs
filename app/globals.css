@@ -202,3 +202,29 @@
   }
 }
 
+/* Frosted Glassmorphism Badge Utility */
+.glass-badge {
+  background-color: rgba(0, 0, 0, 0.22) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Top to Down Animation for Download Symbol */
+@keyframes topToDown {
+  0%, 100% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3.5px);
+  }
+}
+
+.animate-top-to-down {
+  animation: topToDown 1.4s ease-in-out infinite;
+  display: inline-flex;
+}
+
+
+

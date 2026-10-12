@@ -53,7 +53,7 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className={`relative overflow-hidden bg-[#031c3f] text-white h-[70vh] min-h-[70vh] h-[70dvh] min-h-[70dvh] flex flex-col justify-center ${className || ''}`}>
+    <section className={`relative overflow-hidden bg-[#031c3f] text-white h-[90vh] min-h-[90vh] h-[90dvh] min-h-[90dvh] flex flex-col justify-center pt-16 sm:pt-20 md:pt-22 pb-4 sm:pb-6 ${className || ''}`}>
       {/* Background Campus Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -108,7 +108,7 @@ export default function PageHero({
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-8 md:py-10 lg:py-12 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-1 sm:pb-2 w-full -mt-2 sm:-mt-4 md:-mt-6 lg:-mt-8">
         <div className={rightElement ? "grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" : ""}>
           <div className={rightElement ? "lg:col-span-8 max-w-xl md:max-w-2xl" : "max-w-xl md:max-w-2xl"} data-aos="fade-right">
             {/* Breadcrumb Navigation */}
@@ -126,7 +126,7 @@ export default function PageHero({
           {/* Main Title */}
           <h1
             style={titleStyle}
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[42px] font-bold tracking-tight text-white leading-[1.25] break-words ${titleClassName || ''}`}
+            className={`text-2xl sm:text-3xl md:text-[38px] md:leading-[48px] lg:text-[42px] lg:leading-[52px] xl:text-[42px] xl:leading-[52px] font-bold tracking-tight text-white break-words ${titleClassName || ''}`}
           >
             {title}{' '}
             {titleHighlight && (
@@ -145,7 +145,7 @@ export default function PageHero({
           {description && (
             <p
               style={{ lineHeight: '26px', ...descriptionStyle }}
-              className={`text-slate-200 text-sm md:text-[15px] lg:text-base max-w-xl opacity-90 leading-[26px] sm:leading-[26px] mt-2.5 sm:mt-3.5 ${descriptionClassName || ''}`}
+              className={`text-slate-200 text-sm md:text-[16px] md:leading-[26px] lg:text-[16px] lg:leading-[26px] max-w-xl opacity-90 mt-2.5 sm:mt-3.5 ${descriptionClassName || ''}`}
             >
               {description}
             </p>
@@ -251,8 +251,8 @@ export default function PageHero({
           )}
         </div>
 
-        {/* Optional Children slot (e.g. highlight cards) */}
-        {children && <div className="mt-10 sm:mt-12">{children}</div>}
+        {/* Optional Children slot (e.g. highlight cards / floating stats bar) */}
+        {children && <div className="mt-4 sm:mt-5 md:mt-6">{children}</div>}
       </div>
     </section>
   )

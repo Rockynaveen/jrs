@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Users, Phone, MapPin, UserCheck, Shield } from 'lucide-react'
+import { Users, Phone, MapPin, User, Shield } from 'lucide-react'
 
 interface PTAMember {
   sn: number
@@ -93,97 +93,95 @@ const ptaMembers: PTAMember[] = [
 
 export default function AboutPTA() {
   return (
-    <section id="pta" className="py-8 sm:py-12 bg-[#f8fafc] border-t border-slate-200/70">
+    <section id="pta" className="py-[50px] bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-50 border border-red-100 text-red-600 text-[11px] font-bold tracking-wider uppercase mb-1.5">
-            <Users className="w-3 h-3" />
-            <span>Community & Collaboration</span>
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          {/* Eyebrow: — COMMUNITY & COLLABORATION — */}
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              COMMUNITY & COLLABORATION
+            </span>
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#031c3f] tracking-tight">
-            Parent Teacher Association
+
+          <h2
+            style={{ lineHeight: '50px' }}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+          >
+            Parent Teacher <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Association</span>
           </h2>
-          <p className="mt-1 text-slate-600 text-xs sm:text-sm">
+          <p className="mt-2 text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto">
             Promoting continuous collaboration between parents and educators to support the holistic development of our students.
           </p>
         </div>
 
-        {/* Clean, Simple Compact Table Card */}
-        <div className="bg-white rounded-xl shadow-sm border border-slate-200/80 overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-slate-100/80 border-b border-slate-200 text-[11px] font-bold text-slate-700 uppercase tracking-wider">
-                  <th scope="col" className="py-2.5 px-3 sm:px-5 w-14 text-center">
-                    S.N
-                  </th>
-                  <th scope="col" className="py-2.5 px-3 sm:px-5 min-w-[190px]">
-                    Name
-                  </th>
-                  <th scope="col" className="py-2.5 px-3 sm:px-5 min-w-[130px]">
-                    Designation
-                  </th>
-                  <th scope="col" className="py-2.5 px-3 sm:px-5 min-w-[240px]">
-                    Address
-                  </th>
-                  <th scope="col" className="py-2.5 px-3 sm:px-5 min-w-[150px] text-right">
-                    Contact Number
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 text-[13px] text-slate-700">
-                {ptaMembers.map((member) => {
-                  const isChairman = member.designation.toLowerCase() === 'chairman'
-                  return (
-                    <tr
-                      key={member.sn}
-                      className={`transition-colors duration-150 hover:bg-slate-50/80 ${
-                        isChairman ? 'bg-red-50/20' : ''
-                      }`}
+        {/* Member Cards Grid - 5 Cards per Row on Large Screens */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 xl:gap-4 items-stretch">
+          {ptaMembers.map((member) => {
+            const isChairman = member.designation.toLowerCase() === 'chairman'
+
+            return (
+              <div
+                key={member.sn}
+                className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
+              >
+                {/* Image Area with Placeholder Headshot & Bottom Designation Badge */}
+                <div className="relative w-full aspect-[16/12] bg-slate-100 overflow-hidden flex-shrink-0">
+                  <img
+                    src="/images/avatar-placeholder.jpg"
+                    alt={member.name}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+
+                  {/* Floating Glassmorphism Designation Card matching About JRS Section */}
+                  <div className="absolute bottom-2.5 right-2.5 z-10">
+                    <div
+                      className="glass-badge px-3 py-1 rounded-xl transition-all duration-300 flex items-center gap-1.5"
+                      style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.22)',
+                        backdropFilter: 'blur(16px) saturate(180%)',
+                        WebkitBackdropFilter: 'blur(16px) saturate(180%)',
+                        border: '1px solid rgba(255, 255, 255, 0.22)',
+                        boxShadow: '0 8px 24px 0 rgba(0, 0, 0, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2)',
+                      }}
                     >
-                      <td className="py-2 px-3 sm:px-5 text-center font-semibold text-slate-400 text-xs">
-                        {member.sn}
-                      </td>
-                      <td className="py-2 px-3 sm:px-5 font-semibold text-[#031c3f]">
-                        <div className="flex items-center gap-2">
-                          <UserCheck className={`w-3.5 h-3.5 shrink-0 ${isChairman ? 'text-red-600' : 'text-slate-400'}`} />
-                          <span>{member.name}</span>
-                        </div>
-                      </td>
-                      <td className="py-2 px-3 sm:px-5">
-                        {isChairman ? (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-red-100 text-red-700">
-                            <Shield className="w-2.5 h-2.5" />
-                            Chairman
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-slate-100 text-slate-700">
-                            Member
-                          </span>
-                        )}
-                      </td>
-                      <td className="py-2 px-3 sm:px-5 text-slate-600">
-                        <div className="flex items-start gap-1.5">
-                          <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
-                          <span>{member.address}</span>
-                        </div>
-                      </td>
-                      <td className="py-2 px-3 sm:px-5 text-right font-medium">
-                        <a
-                          href={`tel:${member.contact}`}
-                          className="inline-flex items-center gap-1.5 text-slate-700 hover:text-red-600 transition-colors font-mono text-xs"
-                        >
-                          <Phone className="w-3 h-3 text-slate-400 hover:text-red-600" />
-                          <span>{member.contact}</span>
-                        </a>
-                      </td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
+                      {isChairman && <Shield className="w-3 h-3 text-amber-400 shrink-0" />}
+                      <span className="text-[11px] font-bold text-white tracking-wide uppercase drop-shadow-sm">
+                        {member.designation}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card Content Area: Name, Address, Contact in line with minimal spacing */}
+                <div className="p-3.5 pt-2.5 pb-3.5 flex flex-col items-center text-center w-full space-y-1.5">
+                  {/* Member Name */}
+                  <h3 className="text-[15px] xl:text-[16px] font-bold text-[#031c3f] group-hover:text-[#e31e24] transition-colors leading-tight line-clamp-1 w-full">
+                    {member.name}
+                  </h3>
+
+                  {/* Address */}
+                  <div className="flex items-center justify-center gap-1.5 text-[12.5px] xl:text-[13px] text-slate-600 leading-tight w-full">
+                    <MapPin className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
+                    <span className="truncate">{member.address}</span>
+                  </div>
+
+                  {/* Contact Number */}
+                  <div className="w-full flex justify-center pt-0.5">
+                    <a
+                      href={`tel:${member.contact}`}
+                      className="inline-flex items-center gap-1.5 text-[12.5px] xl:text-[13px] font-semibold text-slate-700 hover:text-[#e31e24] transition-colors leading-tight"
+                    >
+                      <Phone className="w-3 h-3 text-[#e31e24] shrink-0" />
+                      <span className="font-mono">{member.contact}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

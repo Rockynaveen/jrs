@@ -86,18 +86,22 @@ export default function AboutWhyChoose() {
   ]
 
   return (
-    <section id="why-choose" className="py-10 bg-[#fafbfc]">
+    <section id="why-choose" className="py-[50px] bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-left mb-8 sm:mb-10">
-          <div className="flex items-center gap-2.5 mb-2.5">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
             <span className="w-8 h-[2px] bg-[#e31e24]" />
             <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
               WHY CHOOSE JRS
             </span>
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
-            What Makes JRS <span className="text-[#e31e24]">Different?</span>
+          <h2
+            style={{ lineHeight: '50px' }}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+          >
+            What Makes JRS <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Different?</span>
           </h2>
         </div>
 

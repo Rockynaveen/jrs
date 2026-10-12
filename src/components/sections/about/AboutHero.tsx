@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import PageHero from '@/components/common/PageHero'
+import AboutStats from './AboutStats'
 
 export default function AboutHero() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
@@ -26,7 +27,10 @@ export default function AboutHero() {
           onClick: () => setIsVideoModalOpen(true),
           icon: 'play',
         }}
-      />
+        className="!h-[90vh] !min-h-[90vh] !h-[90dvh] !min-h-[90dvh]"
+      >
+        <AboutStats />
+      </PageHero>
     </>
   )
 }

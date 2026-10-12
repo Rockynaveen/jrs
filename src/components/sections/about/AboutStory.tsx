@@ -1,230 +1,201 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { Play, X } from 'lucide-react'
 import SchoolImage from '@/components/common/SchoolImage'
 
 export default function AboutStory() {
-  const pillars = [
-    {
-      title: 'Indian Ethos',
-      subtitle: 'Rooted in values and traditions',
-      icon: (
-        <svg
-          className="w-8 h-8 text-[#e31e24]"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          {/* Stylized Lotus Petals */}
-          <path d="M12 3C11 6.5 8 9.5 8 13C8 15.2 9.8 17 12 17C14.2 17 16 15.2 16 13C16 9.5 13 6.5 12 3Z" />
-          <path d="M7 8C6 11 5 13.5 6 15.5C6.8 17.2 8.8 18 10.5 17.5C9.2 16 8.5 14 8.5 12C8.5 10.5 9 9.2 9.5 8.2C8.6 8 7.7 8 7 8Z" opacity="0.85" />
-          <path d="M17 8C17.7 8 18.6 8 19.5 8.2C20 9.2 20.5 10.5 20.5 12C20.5 14 19.8 16 18.5 17.5C20.2 18 22.2 17.2 23 15.5C24 13.5 23 11 22 8C20 8 18 8 17 8Z" opacity="0.85" />
-          <path d="M5 19H19C19 20.5 16 21.5 12 21.5C8 21.5 5 20.5 5 19Z" opacity="0.75" />
-        </svg>
-      ),
-    },
-    {
-      title: 'International Standards',
-      subtitle: 'Global outlook in education',
-      icon: (
-        <svg
-          className="w-8 h-8 text-[#2563eb]"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <line x1="2" y1="12" x2="22" y2="12" />
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Interactive Learning',
-      subtitle: 'Engaging classroom experiences',
-      icon: (
-        <svg
-          className="w-8 h-8 text-[#eab308]"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M9 18h6" />
-          <path d="M10 22h4" />
-          <path d="M12 2a7 7 0 0 0-7 7c0 2.4 1.2 4.5 3 5.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3c1.8-1.2 3-3.3 3-5.7a7 7 0 0 0-7-7z" />
-          <line x1="12" y1="6" x2="12" y2="9" />
-          <line x1="9.5" y1="7" x2="7.5" y2="5" />
-          <line x1="14.5" y1="7" x2="16.5" y2="5" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Real-World Teaching',
-      subtitle: 'Practical knowledge for life',
-      icon: (
-        <svg
-          className="w-8 h-8 text-[#e31e24]"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <circle cx="12" cy="12" r="6" />
-          <circle cx="12" cy="12" r="2" />
-        </svg>
-      ),
-    },
-  ]
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
+
+  // Handle escape key and body scroll lock for video popup
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsVideoModalOpen(false)
+      }
+    }
+
+    if (isVideoModalOpen) {
+      document.body.style.overflow = 'hidden'
+      window.addEventListener('keydown', handleKeyDown)
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isVideoModalOpen])
 
   return (
-    <section id="our-story" className="py-16 sm:py-20 bg-white overflow-hidden">
+    <section id="our-story" className="py-[50px] bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Stylized Image Frame with Origami Fold & Red Accents */}
-          <div className="lg:col-span-6 relative flex items-center justify-center">
-            {/* SVG Filter / Clip Definitions */}
-            <svg width="0" height="0" className="absolute">
-              <defs>
-                <clipPath id="aboutStoryClip" clipPathUnits="objectBoundingBox">
-                  <path d="M 0 0 
-                           L 0.86 0 
-                           C 0.91 0, 0.94 0.05, 0.94 0.14 
-                           L 0.94 0.52 
-                           C 0.94 0.60, 0.91 0.68, 0.86 0.76 
-                           L 0.74 1 
-                           L 0 1 
-                           Z" />
-                </clipPath>
-              </defs>
-            </svg>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-            {/* Container for photo + red vector accents */}
-            <div className="relative w-full max-w-[520px] aspect-[4/3] sm:aspect-[1.32/1]">
-              {/* Photo Container clipped to the contour */}
-              <div
-                className="absolute inset-0 z-0 bg-slate-100 overflow-hidden shadow-md"
-                style={{ clipPath: 'url(#aboutStoryClip)' }}
-              >
-                <SchoolImage
-                  src="/images/about-students.jpg"
-                  alt="JRS International School Students"
-                  className="w-full h-full object-cover object-top sm:object-[center_20%] hover:scale-105 transition-transform duration-500"
-                  fallbackText="/images/about-students.jpg"
-                  fallbackBg="from-red-50 via-slate-100 to-blue-50"
-                />
+          {/* Left Column: Reference composition (Left tall photo, Right photo, Video card below right photo) */}
+          <div className="lg:col-span-6 relative pb-6 sm:pb-8" data-aos="fade-right">
+            <div className="relative grid grid-cols-12 gap-3 sm:gap-4 items-start">
+
+              {/* Image 1 (Left - Portrait photo) */}
+              <div className="col-span-6">
+                <div className="relative aspect-[3/4.4] w-full overflow-hidden bg-slate-100 shadow-md rounded-2xl">
+                  <SchoolImage
+                    src="/images/about-students.jpg"
+                    alt="JRS International School Students"
+                    className="w-full h-full object-cover object-center"
+                    fallbackText="JRS Students"
+                    fallbackBg="from-slate-100 via-blue-50 to-slate-200"
+                  />
+                </div>
               </div>
 
-              {/* Exact Red Vector Accents Layered Over/Beside the Photo */}
-              <svg
-                viewBox="0 0 520 380"
-                className="absolute inset-0 w-full h-full pointer-events-none z-10 overflow-visible"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              {/* Right Side: Image 2 (Campus Building) + Video card below it */}
+              <div className="col-span-6">
+                <div className="relative aspect-[3/4.4] w-full overflow-hidden bg-slate-100 shadow-md rounded-2xl">
+                  <SchoolImage
+                    src="/images/campus-building.jpg"
+                    alt="JRS International School Campus Building"
+                    className="w-full h-full object-cover object-center"
+                    fallbackText="JRS Campus"
+                    fallbackBg="from-slate-100 via-amber-50 to-slate-200"
+                  />
+                </div>
+              </div>
+
+              {/* Floating Glassmorphism Video Card */}
+              <div
+                className="col-span-12 sm:col-span-auto sm:absolute sm:bottom-0 sm:right-0 sm:left-[28%] z-20 p-4 sm:p-5 mt-3 sm:mt-0 transition-all duration-300 hover:-translate-y-1 rounded-2xl"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.42)',
+                  backdropFilter: 'blur(16px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(16px) saturate(180%)',
+                  border: '1px solid rgba(255, 255, 255, 0.22)',
+                  boxShadow: '0 16px 36px 0 rgba(0, 0, 0, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2)',
+                }}
               >
-                <defs>
-                  {/* Bottom-right rich red gradient */}
-                  <linearGradient id="storyRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#eb262d" />
-                    <stop offset="100%" stopColor="#c71017" />
-                  </linearGradient>
+                <p className="text-[13px] sm:text-sm font-bold text-white drop-shadow-sm leading-snug mb-3">
+                  Watch a video about how we work and try for our students
+                </p>
 
-                  {/* Top-left outer darker facet */}
-                  <linearGradient id="storyTopDarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#b91c1c" />
-                    <stop offset="100%" stopColor="#991b1b" />
-                  </linearGradient>
+                <div className="flex items-center justify-between gap-3 pt-1">
+                  <button
+                    type="button"
+                    onClick={() => setIsVideoModalOpen(true)}
+                    className="text-xs sm:text-[13px] font-semibold text-white/90 hover:text-[#e31e24] transition-colors cursor-pointer shrink-0"
+                  >
+                    Play video
+                  </button>
 
-                  {/* Top-left inner bright red sweep */}
-                  <linearGradient id="storyTopBrightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#ef343a" />
-                    <stop offset="100%" stopColor="#dc2626" />
-                  </linearGradient>
-                </defs>
+                  {/* Horizontal line */}
+                  <div className="flex-1 h-[1px] bg-white/20 mx-2" />
 
-                {/* 1. Top-Left Red Origami Fold Accent */}
-                <g>
-                  {/* Darker base wedge */}
-                  <path d="M 0 0 L 115 0 L 0 165 Z" fill="url(#storyTopDarkGrad)" />
-                  {/* Brighter foreground fold */}
-                  <path d="M 0 0 L 85 0 C 62 40, 26 84, 0 140 Z" fill="url(#storyTopBrightGrad)" />
-                </g>
+                  {/* Circular Play Button */}
+                  <button
+                    type="button"
+                    onClick={() => setIsVideoModalOpen(true)}
+                    aria-label="Play campus tour video"
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#e31e24] hover:bg-white hover:text-[#e31e24] text-white flex items-center justify-center transition-all duration-200 shadow-md hover:scale-105 cursor-pointer shrink-0"
+                  >
+                    <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current ml-0.5" />
+                  </button>
+                </div>
+              </div>
 
-                {/* 2. Bottom-Right Organic Red Swoop with Protruding Lobe */}
-                <path
-                  d="M 481 198 
-                     C 492 205, 502 218, 502 234 
-                     C 502 250, 488 273, 468 304 
-                     L 426 380 
-                     L 395 380 
-                     L 450 281 
-                     C 468 248, 481 220, 481 198 
-                     Z"
-                  fill="url(#storyRedGrad)"
-                />
-              </svg>
             </div>
           </div>
 
-          {/* Right Column: Story Text Content */}
-          <div className="lg:col-span-6 space-y-6 relative">
-            {/* Subtle Bullseye Watermark in Top Right */}
-            <div className="absolute top-0 right-0 pointer-events-none opacity-40">
-              <svg width="70" height="70" viewBox="0 0 100 100" fill="none">
-                <circle cx="50" cy="50" r="45" stroke="#e2e8f0" strokeWidth="2" strokeDasharray="3 3" />
-                <circle cx="50" cy="50" r="30" stroke="#e2e8f0" strokeWidth="2" />
-                <circle cx="50" cy="50" r="15" stroke="#cbd5e1" strokeWidth="2" />
-              </svg>
-            </div>
-
-            {/* Eyebrow & Title */}
+          {/* Right Column: Standardized typography & theme styling */}
+          <div className="lg:col-span-6 space-y-5 lg:pl-4" data-aos="fade-left">
             <div>
-              <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24]">
-                OUR STORY
-              </span>
+              {/* Eyebrow: — ABOUT JRS — */}
+              <div className="flex items-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+                  ABOUT JRS
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+
+              {/* Main Heading */}
               <h2
                 style={{ lineHeight: '50px' }}
-                className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight leading-[50px] sm:leading-[50px]"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
               >
-                A Journey of Learning <br className="hidden sm:inline" />
-                and <span className="text-[#e31e24]">Human Values</span>
+                A Legacy of Excellence <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>in Education</span>
               </h2>
             </div>
 
-            {/* Description Paragraph */}
-            <p className="text-slate-700 text-[14px] leading-[25px]">
-              JRS International School, Narapally, Near Uppal Depot, Hyderabad has been committed to the field of education and human values since 2021. We follow the CBSE/NCERT curriculum and strive to provide a perfect blend of academics, values and co-curricular activities. Our aim is to nurture confident, responsible and compassionate individuals who are prepared for a global future.
+            {/* Paragraph 1 */}
+            <p className="text-slate-600 text-[15px] sm:text-[16px] sm:leading-[26px] lg:text-[16px] lg:leading-[26px]">
+              JRS International School, Uppal, Hyderabad is committed to providing quality education with a perfect blend of academics, values and co-curricular activities. We focus on developing confident, responsible and compassionate individuals who are prepared for a constantly evolving world.
             </p>
 
-            {/* 4 Pillars Horizontal Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 pt-3">
-              {pillars.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center sm:items-start text-center sm:text-left group cursor-default"
-                >
-                  <div className="w-10 h-10 flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform duration-200">
-                    {item.icon}
-                  </div>
-                  <h4 className="text-xs sm:text-[13px] font-medium text-slate-800 leading-tight">
-                    {item.title}
-                  </h4>
-                  <p className="text-[14px] text-slate-700 leading-snug mt-1">
-                    {item.subtitle}
-                  </p>
-                </div>
-              ))}
+            {/* Paragraph 2 */}
+            <p className="text-slate-600 text-[15px] sm:text-[16px] sm:leading-[26px] lg:text-[16px] lg:leading-[26px]">
+              Rooted in rich Indian ethos and empowered by global pedagogical standards, our campus provides modern smart classrooms, advanced robotics and science laboratories, sports coaching, and a holistic environment where every student thrives.
+            </p>
+
+            {/* Read more Link linking to Vision & Mission directly below */}
+            <div className="pt-2">
+              <a
+                href="#vision-mission"
+                className="inline-flex items-center gap-2.5 text-sm sm:text-base font-semibold text-[#031c3f] hover:text-[#e31e24] group transition-colors cursor-pointer"
+              >
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                <span className="underline underline-offset-4 decoration-1 decoration-[#e31e24]">Read more</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Video Modal Popup */}
+      {isVideoModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/85 backdrop-blur-md animate-fade-in"
+          onClick={() => setIsVideoModalOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Campus Virtual Tour Video"
+        >
+          <div
+            className="relative w-full max-w-5xl bg-[#031c3f] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/20 animate-scale-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 bg-gradient-to-r from-[#031c3f] to-[#0a2f64] border-b border-white/10 text-white">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#e31e24] animate-pulse" />
+                <h3 className="text-sm sm:text-base font-bold tracking-tight">
+                  JRS International School — Campus Virtual Tour
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsVideoModalOpen(false)}
+                aria-label="Close virtual tour video"
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Video Container */}
+            <div className="relative w-full aspect-video bg-black">
+              <iframe
+                src="https://www.youtube.com/embed/LBvByB-S0O4?autoplay=1&rel=0&modestbranding=1"
+                title="JRS International School Virtual Tour"
+                className="absolute inset-0 w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   )
 }

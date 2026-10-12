@@ -82,7 +82,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] min-h-[540px] sm:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100dvh-5rem)] h-auto sm:h-[calc(100dvh-5rem)]"
+      className="relative w-full overflow-hidden flex flex-col justify-center bg-[#031c3f] min-h-[100vh] min-h-[100dvh] h-[100vh] h-[100dvh]"
     >
       {/* Background Hero Slider Images (full section width & height) */}
       <div className="absolute inset-0 z-0 overflow-hidden">

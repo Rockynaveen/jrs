@@ -45,6 +45,7 @@ export default function EventsSection() {
                 <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
                   LATEST EVENTS
                 </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
               </div>
               <h2
                 style={{ lineHeight: '50px' }}

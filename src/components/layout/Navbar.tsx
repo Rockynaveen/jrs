@@ -125,26 +125,32 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
             <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-slate-700 font-medium font-['Inter',sans-serif] min-w-0 shrink">
               <a
                 href="tel:+9191574043210"
-                className="inline-flex items-center gap-1.5 text-slate-700 hover:text-[#e31e24] transition-colors font-medium shrink-0 font-['Inter',sans-serif]"
+                className="inline-flex items-center gap-2 text-slate-700 hover:text-[#e31e24] transition-colors font-medium shrink-0 font-['Inter',sans-serif] group"
               >
-                <Phone className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-slate-700 font-['Inter',sans-serif] font-medium whitespace-nowrap">+91 915740 43210</span>
+                <span className="w-5 h-5 rounded-full bg-[#013aa3] text-white flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#012f86] transition-colors">
+                  <Phone className="w-2.5 h-2.5 text-white stroke-[2.5]" />
+                </span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium whitespace-nowrap group-hover:text-[#e31e24] transition-colors">+91 915740 43210</span>
               </a>
 
               <span className="text-slate-400 hidden md:inline shrink-0">•</span>
 
               <a
                 href="mailto:info@jrsinternationalschool.com"
-                className="hidden md:inline-flex items-center gap-1.5 text-slate-700 hover:text-[#e31e24] transition-colors font-medium shrink truncate max-w-[200px] lg:max-w-none font-['Inter',sans-serif]"
+                className="hidden md:inline-flex items-center gap-2 text-slate-700 hover:text-[#e31e24] transition-colors font-medium shrink truncate max-w-[200px] lg:max-w-none font-['Inter',sans-serif] group"
               >
-                <Mail className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-slate-700 font-['Inter',sans-serif] font-medium truncate">info@jrsinternationalschool.com</span>
+                <span className="w-5 h-5 rounded-full bg-[#013aa3] text-white flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#012f86] transition-colors">
+                  <Mail className="w-2.5 h-2.5 text-white stroke-[2.5]" />
+                </span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium truncate group-hover:text-[#e31e24] transition-colors">info@jrsinternationalschool.com</span>
               </a>
 
               <span className="text-slate-400 hidden xl:inline shrink-0">•</span>
 
-              <span className="hidden xl:inline-flex items-center gap-1.5 text-slate-700 font-medium shrink-0 font-['Inter',sans-serif] whitespace-nowrap">
-                <Award className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
+              <span className="hidden xl:inline-flex items-center gap-2 text-slate-700 font-medium shrink-0 font-['Inter',sans-serif] whitespace-nowrap">
+                <span className="w-5 h-5 rounded-full bg-[#013aa3] text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Award className="w-2.5 h-2.5 text-white stroke-[2.5]" />
+                </span>
                 <span className="text-slate-700 font-['Inter',sans-serif] font-medium">CBSE Affiliated School</span>
               </span>
             </div>
@@ -153,10 +159,12 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
             <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-slate-700 font-medium shrink-0 font-['Inter',sans-serif]">
               <Link
                 href="/mandatory-disclosure"
-                className="inline-flex items-center gap-1.5 font-medium text-slate-700 hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap"
+                className="inline-flex items-center gap-2 font-medium text-slate-700 hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap group"
               >
-                <FileText className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-slate-700 font-['Inter',sans-serif] font-medium">Mandatory Disclosure</span>
+                <span className="w-5 h-5 rounded-full bg-[#013aa3] text-white flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#012f86] transition-colors">
+                  <FileText className="w-2.5 h-2.5 text-white stroke-[2.5]" />
+                </span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium group-hover:text-[#e31e24] transition-colors">Mandatory Disclosure</span>
               </Link>
 
               <span className="text-slate-400 hidden sm:inline shrink-0">•</span>
@@ -165,10 +173,12 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 href="https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 font-medium text-slate-700 hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap"
+                className="hidden sm:inline-flex items-center gap-2 font-medium text-slate-700 hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap group"
               >
-                <Download className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-slate-700 font-['Inter',sans-serif] font-medium">School Prospectus</span>
+                <span className="w-5 h-5 rounded-full bg-[#013aa3] text-white flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#012f86] transition-colors animate-top-to-down">
+                  <Download className="w-2.5 h-2.5 text-white stroke-[2.5]" />
+                </span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium group-hover:text-[#e31e24] transition-colors">School Prospectus</span>
               </a>
             </div>
           </div>
