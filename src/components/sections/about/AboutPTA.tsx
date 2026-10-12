@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Users, Phone, MapPin, User, Shield } from 'lucide-react'
+import { Users, Phone, MapPin, Crown, ArrowRight } from 'lucide-react'
 
 interface PTAMember {
   sn: number
@@ -16,14 +16,14 @@ const ptaMembers: PTAMember[] = [
     sn: 1,
     name: 'Mrs. Jagadishwari Nataraj',
     designation: 'Chairman',
-    address: 'Divya Enclave Vijaypuri Tarnaka',
+    address: 'Divya Enclave Vijaypuri Tarnaka, Hyderabad',
     contact: '9160300046',
   },
   {
     sn: 2,
     name: 'Mrs Amaravathi',
     designation: 'Member',
-    address: 'Karthikeya Nagar Nacharam Hyderabad',
+    address: 'Karthikeya Nagar Nacharam, Hyderabad',
     contact: '9346065525',
   },
   {
@@ -44,7 +44,7 @@ const ptaMembers: PTAMember[] = [
     sn: 5,
     name: 'Mrs B Sheetal',
     designation: 'Member',
-    address: 'Venkatadri Township Chowdarguda',
+    address: 'Venkatadri Township Chowdariguda',
     contact: '8309981778',
   },
   {
@@ -86,7 +86,7 @@ const ptaMembers: PTAMember[] = [
     sn: 11,
     name: 'Mrs Harika',
     designation: 'Member',
-    address: 'Plot No.42, Sai Sri Enclave Near Venkatadri Township Narapally',
+    address: 'Plot No.42, Sai Sri Enclave Narapally',
     contact: '7674995822',
   },
 ]
@@ -94,7 +94,7 @@ const ptaMembers: PTAMember[] = [
 export default function AboutPTA() {
   return (
     <section id="pta" className="py-[50px] bg-white scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl xl:max-w-[1380px] 2xl:max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           {/* Eyebrow: — COMMUNITY & COLLABORATION — */}
@@ -118,64 +118,84 @@ export default function AboutPTA() {
         </div>
 
         {/* Member Cards Grid - 5 Cards per Row on Large Screens */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 xl:gap-4 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-4.5 xl:gap-5 items-stretch">
           {ptaMembers.map((member) => {
             const isChairman = member.designation.toLowerCase() === 'chairman'
 
             return (
               <div
                 key={member.sn}
-                className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
+                className="relative bg-white rounded-[22px] border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
               >
-                {/* Image Area with Placeholder Headshot & Bottom Designation Badge */}
-                <div className="relative w-full aspect-[16/12] bg-slate-100 overflow-hidden flex-shrink-0">
+                {/* Image Area with Placeholder Headshot & Bottom-Right Frosted Designation Badge */}
+                <div className="relative w-full aspect-[4/3.3] bg-slate-100 overflow-hidden flex-shrink-0">
                   <img
                     src="/images/avatar-placeholder.jpg"
                     alt={member.name}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
 
-                  {/* Floating Glassmorphism Designation Card matching About JRS Section */}
-                  <div className="absolute bottom-2.5 right-2.5 z-10">
+                  {/* Floating Glassmorphism Designation Pill Badge in Logo Blue with Less Opacity */}
+                  <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 z-10">
                     <div
-                      className="glass-badge px-3 py-1 rounded-xl transition-all duration-300 flex items-center gap-1.5"
                       style={{
-                        backgroundColor: 'rgba(0, 0, 0, 0.22)',
-                        backdropFilter: 'blur(16px) saturate(180%)',
-                        WebkitBackdropFilter: 'blur(16px) saturate(180%)',
-                        border: '1px solid rgba(255, 255, 255, 0.22)',
-                        boxShadow: '0 8px 24px 0 rgba(0, 0, 0, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2)',
+                        backgroundColor: 'rgba(1, 58, 163, 0.45)',
+                        backdropFilter: 'blur(12px)',
+                        WebkitBackdropFilter: 'blur(12px)',
+                        border: isChairman ? '1px solid rgba(251, 191, 36, 0.55)' : '1px solid rgba(255, 255, 255, 0.28)',
+                        boxShadow: '0 4px 14px rgba(1, 58, 163, 0.25)',
                       }}
+                      className="px-3 py-1 rounded-full flex items-center gap-1.5 text-white"
                     >
-                      {isChairman && <Shield className="w-3 h-3 text-amber-400 shrink-0" />}
-                      <span className="text-[11px] font-bold text-white tracking-wide uppercase drop-shadow-sm">
+                      {isChairman ? (
+                        <Crown className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+                      ) : (
+                        <Users className="w-3.5 h-3.5 text-white/90 shrink-0" />
+                      )}
+                      <span className={`text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider ${isChairman ? 'text-amber-200' : 'text-white'}`}>
                         {member.designation}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Card Content Area: Name, Address, Contact in line with minimal spacing */}
-                <div className="p-3.5 pt-2.5 pb-3.5 flex flex-col items-center text-center w-full space-y-1.5">
-                  {/* Member Name */}
-                  <h3 className="text-[15px] xl:text-[16px] font-bold text-[#031c3f] group-hover:text-[#e31e24] transition-colors leading-tight line-clamp-1 w-full">
-                    {member.name}
-                  </h3>
+                {/* Card Content Area: Left Aligned with Red Map Pin & Bottom Action Pill Row */}
+                <div className="p-4 sm:p-4.5 flex flex-col flex-1 justify-between bg-white text-left">
+                  <div>
+                    {/* Member Name */}
+                    <h3 className="text-[15px] sm:text-[15.5px] font-bold text-[#031c3f] group-hover:text-[#013aa3] transition-colors leading-snug line-clamp-1">
+                      {member.name}
+                    </h3>
 
-                  {/* Address */}
-                  <div className="flex items-center justify-center gap-1.5 text-[12.5px] xl:text-[13px] text-slate-600 leading-tight w-full">
-                    <MapPin className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                    <span className="truncate">{member.address}</span>
+                    {/* Address with Red Location Pin */}
+                    <div className="flex items-start gap-1.5 mt-2 text-slate-500">
+                      <MapPin className="w-3.5 h-3.5 text-[#ef4444] shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-[12.5px] leading-snug line-clamp-2">
+                        {member.address}
+                      </span>
+                    </div>
                   </div>
 
-                  {/* Contact Number */}
-                  <div className="w-full flex justify-center pt-0.5">
+                  {/* Phone & Arrow Action Row (Logo Blue Tint) */}
+                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
                     <a
                       href={`tel:${member.contact}`}
-                      className="inline-flex items-center gap-1.5 text-[12.5px] xl:text-[13px] font-semibold text-slate-700 hover:text-[#e31e24] transition-colors leading-tight"
+                      className="flex items-center gap-2 group/phone"
                     >
-                      <Phone className="w-3 h-3 text-[#e31e24] shrink-0" />
-                      <span className="font-mono">{member.contact}</span>
+                      <div className="w-7.5 h-7.5 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform group-hover/phone:scale-110 bg-[#013aa3]/10 text-[#013aa3]">
+                        <Phone className="w-3.5 h-3.5" />
+                      </div>
+                      <span className="font-bold text-[12.5px] sm:text-[13px] text-slate-800 group-hover/phone:text-[#013aa3] transition-colors font-mono tracking-tight">
+                        {member.contact}
+                      </span>
+                    </a>
+
+                    <a
+                      href={`tel:${member.contact}`}
+                      aria-label={`Call ${member.name}`}
+                      className="w-7.5 h-7.5 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-all hover:scale-110 bg-[#013aa3]/10 hover:bg-[#013aa3]/20 text-[#013aa3]"
+                    >
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </div>

@@ -20,7 +20,8 @@ export interface PageHeroProps {
   imageSrc?: string
   imageAlt?: string
   imagePosition?: string
-  overlayType?: 'default' | 'logo-blue'
+  overlayType?: 'default' | 'logo-blue' | 'cinematic'
+  showDecorativeSwoosh?: boolean
   primaryButton?: PageHeroButton
   secondaryButton?: PageHeroButton
   rightElement?: React.ReactNode
@@ -42,6 +43,7 @@ export default function PageHero({
   imageAlt = 'JRS International School Campus',
   imagePosition,
   overlayType = 'default',
+  showDecorativeSwoosh = true,
   primaryButton,
   secondaryButton,
   rightElement,
@@ -68,7 +70,14 @@ export default function PageHero({
           }}
         />
 
-        {overlayType === 'logo-blue' ? (
+        {overlayType === 'cinematic' ? (
+          <>
+            {/* Cinematic dark grading matching reference: uniform atmospheric dark tint across full photo */}
+            <div className="absolute inset-0 bg-[#031c3f]/50 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/95 via-[#031c3f]/40 to-[#031c3f]/75 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#031c3f]/90 via-[#031c3f]/55 via-50% to-transparent pointer-events-none" />
+          </>
+        ) : overlayType === 'logo-blue' ? (
           <>
             {/* Logo Blue Overlay: Full mobile protection + desktop horizontal fade */}
             <div className="absolute inset-0 bg-[#013aa3]/50 md:bg-[#013aa3]/40 pointer-events-none" />
@@ -86,29 +95,31 @@ export default function PageHero({
         )}
       </div>
 
-      {/* Decorative Red Curved Swoosh in Bottom-Right Corner (subtle on mobile) */}
-      <div className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 w-36 sm:w-56 md:w-80 h-36 sm:h-56 md:h-80 pointer-events-none z-10 overflow-hidden opacity-40 sm:opacity-90">
-        <svg
-          viewBox="0 0 300 300"
-          className="w-full h-full"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M 120 300 C 180 260, 260 210, 300 120 L 300 300 Z"
-            fill="#e31e24"
-            opacity="0.95"
-          />
-          <path
-            d="M 170 300 C 210 270, 270 230, 300 170 L 300 300 Z"
-            fill="#ff3b44"
-            opacity="0.85"
-          />
-        </svg>
-      </div>
+      {/* Decorative Red Curved Swoosh in Bottom-Right Corner (optional) */}
+      {showDecorativeSwoosh && (
+        <div className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 w-36 sm:w-56 md:w-80 h-36 sm:h-56 md:h-80 pointer-events-none z-10 overflow-hidden opacity-40 sm:opacity-90">
+          <svg
+            viewBox="0 0 300 300"
+            className="w-full h-full"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M 120 300 C 180 260, 260 210, 300 120 L 300 300 Z"
+              fill="#e31e24"
+              opacity="0.95"
+            />
+            <path
+              d="M 170 300 C 210 270, 270 230, 300 170 L 300 300 Z"
+              fill="#ff3b44"
+              opacity="0.85"
+            />
+          </svg>
+        </div>
+      )}
 
-      {/* Hero Content Container: Spans vertical height with main content in upper/middle and stats bar at bottom */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-8 lg:pb-9">
+      {/* Hero Content Container: Centers content comfortably above the bottom statistics bar */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center pt-2 sm:pt-4 md:pt-6 pb-28 sm:pb-32 md:pb-[130px]">
         {/* Upper/Middle Content Area */}
         <div className="my-auto pt-2 sm:pt-4">
           <div className={rightElement ? "grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center" : ""}>
@@ -253,14 +264,10 @@ export default function PageHero({
             )}
           </div>
         </div>
-
-        {/* Bottom Floating Stats Bar Slot: Pushed below with mt-auto */}
-        {children && (
-          <div className="w-full mt-auto pt-4 sm:pt-6">
-            {children}
-          </div>
-        )}
       </div>
+
+      {/* Hero Statistics Bar Slot: Layered inside relative hero section */}
+      {children}
     </section>
   )
 }
