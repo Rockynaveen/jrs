@@ -117,8 +117,8 @@ export default function AboutPTA() {
           </p>
         </div>
 
-        {/* Member Cards Grid - 5 Cards per Row on Large Screens */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-4.5 xl:gap-5 items-stretch">
+        {/* Member Cards Grid - 4 Cards per Row on Large Screens matching site alignment */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 xl:gap-6 items-stretch">
           {ptaMembers.map((member) => {
             const isChairman = member.designation.toLowerCase() === 'chairman'
 
@@ -177,21 +177,27 @@ export default function AboutPTA() {
                 <div className="p-4 sm:p-4.5 flex flex-col flex-1 justify-between bg-white text-left">
                   <div>
                     {/* Member Name */}
-                    <h3 className="text-[15.5px] sm:text-[16px] font-bold text-[#031c3f] group-hover:text-[#013aa3] transition-colors leading-snug line-clamp-1">
+                    <h3
+                      style={{ lineHeight: '26px' }}
+                      className="text-[15.5px] sm:text-[16px] font-bold text-[#031c3f] group-hover:text-[#013aa3] transition-colors leading-[26px] line-clamp-1"
+                    >
                       {member.name}
                     </h3>
 
                     {/* Address with Red Location Pin - High Contrast & Visible */}
                     <div className="flex items-start gap-1.5 mt-2">
                       <MapPin className="w-3.5 h-3.5 text-[#e31e24] shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-[12.5px] font-medium text-slate-700 leading-snug line-clamp-2">
+                      <span
+                        style={{ lineHeight: '23px', fontWeight: 400 }}
+                        className="text-xs sm:text-[12.5px] font-normal text-slate-700 leading-[23px] line-clamp-2"
+                      >
                         {member.address}
                       </span>
                     </div>
                   </div>
 
                   {/* Phone & Arrow Action Row (High Contrast & Clear) */}
-                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
                     <a
                       href={`tel:${member.contact}`}
                       className="flex items-center gap-2 group/phone"

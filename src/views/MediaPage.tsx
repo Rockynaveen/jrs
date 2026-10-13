@@ -174,26 +174,28 @@ export default function MediaPage() {
         {/* 3. Section 1: Our Achievements in the News (Featured Section) */}
         <section
           id="achievements"
-          className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-[#f8fafc] via-white to-[#f8fafc] overflow-hidden"
+          className="relative py-[50px] bg-white overflow-hidden"
         >
-          {/* Subtle Newspaper Watermark Background Texture */}
-          <div
-            aria-hidden="true"
-            className="absolute -top-10 -right-10 select-none pointer-events-none opacity-[0.04] text-[180px] sm:text-[240px] md:text-[320px] font-black tracking-widest text-slate-900 leading-none font-serif z-0"
-          >
-            NEWS
-          </div>
-
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Section Header */}
-            <div className="mb-10 sm:mb-14" data-aos="fade-up">
-              <span className="inline-block text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#d97706] mb-2">
-                LATEST UPDATES
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#031c3f] tracking-tight">
-                Our Achievements <span className="text-[#013aa3]">in the News</span>
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span
+                  style={{ fontSize: '13px', lineHeight: '23px' }}
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                >
+                  LATEST UPDATES
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+              <h2
+                style={{ fontSize: '40px', lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Our Achievements <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>in the News</span>
               </h2>
-              <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl leading-relaxed">
+              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                 Explore the latest news, achievements, events and special moments from JRS International School.
               </p>
             </div>
@@ -203,7 +205,7 @@ export default function MediaPage() {
               {FEATURED_ARTICLES.map((article, index) => (
                 <div
                   key={article.id}
-                  className="bg-white rounded-3xl border-2 border-[#013aa3]/25 hover:border-[#013aa3] shadow-lg hover:shadow-2xl shadow-[#013aa3]/10 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 flex flex-col group cursor-pointer"
+                  className="bg-white rounded-3xl border-2 border-[#013aa3]/25 hover:border-[#013aa3] overflow-hidden transition-all duration-300 hover:-translate-y-1.5 flex flex-col group cursor-pointer"
                   data-aos="fade-up"
                   data-aos-delay={(index + 1) * 100}
                   onClick={() => setSelectedArticle(article)}
@@ -260,32 +262,29 @@ export default function MediaPage() {
         </section>
 
         {/* 4. Section 2: Latest News Grid (Image Format Designed with "View" CTA) */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white relative">
+        <section className="py-[50px] bg-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header Row */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
-              <div data-aos="fade-right">
-                <span className="inline-block text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#d97706] mb-2">
+            {/* Centered Section Header */}
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span
+                  style={{ fontSize: '13px', lineHeight: '23px' }}
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                >
                   FROM OUR CAMPUS
                 </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#031c3f] tracking-tight">
-                  Latest <span className="text-[#013aa3]">News</span>
-                </h2>
-                <p className="mt-2 text-sm text-slate-600">
-                  Catch up on the latest campus stories, events, achievements and press coverage.
-                </p>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
               </div>
-
-              {/* View All Button */}
-              <div data-aos="fade-left">
-                <Link
-                  href="/gallery"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold text-[#013aa3] border border-[#013aa3]/30 hover:bg-[#013aa3] hover:text-white transition-all duration-200"
-                >
-                  <span>View All Media</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
+              <h2
+                style={{ fontSize: '40px', lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Latest <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>News</span>
+              </h2>
+              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                Catch up on the latest campus stories, events, achievements and press coverage.
+              </p>
             </div>
 
             {/* 4 Cards Grid (4 Columns on xl, 2 on md/lg, 1 on Mobile) */}
@@ -295,7 +294,7 @@ export default function MediaPage() {
                   key={article.id}
                   data-aos="fade-up"
                   data-aos-delay={(index % 4) * 100}
-                  className="bg-white rounded-2xl border-2 border-[#013aa3]/35 hover:border-[#013aa3] shadow-md hover:shadow-2xl hover:shadow-[#013aa3]/20 hover:-translate-y-1.5 transition-all duration-300 flex flex-col overflow-hidden group cursor-pointer"
+                  className="bg-white rounded-2xl border-2 border-[#013aa3]/35 hover:border-[#013aa3] hover:-translate-y-1.5 transition-all duration-300 flex flex-col overflow-hidden group cursor-pointer"
                   onClick={() => setSelectedArticle(article)}
                 >
                   {/* Card Image Container (Aspect Ratio & Clean Full Image View) */}
@@ -369,11 +368,22 @@ export default function MediaPage() {
                 </article>
               ))}
             </div>
+
+            {/* Centered View All Media Button */}
+            <div className="text-center mt-8 sm:mt-10" data-aos="fade-up">
+              <Link
+                href="/gallery"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold text-[#013aa3] border border-[#013aa3]/30 hover:bg-[#013aa3] hover:text-white transition-all duration-200"
+              >
+                <span>View All Media</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* 5. Section 3: Bottom Banner (Stay Connected With JRS News & Updates) */}
-        <section className="py-12 sm:py-16 bg-white">
+        <section className="py-[50px] bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div
               className="relative overflow-hidden bg-gradient-to-r from-[#011a42] via-[#022868] to-[#011a42] rounded-3xl p-8 sm:p-10 lg:p-12 text-white shadow-xl shadow-blue-950/20"

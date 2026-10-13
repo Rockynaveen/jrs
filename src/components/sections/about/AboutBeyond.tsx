@@ -90,7 +90,7 @@ export default function AboutBeyond() {
   ]
 
   return (
-    <section id="beyond-classroom" className="py-16 sm:py-20 bg-slate-50/70 overflow-hidden">
+    <section id="beyond-classroom" className="py-16 sm:py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Title and Description */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">

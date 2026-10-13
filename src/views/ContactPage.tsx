@@ -51,7 +51,7 @@ export default function ContactPage() {
 
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-700 antialiased selection:bg-red-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-slate-700 antialiased selection:bg-red-500 selection:text-white">
       {/* 1. Header Navigation */}
       <Navbar activePage="contact" />
 
@@ -78,7 +78,7 @@ export default function ContactPage() {
 
 
         {/* 4. Form & Map Section */}
-        <section id="contact-form" className="py-10 sm:py-16 bg-[#f8fafc]">
+        <section id="contact-form" className="py-10 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
               
@@ -86,19 +86,23 @@ export default function ContactPage() {
               <div className="lg:col-span-5" data-aos="fade-right">
                 <div className="space-y-4">
                   <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge
-                        variant="secondary"
-                        className="bg-red-50 text-red-600 border border-red-100 font-bold uppercase tracking-wider text-xs px-2.5 py-1"
+                    <div className="flex items-center gap-2.5 mb-2.5">
+                      <span className="w-8 h-[2px] bg-[#e31e24]" />
+                      <span
+                        style={{ fontSize: '13px', lineHeight: '23px' }}
+                        className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
                       >
-                        <MessageSquare className="w-3.5 h-3.5 mr-1" />
-                        Online Inquiry
-                      </Badge>
+                        ONLINE INQUIRY
+                      </span>
+                      <span className="w-8 h-[2px] bg-[#e31e24]" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-extrabold text-[#031c3f] tracking-tight">
-                      Send Us a Message
+                    <h2
+                      style={{ lineHeight: '42px' }}
+                      className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#031c3f] tracking-tight leading-[42px]"
+                    >
+                      Send Us a <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Message</span>
                     </h2>
-                    <p className="text-slate-600 text-sm sm:text-[15px] mt-1 leading-relaxed">
+                    <p className="text-slate-600 text-sm sm:text-[15px] mt-2 leading-relaxed">
                       Fill in your details and our admissions counselor will get back to you within 24 hours.
                     </p>
                   </div>
@@ -146,7 +150,7 @@ export default function ContactPage() {
                             onChange={(e) =>
                               setFormData({ ...formData, parentName: e.target.value })
                             }
-                            className="rounded-xl border-slate-200 focus-visible:ring-red-400 focus-visible:border-red-400"
+                            className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
                           />
                         </div>
 
@@ -167,7 +171,7 @@ export default function ContactPage() {
                               onChange={(e) =>
                                 setFormData({ ...formData, phone: e.target.value })
                               }
-                              className="rounded-xl border-slate-200 focus-visible:ring-red-400 focus-visible:border-red-400"
+                              className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
                             />
                           </div>
 
@@ -184,7 +188,7 @@ export default function ContactPage() {
                               onChange={(e) =>
                                 setFormData({ ...formData, grade: e.target.value })
                               }
-                              className="rounded-xl border-slate-200 focus-visible:ring-red-400 focus-visible:border-red-400"
+                              className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
                             >
                               <option value="">Select Grade</option>
                               <option value="Nursery / Pre-KG">Nursery / Pre-KG</option>
@@ -213,7 +217,7 @@ export default function ContactPage() {
                             onChange={(e) =>
                               setFormData({ ...formData, email: e.target.value })
                             }
-                            className="rounded-xl border-slate-200 focus-visible:ring-red-400 focus-visible:border-red-400"
+                            className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
                           />
                         </div>
 
@@ -227,13 +231,13 @@ export default function ContactPage() {
                           <Textarea
                             id="message"
                             required
-                            rows={3}
+                            rows={4}
                             placeholder="Tell us what you'd like to know about JRS..."
                             value={formData.message}
                             onChange={(e) =>
                               setFormData({ ...formData, message: e.target.value })
                             }
-                            className="rounded-xl border-slate-200 focus-visible:ring-red-400 focus-visible:border-red-400 min-h-[90px]"
+                            className="rounded-xl border border-slate-300 bg-white p-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500 min-h-[110px]"
                           />
                         </div>
 

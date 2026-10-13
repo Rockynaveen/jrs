@@ -60,7 +60,7 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className={`relative overflow-hidden bg-[#031c3f] text-white -mt-16 sm:-mt-20 md:-mt-[122px] pt-16 sm:pt-20 md:pt-[122px] h-[70vh] min-h-[70vh] h-[70dvh] min-h-[70dvh] flex flex-col justify-between ${className || ''}`}>
+    <section className={`relative overflow-hidden bg-[#031c3f] text-white -mt-16 sm:-mt-20 md:-mt-[122px] pt-16 sm:pt-20 md:pt-[122px] h-[70vh] min-h-[70vh] h-[70dvh] min-h-[70dvh] flex flex-col ${children ? 'justify-between' : 'justify-center'} ${className || ''}`}>
       {/* Background Campus Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -123,10 +123,16 @@ export default function PageHero({
         </div>
       )}
 
-      {/* Hero Content Container: Centers content comfortably above the bottom statistics bar when children exist, or evenly centers when no children */}
-      <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center pt-2 sm:pt-4 md:pt-6 ${children ? 'pb-28 sm:pb-32 md:pb-[130px]' : 'pb-6 sm:pb-8 md:pb-12'}`}>
+      {/* Hero Content Container: Equal top and bottom padding when no children, or tailored padding when stats bar is present */}
+      <div
+        className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center ${
+          children
+            ? 'pt-2 sm:pt-4 md:pt-6 pb-28 sm:pb-32 md:pb-[130px]'
+            : 'py-6 sm:py-8 md:py-10'
+        }`}
+      >
         {/* Upper/Middle Content Area */}
-        <div className="my-auto pt-2 sm:pt-4">
+        <div className={`my-auto ${children ? 'pt-2 sm:pt-4' : ''}`}>
           <div className={rightElement ? "grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center" : ""}>
             <div className={rightElement ? "lg:col-span-8 max-w-xl md:max-w-2xl" : "max-w-xl md:max-w-2xl"} data-aos="fade-right">
               {/* Breadcrumb Navigation */}
