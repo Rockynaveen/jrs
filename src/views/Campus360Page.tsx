@@ -237,7 +237,7 @@ export default function Campus360Page() {
       {/* 1. Header with active gallery dropdown */}
       <Navbar activePage="360-degree-campus" />
 
-      <main className="flex-1">
+      <main className="flex-1 bg-white">
         {/* 2. Hero Section */}
         <PageHero
           breadcrumb="Gallery"
@@ -269,10 +269,10 @@ export default function Campus360Page() {
                     data-aos="fade-up"
                     data-aos-delay={(index % 4) * 80}
                     onClick={() => openLightbox(index)}
-                    className="group relative rounded-2xl overflow-hidden bg-slate-900 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer border border-slate-200/80"
+                    className="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer border border-slate-200/80 flex flex-col"
                   >
                     {/* Panoramic Image Frame */}
-                    <div className="relative aspect-[16/10] sm:aspect-[2/1] w-full overflow-hidden bg-slate-800">
+                    <div className="relative aspect-[16/10] sm:aspect-[2/1] w-full overflow-hidden bg-slate-100">
                       <img
                         src={item.image}
                         alt={item.title}
@@ -283,8 +283,8 @@ export default function Campus360Page() {
                         }}
                       />
 
-                      {/* Subtle top-to-bottom dark gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                      {/* Subtle hover overlay */}
+                      <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                       {/* Zoom Hint Icon in Top Right */}
                       <div className="absolute top-3.5 right-3.5 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -292,25 +292,25 @@ export default function Campus360Page() {
                       </div>
 
                       {/* 360 Badge in Top Left */}
-                      <div className="absolute top-3.5 left-3.5 z-10 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold tracking-wider uppercase flex items-center gap-1.5">
-                        <Compass className="w-3.5 h-3.5 text-amber-400 animate-spin-slow" />
+                      <div className="absolute top-3.5 left-3.5 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-slate-800 text-[11px] font-bold tracking-wider uppercase flex items-center gap-1.5 shadow-sm">
+                        <Compass className="w-3.5 h-3.5 text-[#e31e24] animate-spin-slow" />
                         <span>360° View</span>
                       </div>
                     </div>
 
-                    {/* Bottom Floating Overlay Pill Bar */}
-                    <div className="absolute bottom-3 left-3 right-3 z-10 bg-slate-950/80 group-hover:bg-[#031c3f]/95 backdrop-blur-md rounded-xl p-3 border border-white/15 flex items-center justify-between transition-colors duration-300 shadow-lg">
+                    {/* Bottom Info Bar with White Background */}
+                    <div className="p-4 bg-white flex items-center justify-between border-t border-slate-100 transition-colors duration-300">
                       <div className="flex items-center gap-2.5 min-w-0 pr-2">
-                        <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white shrink-0">
+                        <div className="w-9 h-9 rounded-xl bg-red-50 text-[#e31e24] flex items-center justify-center shrink-0">
                           <Icon className="w-4 h-4" />
                         </div>
-                        <span className="text-sm sm:text-base font-bold text-white tracking-wide truncate">
+                        <span className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#e31e24] tracking-wide truncate transition-colors">
                           {item.title}
                         </span>
                       </div>
 
                       {/* White Circular Arrow Button */}
-                      <div className="w-8 h-8 rounded-full bg-white text-[#031c3f] group-hover:bg-[#e31e24] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-md shrink-0 group-hover:scale-110">
+                      <div className="w-8 h-8 rounded-full bg-slate-100 text-[#031c3f] group-hover:bg-[#e31e24] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 group-hover:scale-110">
                         <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                       </div>
                     </div>

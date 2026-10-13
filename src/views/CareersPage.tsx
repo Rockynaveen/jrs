@@ -119,20 +119,18 @@ export default function CareersPage() {
                 </p>
               </div>
 
-              {/* Right Column: Campus Architecture Frame */}
+              {/* Right Column: Campus Architecture Image */}
               <div className="lg:col-span-6" data-aos="fade-left">
-                <div className="relative rounded-[2.5rem] bg-[#eef5fc] p-3 sm:p-4.5 shadow-sm">
-                  <div className="relative rounded-[2rem] overflow-hidden aspect-[16/10] sm:aspect-[16/10] shadow-md bg-slate-100 group">
-                    <img
-                      src="/images/admissions-bg.jpg"
-                      alt="JRS International School Campus"
-                      className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
-                      onError={(e) => {
-                        const target = e.currentTarget
-                        target.src = '/images/campus-building.jpg'
-                      }}
-                    />
-                  </div>
+                <div className="relative rounded-3xl overflow-hidden aspect-[16/10] shadow-md bg-slate-100 group">
+                  <img
+                    src="/images/admissions-bg.jpg"
+                    alt="JRS International School Campus"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                    onError={(e) => {
+                      const target = e.currentTarget
+                      target.src = '/images/campus-building.jpg'
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -173,7 +171,8 @@ export default function CareersPage() {
                     key={index}
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
-                    className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-start gap-4 group"
+                    style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
+                    className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 hover:-translate-y-1 transition-all duration-300 flex items-start gap-4 group"
                   >
                     <div
                       style={{ backgroundColor: 'rgb(6 60 163)' }}

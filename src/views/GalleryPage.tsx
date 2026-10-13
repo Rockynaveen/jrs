@@ -369,15 +369,13 @@ export default function GalleryPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Centered Heading */}
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
-              <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              <div className="mb-2.5">
                 <span
                   style={{ fontSize: '13px', lineHeight: '23px' }}
                   className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
                 >
                   CAMPUS INFRASTRUCTURE & OPEN-AIR ARENA
                 </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
               </div>
               <h2
                 style={{ fontSize: '40px', lineHeight: '50px' }}
@@ -420,7 +418,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Section: Classroom (No Section Heading, "Classroom" directly below each image) */}
-        <section id="classroom" className="py-5 sm:py-6 bg-white border-t border-slate-200/60">
+        <section id="classroom" className="py-5 sm:py-6 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
               {CLASSROOM_IMAGES.map((item, index) => (
@@ -457,7 +455,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Section: Main Building & Entrance (Labels directly below images) */}
-        <section id="campus-entrance" className="pt-6 sm:pt-8 pb-12 sm:pb-16 bg-white border-t border-slate-200/60">
+        <section id="campus-entrance" className="pt-6 sm:pt-8 pb-12 sm:pb-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
               {CAMPUS_IMAGES.map((item, index) => (
@@ -494,7 +492,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Section 2: Feb 17 Annual Day celebrations 2023-24 */}
-        <section id="annual-day-celebrations" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
+        <section id="annual-day-celebrations" className="py-14 sm:py-18 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Centered Heading */}
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
@@ -549,7 +547,7 @@ export default function GalleryPage() {
         </section>
 
         {/* 5. Section 2: Feb 11th Annual Day Celebrations */}
-        <section id="feb-11-celebrations" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
+        <section id="feb-11-celebrations" className="py-14 sm:py-18 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Centered Heading */}
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
@@ -604,7 +602,7 @@ export default function GalleryPage() {
         </section>
 
         {/* 6. Section 3: Science Experiment & Activities… */}
-        <section id="science-activities" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
+        <section id="science-activities" className="py-14 sm:py-18 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Centered Heading */}
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
@@ -659,7 +657,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Section: Videos - Create Life Skills (Middle of the Page) */}
-        <section id="life-skills-videos" className="py-14 sm:py-18 bg-white border-y border-slate-200/60">
+        <section id="life-skills-videos" className="py-14 sm:py-18 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Centered Heading */}
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
@@ -720,7 +718,7 @@ export default function GalleryPage() {
 
 
         {/* 7. Section 4: Republic Day Celebrations */}
-        <section id="republic-day-celebrations" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
+        <section id="republic-day-celebrations" className="py-14 sm:py-18 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Centered Heading */}
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">

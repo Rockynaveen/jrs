@@ -264,27 +264,40 @@ export default function MediaPage() {
         {/* 4. Section 2: Latest News Grid (Image Format Designed with "View" CTA) */}
         <section className="py-[50px] bg-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Section Header */}
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
-              <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
-                <span
-                  style={{ fontSize: '13px', lineHeight: '23px' }}
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+            {/* Section Header with Top-Right "View All Media" Button */}
+            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
+              <div className="text-center max-w-2xl lg:max-w-3xl mx-auto px-4">
+                <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                  <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  <span
+                    style={{ fontSize: '13px', lineHeight: '23px' }}
+                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                  >
+                    FROM OUR CAMPUS
+                  </span>
+                  <span className="w-8 h-[2px] bg-[#e31e24]" />
+                </div>
+                <h2
+                  style={{ fontSize: '40px', lineHeight: '50px' }}
+                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
                 >
-                  FROM OUR CAMPUS
-                </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  Latest <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>News</span>
+                </h2>
+                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-xl mx-auto leading-relaxed">
+                  Catch up on the latest campus stories, events, achievements and press coverage.
+                </p>
               </div>
-              <h2
-                style={{ fontSize: '40px', lineHeight: '50px' }}
-                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-              >
-                Latest <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>News</span>
-              </h2>
-              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                Catch up on the latest campus stories, events, achievements and press coverage.
-              </p>
+
+              {/* View All Media Button placed at Top Right of Section */}
+              <div className="mt-4 md:mt-0 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 flex justify-center md:justify-end">
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold text-[#013aa3] border-2 border-[#013aa3]/30 hover:border-[#013aa3] hover:bg-[#013aa3] hover:text-white transition-all duration-200 shadow-sm"
+                >
+                  <span>View All Media</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
 
             {/* 4 Cards Grid (4 Columns on xl, 2 on md/lg, 1 on Mobile) */}
@@ -367,17 +380,6 @@ export default function MediaPage() {
                   </div>
                 </article>
               ))}
-            </div>
-
-            {/* Centered View All Media Button */}
-            <div className="text-center mt-8 sm:mt-10" data-aos="fade-up">
-              <Link
-                href="/gallery"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold text-[#013aa3] border border-[#013aa3]/30 hover:bg-[#013aa3] hover:text-white transition-all duration-200"
-              >
-                <span>View All Media</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
             </div>
           </div>
         </section>
