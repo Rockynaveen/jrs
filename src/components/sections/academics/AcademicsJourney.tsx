@@ -124,150 +124,116 @@ export default function AcademicsJourney() {
     <section id="programmes" className="py-12 sm:py-16 bg-[#f8fafc] overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Academic Journey Content */}
-        <div className="space-y-8" data-aos="fade-up">
-            {/* Header with Title and Illustrated Line Art Doodle */}
-            <div className="relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs">
-              {/* Illustrated Line Art Doodle: Open Book with Airplane Flying (from screenshot) */}
-              <div className="absolute top-4 right-4 sm:top-6 sm:right-8 opacity-25 hidden sm:block pointer-events-none">
-                <svg
-                  width="130"
-                  height="80"
-                  viewBox="0 0 160 100"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="text-blue-900"
-                >
-                  {/* Open Book Outline */}
-                  <path
-                    d="M 80 40 C 60 25, 30 25, 10 32 L 10 82 C 30 75, 60 75, 80 90 C 100 75, 130 75, 150 82 L 150 32 C 130 25, 100 25, 80 40 Z"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M 80 40 L 80 90"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  {/* Paper Plane */}
-                  <path
-                    d="M 125 15 L 155 5 L 140 32 L 132 20 Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M 155 5 L 132 20"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                  {/* Dashed flight trail */}
-                  <path
-                    d="M 100 45 C 115 35, 120 28, 128 20"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeDasharray="3 3"
-                  />
-                </svg>
-              </div>
-
-              <div>
-                <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
-                  ACADEMIC JOURNEY
-                </span>
-                <h2
-                  style={{ fontSize: '40px', lineHeight: '50px' }}
-                  className="text-[40px] sm:text-[40px] lg:text-[40px] font-extrabold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px] max-w-xl"
-                >
-                  Learning That Goes <span className="text-[#0a2559]" style={{ fontSize: 'inherit', lineHeight: 'inherit' }}>Beyond Textbooks</span>
-                </h2>
-                <p
-                  style={{ fontSize: '16px', lineHeight: '26px' }}
-                  className="text-slate-700 text-[16px] sm:text-[16px] leading-[26px] sm:leading-[26px] mt-3 max-w-2xl"
-                >
-                  We provide a nurturing and stimulating environment where every child is encouraged to explore, question, create and grow at their own pace.
-                </p>
-              </div>
-
+        <div>
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
+            {/* Eyebrow */}
+            <div className="flex items-center justify-center gap-2.5 mb-2.5">
+              <span className="w-8 h-[2px] bg-[#e31e24]" />
+              <span
+                style={{ fontSize: '13px', lineHeight: '23px' }}
+                className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+              >
+                ACADEMIC JOURNEY
+              </span>
+              <span className="w-8 h-[2px] bg-[#e31e24]" />
             </div>
 
-            {/* Academic Programmes Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-                {earlyYearsProgrammes.map((prog, index) => {
-                  const Icon = prog.icon
-                  return (
-                    <div
-                      key={index}
-                      data-aos="fade-up"
-                      data-aos-delay={index * 80}
-                      onClick={() => setActiveModal(index)}
-                      className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col h-full group hover:-translate-y-1 cursor-pointer"
-                    >
-                      {/* Image with Overlapping Icon Badge */}
-                      <div className="relative aspect-[16/11] w-full bg-slate-100">
-                        <div className="w-full h-full overflow-hidden">
-                          <SchoolImage
-                            src={prog.image}
-                            alt={prog.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            fallbackText={prog.title}
-                            fallbackBg="from-slate-100 to-slate-200"
-                          />
-                        </div>
+            <h2
+              style={{ fontSize: '40px', lineHeight: '50px' }}
+              className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+            >
+              Learning That Goes <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Beyond Textbooks</span>
+            </h2>
+            <p
+              style={{ fontSize: '16px', lineHeight: '26px' }}
+              className="text-slate-600 text-sm sm:text-base mt-3 max-w-2xl mx-auto leading-[26px]"
+            >
+              We provide a nurturing and stimulating environment where every child is encouraged to explore, question, create and grow at their own pace.
+            </p>
+          </div>
 
-                        {/* Overlapping Circular Icon Badge in bottom-left */}
-                        <div className="absolute -bottom-5 left-5 z-20">
-                          <div
-                            className={`w-11 h-11 rounded-full ${prog.iconBg} shadow-md border-2 border-white flex items-center justify-center transition-transform group-hover:scale-110`}
-                          >
-                            <Icon className="w-5 h-5" />
-                          </div>
-                        </div>
-                      </div>
+          {/* Academic Programmes Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            {earlyYearsProgrammes.map((prog, index) => {
+              const Icon = prog.icon
+              return (
+                <div
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 80}
+                  onClick={() => setActiveModal(index)}
+                  className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col h-full group hover:-translate-y-1 cursor-pointer"
+                >
+                  {/* Image with Overlapping Icon Badge */}
+                  <div className="relative aspect-[16/11] w-full bg-slate-100">
+                    <div className="w-full h-full overflow-hidden">
+                      <SchoolImage
+                        src={prog.image}
+                        alt={prog.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        fallbackText={prog.title}
+                        fallbackBg="from-slate-100 to-slate-200"
+                      />
+                    </div>
 
-                      {/* Card Content with aligned rows */}
-                      <div className="px-5 pt-8 pb-0 flex flex-col flex-1">
-                        {/* Title Row with fixed min-height for uniform alignment */}
-                        <div className="min-h-[3rem] flex items-center mb-1">
-                          <h3
-                            style={{ fontSize: '20px' }}
-                            className="text-[20px] sm:text-[20px] font-semibold text-[#031c3f] tracking-tight group-hover:text-blue-900 transition-colors leading-snug"
-                          >
-                            {prog.title}
-                          </h3>
-                        </div>
-
-                        {/* Badge Row with uniform height and style */}
-                        <div className="h-6 flex items-center mb-2.5">
-                          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-200/60 uppercase tracking-wider">
-                            {prog.ageBadge}
-                          </span>
-                        </div>
-
-                        {/* Description with fixed min-height */}
-                        <p className="text-slate-700 text-[14px] leading-relaxed flex-1 line-clamp-4 min-h-[4.5rem]">
-                          {prog.description}
-                        </p>
-
-                        {/* Bottom Action Footer pinned neatly */}
-                        <div className="py-2 mt-auto border-t border-slate-100 flex items-center justify-between">
-                          <span
-                            style={{ fontSize: '14px' }}
-                            className="text-[14px] font-semibold text-slate-700 group-hover:text-[#0a2559] transition-colors"
-                          >
-                            Explore details
-                          </span>
-                          <div className="w-8 h-8 rounded-full border border-slate-200 group-hover:border-[#0a2559] group-hover:bg-[#0a2559] group-hover:text-white text-slate-700 flex items-center justify-center transition-all duration-200 shadow-2xs">
-                            <ChevronRight className="w-4 h-4 ml-0.5" />
-                          </div>
-                        </div>
+                    {/* Overlapping Circular Icon Badge in bottom-left */}
+                    <div className="absolute -bottom-5 left-5 z-20">
+                      <div
+                        className={`w-11 h-11 rounded-full ${prog.iconBg} shadow-md border-2 border-white flex items-center justify-center transition-transform group-hover:scale-110`}
+                      >
+                        <Icon className="w-5 h-5" />
                       </div>
                     </div>
-                  )
-                })}
-              </div>
+                  </div>
+
+                  {/* Card Content with aligned rows */}
+                  <div className="px-5 pt-8 pb-0 flex flex-col flex-1">
+                    {/* Title Row with fixed min-height for uniform alignment */}
+                    <div className="min-h-[3rem] flex items-center mb-1">
+                      <h3
+                        style={{ fontSize: '20px', lineHeight: '30px' }}
+                        className="text-[20px] sm:text-[20px] font-semibold text-[#031c3f] tracking-tight group-hover:text-blue-900 transition-colors leading-[30px]"
+                      >
+                        {prog.title}
+                      </h3>
+                    </div>
+
+                    {/* Badge Row with uniform height and style */}
+                    <div className="h-6 flex items-center mb-2.5">
+                      <span
+                        style={{ fontSize: '11px', lineHeight: '21px' }}
+                        className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-200/60 uppercase tracking-wider leading-[21px]"
+                      >
+                        {prog.ageBadge}
+                      </span>
+                    </div>
+
+                    {/* Description with fixed min-height */}
+                    <p
+                      style={{ fontSize: '14px', lineHeight: '24px' }}
+                      className="text-slate-700 text-[14px] leading-[24px] flex-1 line-clamp-4 min-h-[4.5rem]"
+                    >
+                      {prog.description}
+                    </p>
+
+                    {/* Bottom Action Footer pinned neatly */}
+                    <div className="py-2 mt-auto border-t border-slate-100 flex items-center justify-between">
+                      <span
+                        style={{ fontSize: '14px', lineHeight: '24px' }}
+                        className="text-[14px] font-semibold text-slate-700 group-hover:text-[#0a2559] transition-colors leading-[24px]"
+                      >
+                        Explore details
+                      </span>
+                      <div className="w-8 h-8 rounded-full border border-slate-200 group-hover:border-[#0a2559] group-hover:bg-[#0a2559] group-hover:text-white text-slate-700 flex items-center justify-center transition-all duration-200 shadow-2xs">
+                        <ChevronRight className="w-4 h-4 ml-0.5" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
 
@@ -321,7 +287,10 @@ export default function AcademicsJourney() {
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-amber-400/20 text-amber-300 border border-amber-400/30 backdrop-blur-sm mb-1.5">
                     <span>{currentProgramme.ageBadge}</span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight drop-shadow-sm">
+                  <h3
+                    style={{ fontSize: '24px', lineHeight: '34px' }}
+                    className="text-xl sm:text-2xl font-bold tracking-tight text-white leading-[34px] drop-shadow-sm"
+                  >
                     {currentProgramme.title}
                   </h3>
                 </div>
@@ -352,7 +321,7 @@ export default function AcademicsJourney() {
                 <div className="space-y-3 pt-1">
                   <div className="flex items-center gap-2 text-[#031c3f] font-bold text-xs uppercase tracking-wider">
                     <span className="w-2 h-2 rounded-full bg-[#e31e24]" />
-                    <span>Curriculum & Learning Highlights</span>
+                    <span style={{ fontSize: '12px', lineHeight: '22px' }}>Curriculum & Learning Highlights</span>
                   </div>
                   <div className="grid grid-cols-1 gap-2.5">
                     {currentProgramme.highlights.map((highlight, i) => (
@@ -363,7 +332,10 @@ export default function AcademicsJourney() {
                         <div className="w-5 h-5 rounded-full bg-[#feecee] text-[#e31e24] flex items-center justify-center flex-shrink-0 mt-0.5">
                           <Check className="w-3 h-3 stroke-[2.5]" />
                         </div>
-                        <span className="text-[14px] text-slate-700 leading-snug font-medium">
+                        <span
+                          style={{ fontSize: '14px', lineHeight: '24px' }}
+                          className="text-[14px] text-slate-700 leading-[24px] font-medium"
+                        >
                           {highlight}
                         </span>
                       </div>
