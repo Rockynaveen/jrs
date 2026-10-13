@@ -152,7 +152,7 @@ export default function PageHero({
                   </>
                 )}
                 <span className="text-slate-400 font-normal">›</span>
-                <span className="text-[#e31e24] font-semibold">{breadcrumb}</span>
+                <span className="text-[#f59e0b] font-semibold">{breadcrumb}</span>
               </nav>
 
               {/* Main Title */}

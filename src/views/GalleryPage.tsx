@@ -367,15 +367,25 @@ export default function GalleryPage() {
         {/* Section 1: Amphitheatre Open-Air Arena */}
         <section id="amphitheatre" className="pt-12 sm:pt-16 pb-6 sm:pb-8 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header Row */}
-            <div className="mb-8 sm:mb-10" data-aos="fade-right">
-              <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
-                CAMPUS INFRASTRUCTURE & OPEN-AIR ARENA
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
-                Amphitheatre <span className="text-[#e31e24]">Open-Air Arena</span>
+            {/* Centered Heading */}
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span
+                  style={{ fontSize: '13px', lineHeight: '23px' }}
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                >
+                  CAMPUS INFRASTRUCTURE & OPEN-AIR ARENA
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+              <h2
+                style={{ fontSize: '40px', lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Amphitheatre <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Open-Air Arena</span>
               </h2>
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mt-2.5 max-w-2xl">
+              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                 A serene circular open-air theatre built around the majestic heritage tree, hosting assemblies, student debates, cultural gatherings, and outdoor performances.
               </p>
             </div>
@@ -486,15 +496,25 @@ export default function GalleryPage() {
         {/* Section 2: Feb 17 Annual Day celebrations 2023-24 */}
         <section id="annual-day-celebrations" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header with Title */}
-            <div className="mb-8 sm:mb-10" data-aos="fade-right">
-              <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
-                CAMPUS HIGHLIGHTS
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
-                Feb 17 <span className="text-[#e31e24]">Annual Day celebrations 2023-24</span>
+            {/* Centered Heading */}
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span
+                  style={{ fontSize: '13px', lineHeight: '23px' }}
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                >
+                  CAMPUS HIGHLIGHTS
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+              <h2
+                style={{ fontSize: '40px', lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Feb 17 <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day celebrations 2023-24</span>
               </h2>
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mt-2.5 max-w-2xl">
+              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                 Moments from UTSAHA 2K24 — Annual Day celebrations at JRS International School.
               </p>
             </div>
@@ -531,15 +551,25 @@ export default function GalleryPage() {
         {/* 5. Section 2: Feb 11th Annual Day Celebrations */}
         <section id="feb-11-celebrations" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header with Title */}
-            <div className="mb-8 sm:mb-10" data-aos="fade-right">
-              <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
-                STAGE & CULTURAL HIGHLIGHTS
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
-                Feb 11th <span className="text-[#e31e24]">Annual Day Celebrations</span>
+            {/* Centered Heading */}
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span
+                  style={{ fontSize: '13px', lineHeight: '23px' }}
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                >
+                  STAGE & CULTURAL HIGHLIGHTS
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+              <h2
+                style={{ fontSize: '40px', lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Feb 11th <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day Celebrations</span>
               </h2>
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mt-2.5 max-w-2xl">
+              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                 Spectacular stage dances, cultural performances, and memorable moments from JRS International School.
               </p>
             </div>
@@ -576,15 +606,25 @@ export default function GalleryPage() {
         {/* 6. Section 3: Science Experiment & Activities… */}
         <section id="science-activities" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header Row */}
-            <div className="mb-8 sm:mb-10" data-aos="fade-right">
-              <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
-                LABS & BEYOND CLASSROOM
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
-                Science Experiment & <span className="text-[#e31e24]">Activities…</span>
+            {/* Centered Heading */}
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span
+                  style={{ fontSize: '13px', lineHeight: '23px' }}
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                >
+                  LABS & BEYOND CLASSROOM
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+              <h2
+                style={{ fontSize: '40px', lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Science Experiment & <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Activities…</span>
               </h2>
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mt-2.5 max-w-2xl">
+              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                 Hands-on scientific inquiry, sports training, and extracurricular learning at JRS International School.
               </p>
             </div>
@@ -621,19 +661,27 @@ export default function GalleryPage() {
         {/* Section: Videos - Create Life Skills (Middle of the Page) */}
         <section id="life-skills-videos" className="py-14 sm:py-18 bg-white border-y border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header Row */}
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
-              <div data-aos="fade-right">
-                <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
+            {/* Centered Heading */}
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span
+                  style={{ fontSize: '13px', lineHeight: '23px' }}
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                >
                   STUDENT DISCUSSIONS & SESSIONS
                 </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
-                  Create <span className="text-[#e31e24]">Life Skills</span>
-                </h2>
-                <p className="text-slate-700 text-sm sm:text-base leading-relaxed mt-2.5 max-w-2xl">
-                  Watch our students in action developing communication, critical thinking, debate skills, and creative expression.
-                </p>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
               </div>
+              <h2
+                style={{ fontSize: '40px', lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Create <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Life Skills</span>
+              </h2>
+              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                Watch our students in action developing communication, critical thinking, debate skills, and creative expression.
+              </p>
             </div>
 
             {/* 2 Video Images Grid */}
@@ -674,15 +722,25 @@ export default function GalleryPage() {
         {/* 7. Section 4: Republic Day Celebrations */}
         <section id="republic-day-celebrations" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header Row */}
-            <div className="mb-8 sm:mb-10" data-aos="fade-right">
-              <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
-                PATRIOTIC TRADITIONS
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
-                Republic Day <span className="text-[#e31e24]">Celebrations</span>
+            {/* Centered Heading */}
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span
+                  style={{ fontSize: '13px', lineHeight: '23px' }}
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                >
+                  PATRIOTIC TRADITIONS
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+              <h2
+                style={{ fontSize: '40px', lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Republic Day <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Celebrations</span>
               </h2>
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mt-2.5 max-w-2xl">
+              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                 Honoring national pride and constitutional values with student parades, freedom fighter tributes, and ceremonial drills at JRS International School.
               </p>
             </div>
