@@ -57,7 +57,7 @@ export default function AboutVideo() {
       id="campus-spirit"
       className="relative py-[50px] bg-white text-slate-800 overflow-hidden scroll-mt-20"
     >
-      <div className="relative z-10 max-w-7xl xl:max-w-[1380px] 2xl:max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
           {/* Eyebrow: — CAMPUS TOUR & LIFE AT JRS — */}
@@ -134,7 +134,10 @@ export default function AboutVideo() {
 
                     {/* Card Heading: Balanced Font Size & Two-Line Wrapping */}
                     <div className="w-full flex-1 flex items-center justify-center px-1">
-                      <h3 className="text-white font-bold text-[16px] sm:text-[17px] lg:text-[18.5px] xl:text-[20px] 2xl:text-[21px] text-center leading-[1.25] tracking-tight drop-shadow-sm whitespace-pre-line">
+                      <h3
+                        style={{ fontSize: '14px', lineHeight: '24px' }}
+                        className="text-white font-bold text-[14px] text-center leading-[24px] tracking-tight drop-shadow-sm whitespace-pre-line"
+                      >
                         {item.title}
                       </h3>
                     </div>
