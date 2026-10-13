@@ -1,16 +1,18 @@
 'use client'
 
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useEffect } from 'react'
 import AOS from 'aos'
 import Navbar from '@/components/layout/Navbar'
 import PageHero from '@/components/common/PageHero'
 import Footer from '@/components/layout/Footer'
-import { ArrowUpDown, UserCheck, Shield } from 'lucide-react'
+import { Crown, Users, MapPin, Phone } from 'lucide-react'
 
 interface CommitteeMember {
   sn: number
   name: string
   status: string
+  address: string
+  contact: string
 }
 
 const managingMembers: CommitteeMember[] = [
@@ -18,53 +20,61 @@ const managingMembers: CommitteeMember[] = [
     sn: 1,
     name: 'Mr. C. R. Jagadish',
     status: 'President',
+    address: 'Karthikeya Nagar Nacharam, Hyderabad',
+    contact: '9542664980',
   },
   {
     sn: 2,
     name: 'Ms. V. Jyothi',
     status: 'Vice-President',
+    address: '12-13-415/3 Tarnaka, Secunderabad',
+    contact: '9666312947',
   },
   {
     sn: 3,
     name: 'Ms. C. Amaravathi',
     status: 'General Secretary',
+    address: 'Karthikeya Nagar Nacharam, Hyderabad',
+    contact: '9346065525',
   },
   {
     sn: 4,
     name: 'Dr. C. Suman Kumar',
     status: 'Joint-Secretary',
+    address: 'Boduppal, Hyderabad',
+    contact: '9926811371',
   },
   {
     sn: 5,
     name: 'Ms. V. Vedavathi',
     status: 'Treasurer',
+    address: 'Divya Enclave Vijaypuri Tarnaka, Hyderabad',
+    contact: '9160300046',
   },
   {
     sn: 6,
     name: 'Mr. Sreepathi Rao',
     status: 'Executive-Member',
+    address: 'Uppal, Hyderabad',
+    contact: '9963701615',
   },
   {
     sn: 7,
     name: 'Mr. Sudharshan Rao',
     status: 'Exe-Member',
+    address: 'L.B Nagar, Hyderabad',
+    contact: '8520047067',
   },
   {
     sn: 8,
     name: 'Mr. Baskar Reddy',
     status: 'Exe-Member',
+    address: 'Venkatadri Township Chowdarguda, Hyderabad',
+    contact: '9908330490',
   },
 ]
 
-type SortField = 'sn' | 'name' | 'status'
-
 export default function EducationalSocietyPage() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [entriesPerPage, setEntriesPerPage] = useState(10)
-  const [currentPage, setCurrentPage] = useState(1)
-  const [sortField, setSortField] = useState<SortField>('sn')
-  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc')
-
   useEffect(() => {
     AOS.init({
       duration: 750,
@@ -73,58 +83,6 @@ export default function EducationalSocietyPage() {
       offset: 50,
     })
   }, [])
-
-  const handleSort = (field: SortField) => {
-    if (sortField === field) {
-      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc')
-    } else {
-      setSortField(field)
-      setSortDirection('asc')
-    }
-  }
-
-  const filteredAndSortedMembers = useMemo(() => {
-    let result = managingMembers.filter((member) => {
-      const term = searchTerm.toLowerCase()
-      return (
-        member.name.toLowerCase().includes(term) ||
-        member.status.toLowerCase().includes(term) ||
-        member.sn.toString().includes(term)
-      )
-    })
-
-    result.sort((a, b) => {
-      let aVal = a[sortField]
-      let bVal = b[sortField]
-
-      if (typeof aVal === 'number' && typeof bVal === 'number') {
-        return sortDirection === 'asc' ? aVal - bVal : bVal - aVal
-      }
-
-      aVal = String(aVal).toLowerCase()
-      bVal = String(bVal).toLowerCase()
-
-      if (aVal < bVal) return sortDirection === 'asc' ? -1 : 1
-      if (aVal > bVal) return sortDirection === 'asc' ? 1 : -1
-      return 0
-    })
-
-    return result
-  }, [searchTerm, sortField, sortDirection])
-
-  const totalPages =
-    Math.ceil(filteredAndSortedMembers.length / entriesPerPage) || 1
-  const startIndex = (currentPage - 1) * entriesPerPage
-  const paginatedMembers = filteredAndSortedMembers.slice(
-    startIndex,
-    startIndex + entriesPerPage
-  )
-
-  const startEntry = filteredAndSortedMembers.length === 0 ? 0 : startIndex + 1
-  const endEntry = Math.min(
-    startIndex + entriesPerPage,
-    filteredAndSortedMembers.length
-  )
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-800 antialiased selection:bg-red-500 selection:text-white">
@@ -144,230 +102,127 @@ export default function EducationalSocietyPage() {
         />
 
         {/* 3. Managing Committee Section */}
-        <div className="py-10 sm:py-14 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-
+        <section className="py-[50px] bg-white scroll-mt-20">
+          <div className="max-w-7xl xl:max-w-[1380px] 2xl:max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8">
             {/* Section Header */}
-            <div data-aos="fade-up">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#dc2626] mb-3 tracking-tight">
-                MANAGING COMMITTEE :
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+                  GOVERNING BODY & LEADERSHIP
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+
+              <h2
+                style={{ lineHeight: '50px' }}
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Managing <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Committee</span>
               </h2>
+              <p
+                style={{ margin: '10px auto', lineHeight: '26px' }}
+                className="text-slate-600 text-xs sm:text-[15px] my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
+              >
+                Distinguished governing body steering the vision, academic excellence, statutory compliance, and strategic growth of JRS International School.
+              </p>
             </div>
 
-            {/* DataTables Controls */}
-            <div
-              className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 text-xs text-slate-700"
-              data-aos="fade-up"
-            >
-              <div className="flex items-center gap-1.5">
-                <span>Show</span>
-                <select
-                  value={entriesPerPage}
-                  onChange={(e) => {
-                    setEntriesPerPage(Number(e.target.value))
-                    setCurrentPage(1)
-                  }}
-                  className="border border-slate-300 rounded px-2 py-1 text-xs bg-white text-slate-800 focus:outline-hidden focus:border-blue-500"
-                >
-                  <option value={10}>10</option>
-                  <option value={25}>25</option>
-                  <option value={50}>50</option>
-                </select>
-                <span>entries per page</span>
-              </div>
+            {/* Member Cards Grid (Matching PTA Section / Image 2) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 xl:gap-6 items-stretch">
+              {managingMembers.map((member) => {
+                const isPresident = member.status.toLowerCase() === 'president'
 
-              <div className="flex items-center gap-1.5 w-full sm:w-auto">
-                <span>Search:</span>
-                <input
-                  type="text"
-                  value={searchTerm}
-                  onChange={(e) => {
-                    setSearchTerm(e.target.value)
-                    setCurrentPage(1)
-                  }}
-                  placeholder=""
-                  className="border border-slate-300 rounded px-2 py-1 text-xs bg-white text-slate-800 focus:outline-hidden focus:border-blue-500 w-full sm:w-48"
-                />
-              </div>
-            </div>
+                return (
+                  <div
+                    key={member.sn}
+                    data-aos="fade-up"
+                    className="relative bg-white rounded-[22px] border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
+                  >
+                    {/* Image Area with Placeholder Headshot & Bottom-Right Glassmorphism Designation Badge */}
+                    <div className="relative w-full aspect-[4/3.3] bg-slate-100 overflow-hidden flex-shrink-0">
+                      <img
+                        src="/images/avatar-placeholder.jpg"
+                        alt={member.name}
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      />
 
-            {/* Soft Powder Blue Header Table */}
-            <div
-              className="bg-white rounded-md border border-slate-300 shadow-2xs overflow-hidden"
-              data-aos="fade-up"
-            >
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
-                  <thead>
-                    <tr className="bg-[#dce7f6] border-b border-slate-300 text-xs sm:text-[13px] font-bold text-slate-800 uppercase tracking-wider">
-                      <th
-                        scope="col"
-                        onClick={() => handleSort('sn')}
-                        className="py-2.5 px-4 sm:px-6 w-20 text-left cursor-pointer select-none hover:bg-[#d0ddf0] transition-colors"
-                      >
-                        <div className="inline-flex items-center gap-1">
-                          <span>S.NO.</span>
-                          <ArrowUpDown className="w-3 h-3 text-slate-500" />
-                        </div>
-                      </th>
-                      <th
-                        scope="col"
-                        onClick={() => handleSort('name')}
-                        className="py-2.5 px-4 sm:px-6 min-w-[280px] cursor-pointer select-none hover:bg-[#d0ddf0] transition-colors"
-                      >
-                        <div className="inline-flex items-center gap-1">
-                          <span>NAME OF THE PERSON</span>
-                          <ArrowUpDown className="w-3 h-3 text-slate-500" />
-                        </div>
-                      </th>
-                      <th
-                        scope="col"
-                        onClick={() => handleSort('status')}
-                        className="py-2.5 px-4 sm:px-6 min-w-[200px] text-right cursor-pointer select-none hover:bg-[#d0ddf0] transition-colors"
-                      >
-                        <div className="inline-flex items-center gap-1 justify-end">
-                          <span>STATUS / DESIGNATION</span>
-                          <ArrowUpDown className="w-3 h-3 text-slate-500" />
-                        </div>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200 text-xs sm:text-[13px] text-slate-700">
-                    {paginatedMembers.length > 0 ? (
-                      paginatedMembers.map((member) => {
-                        const isPresident =
-                          member.status.toLowerCase() === 'president'
-                        const isVicePresident = member.status
-                          .toLowerCase()
-                          .includes('vice')
-                        const isSecretary = member.status
-                          .toLowerCase()
-                          .includes('secretary')
-
-                        return (
-                          <tr
-                            key={member.sn}
-                            className={`hover:bg-slate-50/70 transition-colors ${
-                              isPresident ? 'bg-red-50/20' : ''
-                            }`}
-                          >
-                            <td className="py-3 px-4 sm:px-6 font-medium text-slate-800">
-                              {member.sn}
-                            </td>
-                            <td className="py-3 px-4 sm:px-6 font-semibold text-slate-800">
-                              <div className="flex items-center gap-2">
-                                <UserCheck
-                                  className={`w-3.5 h-3.5 shrink-0 ${
-                                    isPresident
-                                      ? 'text-red-600'
-                                      : isVicePresident
-                                      ? 'text-blue-600'
-                                      : 'text-slate-400'
-                                  }`}
-                                />
-                                <span>{member.name}</span>
-                              </div>
-                            </td>
-                            <td className="py-3 px-4 sm:px-6 text-right font-medium">
-                              {isPresident ? (
-                                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-xs font-bold bg-red-100 text-red-700 border border-red-200">
-                                  <Shield className="w-3 h-3" />
-                                  {member.status}
-                                </span>
-                              ) : isVicePresident ? (
-                                <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100">
-                                  {member.status}
-                                </span>
-                              ) : isSecretary ? (
-                                <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-100">
-                                  {member.status}
-                                </span>
-                              ) : (
-                                <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-700">
-                                  {member.status}
-                                </span>
-                              )}
-                            </td>
-                          </tr>
-                        )
-                      })
-                    ) : (
-                      <tr>
-                        <td
-                          colSpan={3}
-                          className="py-8 text-center text-slate-500 italic"
+                      {/* Floating True Glassmorphism Designation Pill Badge */}
+                      <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 z-10">
+                        <div
+                          style={
+                            isPresident
+                              ? {
+                                  background:
+                                    'linear-gradient(135deg, rgba(255, 255, 255, 0.38) 0%, rgba(254, 243, 199, 0.22) 100%)',
+                                  backdropFilter: 'blur(12px) saturate(190%)',
+                                  WebkitBackdropFilter: 'blur(12px) saturate(190%)',
+                                  border: '1.5px solid rgba(245, 158, 11, 0.65)',
+                                  boxShadow:
+                                    '0 8px 24px -4px rgba(0, 0, 0, 0.12), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.06)',
+                                }
+                              : {
+                                  background:
+                                    'linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.12) 100%)',
+                                  backdropFilter: 'blur(12px) saturate(190%)',
+                                  WebkitBackdropFilter: 'blur(12px) saturate(190%)',
+                                  border: '1.5px solid rgba(255, 255, 255, 0.85)',
+                                  boxShadow:
+                                    '0 8px 24px -4px rgba(0, 0, 0, 0.12), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.06)',
+                                }
+                          }
+                          className="px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-md transition-all duration-300 hover:scale-105"
                         >
-                          No matching members found for &ldquo;{searchTerm}&rdquo;
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
+                          {isPresident ? (
+                            <Crown className="w-3.5 h-3.5 text-amber-600 fill-amber-500/20 shrink-0 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]" />
+                          ) : (
+                            <Users className="w-3.5 h-3.5 text-black shrink-0 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]" />
+                          )}
+                          <span className="text-[11px] sm:text-[11.5px] font-extrabold uppercase tracking-wider text-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)]">
+                            {member.status}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Card Content Area: Left Aligned with Red Map Pin & Phone */}
+                    <div className="p-4 sm:p-4.5 flex flex-col flex-1 justify-between bg-white text-left">
+                      <div>
+                        {/* Member Name */}
+                        <h3 className="text-[15.5px] sm:text-[16px] font-bold text-[#031c3f] group-hover:text-[#013aa3] transition-colors leading-snug line-clamp-1">
+                          {member.name}
+                        </h3>
+
+                        {/* Address with Red Location Pin */}
+                        <div className="flex items-start gap-1.5 mt-2">
+                          <MapPin className="w-3.5 h-3.5 text-[#e31e24] shrink-0 mt-0.5" />
+                          <span className="text-xs sm:text-[12.5px] font-medium text-slate-700 leading-snug line-clamp-2">
+                            {member.address}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Phone Row */}
+                      <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <a
+                          href={`tel:${member.contact}`}
+                          className="flex items-center gap-2 group/phone"
+                        >
+                          <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform group-hover/phone:scale-110 bg-[#013aa3]/10 text-[#013aa3]">
+                            <Phone className="w-3.5 h-3.5" />
+                          </div>
+                          <span className="font-bold text-[13px] text-slate-900 group-hover/phone:text-[#013aa3] transition-colors tracking-tight">
+                            {member.contact}
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
-
-            {/* DataTables Pagination & Entry Counts */}
-            <div
-              className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-700 pt-1"
-              data-aos="fade-up"
-            >
-              <div>
-                Showing {startEntry} to {endEntry} of{' '}
-                {filteredAndSortedMembers.length} entries
-              </div>
-
-              <div className="flex items-center gap-1">
-                <button
-                  type="button"
-                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                  disabled={currentPage === 1}
-                  className={`border border-slate-300 rounded px-2.5 py-1 text-xs transition-colors ${
-                    currentPage === 1
-                      ? 'text-slate-400 bg-slate-50 cursor-not-allowed'
-                      : 'text-slate-700 bg-white hover:bg-slate-100 cursor-pointer'
-                  }`}
-                  aria-label="Previous page"
-                >
-                  ‹
-                </button>
-
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                  (page) => (
-                    <button
-                      key={page}
-                      type="button"
-                      onClick={() => setCurrentPage(page)}
-                      className={`rounded px-2.5 py-1 text-xs font-semibold transition-colors cursor-pointer ${
-                        currentPage === page
-                          ? 'border border-blue-600 bg-blue-50 text-blue-700'
-                          : 'border border-slate-300 bg-white text-slate-700 hover:bg-slate-100'
-                      }`}
-                    >
-                      {page}
-                    </button>
-                  )
-                )}
-
-                <button
-                  type="button"
-                  onClick={() =>
-                    setCurrentPage((p) => Math.min(totalPages, p + 1))
-                  }
-                  disabled={currentPage === totalPages}
-                  className={`border border-slate-300 rounded px-2.5 py-1 text-xs transition-colors ${
-                    currentPage === totalPages
-                      ? 'text-slate-400 bg-slate-50 cursor-not-allowed'
-                      : 'text-slate-700 bg-white hover:bg-slate-100 cursor-pointer'
-                  }`}
-                  aria-label="Next page"
-                >
-                  ›
-                </button>
-              </div>
-            </div>
-
           </div>
-        </div>
+        </section>
       </main>
 
       {/* 4. Footer */}
