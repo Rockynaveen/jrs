@@ -34,7 +34,7 @@ export default function AboutVideo() {
     },
     {
       title: 'CBSE & Cultural\nEthos',
-      image: '/images/primary-school-study.jpg',
+      image: '/images/about us why.png',
       icon: BookOpen,
       imagePosition: 'object-center',
       haloBg: 'bg-amber-500/25 border-amber-400/40 shadow-[0_0_20px_rgba(245,158,11,0.4)]',

@@ -13,6 +13,10 @@ export interface PageHeroButton {
 
 export interface PageHeroProps {
   breadcrumb: string
+  parentBreadcrumb?: {
+    label: string
+    href: string
+  }
   title: string
   titleHighlight?: string
   subtitle?: string
@@ -35,6 +39,7 @@ export interface PageHeroProps {
 
 export default function PageHero({
   breadcrumb,
+  parentBreadcrumb,
   title,
   titleHighlight,
   subtitle,
@@ -138,8 +143,16 @@ export default function PageHero({
                 <Link href="/" className="hover:text-white transition-colors">
                   Home
                 </Link>
+                {parentBreadcrumb && (
+                  <>
+                    <span className="text-slate-400 font-normal">›</span>
+                    <Link href={parentBreadcrumb.href} className="hover:text-white transition-colors">
+                      {parentBreadcrumb.label}
+                    </Link>
+                  </>
+                )}
                 <span className="text-slate-400 font-normal">›</span>
-                <span className="text-white font-semibold">{breadcrumb}</span>
+                <span className="text-[#e31e24] font-semibold">{breadcrumb}</span>
               </nav>
 
               {/* Main Title */}
