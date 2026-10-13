@@ -135,24 +135,38 @@ export default function AboutPTA() {
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
 
-                  {/* Floating Glassmorphism Designation Pill Badge in Logo Blue with Less Opacity */}
+                  {/* Floating True Glassmorphism Designation Pill Badge */}
                   <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 z-10">
                     <div
-                      style={{
-                        backgroundColor: 'rgba(1, 58, 163, 0.45)',
-                        backdropFilter: 'blur(12px)',
-                        WebkitBackdropFilter: 'blur(12px)',
-                        border: isChairman ? '1px solid rgba(251, 191, 36, 0.55)' : '1px solid rgba(255, 255, 255, 0.28)',
-                        boxShadow: '0 4px 14px rgba(1, 58, 163, 0.25)',
-                      }}
-                      className="px-3 py-1 rounded-full flex items-center gap-1.5 text-white"
+                      style={
+                        isChairman
+                          ? {
+                            background:
+                              'linear-gradient(135deg, rgba(255, 255, 255, 0.38) 0%, rgba(254, 243, 199, 0.22) 100%)',
+                            backdropFilter: 'blur(12px) saturate(190%)',
+                            WebkitBackdropFilter: 'blur(12px) saturate(190%)',
+                            border: '1.5px solid rgba(245, 158, 11, 0.65)',
+                            boxShadow:
+                              '0 8px 24px -4px rgba(0, 0, 0, 0.12), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.06)',
+                          }
+                          : {
+                            background:
+                              'linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.12) 100%)',
+                            backdropFilter: 'blur(12px) saturate(190%)',
+                            WebkitBackdropFilter: 'blur(12px) saturate(190%)',
+                            border: '1.5px solid rgba(255, 255, 255, 0.85)',
+                            boxShadow:
+                              '0 8px 24px -4px rgba(0, 0, 0, 0.12), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.06)',
+                          }
+                      }
+                      className="px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-md transition-all duration-300 hover:scale-105"
                     >
                       {isChairman ? (
-                        <Crown className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+                        <Crown className="w-3.5 h-3.5 text-amber-600 fill-amber-500/20 shrink-0 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]" />
                       ) : (
-                        <Users className="w-3.5 h-3.5 text-white/90 shrink-0" />
+                        <Users className="w-3.5 h-3.5 text-black shrink-0 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]" />
                       )}
-                      <span className={`text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider ${isChairman ? 'text-amber-200' : 'text-white'}`}>
+                      <span className="text-[11px] sm:text-[11.5px] font-extrabold uppercase tracking-wider text-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)]">
                         {member.designation}
                       </span>
                     </div>
@@ -163,40 +177,34 @@ export default function AboutPTA() {
                 <div className="p-4 sm:p-4.5 flex flex-col flex-1 justify-between bg-white text-left">
                   <div>
                     {/* Member Name */}
-                    <h3 className="text-[15px] sm:text-[15.5px] font-bold text-[#031c3f] group-hover:text-[#013aa3] transition-colors leading-snug line-clamp-1">
+                    <h3 className="text-[15.5px] sm:text-[16px] font-bold text-[#031c3f] group-hover:text-[#013aa3] transition-colors leading-snug line-clamp-1">
                       {member.name}
                     </h3>
 
-                    {/* Address with Red Location Pin */}
-                    <div className="flex items-start gap-1.5 mt-2 text-slate-500">
-                      <MapPin className="w-3.5 h-3.5 text-[#ef4444] shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-[12.5px] leading-snug line-clamp-2">
+                    {/* Address with Red Location Pin - High Contrast & Visible */}
+                    <div className="flex items-start gap-1.5 mt-2">
+                      <MapPin className="w-3.5 h-3.5 text-[#e31e24] shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-[12.5px] font-medium text-slate-700 leading-snug line-clamp-2">
                         {member.address}
                       </span>
                     </div>
                   </div>
 
-                  {/* Phone & Arrow Action Row (Logo Blue Tint) */}
+                  {/* Phone & Arrow Action Row (High Contrast & Clear) */}
                   <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
                     <a
                       href={`tel:${member.contact}`}
                       className="flex items-center gap-2 group/phone"
                     >
-                      <div className="w-7.5 h-7.5 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform group-hover/phone:scale-110 bg-[#013aa3]/10 text-[#013aa3]">
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform group-hover/phone:scale-110 bg-[#013aa3]/10 text-[#013aa3]">
                         <Phone className="w-3.5 h-3.5" />
                       </div>
-                      <span className="font-bold text-[12.5px] sm:text-[13px] text-slate-800 group-hover/phone:text-[#013aa3] transition-colors font-mono tracking-tight">
+                      <span className="font-bold text-[13px] text-slate-900 group-hover/phone:text-[#013aa3] transition-colors tracking-tight">
                         {member.contact}
                       </span>
                     </a>
 
-                    <a
-                      href={`tel:${member.contact}`}
-                      aria-label={`Call ${member.name}`}
-                      className="w-7.5 h-7.5 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-all hover:scale-110 bg-[#013aa3]/10 hover:bg-[#013aa3]/20 text-[#013aa3]"
-                    >
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </a>
+
                   </div>
                 </div>
               </div>
