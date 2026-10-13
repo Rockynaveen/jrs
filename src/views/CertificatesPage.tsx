@@ -26,24 +26,24 @@ interface DocumentItem {
 }
 
 const generalInformation = [
-  { sno: 1, info: 'NAME OF THE SCHOOL', details: 'JRS INTERNATIONAL SCHOOL' },
-  { sno: 2, info: 'AFFILIATION NO. (IF APPLICABLE)', details: '3630135' },
-  { sno: 3, info: 'SCHOOL CODE (IF APPLICABLE)', details: '57648' },
+  { sno: 1, info: 'Name of the School', details: 'JRS INTERNATIONAL SCHOOL' },
+  { sno: 2, info: 'Affiliation No. (if applicable)', details: '3630135' },
+  { sno: 3, info: 'School Code (if applicable)', details: '57648' },
   {
     sno: 4,
-    info: 'COMPLETE ADDRESS WITH PIN CODE',
+    info: 'Complete Address with Pin Code',
     details:
       'Sy. No. 129, Narapally, Korremula Road, Ghatkesar Mandal, Medchal-Malkajgiri District, Hyderabad, Telangana - 500088.',
   },
   {
     sno: 5,
-    info: 'PRINCIPAL NAME & QUALIFICATION:',
+    info: 'Principal Name & Qualification',
     details: 'Mrs. Marlene Mannas, M.Sc., B.Ed., M.A.',
   },
-  { sno: 6, info: 'SCHOOL EMAIL ID', details: 'info@jrsinternationalschool.com' },
+  { sno: 6, info: 'School Email ID', details: 'info@jrsinternationalschool.com' },
   {
     sno: 7,
-    info: 'CONTACT DETAILS (LANDLINE/MOBILE)',
+    info: 'Contact Details (Landline / Mobile)',
     details: '+91 915740 43210 / 08415-295555',
   },
 ]
@@ -52,40 +52,40 @@ const documentsAndInformation: DocumentItem[] = [
   {
     sno: 1,
     title:
-      'COPIES OF AFFILIATION/UPGRADATION LETTER AND RECENT EXTENSION OF AFFILIATION, IF ANY',
-    btnLabel: 'AFFILIATION/UPGRADATION LETTER',
+      'Copies of Affiliation/Upgradation Letter and recent Extension of Affiliation, if any',
+    btnLabel: 'Affiliation / Upgradation Letter',
     pdfUrl: '/certificates/preprimary-to-8-noc.pdf',
     authority: 'Central Board of Secondary Education (CBSE)',
   },
   {
     sno: 2,
     title:
-      'COPIES OF SOCIETIES/TRUST/COMPANY REGISTRATION/RENEWAL CERTIFICATE, AS APPLICABLE',
-    btnLabel: 'SOCIETY REGISTRATION',
+      'Copies of Societies/Trust/Company Registration/Renewal Certificate, as applicable',
+    btnLabel: 'Society Registration',
     href: '/educational-society',
     authority: 'Registrar of Societies, Govt. of Telangana',
   },
   {
     sno: 3,
     title:
-      'COPY OF NO OBJECTION CERTIFICATE (NOC) ISSUED, IF APPLICABLE, BY THE STATE GOVT./UT',
-    btnLabel: 'NOC',
+      'Copy of No Objection Certificate (NOC) issued, if applicable, by the State Govt./UT',
+    btnLabel: 'NOC Certificate',
     pdfUrl: '/certificates/preprimary-to-8-noc.pdf',
     authority: 'Department of School Education, Govt. of Telangana',
   },
   {
     sno: 4,
     title:
-      "COPIES OF RECOGNITION CERTIFICATE UNDER RTE ACT, 2009, AND IT'S RENEWAL IF APPLICABLE",
-    btnLabel: 'RECOGNITION CERTIFICATE',
+      "Copies of Recognition Certificate under RTE Act, 2009, and its renewal if applicable",
+    btnLabel: 'Recognition Certificate',
     pdfUrl: '/certificates/preprimary-to-8-noc.pdf',
     authority: 'District Educational Officer, Medchal-Malkajgiri',
   },
   {
     sno: 5,
     title:
-      'COPY OF VALID BUILDING SAFETY CERTIFICATE AS PER THE NATIONAL BUILDING CODE',
-    btnLabel: 'BUILDING SAFETY CERTIFICATE',
+      'Copy of valid Building Safety Certificate as per the National Building Code',
+    btnLabel: 'Building Safety Certificate',
     pdfUrl: '/certificates/annexure%20D.pdf',
     authority:
       'Deputy Executive Engineer (R&B), Buildings Sub-Division, Medchal-Malkajgiri',
@@ -93,31 +93,31 @@ const documentsAndInformation: DocumentItem[] = [
   {
     sno: 6,
     title:
-      'COPY OF VALID FIRE SAFETY CERTIFICATE ISSUED BY THE COMPETENT AUTHORITY',
-    btnLabel: 'FIRE SAFETY CERTIFICATE',
+      'Copy of valid Fire Safety Certificate issued by the competent authority',
+    btnLabel: 'Fire Safety Certificate',
     pdfUrl: '/certificates/fire%20safety%20certificate.pdf',
     authority: 'Station Fire Officer, Fire Services Department',
   },
   {
     sno: 7,
     title:
-      'COPY OF THE DEO CERTIFICATE SUBMITTED BY THE SCHOOL FOR AFFILIATION / UPGRADATION / EXTENSION OF AFFILIATION OR SELF CERTIFICATION BY SCHOOL',
-    btnLabel: 'SELF CERTIFICATION',
+      'Copy of the DEO Certificate submitted by the school for Affiliation / Upgradation / Extension of Affiliation or Self Certification by School',
+    btnLabel: 'Self Certification',
     pdfUrl: '/certificates/preprimary-to-8-noc.pdf',
     authority: 'School Administration / Competent Authority',
   },
   {
     sno: 8,
-    title: 'COPIES OF VALID WATER, HEALTH AND SANITATION CERTIFICATES',
-    btnLabel: 'WATER, HEALTH AND SANITATION',
+    title: 'Copies of valid Water, Health and Sanitation Certificates',
+    btnLabel: 'Water, Health & Sanitation',
     pdfUrl: '/certificates/report%20bacteriological.pdf',
     authority:
       'Directorate of I.P.M., P.H. Labs & Food Administration, Telangana',
   },
   {
     sno: 9,
-    title: 'COPIES OF VALID CERTIFICATE OF LAND (AS PER CBSE AFFILIATION NORMS)',
-    btnLabel: 'CERTIFICATE OF LAND',
+    title: 'Copies of valid Certificate of Land (as per CBSE Affiliation Norms)',
+    btnLabel: 'Certificate of Land',
     pdfUrl: '/certificates/certificate%20of%20land.pdf',
     authority: 'Sub-Registrar Office, Narapally, Medchal-Malkajgiri',
   },
@@ -126,33 +126,33 @@ const documentsAndInformation: DocumentItem[] = [
 const schoolInfrastructure = [
   {
     sno: 1,
-    info: 'TOTAL CAMPUS AREA OF THE SCHOOL',
-    details: '12,477 SQ MTR (3.08 ACRES)',
+    info: 'Total Campus Area of the School',
+    details: '12,477 Sq. Mtr. (3.08 Acres)',
     docAction: {
-      label: 'LAND CERTIFICATE',
-      title: 'CERTIFICATE OF LAND (ANNEXURE B)',
+      label: 'Land Certificate',
+      title: 'Certificate of Land (Annexure B)',
       pdfUrl: '/certificates/certificate%20of%20land.pdf',
       authority: 'Sub-Registrar Office, Narapally, Medchal-Malkajgiri',
     },
   },
   {
     sno: 2,
-    info: 'NO. AND SIZE OF THE CLASSROOM (SQ MTR)',
-    details: '22, 48 SQ MTR',
+    info: 'No. and Size of Classrooms (Sq. Mtr.)',
+    details: '22 Classrooms (48 Sq. Mtr. each)',
   },
   {
     sno: 3,
-    info: 'NO. AND SIZE OF THE LABORATORIES INCLUDING COMPUTER LABS (SQ MTR)',
-    details: '4, 46 SQ Mtr',
+    info: 'No. and Size of Laboratories including Computer Labs (Sq. Mtr.)',
+    details: '4 Laboratories (46 Sq. Mtr. each)',
   },
-  { sno: 4, info: 'INTERNET FACILITY', details: 'YES' },
-  { sno: 5, info: 'NO. OF GIRLS TOILETS', details: '20' },
-  { sno: 6, info: 'NO. OF BOYS TOILETS', details: '20' },
+  { sno: 4, info: 'Internet Facility', details: 'Yes' },
+  { sno: 5, info: 'No. of Girls Toilets', details: '20' },
+  { sno: 6, info: 'No. of Boys Toilets', details: '20' },
   {
     sno: 7,
-    info: 'LINK OF YOUTUBE VIDEO OF THE INSPECTION OF SCHOOL COVERING THE INFRASTRUCTURE OF THE SCHOOL',
+    info: 'Link of YouTube Video of inspection of school infrastructure',
     action: {
-      label: 'Watch Now',
+      label: 'Watch Video',
       href: 'https://www.youtube.com/@JRSInternationalSchool',
     },
   },
@@ -161,8 +161,8 @@ const schoolInfrastructure = [
 const smcDocuments: DocumentItem[] = [
   {
     sno: 1,
-    title: 'SCHOOL MANAGEMENT COMMITTEE',
-    btnLabel: 'SCHOOL MANAGEMENT COMMITTEE',
+    title: 'School Management Committee (SMC)',
+    btnLabel: 'View SMC Details',
     href: '/school-management-committee',
     authority: 'JRS Educational Society',
   },
@@ -243,44 +243,72 @@ export default function CertificatesPage() {
         />
 
         {/* 3. Main Tables Section */}
-        <div className="py-10 sm:py-14 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+        <section className="py-[50px] bg-white scroll-mt-20">
+          <div className="max-w-7xl xl:max-w-[1380px] 2xl:max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-14">
+
+            {/* Section Header */}
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
+              {/* Eyebrow */}
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+                  STATUTORY COMPLIANCE & PUBLIC DISCLOSURE
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+
+              <h2
+                style={{ lineHeight: '50px' }}
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Mandatory Public <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Disclosure</span>
+              </h2>
+              <p
+                style={{ margin: '10px auto', lineHeight: '26px' }}
+                className="text-slate-600 text-xs sm:text-[15px] my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
+              >
+                In compliance with CBSE regulations, here are the mandatory public disclosures, statutory certificates, infrastructure details, and academic records for JRS International School.
+              </p>
+            </div>
 
             {/* SECTION 1: General Information */}
             <section data-aos="fade-up">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#dc2626] mb-3 tracking-tight">
-                General Information
-              </h2>
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="w-1.5 h-6 bg-[#e31e24] rounded-full inline-block shrink-0" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#031c3f] tracking-tight font-['Manrope',sans-serif]">
+                  General Information
+                </h3>
+              </div>
 
-              <div className="bg-white rounded-md border border-slate-300 shadow-2xs overflow-hidden">
+              <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
-                      <tr className="bg-[#dce7f6] border-b border-slate-300 text-xs sm:text-[13px] font-bold text-slate-800 uppercase tracking-wider">
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 w-20 text-left">
+                      <tr className="bg-[#f0f5fc] border-b border-slate-200 text-xs sm:text-[13px] font-bold text-[#031c3f] uppercase tracking-wider font-['Manrope',sans-serif]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-20 text-left">
                           S.NO.
                         </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[280px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[280px]">
                           INFORMATION
                         </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[320px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[320px]">
                           DETAILS
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-200 text-xs sm:text-[13px] text-slate-700">
+                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-slate-700 font-['Inter',sans-serif]">
                       {generalInformation.map((item) => (
                         <tr
                           key={item.sno}
-                          className="hover:bg-slate-50/70 transition-colors"
+                          className="hover:bg-slate-50/80 transition-colors"
                         >
-                          <td className="py-3 px-4 sm:px-6 font-medium text-slate-800">
+                          <td className="py-3.5 px-4 sm:px-6 font-semibold text-slate-500">
                             {item.sno}
                           </td>
-                          <td className="py-3 px-4 sm:px-6 font-semibold text-slate-800">
+                          <td className="py-3.5 px-4 sm:px-6 font-semibold text-[#031c3f] leading-relaxed">
                             {item.info}
                           </td>
-                          <td className="py-3 px-4 sm:px-6 text-slate-800">
+                          <td className="py-3.5 px-4 sm:px-6 text-slate-700 leading-relaxed font-normal">
                             {item.details}
                           </td>
                         </tr>
@@ -293,57 +321,63 @@ export default function CertificatesPage() {
 
             {/* SECTION 2: Documents And Information */}
             <section data-aos="fade-up">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#dc2626] mb-3 tracking-tight">
-                Documents And Information
-              </h2>
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="w-1.5 h-6 bg-[#e31e24] rounded-full inline-block shrink-0" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#031c3f] tracking-tight font-['Manrope',sans-serif]">
+                  Documents and Information
+                </h3>
+              </div>
 
-              <div className="bg-white rounded-md border border-slate-300 shadow-2xs overflow-hidden">
+              <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
-                      <tr className="bg-[#dce7f6] border-b border-slate-300 text-xs sm:text-[13px] font-bold text-slate-800 uppercase tracking-wider">
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 w-20 text-left">
+                      <tr className="bg-[#f0f5fc] border-b border-slate-200 text-xs sm:text-[13px] font-bold text-[#031c3f] uppercase tracking-wider font-['Manrope',sans-serif]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-20 text-left">
                           S.NO.
                         </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[380px]">
-                          DOCUMENTS/INFORMATION
+                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[380px]">
+                          DOCUMENTS / INFORMATION
                         </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[240px] text-center sm:text-left">
+                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[240px] text-center sm:text-left">
                           UPLOAD DOCUMENTS
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-200 text-xs sm:text-[13px] text-slate-700">
+                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-slate-700 font-['Inter',sans-serif]">
                       {documentsAndInformation.map((doc) => (
                         <tr
                           key={doc.sno}
-                          className="hover:bg-slate-50/70 transition-colors"
+                          className="hover:bg-slate-50/80 transition-colors"
                         >
-                          <td className="py-3 px-4 sm:px-6 font-medium text-slate-800">
+                          <td className="py-3.5 px-4 sm:px-6 font-semibold text-slate-500">
                             {doc.sno}
                           </td>
-                          <td className="py-3 px-4 sm:px-6 text-slate-800 font-medium leading-relaxed">
+                          <td className="py-3.5 px-4 sm:px-6 text-[#031c3f] font-medium leading-relaxed">
                             {doc.title}
                           </td>
-                          <td className="py-3 px-4 sm:px-6">
+                          <td className="py-3.5 px-4 sm:px-6">
                             {doc.pdfUrl ? (
                               <button
                                 type="button"
                                 onClick={() => handleDocumentClick(doc)}
-                                className="bg-[#eaf1fb] hover:bg-[#dbe7f6] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3.5 py-1.5 rounded uppercase tracking-wider shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5"
+                                className="bg-[#013aa3]/10 hover:bg-[#013aa3] text-[#013aa3] hover:text-white border border-[#013aa3]/20 font-semibold text-xs sm:text-[12.5px] px-3.5 py-1.5 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5 font-['Inter',sans-serif]"
                               >
+                                <FileText className="w-3.5 h-3.5 shrink-0" />
                                 <span>{doc.btnLabel}</span>
                               </button>
                             ) : doc.href ? (
                               <Link
                                 href={doc.href}
-                                className="bg-[#eaf1fb] hover:bg-[#dbe7f6] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3.5 py-1.5 rounded uppercase tracking-wider shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5"
+                                className="bg-[#013aa3]/10 hover:bg-[#013aa3] text-[#013aa3] hover:text-white border border-[#013aa3]/20 font-semibold text-xs sm:text-[12.5px] px-3.5 py-1.5 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5 font-['Inter',sans-serif]"
                               >
+                                <ExternalLink className="w-3.5 h-3.5 shrink-0" />
                                 <span>{doc.btnLabel}</span>
                               </Link>
                             ) : (
-                              <span className="bg-[#eaf1fb] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3.5 py-1.5 rounded uppercase tracking-wider inline-block">
-                                {doc.btnLabel}
+                              <span className="bg-[#013aa3]/10 text-[#013aa3] border border-[#013aa3]/20 font-semibold text-xs sm:text-[12.5px] px-3.5 py-1.5 rounded-lg tracking-wide inline-flex items-center gap-1.5 font-['Inter',sans-serif]">
+                                <FileText className="w-3.5 h-3.5 shrink-0" />
+                                <span>{doc.btnLabel}</span>
                               </span>
                             )}
                           </td>
@@ -355,41 +389,44 @@ export default function CertificatesPage() {
               </div>
             </section>
 
-            {/* SECTION 6: SCHOOL INFRASTRUCTURE: */}
+            {/* SECTION 3: School Infrastructure */}
             <section data-aos="fade-up">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#dc2626] mb-3 tracking-tight">
-                SCHOOL INFRASTRUCTURE:
-              </h2>
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="w-1.5 h-6 bg-[#e31e24] rounded-full inline-block shrink-0" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#031c3f] tracking-tight font-['Manrope',sans-serif]">
+                  School Infrastructure
+                </h3>
+              </div>
 
-              <div className="bg-white rounded-md border border-slate-300 shadow-2xs overflow-hidden">
+              <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
-                      <tr className="bg-[#dce7f6] border-b border-slate-300 text-xs sm:text-[13px] font-bold text-slate-800 uppercase tracking-wider">
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 w-20 text-left">
+                      <tr className="bg-[#f0f5fc] border-b border-slate-200 text-xs sm:text-[13px] font-bold text-[#031c3f] uppercase tracking-wider font-['Manrope',sans-serif]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-20 text-left">
                           S.NO.
                         </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[340px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[340px]">
                           INFORMATION
                         </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[280px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[280px]">
                           DETAILS
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-200 text-xs sm:text-[13px] text-slate-700">
+                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-slate-700 font-['Inter',sans-serif]">
                       {schoolInfrastructure.map((item) => (
                         <tr
                           key={item.sno}
-                          className="hover:bg-slate-50/70 transition-colors"
+                          className="hover:bg-slate-50/80 transition-colors"
                         >
-                          <td className="py-3 px-4 sm:px-6 font-medium text-slate-800">
+                          <td className="py-3.5 px-4 sm:px-6 font-semibold text-slate-500">
                             {item.sno}
                           </td>
-                          <td className="py-3 px-4 sm:px-6 text-slate-800 font-medium">
+                          <td className="py-3.5 px-4 sm:px-6 text-[#031c3f] font-semibold leading-relaxed">
                             {item.info}
                           </td>
-                          <td className="py-3 px-4 sm:px-6 text-slate-800">
+                          <td className="py-3.5 px-4 sm:px-6 text-slate-700 leading-relaxed font-normal">
                             {item.docAction ? (
                               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                                 <span>{item.details}</span>
@@ -402,8 +439,9 @@ export default function CertificatesPage() {
                                       authority: item.docAction.authority,
                                     })
                                   }
-                                  className="bg-[#eaf1fb] hover:bg-[#dbe7f6] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3 py-1 rounded uppercase tracking-wider shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5 w-fit"
+                                  className="bg-[#013aa3]/10 hover:bg-[#013aa3] text-[#013aa3] hover:text-white border border-[#013aa3]/20 font-semibold text-xs sm:text-[12.5px] px-3.5 py-1.5 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5 w-fit font-['Inter',sans-serif]"
                                 >
+                                  <FileText className="w-3.5 h-3.5 shrink-0" />
                                   <span>{item.docAction.label}</span>
                                 </button>
                               </div>
@@ -412,9 +450,9 @@ export default function CertificatesPage() {
                                 href={item.action.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-[#eaf1fb] hover:bg-[#dbe7f6] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3.5 py-1.5 rounded uppercase tracking-wider shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5"
+                                className="bg-[#e31e24]/10 hover:bg-[#e31e24] text-[#e31e24] hover:text-white border border-[#e31e24]/20 font-semibold text-xs sm:text-[12.5px] px-3.5 py-1.5 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5 font-['Inter',sans-serif]"
                               >
-                                <Play className="w-3 h-3 fill-current" />
+                                <Play className="w-3.5 h-3.5 fill-current shrink-0" />
                                 <span>{item.action.label}</span>
                               </a>
                             ) : (
@@ -429,20 +467,23 @@ export default function CertificatesPage() {
               </div>
             </section>
 
-            {/* SECTION 7: SCHOOL MANAGEMENT COMMITEE : */}
+            {/* SECTION 4: School Management Committee */}
             <section data-aos="fade-up">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#dc2626] mb-3 tracking-tight">
-                SCHOOL MANAGEMENT COMMITEE :
-              </h2>
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="w-1.5 h-6 bg-[#e31e24] rounded-full inline-block shrink-0" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#031c3f] tracking-tight font-['Manrope',sans-serif]">
+                  School Management Committee
+                </h3>
+              </div>
 
               {/* DataTables-style controls */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 text-xs text-slate-700">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 text-xs sm:text-[13px] text-slate-600 font-['Inter',sans-serif]">
                 <div className="flex items-center gap-1.5">
                   <span>Show</span>
                   <select
                     value={entriesPerPage}
                     onChange={(e) => setEntriesPerPage(e.target.value)}
-                    className="border border-slate-300 rounded px-2 py-1 text-xs bg-white text-slate-800 focus:outline-hidden focus:border-blue-500"
+                    className="border border-slate-300 rounded-lg px-2.5 py-1 text-xs sm:text-[13px] bg-white text-slate-800 focus:outline-hidden focus:border-[#013aa3] focus:ring-1 focus:ring-[#013aa3]"
                   >
                     <option value="10">10</option>
                     <option value="25">25</option>
@@ -457,31 +498,31 @@ export default function CertificatesPage() {
                     type="text"
                     value={smcSearch}
                     onChange={(e) => setSmcSearch(e.target.value)}
-                    placeholder=""
-                    className="border border-slate-300 rounded px-2 py-1 text-xs bg-white text-slate-800 focus:outline-hidden focus:border-blue-500 w-full sm:w-44"
+                    placeholder="Search records..."
+                    className="border border-slate-300 rounded-lg px-3 py-1.5 text-xs sm:text-[13px] bg-white text-slate-800 focus:outline-hidden focus:border-[#013aa3] focus:ring-1 focus:ring-[#013aa3] w-full sm:w-52"
                   />
                 </div>
               </div>
 
               {/* SMC Table */}
-              <div className="bg-white rounded-md border border-slate-300 shadow-2xs overflow-hidden">
+              <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
-                      <tr className="bg-[#dce7f6] border-b border-slate-300 text-xs sm:text-[13px] font-bold text-slate-800 uppercase tracking-wider">
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 w-24 text-left">
+                      <tr className="bg-[#f0f5fc] border-b border-slate-200 text-xs sm:text-[13px] font-bold text-[#031c3f] uppercase tracking-wider font-['Manrope',sans-serif]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-24 text-left">
                           <div className="inline-flex items-center gap-1 cursor-pointer select-none">
                             <span>S.NO.</span>
                             <ArrowUpDown className="w-3 h-3 text-slate-400" />
                           </div>
                         </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[380px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[380px]">
                           <div className="inline-flex items-center gap-1 cursor-pointer select-none">
-                            <span>DOCUMENTS/INFORMATION</span>
+                            <span>DOCUMENTS / INFORMATION</span>
                             <ArrowUpDown className="w-3 h-3 text-slate-400" />
                           </div>
                         </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[240px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[240px]">
                           <div className="inline-flex items-center gap-1 cursor-pointer select-none">
                             <span>UPLOAD DOCUMENTS</span>
                             <ArrowUpDown className="w-3 h-3 text-slate-400" />
@@ -489,30 +530,32 @@ export default function CertificatesPage() {
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-200 text-xs sm:text-[13px] text-slate-700">
+                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-slate-700 font-['Inter',sans-serif]">
                       {filteredSmc.length > 0 ? (
                         filteredSmc.map((item) => (
                           <tr
                             key={item.sno}
-                            className="hover:bg-slate-50/70 transition-colors"
+                            className="hover:bg-slate-50/80 transition-colors"
                           >
-                            <td className="py-3 px-4 sm:px-6 font-medium text-slate-800">
+                            <td className="py-3.5 px-4 sm:px-6 font-semibold text-slate-500">
                               {item.sno}
                             </td>
-                            <td className="py-3 px-4 sm:px-6 text-slate-800 font-medium">
+                            <td className="py-3.5 px-4 sm:px-6 text-[#031c3f] font-semibold leading-relaxed">
                               {item.title}
                             </td>
-                            <td className="py-3 px-4 sm:px-6">
+                            <td className="py-3.5 px-4 sm:px-6">
                               {item.href ? (
                                 <Link
                                   href={item.href}
-                                  className="bg-[#eaf1fb] hover:bg-[#dbe7f6] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3.5 py-1.5 rounded uppercase tracking-wider shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5"
+                                  className="bg-[#013aa3]/10 hover:bg-[#013aa3] text-[#013aa3] hover:text-white border border-[#013aa3]/20 font-semibold text-xs sm:text-[12.5px] px-3.5 py-1.5 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5 font-['Inter',sans-serif]"
                                 >
+                                  <ExternalLink className="w-3.5 h-3.5 shrink-0" />
                                   <span>{item.btnLabel}</span>
                                 </Link>
                               ) : (
-                                <span className="bg-[#eaf1fb] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3.5 py-1.5 rounded uppercase tracking-wider inline-block">
-                                  {item.btnLabel}
+                                <span className="bg-[#013aa3]/10 text-[#013aa3] border border-[#013aa3]/20 font-semibold text-xs sm:text-[12.5px] px-3.5 py-1.5 rounded-lg tracking-wide inline-flex items-center gap-1.5 font-['Inter',sans-serif]">
+                                  <FileText className="w-3.5 h-3.5 shrink-0" />
+                                  <span>{item.btnLabel}</span>
                                 </span>
                               )}
                             </td>
@@ -534,7 +577,7 @@ export default function CertificatesPage() {
               </div>
 
               {/* DataTables-style pagination info */}
-              <div className="flex items-center justify-between mt-3 text-xs text-slate-700">
+              <div className="flex items-center justify-between mt-3 text-xs sm:text-[13px] text-slate-600 font-['Inter',sans-serif]">
                 <div>
                   Showing 1 to {filteredSmc.length} of {filteredSmc.length} entry
                 </div>
@@ -542,17 +585,17 @@ export default function CertificatesPage() {
                   <button
                     type="button"
                     disabled
-                    className="border border-slate-300 rounded px-2 py-0.5 text-xs text-slate-400 bg-slate-50 cursor-not-allowed"
+                    className="border border-slate-300 rounded px-2.5 py-0.5 text-xs text-slate-400 bg-slate-50 cursor-not-allowed"
                   >
                     ‹
                   </button>
-                  <span className="border border-blue-600 bg-blue-50 text-blue-700 rounded px-2.5 py-0.5 text-xs font-semibold">
+                  <span className="border border-[#013aa3] bg-[#013aa3]/10 text-[#013aa3] rounded px-2.5 py-0.5 text-xs font-semibold">
                     1
                   </span>
                   <button
                     type="button"
                     disabled
-                    className="border border-slate-300 rounded px-2 py-0.5 text-xs text-slate-400 bg-slate-50 cursor-not-allowed"
+                    className="border border-slate-300 rounded px-2.5 py-0.5 text-xs text-slate-400 bg-slate-50 cursor-not-allowed"
                   >
                     ›
                   </button>
@@ -561,7 +604,7 @@ export default function CertificatesPage() {
             </section>
 
           </div>
-        </div>
+        </section>
       </main>
 
       {/* 4. Full View PDF Modal Dialog */}
