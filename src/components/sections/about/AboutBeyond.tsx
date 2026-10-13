@@ -93,14 +93,26 @@ export default function AboutBeyond() {
     <section id="beyond-classroom" className="py-16 sm:py-20 bg-slate-50/70 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Title and Description */}
-        <div className="max-w-3xl mb-10 sm:mb-12" data-aos="fade-right">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-[#e31e24] text-xs font-extrabold uppercase tracking-wider mb-2.5">
-            <span>Co-Curricular Excellence</span>
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
+          {/* Eyebrow */}
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              CO-CURRICULAR EXCELLENCE
+            </span>
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
-            Education Beyond The Classroom
+
+          <h2
+            style={{ lineHeight: '52px' }}
+            className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#031c3f] tracking-tight leading-[52px] sm:leading-[52px] lg:leading-[52px]"
+          >
+            Education Beyond The <span className="text-[#e31e24]" style={{ lineHeight: '52px' }}>Classroom</span>
           </h2>
-          <p className="text-slate-700 text-[14px] leading-relaxed mt-3">
+          <p
+            style={{ lineHeight: '24px' }}
+            className="text-slate-600 text-sm sm:text-base mt-3 leading-[24px] max-w-2xl mx-auto"
+          >
             We empower students to explore their passions, build physical stamina, and cultivate artistic talents through a diverse suite of holistic activities designed for all-round growth.
           </p>
         </div>

@@ -64,7 +64,7 @@ export default function AboutAdmissionSteps() {
   ]
 
   return (
-    <section id="admission-steps" className="py-10 bg-white relative overflow-hidden">
+    <section id="admission-steps" className="py-[50px] bg-white relative overflow-hidden">
       {/* Subtle Graduation Cap Watermark in Top Right */}
       <div className="absolute -top-4 right-4 lg:right-12 pointer-events-none opacity-[0.05] select-none hidden md:block">
         <GraduationCap className="w-80 h-80 text-slate-900" strokeWidth={1} />
@@ -73,20 +73,20 @@ export default function AboutAdmissionSteps() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          {/* Dual-color pill indicator */}
-          <div className="flex items-center justify-center mb-3">
-            <div className="flex h-1.5 w-10 rounded-full overflow-hidden shadow-2xs">
-              <span className="w-1/2 bg-[#031c3f]" />
-              <span className="w-1/2 bg-[#e31e24]" />
-            </div>
+          {/* Eyebrow: — STEPS OF — */}
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              STEPS OF
+            </span>
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
           </div>
 
-          <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-1">
-            STEPS OF
-          </span>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#031c3f] tracking-tight leading-tight">
-            ADMISSION <span className="text-[#e31e24]">PROCESS</span>
+          <h2
+            style={{ lineHeight: '52px' }}
+            className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[52px] sm:leading-[52px] lg:leading-[52px]"
+          >
+            Admission <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Process</span>
           </h2>
           <p className="text-slate-600 text-[14px] sm:text-[15px] font-normal mt-2.5 max-w-xl mx-auto">
             Follow these simple steps to complete the admission process at JRS.
@@ -104,9 +104,8 @@ export default function AboutAdmissionSteps() {
               <div key={idx} className="flex flex-col items-center relative z-10">
                 {/* Circle dot node on the horizontal line */}
                 <div
-                  className={`w-3.5 h-3.5 rounded-full ${
-                    item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                  } border-2 border-white shadow-xs`}
+                  className={`w-3.5 h-3.5 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                    } border-2 border-white shadow-xs`}
                 />
                 {/* Vertical line connecting down to the card */}
                 <div className="w-[1.5px] h-6 bg-slate-300/80" />
@@ -134,9 +133,8 @@ export default function AboutAdmissionSteps() {
 
                 {/* Number Badge at Top Center */}
                 <div
-                  className={`w-9 h-9 rounded-full ${
-                    item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                  } text-white text-xs font-black flex items-center justify-center shadow-xs mb-4 border-2 border-white relative z-10 group-hover:scale-105 transition-transform`}
+                  className={`w-9 h-9 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                    } text-white text-xs font-black flex items-center justify-center shadow-xs mb-4 border-2 border-white relative z-10 group-hover:scale-105 transition-transform`}
                 >
                   {item.step}
                 </div>
@@ -153,13 +151,12 @@ export default function AboutAdmissionSteps() {
 
                 {/* Accent Divider Dash */}
                 <div
-                  className={`w-6 h-[2px] ${
-                    item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                  } rounded-full my-2.5 mx-auto`}
+                  className={`w-6 h-[2px] ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                    } rounded-full my-2.5 mx-auto`}
                 />
 
                 {/* Description */}
-                <p className="text-slate-600 text-[12px] xl:text-[12.5px] leading-[18px] xl:leading-[19px] font-normal flex-1">
+                <p className="text-slate-600 text-[13px] leading-[26px] font-normal flex-1">
                   {item.description}
                 </p>
               </div>
@@ -187,9 +184,8 @@ export default function AboutAdmissionSteps() {
 
               {/* Number Badge at Top Center */}
               <div
-                className={`w-9 h-9 rounded-full ${
-                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                } text-white text-xs font-black flex items-center justify-center shadow-xs mb-3.5 border-2 border-white relative z-10`}
+                className={`w-9 h-9 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                  } text-white text-xs font-black flex items-center justify-center shadow-xs mb-3.5 border-2 border-white relative z-10`}
               >
                 {item.step}
               </div>
@@ -206,9 +202,8 @@ export default function AboutAdmissionSteps() {
 
               {/* Accent Divider Dash */}
               <div
-                className={`w-6 h-[2px] ${
-                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                } rounded-full my-2.5 mx-auto`}
+                className={`w-6 h-[2px] ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                  } rounded-full my-2.5 mx-auto`}
               />
 
               {/* Description */}

@@ -83,17 +83,29 @@ export default function AdmissionsFAQ() {
   }
 
   return (
-    <section className="py-12 sm:py-16 bg-white overflow-hidden">
+    <section className="py-[50px] bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
-          <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#dc2626] block mb-2">
-            ADMISSIONS FAQS
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
-            Frequently Asked Questions
+          {/* Eyebrow */}
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              ADMISSIONS FAQS
+            </span>
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+          </div>
+
+          <h2
+            style={{ lineHeight: '52px' }}
+            className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#031c3f] tracking-tight leading-[52px] sm:leading-[52px] lg:leading-[52px]"
+          >
+            Frequently Asked <span className="text-[#e31e24]" style={{ lineHeight: '52px' }}>Questions</span>
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2">
+          <p
+            style={{ lineHeight: '36px' }}
+            className="text-slate-600 text-sm sm:text-base mt-2 leading-[36px]"
+          >
             Find answers to commonly asked questions about admissions, academics, and life at JRS.
           </p>
         </div>
@@ -140,7 +152,10 @@ export default function AdmissionsFAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-5 pt-1 text-slate-700 text-xs sm:text-[14px] leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                  <div
+                    style={{ lineHeight: '26px' }}
+                    className="px-4 sm:px-5 pb-5 pt-1 text-slate-700 text-xs sm:text-[14px] leading-[26px] border-t border-slate-100 bg-slate-50/50"
+                  >
                     {faq.answer}
                   </div>
                 )}
