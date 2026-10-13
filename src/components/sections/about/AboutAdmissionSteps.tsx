@@ -83,94 +83,15 @@ export default function AboutAdmissionSteps() {
           </p>
         </div>
 
-        {/* Desktop 6-Step Visual Stepper with Horizontal Connector Bar */}
-        <div className="hidden lg:block">
-          {/* Horizontal Timeline Connector Bar */}
-          <div className="grid grid-cols-6 gap-3.5 xl:gap-5 relative mb-0">
-            {/* Continuous horizontal connecting line spanning from column 1 center to column 6 center */}
-            <div className="absolute top-[6px] left-[8.33%] right-[8.33%] h-[1.5px] bg-slate-300/80 z-0" />
-
-            {steps.map((item, idx) => (
-              <div key={idx} className="flex flex-col items-center relative z-10">
-                {/* Circle dot node on the horizontal line */}
-                <div
-                  className={`w-3.5 h-3.5 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                    } border-2 border-white shadow-xs`}
-                />
-                {/* Vertical line connecting down to the card */}
-                <div className="w-[1.5px] h-6 bg-slate-300/80" />
-              </div>
-            ))}
-          </div>
-
-          {/* 6 Step Cards Grid */}
-          <div className="grid grid-cols-6 gap-3.5 xl:gap-5 items-stretch">
-            {steps.map((item, index) => (
-              <div
-                key={index}
-                className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 p-4 xl:p-5 pt-5 pb-3.5 flex flex-col items-center text-center overflow-hidden h-full group"
-              >
-                {/* Top-Left Corner Accent Swoop */}
-                <div className="absolute top-0 left-0 w-12 xl:w-14 h-12 xl:h-14 pointer-events-none z-10">
-                  <svg
-                    viewBox="0 0 56 56"
-                    className={`w-full h-full ${item.isEven ? 'text-[#e31e24]' : 'text-[#031c3f]'}`}
-                    fill="currentColor"
-                  >
-                    <path d="M 0 0 L 46 0 C 38 18, 18 38, 0 46 Z" />
-                  </svg>
-                </div>
-
-                {/* Number Badge at Top Center */}
-                <div
-                  className={`w-9 h-9 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                    } text-white text-xs font-black flex items-center justify-center shadow-xs mb-4 border-2 border-white relative z-10 group-hover:scale-105 transition-transform`}
-                >
-                  {item.step}
-                </div>
-
-                {/* 3D Flat Icon */}
-                <div className="mb-3.5 flex items-center justify-center h-16 xl:h-20 w-full">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-14 h-14 xl:w-16 xl:h-16 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.12)] group-hover:scale-110 transition-transform duration-300 pointer-events-none"
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-[14px] xl:text-[15px] font-bold text-[#031c3f] leading-snug min-h-[42px] flex items-center justify-center">
-                  {item.title}
-                </h3>
-
-                {/* Accent Divider Dash */}
-                <div
-                  className={`w-6 h-[2px] ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                    } rounded-full my-2.5 mx-auto`}
-                />
-
-                {/* Description */}
-                <p
-                  style={{ fontSize: '14px', fontWeight: 400, lineHeight: '24px' }}
-                  className="text-slate-600 text-[14px] font-normal leading-[24px] flex-1"
-                >
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Tablet & Mobile Layout: Responsive Grid Cards with Matching Aesthetics */}
-        <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {/* 6 Step Cards Grid: 3 Cards per Row on Large Screens */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 items-stretch">
           {steps.map((item, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 p-5 pt-6 pb-3.5 flex flex-col items-center text-center overflow-hidden"
+              className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 p-6 sm:p-7 pt-6 pb-6 flex flex-col items-center text-center overflow-hidden h-full group"
             >
               {/* Top-Left Corner Accent Swoop */}
-              <div className="absolute top-0 left-0 w-14 h-14 pointer-events-none z-10">
+              <div className="absolute top-0 left-0 w-14 sm:w-16 h-14 sm:h-16 pointer-events-none z-10">
                 <svg
                   viewBox="0 0 56 56"
                   className={`w-full h-full ${item.isEven ? 'text-[#e31e24]' : 'text-[#031c3f]'}`}
@@ -182,37 +103,40 @@ export default function AboutAdmissionSteps() {
 
               {/* Number Badge at Top Center */}
               <div
-                className={`w-9 h-9 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                  } text-white text-xs font-black flex items-center justify-center shadow-xs mb-3.5 border-2 border-white relative z-10`}
+                className={`w-10 h-10 rounded-full ${
+                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                } text-white text-xs sm:text-sm font-black flex items-center justify-center shadow-xs mb-4 border-2 border-white relative z-10 group-hover:scale-105 transition-transform`}
               >
                 {item.step}
               </div>
 
-              {/* 3D Flat Icon */}
-              <div className="mb-3.5 flex items-center justify-center h-16 w-full">
+              {/* 3D Flat Icon with transparent background */}
+              <div className="mb-4 flex items-center justify-center h-20 sm:h-24 w-full">
                 <img
                   src={item.image}
-                  alt={item.title}
-                  className="w-14 h-14 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.12)] pointer-events-none"
+                  alt=""
+                  aria-hidden="true"
+                  className="w-18 h-18 sm:w-20 sm:h-20 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.12)] group-hover:scale-110 transition-transform duration-300 pointer-events-none"
                   loading="lazy"
                 />
               </div>
 
               {/* Title */}
-              <h3 className="text-[15px] font-bold text-[#031c3f] leading-snug">
+              <h3 className="text-[16px] sm:text-[17px] font-bold text-[#031c3f] leading-snug min-h-[32px] flex items-center justify-center">
                 {item.title}
               </h3>
 
               {/* Accent Divider Dash */}
               <div
-                className={`w-6 h-[2px] ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                  } rounded-full my-2.5 mx-auto`}
+                className={`w-8 h-[2px] ${
+                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                } rounded-full my-3 mx-auto`}
               />
 
               {/* Description */}
               <p
                 style={{ fontSize: '14px', fontWeight: 400, lineHeight: '24px' }}
-                className="text-slate-600 text-[14px] font-normal leading-[24px]"
+                className="text-slate-600 text-[14px] font-normal leading-[24px] flex-1"
               >
                 {item.description}
               </p>
