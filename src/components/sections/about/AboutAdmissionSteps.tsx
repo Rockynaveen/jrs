@@ -1,15 +1,7 @@
 'use client'
 
 import React from 'react'
-import {
-  Users,
-  FileText,
-  UserCheck,
-  FileEdit,
-  MessagesSquare,
-  CreditCard,
-  GraduationCap,
-} from 'lucide-react'
+import { GraduationCap } from 'lucide-react'
 
 export default function AboutAdmissionSteps() {
   const steps = [
@@ -19,7 +11,7 @@ export default function AboutAdmissionSteps() {
       title: 'Meet the Admission Officer',
       description:
         'Visit the school campus and meet our admission officer for guidance.',
-      icon: <Users className="w-9 h-9 text-[#031c3f] stroke-[1.8]" />,
+      image: '/images/admissions/admission-officer.png',
     },
     {
       step: '02',
@@ -27,7 +19,7 @@ export default function AboutAdmissionSteps() {
       title: 'Procure the Application Form',
       description:
         'Collect the application form from the school or download it as provided.',
-      icon: <FileText className="w-9 h-9 text-[#e31e24] stroke-[1.8]" />,
+      image: '/images/admissions/application-form.png',
     },
     {
       step: '03',
@@ -35,7 +27,7 @@ export default function AboutAdmissionSteps() {
       title: 'Register With Us',
       description:
         'Submit the completed application form with the required details.',
-      icon: <UserCheck className="w-9 h-9 text-[#031c3f] stroke-[1.8]" />,
+      image: '/images/admissions/register-student.png',
     },
     {
       step: '04',
@@ -43,7 +35,7 @@ export default function AboutAdmissionSteps() {
       title: 'Appear For The Admission Test',
       description:
         'The student needs to appear for the admission test as per the grade.',
-      icon: <FileEdit className="w-9 h-9 text-[#e31e24] stroke-[1.8]" />,
+      image: '/images/admissions/admission-test.png',
     },
     {
       step: '05',
@@ -51,7 +43,7 @@ export default function AboutAdmissionSteps() {
       title: 'Appear For The Personal Interview',
       description:
         'The student and parents may be called for a personal interview.',
-      icon: <MessagesSquare className="w-9 h-9 text-[#031c3f] stroke-[1.8]" />,
+      image: '/images/admissions/personal-interview.png',
     },
     {
       step: '06',
@@ -59,7 +51,7 @@ export default function AboutAdmissionSteps() {
       title: 'Pay Fee',
       description:
         'Upon selection, complete the fee payment to confirm admission.',
-      icon: <CreditCard className="w-9 h-9 text-[#e31e24] stroke-[1.8]" />,
+      image: '/images/admissions/pay-fee.png',
     },
   ]
 
@@ -139,9 +131,14 @@ export default function AboutAdmissionSteps() {
                   {item.step}
                 </div>
 
-                {/* Icon */}
-                <div className="mb-3.5 flex items-center justify-center h-12 group-hover:scale-110 transition-transform duration-300">
-                  {item.icon}
+                {/* 3D Flat Icon */}
+                <div className="mb-3.5 flex items-center justify-center h-16 xl:h-20 w-full">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-14 h-14 xl:w-16 xl:h-16 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.12)] group-hover:scale-110 transition-transform duration-300 pointer-events-none"
+                    loading="lazy"
+                  />
                 </div>
 
                 {/* Title */}
@@ -190,9 +187,14 @@ export default function AboutAdmissionSteps() {
                 {item.step}
               </div>
 
-              {/* Icon */}
-              <div className="mb-3 flex items-center justify-center h-12">
-                {item.icon}
+              {/* 3D Flat Icon */}
+              <div className="mb-3.5 flex items-center justify-center h-16 w-full">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-14 h-14 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.12)] pointer-events-none"
+                  loading="lazy"
+                />
               </div>
 
               {/* Title */}
