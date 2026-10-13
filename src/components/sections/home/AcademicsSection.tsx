@@ -102,8 +102,8 @@ export default function AcademicsSection() {
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="w-6 sm:w-8 h-[2px] bg-[#e31e24]" />
             <span
-              style={{ lineHeight: '52px' }}
-              className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] leading-[52px] sm:leading-[52px]"
+              style={{ lineHeight: '26px' }}
+              className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] leading-[26px] sm:leading-[26px]"
             >
               ACADEMIC PROGRAMMES
             </span>
@@ -169,7 +169,10 @@ export default function AcademicsSection() {
                   </p>
 
                   {/* Description */}
-                  <p className="text-slate-600 text-xs sm:text-base leading-relaxed max-w-xl">
+                  <p
+                    style={{ lineHeight: '26px' }}
+                    className="text-slate-600 text-xs sm:text-base leading-[26px] max-w-xl"
+                  >
                     {stage.description}
                   </p>
 
