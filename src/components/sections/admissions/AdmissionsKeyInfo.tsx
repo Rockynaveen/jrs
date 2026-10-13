@@ -19,7 +19,6 @@ export default function AdmissionsKeyInfo() {
         'bg-red-50 text-[#dc2626] border-red-200/80 group-hover:bg-red-100/80',
       topBar: 'bg-gradient-to-r from-[#dc2626] to-[#ef4444]',
       hoverBorder: 'hover:border-[#dc2626]/50',
-      hoverShadow: 'hover:shadow-xl hover:shadow-red-500/10',
       hoverBg: 'hover:bg-gradient-to-br hover:from-white hover:to-red-50/20',
       icon: Sparkles,
       iconDefault: 'bg-red-50 text-[#dc2626]',
@@ -43,7 +42,6 @@ export default function AdmissionsKeyInfo() {
         'bg-blue-50 text-[#031c3f] border-blue-200/80 group-hover:bg-blue-100/80',
       topBar: 'bg-gradient-to-r from-[#031c3f] via-[#1d4ed8] to-[#2563eb]',
       hoverBorder: 'hover:border-[#2563eb]/50',
-      hoverShadow: 'hover:shadow-xl hover:shadow-blue-600/10',
       hoverBg: 'hover:bg-gradient-to-br hover:from-white hover:to-blue-50/20',
       icon: ClipboardCheck,
       iconDefault: 'bg-blue-50 text-[#031c3f]',
@@ -65,7 +63,6 @@ export default function AdmissionsKeyInfo() {
         'bg-blue-50 text-[#031c3f] border-blue-200/80 group-hover:bg-blue-100/80',
       topBar: 'bg-gradient-to-r from-[#031c3f] via-[#1d4ed8] to-[#2563eb]',
       hoverBorder: 'hover:border-[#2563eb]/50',
-      hoverShadow: 'hover:shadow-xl hover:shadow-blue-600/10',
       hoverBg: 'hover:bg-gradient-to-br hover:from-white hover:to-blue-50/20',
       icon: Users,
       iconDefault: 'bg-blue-50 text-[#031c3f]',
@@ -89,7 +86,6 @@ export default function AdmissionsKeyInfo() {
         'bg-red-50 text-[#dc2626] border-red-200/80 group-hover:bg-red-100/80',
       topBar: 'bg-gradient-to-r from-[#dc2626] to-[#ef4444]',
       hoverBorder: 'hover:border-[#dc2626]/50',
-      hoverShadow: 'hover:shadow-xl hover:shadow-red-500/10',
       hoverBg: 'hover:bg-gradient-to-br hover:from-white hover:to-red-50/20',
       icon: FileText,
       iconDefault: 'bg-red-50 text-[#dc2626]',
@@ -108,17 +104,27 @@ export default function AdmissionsKeyInfo() {
   ]
 
   return (
-    <section className="py-10 bg-slate-50/80 overflow-hidden border-t border-slate-100">
+    <section className="py-[50px] bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="max-w-3xl mb-10" data-aos="fade-up">
-          <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626] block mb-2">
-            ADMISSION ARRANGEMENTS & POLICY
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#031c3f] tracking-tight leading-tight">
-            Admission Criteria & Guidelines
+        <div className="text-center max-w-3xl mx-auto mb-10" data-aos="fade-up">
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              ADMISSION ARRANGEMENTS & POLICY
+            </span>
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+          </div>
+          <h2
+            style={{ lineHeight: '52px' }}
+            className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#031c3f] tracking-tight leading-[52px]"
+          >
+            Admission Criteria & <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Guidelines</span>
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+          <p
+            style={{ lineHeight: '36px' }}
+            className="text-slate-600 text-sm sm:text-base mt-3 leading-[36px] max-w-2xl mx-auto"
+          >
             Essential guidelines for parents applying to Nursery and Grades 1 through 12, designed to ensure a fair, supportive, and child-centered enrollment process.
           </p>
         </div>
@@ -130,7 +136,7 @@ export default function AdmissionsKeyInfo() {
             return (
               <div
                 key={item.id}
-                className={`group relative bg-white rounded-2xl p-5 sm:p-7 shadow-sm border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} ${item.hoverShadow} ${item.hoverBg} overflow-hidden flex flex-col justify-between`}
+                className={`group relative bg-white rounded-2xl p-5 sm:p-7 border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} ${item.hoverBg} overflow-hidden flex flex-col justify-between`}
               >
                 {/* Colored Top Accent Stripe that expands on hover */}
                 <div
@@ -168,7 +174,10 @@ export default function AdmissionsKeyInfo() {
                       {item.title}
                     </h3>
 
-                    <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                    <p
+                      style={{ lineHeight: '24px' }}
+                      className="text-slate-700 text-xs sm:text-sm leading-[24px]"
+                    >
                       {item.description}
                     </p>
 
@@ -186,10 +195,11 @@ export default function AdmissionsKeyInfo() {
                         {item.keyPoints.map((pt, pIdx) => (
                           <li
                             key={pIdx}
-                            className="flex items-center gap-2 text-xs text-slate-600 font-medium"
+                            style={{ lineHeight: '24px' }}
+                            className="flex items-start gap-2 text-xs text-slate-600 font-medium leading-[24px]"
                           >
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 transition-transform duration-300 group-hover:scale-110" />
-                            <span>{pt}</span>
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-[5px] transition-transform duration-300 group-hover:scale-110" />
+                            <span style={{ lineHeight: '24px' }} className="leading-[24px]">{pt}</span>
                           </li>
                         ))}
                       </ul>

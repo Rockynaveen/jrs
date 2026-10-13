@@ -30,7 +30,9 @@ export default function BeyondClassroomPage() {
           title="Beyond The"
           titleHighlight="Classroom"
           subtitle="Nurturing Creativity, Athletics, Character & Life Skills."
-          description="Education at JRS extends far beyond the four walls of the classroom. We empower students to discover their passions, hone athletic talents, express artistic creativity, and build lifelong character."
+          description="We empower students to discover their passions, develop talents, and build character beyond the classroom."
+          descriptionStyle={{ lineHeight: '25px' }}
+          descriptionClassName="leading-[25px] md:leading-[25px]"
           imageSrc="/images/beyond-hero.png"
           imageAlt="JRS International School Beyond Classroom Activities"
           imagePosition="object-cover object-center md:object-[center_35%]"

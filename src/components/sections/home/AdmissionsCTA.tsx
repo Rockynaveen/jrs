@@ -99,7 +99,7 @@ export default function AdmissionsCTA() {
   return (
     <section
       id="contact"
-      className="relative bg-[#030d1d] py-10 overflow-hidden text-white scroll-mt-24"
+      className="relative bg-[#030d1d] py-[50px] overflow-hidden text-white scroll-mt-24"
     >
       <span id="enquire" className="absolute -top-24" />
       <span id="admissions" className="absolute -top-24" />

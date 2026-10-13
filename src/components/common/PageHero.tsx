@@ -55,7 +55,7 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className={`relative overflow-hidden bg-[#031c3f] text-white -mt-16 sm:-mt-20 md:-mt-[122px] pt-16 sm:pt-20 md:pt-[122px] h-[100vh] min-h-[100vh] h-[100dvh] min-h-[100dvh] flex flex-col justify-between ${className || ''}`}>
+    <section className={`relative overflow-hidden bg-[#031c3f] text-white -mt-16 sm:-mt-20 md:-mt-[122px] pt-16 sm:pt-20 md:pt-[122px] h-[70vh] min-h-[70vh] h-[70dvh] min-h-[70dvh] flex flex-col justify-between ${className || ''}`}>
       {/* Background Campus Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -118,8 +118,8 @@ export default function PageHero({
         </div>
       )}
 
-      {/* Hero Content Container: Centers content comfortably above the bottom statistics bar */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center pt-2 sm:pt-4 md:pt-6 pb-28 sm:pb-32 md:pb-[130px]">
+      {/* Hero Content Container: Centers content comfortably above the bottom statistics bar when children exist, or evenly centers when no children */}
+      <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center pt-2 sm:pt-4 md:pt-6 ${children ? 'pb-28 sm:pb-32 md:pb-[130px]' : 'pb-6 sm:pb-8 md:pb-12'}`}>
         {/* Upper/Middle Content Area */}
         <div className="my-auto pt-2 sm:pt-4">
           <div className={rightElement ? "grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center" : ""}>

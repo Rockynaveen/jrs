@@ -64,7 +64,7 @@ export default function AdmissionsProcess() {
   ]
 
   return (
-    <section id="admission-process" className="py-10 bg-white relative overflow-hidden">
+    <section id="admission-process" className="py-[50px] bg-white relative overflow-hidden">
       {/* Subtle Graduation Cap Watermark in Top Right */}
       <div className="absolute -top-4 right-4 lg:right-12 pointer-events-none opacity-[0.05] select-none hidden md:block">
         <GraduationCap className="w-80 h-80 text-slate-900" strokeWidth={1} />
@@ -73,20 +73,20 @@ export default function AdmissionsProcess() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          {/* Dual-color pill indicator */}
-          <div className="flex items-center justify-center mb-3">
-            <div className="flex h-1.5 w-10 rounded-full overflow-hidden shadow-2xs">
-              <span className="w-1/2 bg-[#031c3f]" />
-              <span className="w-1/2 bg-[#e31e24]" />
-            </div>
+          {/* Eyebrow: — STEPS OF — */}
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              STEPS OF
+            </span>
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
           </div>
 
-          <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-1">
-            STEPS OF
-          </span>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#031c3f] tracking-tight leading-tight">
-            ADMISSION <span className="text-[#e31e24]">PROCESS</span>
+          <h2
+            style={{ lineHeight: '52px' }}
+            className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[52px] sm:leading-[52px] lg:leading-[52px]"
+          >
+            Admission <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Process</span>
           </h2>
           <p className="text-slate-600 text-[14px] sm:text-[15px] font-normal mt-2.5 max-w-xl mx-auto">
             Follow these simple steps to complete the admission process at JRS.

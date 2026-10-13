@@ -124,10 +124,10 @@ export default function FacilitiesPage() {
                     key={index}
                     data-aos="fade-up"
                     data-aos-delay={index * 50}
-                    className="p-4 sm:p-5 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/80 hover:border-red-200 hover:shadow-xl transition-all duration-200 flex items-center gap-3.5 sm:gap-4 group"
+                    className="p-4 sm:p-5 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/80 hover:border-red-200 transition-all duration-200 flex items-center gap-3.5 sm:gap-4 group"
                   >
                     <div
-                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shrink-0 border-2 ${item.iconBg} transition-transform duration-200 group-hover:scale-110 shadow-sm`}
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shrink-0 border-2 ${item.iconBg} transition-transform duration-200 group-hover:scale-110`}
                     >
                       <Icon className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.2]" />
                     </div>
@@ -141,29 +141,58 @@ export default function FacilitiesPage() {
               })}
             </div>
 
-            {/* Simple Closing Note & Invitation Box */}
+            {/* Invitation Glassmorphic Card with Contained Background Image */}
             <div
-              className="mt-14 max-w-4xl mx-auto p-8 sm:p-10 rounded-2xl bg-[#031c3f] text-white text-center shadow-lg relative overflow-hidden"
+              className="mt-14 relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/20"
               data-aos="fade-up"
             >
-              <div className="relative z-10 max-w-xl mx-auto space-y-4">
-                <h3 className="text-xl sm:text-2xl font-bold leading-snug text-white">
-                  We invite everyone to join us on our journey towards excellence.
-                </h3>
-                <div className="pt-2 flex flex-wrap justify-center gap-3.5">
-                  <Link
-                    href="/admissions"
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] active:scale-95 transition-all shadow-md"
-                  >
-                    <span>Book a Campus Tour</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    href="/#contact"
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-colors"
-                  >
-                    <span>Contact School</span>
-                  </Link>
+              {/* Background Image confined strictly to this card */}
+              <div className="absolute inset-0 z-0">
+                <img
+                  src="/images/campus-building.jpg"
+                  alt="JRS International School Campus"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#031127]/90 via-[#031c3f]/80 to-[#031127]/90 backdrop-blur-[2px]" />
+              </div>
+
+              {/* Glassmorphic Content Layer */}
+              <div className="relative z-10 w-full bg-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-md shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
+                  {/* Left Side: Content */}
+                  <div className="flex-1 space-y-3 sm:space-y-4 text-left">
+                    <div className="flex items-center gap-2.5 mb-1">
+                      <span className="w-6 h-[2px] bg-[#e31e24]" />
+                      <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-amber-300">
+                        JOIN THE JRS JOURNEY
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold leading-snug sm:leading-[38px] text-white drop-shadow-sm">
+                      We invite everyone to join us on our journey towards <span className="text-amber-300">excellence</span>.
+                    </h3>
+
+                    <p className="text-slate-200 text-xs sm:text-sm leading-relaxed max-w-2xl">
+                      Experience our vibrant learning atmosphere, state-of-the-art facilities, and nurturing environment firsthand.
+                    </p>
+                  </div>
+
+                  {/* Right Side: Buttons */}
+                  <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch sm:items-center lg:items-end xl:items-center gap-3 shrink-0">
+                    <Link
+                      href="/admissions"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] active:scale-95 transition-all shadow-lg shadow-red-600/30 whitespace-nowrap"
+                    >
+                      <span>Book a Campus Tour</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link
+                      href="/#contact"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 border border-white/30 hover:bg-white/20 backdrop-blur-sm transition-all whitespace-nowrap"
+                    >
+                      <span>Contact School</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
