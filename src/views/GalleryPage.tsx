@@ -410,7 +410,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Section: Classroom (No Section Heading, "Classroom" directly below each image) */}
-        <section id="classroom" className="py-5 sm:py-6 bg-slate-50/60 border-t border-slate-200/60">
+        <section id="classroom" className="py-5 sm:py-6 bg-white border-t border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
               {CLASSROOM_IMAGES.map((item, index) => (
@@ -484,7 +484,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Section 2: Feb 17 Annual Day celebrations 2023-24 */}
-        <section id="annual-day-celebrations" className="py-14 sm:py-18 bg-slate-50/60 border-t border-slate-200/60">
+        <section id="annual-day-celebrations" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header with Title */}
             <div className="mb-8 sm:mb-10" data-aos="fade-right">
@@ -619,7 +619,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Section: Videos - Create Life Skills (Middle of the Page) */}
-        <section id="life-skills-videos" className="py-14 sm:py-18 bg-slate-50/60 border-y border-slate-200/60">
+        <section id="life-skills-videos" className="py-14 sm:py-18 bg-white border-y border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header Row */}
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
@@ -672,7 +672,7 @@ export default function GalleryPage() {
 
 
         {/* 7. Section 4: Republic Day Celebrations */}
-        <section id="republic-day-celebrations" className="py-14 sm:py-18 bg-slate-50/60 border-t border-slate-200/60">
+        <section id="republic-day-celebrations" className="py-14 sm:py-18 bg-white border-t border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header Row */}
             <div className="mb-8 sm:mb-10" data-aos="fade-right">

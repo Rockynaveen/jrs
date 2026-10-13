@@ -31,32 +31,24 @@ export default function CareersPage() {
       description:
         'Work with passionate educators and supportive leadership.',
       icon: Users,
-      bg: 'bg-[#e0effe]',
-      color: 'text-[#0284c7]',
     },
     {
       title: 'Continuous Growth',
       description:
         'Access to training, seminars and professional development programs.',
       icon: GraduationCap,
-      bg: 'bg-[#fef3c7]',
-      color: 'text-[#d97706]',
     },
     {
       title: 'Innovative Teaching',
       description:
         'Use modern tools and research-based methods in the classroom.',
       icon: Lightbulb,
-      bg: 'bg-[#dcfce7]',
-      color: 'text-[#16a34a]',
     },
     {
       title: 'Make a Difference',
       description:
         'Be part of a mission to create confident, ethical and future-ready students.',
       icon: Star,
-      bg: 'bg-[#ffe4e6]',
-      color: 'text-[#e11d48]',
     },
   ]
 
@@ -81,32 +73,6 @@ export default function CareersPage() {
           imageSrc="/images/careers-hero.jpg"
           imageAlt="Careers at JRS International School"
           imagePosition="object-cover object-[center_35%]"
-          rightElement={
-            <div className="relative text-right select-none transform rotate-[-3deg]">
-              <p
-                className="text-3xl sm:text-4xl md:text-[44px] text-white font-normal leading-tight tracking-wide drop-shadow-md"
-                style={{
-                  fontFamily: '"Caveat", "Brush Script MT", "Segoe Script", cursive',
-                }}
-              >
-                Where <br />
-                <span className="text-white">dreams are welcome</span>
-              </p>
-              {/* Subtle golden curved stroke beneath */}
-              <svg
-                className="w-48 h-4 ml-auto mt-1 overflow-visible"
-                viewBox="0 0 180 16"
-                fill="none"
-              >
-                <path
-                  d="M 5 12 C 55 4, 125 4, 175 14"
-                  stroke="#f59e0b"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
-          }
         />
 
         {/* 3. Section 1: "Grow. Teach. Inspire. Make a Difference." */}
@@ -116,18 +82,33 @@ export default function CareersPage() {
               {/* Left Column: Heading and Body */}
               <div className="lg:col-span-6 space-y-4" data-aos="fade-right">
                 <div>
-                  <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
-                    TEACHING AT JRS
-                  </span>
-                  <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-[1.18]">
-                    Grow. Teach. <span className="text-[#e31e24]">Inspire.</span>
+                  {/* Eyebrow */}
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    <span className="w-8 h-[2px] bg-[#e31e24]" />
+                    <span
+                      style={{ fontSize: '13px', lineHeight: '23px' }}
+                      className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                    >
+                      TEACHING AT JRS
+                    </span>
+                    <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  </div>
+
+                  <h2
+                    style={{ fontSize: '40px', lineHeight: '50px' }}
+                    className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+                  >
+                    Grow. Teach. <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Inspire.</span>
                     <br className="hidden sm:inline" />
-                    Make a <span className="text-[#e31e24]">Difference.</span>
+                    Make a <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Difference.</span>
                   </h2>
                 </div>
 
                 {/* Description Paragraph */}
-                <p className="text-slate-700 text-sm sm:text-[15px] leading-relaxed pt-1">
+                <p
+                  style={{ lineHeight: '30px' }}
+                  className="text-slate-700 text-sm sm:text-[15px] leading-[30px] sm:leading-[30px] pt-1"
+                >
                   We believe that the teacher community at JRS is our unique asset.
                   Here, teachers are given the push to innovate, create, and approach
                   teaching methodology through interactive and research-based methods.
@@ -159,15 +140,27 @@ export default function CareersPage() {
         </section>
 
         {/* 4. Section 2: "Why Join JRS?" (4 Horizontal Cards) */}
-        <section className="py-10 bg-[#f8fafc] border-y border-slate-100 overflow-hidden">
+        <section className="py-10 bg-transparent overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Centered Heading */}
-            <div className="text-center max-w-xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
-              <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
-                WORK CULTURE & BENEFITS
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] tracking-tight">
-                Why Join <span className="text-[#e31e24]">JRS?</span>
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+              {/* Eyebrow */}
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span
+                  style={{ fontSize: '13px', lineHeight: '23px' }}
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                >
+                  WORK CULTURE & BENEFITS
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+
+              <h2
+                style={{ fontSize: '40px', lineHeight: '50px' }}
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+              >
+                Why Join <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>JRS?</span>
               </h2>
             </div>
 
@@ -183,9 +176,10 @@ export default function CareersPage() {
                     className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-start gap-4 group"
                   >
                     <div
-                      className={`w-12 h-12 rounded-full ${item.bg} ${item.color} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs`}
+                      style={{ backgroundColor: 'rgb(6 60 163)' }}
+                      className="w-12 h-12 rounded-full text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs"
                     >
-                      <Icon className="w-5 h-5 stroke-[2.2]" />
+                      <Icon className="w-5 h-5 stroke-[2.2] text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-[15px] font-bold text-[#031c3f] leading-snug group-hover:text-[#013aa3] transition-colors">
@@ -209,12 +203,26 @@ export default function CareersPage() {
               {/* Left Column: Who are passionate about their field */}
               <div className="lg:col-span-6 space-y-4" data-aos="fade-right">
                 <div>
-                  <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-2">
-                    CAREER OPPORTUNITIES
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#031c3f] tracking-tight leading-snug">
+                  {/* Eyebrow */}
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    <span className="w-8 h-[2px] bg-[#e31e24]" />
+                    <span
+                      style={{ fontSize: '13px', lineHeight: '23px' }}
+                      className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                    >
+                      CAREER OPPORTUNITIES
+                    </span>
+                    <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  </div>
+                  <h2
+                    style={{ lineHeight: '44px' }}
+                    className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#031c3f] tracking-tight leading-[44px] sm:leading-[44px] lg:leading-[44px]"
+                  >
                     Who are passionate about their field –
-                    <span className="text-[#e31e24] block mt-1.5">
+                    <span
+                      style={{ lineHeight: '44px' }}
+                      className="text-[#e31e24] block mt-1.5 leading-[44px]"
+                    >
                       A great future awaits you at JRS
                     </span>
                   </h2>
@@ -231,9 +239,9 @@ export default function CareersPage() {
 
               {/* Right Column: How to Apply Card */}
               <div className="lg:col-span-6" data-aos="fade-left">
-                <div className="relative bg-[#f0f6ff] border border-blue-100 rounded-3xl p-6 sm:p-8 overflow-hidden shadow-sm">
+                <div className="relative bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 overflow-hidden shadow-xs">
                   {/* Decorative Paper Airplane Watermark */}
-                  <Send className="w-16 h-16 text-blue-200/60 absolute top-5 right-5 pointer-events-none transform rotate-12" />
+                  <Send className="w-16 h-16 text-slate-200/50 absolute top-5 right-5 pointer-events-none transform rotate-12" />
 
                   {/* Heading */}
                   <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] block mb-1">
@@ -257,7 +265,7 @@ export default function CareersPage() {
                   </p>
 
                   {/* What to mention */}
-                  <div className="mt-5 pt-4 border-t border-blue-100/80">
+                  <div className="mt-5 pt-4 border-t border-slate-100">
                     <h4 className="text-[14px] font-bold text-slate-900 mb-3">
                       Please ensure you mention:
                     </h4>

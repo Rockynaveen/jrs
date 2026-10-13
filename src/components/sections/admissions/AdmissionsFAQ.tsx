@@ -154,7 +154,7 @@ export default function AdmissionsFAQ() {
                 {isOpen && (
                   <div
                     style={{ lineHeight: '26px' }}
-                    className="px-4 sm:px-5 pb-5 pt-1 text-slate-700 text-xs sm:text-[14px] leading-[26px] border-t border-slate-100 bg-slate-50/50"
+                    className="px-4 sm:px-5 pb-5 pt-1 text-slate-700 text-xs sm:text-[14px] leading-[26px] border-t border-slate-100 bg-white"
                   >
                     {faq.answer}
                   </div>

@@ -30,42 +30,42 @@ export default function FacilitiesPage() {
     {
       title: 'Athletics Track, Swimming Pool and Meditation Hall',
       icon: Waves,
-      iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-100',
+      iconBg: 'bg-[#063ca3] text-white',
     },
     {
       title: 'Spacious playgrounds for football, cricket, basketball and volleyball',
       icon: Trophy,
-      iconBg: 'bg-amber-50 text-amber-600 border-amber-100',
+      iconBg: 'bg-[#063ca3] text-white',
     },
     {
       title: 'Canteen for the use of day scholars and staff',
       icon: UtensilsCrossed,
-      iconBg: 'bg-orange-50 text-orange-600 border-orange-100',
+      iconBg: 'bg-[#063ca3] text-white',
     },
     {
       title: 'Transport facilities for students and staff',
       icon: Bus,
-      iconBg: 'bg-blue-50 text-blue-600 border-blue-100',
+      iconBg: 'bg-[#063ca3] text-white',
     },
     {
       title: 'Secure campus with widespread CCTV coverage',
       icon: ShieldCheck,
-      iconBg: 'bg-red-50 text-red-600 border-red-100',
+      iconBg: 'bg-[#063ca3] text-white',
     },
     {
       title: 'Medical facilities and First aid',
       icon: HeartPulse,
-      iconBg: 'bg-rose-50 text-rose-600 border-rose-100',
+      iconBg: 'bg-[#063ca3] text-white',
     },
     {
       title: 'World Class Infrastructure with elegant Ambience',
       icon: Building2,
-      iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-100',
+      iconBg: 'bg-[#063ca3] text-white',
     },
     {
       title: 'Excellent computing facilities with Internet and Wi-Fi',
       icon: Wifi,
-      iconBg: 'bg-cyan-50 text-cyan-600 border-cyan-100',
+      iconBg: 'bg-[#063ca3] text-white',
     },
   ]
 
@@ -124,15 +124,16 @@ export default function FacilitiesPage() {
                     key={index}
                     data-aos="fade-up"
                     data-aos-delay={index * 50}
-                    className="p-4 sm:p-5 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/80 hover:border-red-200 transition-all duration-200 flex items-center gap-3.5 sm:gap-4 group"
+                    className="p-4 sm:p-5 rounded-2xl bg-white hover:bg-slate-50/50 border border-slate-200/90 hover:border-blue-200 transition-all duration-200 flex items-center gap-3.5 sm:gap-4 group shadow-xs hover:shadow-md"
                   >
                     <div
-                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shrink-0 border-2 ${item.iconBg} transition-transform duration-200 group-hover:scale-110`}
+                      style={{ backgroundColor: 'rgb(6, 60, 163)' }}
+                      className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shrink-0 text-white shadow-md transition-transform duration-200 group-hover:scale-110"
                     >
-                      <Icon className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.2]" />
+                      <Icon className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.2] text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-[13px] sm:text-[14px] font-normal text-slate-800 group-hover:text-red-600 transition-colors leading-snug">
+                      <p className="text-[13px] sm:text-[14px] font-medium text-slate-800 group-hover:text-blue-900 transition-colors leading-snug">
                         {item.title}
                       </p>
                     </div>
@@ -161,8 +162,7 @@ export default function FacilitiesPage() {
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
                   {/* Left Side: Content */}
                   <div className="flex-1 space-y-3 sm:space-y-4 text-left">
-                    <div className="flex items-center gap-2.5 mb-1">
-                      <span className="w-6 h-[2px] bg-[#e31e24]" />
+                    <div className="mb-1">
                       <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-amber-300">
                         JOIN THE JRS JOURNEY
                       </span>

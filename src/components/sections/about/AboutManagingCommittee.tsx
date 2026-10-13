@@ -160,14 +160,20 @@ export default function AboutManagingCommittee() {
                 <div className="p-4 sm:p-4.5 flex flex-col flex-1 justify-between bg-white text-left">
                   <div>
                     {/* Member Name */}
-                    <h3 className="text-[15.5px] sm:text-[16px] font-bold text-[#031c3f] group-hover:text-[#013aa3] transition-colors leading-snug line-clamp-1">
+                    <h3
+                      style={{ lineHeight: '26px' }}
+                      className="text-[15.5px] sm:text-[16px] font-bold text-[#031c3f] group-hover:text-[#013aa3] transition-colors leading-[26px] line-clamp-1"
+                    >
                       {member.name}
                     </h3>
 
                     {/* Address with Red Location Pin */}
                     <div className="flex items-start gap-1.5 mt-2">
                       <MapPin className="w-3.5 h-3.5 text-[#e31e24] shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-[12.5px] font-medium text-slate-700 leading-snug line-clamp-2">
+                      <span
+                        style={{ lineHeight: '23px', fontWeight: 400 }}
+                        className="text-xs sm:text-[12.5px] font-normal text-slate-700 leading-[23px] line-clamp-2"
+                      >
                         {member.address}
                       </span>
                     </div>
