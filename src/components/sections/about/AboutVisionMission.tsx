@@ -35,7 +35,7 @@ export default function AboutVisionMission() {
                 {/* Standardized Eyebrow with Symmetrical Accent Lines */}
                 <div className="flex items-center gap-2 mb-2.5">
                   <span className="w-6 h-[2px] bg-[#e31e24]" />
-                  <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#ff5252]">
+                  <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
                     OUR VISION
                   </span>
                   <span className="w-6 h-[2px] bg-[#e31e24]" />
@@ -88,7 +88,7 @@ export default function AboutVisionMission() {
                 {/* Standardized Eyebrow with Symmetrical Accent Lines */}
                 <div className="flex items-center gap-2 mb-2.5">
                   <span className="w-6 h-[2px] bg-[#e31e24]" />
-                  <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#ff5252]">
+                  <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
                     OUR MISSION
                   </span>
                   <span className="w-6 h-[2px] bg-[#e31e24]" />

@@ -252,15 +252,17 @@ export default function CareersPage() {
 
                   {/* Instructions */}
                   <p className="text-[14px] text-slate-700 leading-relaxed">
-                    If you are looking for an opportunity to work at JRS
-                    International School, please send your resume to:{' '}
-                    <a
-                      href="mailto:hrjrshyd@gmail.com"
-                      className="inline-flex items-center gap-1.5 font-bold text-[#013aa3] hover:underline"
-                    >
-                      <Mail className="w-4 h-4 inline shrink-0" />
-                      <span>hrjrshyd@gmail.com</span>
-                    </a>
+                    If you are looking for an opportunity to work at JRS International School,{' '}
+                    <span className="inline-flex flex-wrap sm:flex-nowrap items-center gap-1.5 align-middle">
+                      <span>please send your resume to:</span>
+                      <a
+                        href="mailto:hrjrshyd@gmail.com"
+                        className="inline-flex items-center gap-1.5 font-bold text-[#013aa3] hover:text-[#e31e24] hover:underline transition-colors whitespace-nowrap"
+                      >
+                        <Mail className="w-4 h-4 text-[#013aa3] shrink-0" />
+                        <span>hrjrshyd@gmail.com</span>
+                      </a>
+                    </span>
                   </p>
 
                   {/* What to mention */}

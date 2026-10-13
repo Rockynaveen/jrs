@@ -145,7 +145,7 @@ const facilities = [
 export default function FacilitiesSection() {
   return (
     <section id="facilities" className="py-10 bg-transparent relative overflow-hidden">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 relative" data-aos="fade-up">
           {/* Eyebrow: — OUR FACILITIES — */}

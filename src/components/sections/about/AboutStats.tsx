@@ -94,7 +94,7 @@ export default function AboutStats() {
 
   const stats: StatItem[] = [
     {
-      icon: <GraduationCap className="w-6 h-6 sm:w-6.5 sm:h-6.5 text-amber-300 stroke-[2.2]" />,
+      icon: <GraduationCap className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-amber-300 stroke-[2]" />,
       value: 2021,
       prefix: '',
       suffix: '',
@@ -102,7 +102,7 @@ export default function AboutStats() {
       label: 'Year of Establishment',
     },
     {
-      icon: <ShieldCheck className="w-6 h-6 sm:w-6.5 sm:h-6.5 text-emerald-300 stroke-[2.2]" />,
+      icon: <ShieldCheck className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-emerald-300 stroke-[2]" />,
       value: 3630478,
       prefix: '',
       suffix: '',
@@ -110,7 +110,7 @@ export default function AboutStats() {
       label: 'CBSE Affiliation No.',
     },
     {
-      icon: <Users className="w-6 h-6 sm:w-6.5 sm:h-6.5 text-sky-300 stroke-[2.2]" />,
+      icon: <Users className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-sky-300 stroke-[2]" />,
       value: 25,
       prefix: '1:',
       suffix: '',
@@ -118,7 +118,7 @@ export default function AboutStats() {
       label: 'Teacher-Student Ratio',
     },
     {
-      icon: <Sparkles className="w-6 h-6 sm:w-6.5 sm:h-6.5 text-purple-300 stroke-[2.2]" />,
+      icon: <Sparkles className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-purple-300 stroke-[2]" />,
       value: 5,
       prefix: '',
       suffix: '',
@@ -132,12 +132,13 @@ export default function AboutStats() {
       ref={containerRef}
       data-aos="fade-up"
       data-aos-delay="200"
-      className="hero-stats absolute inset-x-0 bottom-3 sm:bottom-5 md:bottom-[26px] lg:bottom-[32px] z-[2] px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5 md:gap-4 lg:gap-4.5"
+      className="hero-stats absolute inset-x-0 bottom-3 sm:bottom-5 md:bottom-[26px] lg:bottom-[32px] z-[2] px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex sm:grid grid-cols-4 gap-2.5 sm:gap-3 md:gap-3.5 lg:gap-4 overflow-x-auto pb-1 sm:pb-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
     >
       {stats.map((item) => (
         <div
           key={item.label}
-          className="group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-[20px] p-2.5 sm:p-3.5 md:p-4 lg:p-4.5 bg-transparent hover:bg-white/[0.06] backdrop-blur-md border border-white/20 hover:border-white/40 shadow-[0_4px_24px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-3 sm:gap-3.5 md:gap-4 min-w-0"
+          style={{ borderRadius: '12px' }}
+          className="group relative overflow-hidden rounded-[12px] h-[76px] sm:h-[82px] md:h-[88px] min-w-[210px] sm:min-w-0 w-full shrink-0 p-2.5 sm:p-3 md:p-3.5 bg-transparent hover:bg-white/[0.06] backdrop-blur-md border border-white/20 hover:border-white/40 shadow-[0_4px_24px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 flex items-center justify-start px-3.5 sm:px-4 md:px-5 gap-3 sm:gap-3.5 md:gap-4"
         >
           {/* Subtle top ambient light highlight */}
           <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none" />
