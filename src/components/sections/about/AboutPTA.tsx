@@ -94,7 +94,7 @@ const ptaMembers: PTAMember[] = [
 export default function AboutPTA() {
   return (
     <section id="pta" className="py-[50px] bg-white scroll-mt-20">
-      <div className="max-w-7xl xl:max-w-[1380px] 2xl:max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           {/* Eyebrow: — COMMUNITY & COLLABORATION — */}
