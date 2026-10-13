@@ -244,7 +244,7 @@ export default function CertificatesPage() {
 
         {/* 3. Main Tables Section */}
         <section className="py-[50px] bg-white scroll-mt-20">
-          <div className="max-w-7xl xl:max-w-[1380px] 2xl:max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-14">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-14">
 
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">

@@ -75,7 +75,10 @@ export default function AboutAdmissionSteps() {
           >
             Admission <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Process</span>
           </h2>
-          <p className="text-slate-600 text-[14px] sm:text-[15px] font-normal mt-2.5 max-w-xl mx-auto">
+          <p
+            style={{ fontSize: '14px', fontWeight: 400, lineHeight: '24px' }}
+            className="text-slate-600 text-[14px] font-normal leading-[24px] mt-2.5 max-w-xl mx-auto"
+          >
             Follow these simple steps to complete the admission process at JRS.
           </p>
         </div>
@@ -105,7 +108,7 @@ export default function AboutAdmissionSteps() {
             {steps.map((item, index) => (
               <div
                 key={index}
-                className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 p-4 xl:p-5 pt-5 pb-6 flex flex-col items-center text-center overflow-hidden h-full group"
+                className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 p-4 xl:p-5 pt-5 pb-3.5 flex flex-col items-center text-center overflow-hidden h-full group"
               >
                 {/* Top-Left Corner Accent Swoop */}
                 <div className="absolute top-0 left-0 w-12 xl:w-14 h-12 xl:h-14 pointer-events-none z-10">
@@ -148,7 +151,10 @@ export default function AboutAdmissionSteps() {
                 />
 
                 {/* Description */}
-                <p className="text-slate-600 text-[13px] leading-[26px] font-normal flex-1">
+                <p
+                  style={{ fontSize: '14px', fontWeight: 400, lineHeight: '24px' }}
+                  className="text-slate-600 text-[14px] font-normal leading-[24px] flex-1"
+                >
                   {item.description}
                 </p>
               </div>
@@ -161,7 +167,7 @@ export default function AboutAdmissionSteps() {
           {steps.map((item, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 p-5 pt-6 pb-6 flex flex-col items-center text-center overflow-hidden"
+              className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 p-5 pt-6 pb-3.5 flex flex-col items-center text-center overflow-hidden"
             >
               {/* Top-Left Corner Accent Swoop */}
               <div className="absolute top-0 left-0 w-14 h-14 pointer-events-none z-10">
@@ -204,7 +210,10 @@ export default function AboutAdmissionSteps() {
               />
 
               {/* Description */}
-              <p className="text-slate-600 text-[13px] leading-[20px] font-normal">
+              <p
+                style={{ fontSize: '14px', fontWeight: 400, lineHeight: '24px' }}
+                className="text-slate-600 text-[14px] font-normal leading-[24px]"
+              >
                 {item.description}
               </p>
             </div>

@@ -195,11 +195,11 @@ export default function AdmissionsKeyInfo() {
                         {item.keyPoints.map((pt, pIdx) => (
                           <li
                             key={pIdx}
-                            style={{ lineHeight: '24px' }}
-                            className="flex items-start gap-2 text-xs text-slate-600 font-medium leading-[24px]"
+                            style={{ fontSize: '14px', fontWeight: 400, lineHeight: '26px' }}
+                            className="flex items-start gap-2 text-[13px] text-slate-600 font-normal leading-[26px]"
                           >
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-[5px] transition-transform duration-300 group-hover:scale-110" />
-                            <span style={{ lineHeight: '24px' }} className="leading-[24px]">{pt}</span>
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-[6px] transition-transform duration-300 group-hover:scale-110" />
+                            <span style={{ fontSize: '14px', fontWeight: 400, lineHeight: '26px' }} className="text-[13px] font-normal leading-[26px]">{pt}</span>
                           </li>
                         ))}
                       </ul>

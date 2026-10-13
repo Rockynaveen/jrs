@@ -75,7 +75,10 @@ export default function AdmissionsProcess() {
           >
             Admission <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Process</span>
           </h2>
-          <p className="text-slate-600 text-[14px] sm:text-[15px] font-normal mt-2.5 max-w-xl mx-auto">
+          <p
+            style={{ fontSize: '14px', fontWeight: 400, lineHeight: '20px' }}
+            className="text-slate-600 text-[14px] font-normal leading-[24px] mt-2.5 max-w-xl mx-auto"
+          >
             Follow these simple steps to complete the admission process at JRS.
           </p>
         </div>
@@ -91,9 +94,8 @@ export default function AdmissionsProcess() {
               <div key={idx} className="flex flex-col items-center relative z-10">
                 {/* Circle dot node on the horizontal line */}
                 <div
-                  className={`w-3.5 h-3.5 rounded-full ${
-                    item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                  } border-2 border-white shadow-xs`}
+                  className={`w-3.5 h-3.5 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                    } border-2 border-white shadow-xs`}
                 />
                 {/* Vertical line connecting down to the card */}
                 <div className="w-[1.5px] h-6 bg-slate-300/80" />
@@ -106,7 +108,7 @@ export default function AdmissionsProcess() {
             {steps.map((item, index) => (
               <div
                 key={index}
-                className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 p-4 xl:p-5 pt-5 pb-6 flex flex-col items-center text-center overflow-hidden h-full group"
+                className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 p-4 xl:p-5 pt-5 pb-3.5 flex flex-col items-center text-center overflow-hidden h-full group"
               >
                 {/* Top-Left Corner Accent Swoop */}
                 <div className="absolute top-0 left-0 w-12 xl:w-14 h-12 xl:h-14 pointer-events-none z-10">
@@ -121,9 +123,8 @@ export default function AdmissionsProcess() {
 
                 {/* Number Badge at Top Center */}
                 <div
-                  className={`w-9 h-9 rounded-full ${
-                    item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                  } text-white text-xs font-black flex items-center justify-center shadow-xs mb-4 border-2 border-white relative z-10 group-hover:scale-105 transition-transform`}
+                  className={`w-9 h-9 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                    } text-white text-xs font-black flex items-center justify-center shadow-xs mb-4 border-2 border-white relative z-10 group-hover:scale-105 transition-transform`}
                 >
                   {item.step}
                 </div>
@@ -145,13 +146,15 @@ export default function AdmissionsProcess() {
 
                 {/* Accent Divider Dash */}
                 <div
-                  className={`w-6 h-[2px] ${
-                    item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                  } rounded-full my-2.5 mx-auto`}
+                  className={`w-6 h-[2px] ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                    } rounded-full my-2.5 mx-auto`}
                 />
 
                 {/* Description */}
-                <p className="text-slate-600 text-[12px] xl:text-[12.5px] leading-[18px] xl:leading-[19px] font-normal flex-1">
+                <p
+                  style={{ fontSize: '14px', fontWeight: 400, lineHeight: '24px' }}
+                  className="text-slate-600 text-[14px] font-normal leading-[24px] flex-1"
+                >
                   {item.description}
                 </p>
               </div>
@@ -164,7 +167,7 @@ export default function AdmissionsProcess() {
           {steps.map((item, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 p-5 pt-6 pb-6 flex flex-col items-center text-center overflow-hidden"
+              className="relative bg-white rounded-2xl border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-all duration-300 p-5 pt-6 pb-3.5 flex flex-col items-center text-center overflow-hidden"
             >
               {/* Top-Left Corner Accent Swoop */}
               <div className="absolute top-0 left-0 w-14 h-14 pointer-events-none z-10">
@@ -179,9 +182,8 @@ export default function AdmissionsProcess() {
 
               {/* Number Badge at Top Center */}
               <div
-                className={`w-9 h-9 rounded-full ${
-                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                } text-white text-xs font-black flex items-center justify-center shadow-xs mb-3.5 border-2 border-white relative z-10`}
+                className={`w-9 h-9 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                  } text-white text-xs font-black flex items-center justify-center shadow-xs mb-3.5 border-2 border-white relative z-10`}
               >
                 {item.step}
               </div>
@@ -203,13 +205,15 @@ export default function AdmissionsProcess() {
 
               {/* Accent Divider Dash */}
               <div
-                className={`w-6 h-[2px] ${
-                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                } rounded-full my-2.5 mx-auto`}
+                className={`w-6 h-[2px] ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                  } rounded-full my-2.5 mx-auto`}
               />
 
               {/* Description */}
-              <p className="text-slate-600 text-[13px] leading-[20px] font-normal">
+              <p
+                style={{ fontSize: '14px', fontWeight: 400, lineHeight: '24px' }}
+                className="text-slate-600 text-[14px] font-normal leading-[24px]"
+              >
                 {item.description}
               </p>
             </div>
