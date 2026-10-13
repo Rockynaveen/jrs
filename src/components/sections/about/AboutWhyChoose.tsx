@@ -120,12 +120,11 @@ export default function AboutWhyChoose() {
                   {item.icon}
                 </div>
 
-                {/* Title */}
                 <h3 className="text-sm sm:text-[15px] font-bold text-[#031c3f] leading-snug">
                   {item.title}
                 </h3>
 
-                {/* Description */}
+
                 <p className="text-[14px] text-slate-700 leading-relaxed mt-2.5">
                   {item.description}
                 </p>
@@ -134,7 +133,7 @@ export default function AboutWhyChoose() {
           ))}
         </div>
 
-        {/* Bottom 8 Compact Cards */}
+
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-3.5 mt-5">
           {bottomBadges.map((badge, index) => (
             <div
