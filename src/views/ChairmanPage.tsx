@@ -8,17 +8,9 @@ import PageHero from '@/components/common/PageHero'
 import Footer from '@/components/layout/Footer'
 import {
   Quote,
-  Sparkles,
   Award,
-  Compass,
-  HeartHandshake,
-  BookOpen,
-  CheckCircle2,
   ArrowRight,
-  ShieldCheck,
   Target,
-  GraduationCap,
-  Calendar,
 } from 'lucide-react'
 
 export default function ChairmanPage() {
@@ -96,30 +88,6 @@ export default function ChairmanPage() {
                       </div>
                     </div>
 
-                    {/* Quick Highlights Card */}
-                    <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100 space-y-3">
-                      <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
-                        Leadership Cornerstones
-                      </h4>
-                      <div className="space-y-2 text-xs text-slate-700">
-                        <div className="flex items-center gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                          <span>Holistic 360° Child Development</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                          <span>1:25 Individual Attention Ratio</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                          <span>Experiential STEM & Robotics Integration</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                          <span>Strong Ethical & Cultural Foundation</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -156,32 +124,6 @@ export default function ChairmanPage() {
                     </p>
                   </div>
 
-                  {/* 3 Value Pillars */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-100">
-                    <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col">
-                      <Compass className="w-6 h-6 text-red-600 mb-2" />
-                      <h4 className="text-sm font-bold text-slate-900 mb-1">Inquiry-Led Pedagogy</h4>
-                      <p className="text-xs text-slate-700 leading-relaxed">
-                        Curiosity and hands-on conceptual mastery replace passive memorization.
-                      </p>
-                    </div>
-
-                    <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col">
-                      <HeartHandshake className="w-6 h-6 text-amber-600 mb-2" />
-                      <h4 className="text-sm font-bold text-slate-900 mb-1">Human Values</h4>
-                      <p className="text-xs text-slate-700 leading-relaxed">
-                        Empathy, discipline, mutual respect, and civic consciousness instilled daily.
-                      </p>
-                    </div>
-
-                    <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col">
-                      <Award className="w-6 h-6 text-[#0a2559] mb-2" />
-                      <h4 className="text-sm font-bold text-slate-900 mb-1">Global Standard</h4>
-                      <p className="text-xs text-slate-700 leading-relaxed">
-                        Modern sports arena, smart labs, and preparatory foundation for future careers.
-                      </p>
-                    </div>
-                  </div>
 
                   {/* Signoff */}
                   <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
