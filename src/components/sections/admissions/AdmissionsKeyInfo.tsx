@@ -15,17 +15,7 @@ export default function AdmissionsKeyInfo() {
       id: 'nursery',
       num: '01',
       badge: 'Early Years (Age 2+)',
-      badgeClass:
-        'bg-red-50 text-[#dc2626] border-red-200/80 group-hover:bg-red-100/80',
-      topBar: 'bg-gradient-to-r from-[#dc2626] to-[#ef4444]',
-      hoverBorder: 'hover:border-[#dc2626]/50',
-      hoverBg: 'hover:bg-gradient-to-br hover:from-white hover:to-red-50/20',
       icon: Sparkles,
-      iconDefault: 'bg-red-50 text-[#dc2626]',
-      iconHover:
-        'group-hover:bg-[#dc2626] group-hover:text-white group-hover:shadow-md group-hover:shadow-red-500/30 group-hover:scale-110',
-      titleHover: 'group-hover:text-[#dc2626]',
-      numHover: 'group-hover:text-red-200/70',
       title: 'Nursery Admission',
       description:
         'You can apply for a place in our Nursery by filling in an application form available from the school office or online. Children are admitted to Nursery the term after their second birthday.',
@@ -38,17 +28,7 @@ export default function AdmissionsKeyInfo() {
       id: 'clt',
       num: '02',
       badge: 'Grades 1 to 12',
-      badgeClass:
-        'bg-blue-50 text-[#031c3f] border-blue-200/80 group-hover:bg-blue-100/80',
-      topBar: 'bg-gradient-to-r from-[#031c3f] via-[#1d4ed8] to-[#2563eb]',
-      hoverBorder: 'hover:border-[#2563eb]/50',
-      hoverBg: 'hover:bg-gradient-to-br hover:from-white hover:to-blue-50/20',
       icon: ClipboardCheck,
-      iconDefault: 'bg-blue-50 text-[#031c3f]',
-      iconHover:
-        'group-hover:bg-[#031c3f] group-hover:text-white group-hover:shadow-md group-hover:shadow-blue-900/30 group-hover:scale-110',
-      titleHover: 'group-hover:text-[#1d4ed8]',
-      numHover: 'group-hover:text-blue-200/70',
       title: 'Competency Level Test (CLT)',
       description:
         'Applicants seeking admission to Grades 1 to 12 will be required to appear for a Competency Level Test (CLT).',
@@ -59,17 +39,7 @@ export default function AdmissionsKeyInfo() {
       id: 'allocation',
       num: '03',
       badge: 'Fair & Transparent',
-      badgeClass:
-        'bg-blue-50 text-[#031c3f] border-blue-200/80 group-hover:bg-blue-100/80',
-      topBar: 'bg-gradient-to-r from-[#031c3f] via-[#1d4ed8] to-[#2563eb]',
-      hoverBorder: 'hover:border-[#2563eb]/50',
-      hoverBg: 'hover:bg-gradient-to-br hover:from-white hover:to-blue-50/20',
       icon: Users,
-      iconDefault: 'bg-blue-50 text-[#031c3f]',
-      iconHover:
-        'group-hover:bg-[#031c3f] group-hover:text-white group-hover:shadow-md group-hover:shadow-blue-900/30 group-hover:scale-110',
-      titleHover: 'group-hover:text-[#1d4ed8]',
-      numHover: 'group-hover:text-blue-200/70',
       title: 'Seat Allocation & Waitlist Policy',
       description:
         'Admission will be offered only on a first-come, first-served basis. If no seats are available at the time the application is received, the applicant will be placed on the waitlist.',
@@ -82,17 +52,7 @@ export default function AdmissionsKeyInfo() {
       id: 'appeals',
       num: '04',
       badge: 'Guidance & Appeals',
-      badgeClass:
-        'bg-red-50 text-[#dc2626] border-red-200/80 group-hover:bg-red-100/80',
-      topBar: 'bg-gradient-to-r from-[#dc2626] to-[#ef4444]',
-      hoverBorder: 'hover:border-[#dc2626]/50',
-      hoverBg: 'hover:bg-gradient-to-br hover:from-white hover:to-red-50/20',
       icon: FileText,
-      iconDefault: 'bg-red-50 text-[#dc2626]',
-      iconHover:
-        'group-hover:bg-[#dc2626] group-hover:text-white group-hover:shadow-md group-hover:shadow-red-500/30 group-hover:scale-110',
-      titleHover: 'group-hover:text-[#dc2626]',
-      numHover: 'group-hover:text-red-200/70',
       title: 'Admissions Appeals & Support',
       description:
         'Information on admissions appeals and procedural guidelines is readily available from the school office. Our team is here to assist you at every stage of the application.',
@@ -129,47 +89,44 @@ export default function AdmissionsKeyInfo() {
           </p>
         </div>
 
-        {/* 4 Cards Grid: 2 Cards per Row with dynamic hover effects */}
+        {/* 4 Cards Grid: 2 Cards per Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
           {guidelines.map((item) => {
             const Icon = item.icon
             return (
               <div
                 key={item.id}
-                className={`group relative bg-white rounded-2xl p-5 sm:p-7 border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} ${item.hoverBg} overflow-hidden flex flex-col justify-between`}
+                style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
+                className="group relative bg-white rounded-2xl p-5 sm:p-7 border border-slate-200/80 hover:border-slate-300 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between"
               >
-                {/* Colored Top Accent Stripe that expands on hover */}
-                <div
-                  className={`absolute top-0 left-0 right-0 h-1 group-hover:h-1.5 transition-all duration-300 ${item.topBar}`}
-                />
-
                 {/* Subtle Ghost Number Watermark */}
                 <span
-                  className={`absolute top-4 right-5 text-3xl sm:text-4xl font-black text-slate-100/90 ${item.numHover} select-none pointer-events-none transition-colors duration-300`}
+                  className="absolute top-4 right-5 text-3xl sm:text-4xl font-black text-slate-100/90 select-none pointer-events-none"
                 >
                   {item.num}
                 </span>
 
                 <div className="flex items-start gap-3.5 sm:gap-4 relative z-10">
-                  {/* Icon with Hover Pop Effect */}
+                  {/* Icon: Logo Blue Background, White Icon */}
                   <div
-                    className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 shadow-sm transition-all duration-300 ${item.iconDefault} ${item.iconHover}`}
+                    style={{ backgroundColor: '#013aa3' }}
+                    className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 shadow-sm transition-all duration-300 group-hover:scale-110 text-white"
                   >
-                    <Icon className="w-5 h-5 transition-transform duration-300 group-hover:rotate-6" />
+                    <Icon className="w-5 h-5 text-white stroke-[2.2]" />
                   </div>
 
                   <div className="flex-1 space-y-2 sm:space-y-2.5 pr-2 sm:pr-8">
                     {/* Badge and Title */}
                     <div className="flex flex-wrap items-center gap-2">
                       <span
-                        className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border transition-colors duration-300 ${item.badgeClass}`}
+                        className="text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-blue-200/80 bg-blue-50 text-[#013aa3]"
                       >
                         {item.badge}
                       </span>
                     </div>
 
                     <h3
-                      className={`text-base sm:text-lg font-bold text-[#031c3f] transition-colors duration-300 ${item.titleHover}`}
+                      className="text-base sm:text-lg font-bold text-[#031c3f]"
                     >
                       {item.title}
                     </h3>
@@ -183,7 +140,7 @@ export default function AdmissionsKeyInfo() {
 
                     {/* Highlight Box if present */}
                     {item.highlight && (
-                      <div className="bg-blue-50/70 border border-blue-100/90 rounded-xl p-3 text-xs text-blue-950 leading-relaxed font-medium transition-colors duration-300 group-hover:bg-blue-50 group-hover:border-blue-200">
+                      <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3 text-xs text-slate-800 leading-relaxed font-medium">
                         <span className="font-bold text-[#031c3f]">Note: </span>
                         {item.highlight}
                       </div>
