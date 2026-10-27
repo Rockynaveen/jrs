@@ -98,7 +98,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
       ],
     },
     { name: 'Beyond Classroom', href: '/beyond', id: 'beyond' },
-    { name: 'Amenities', href: '/facilities', id: 'facilities' },
+    { name: 'Facilities', href: '/facilities', id: 'facilities' },
     {
       name: 'Gallery',
       href: '/gallery',
@@ -123,26 +123,35 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2 font-['Inter',sans-serif] font-medium">
             {/* Left Contact & Affiliation Info */}
             <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 text-xs sm:text-[12px] xl:text-[13px] text-slate-700 font-medium font-['Inter',sans-serif] min-w-0 shrink">
-              <a
-                href="tel:+9191574043210"
-                className="inline-flex items-center gap-2 text-slate-700 hover:text-[#e31e24] transition-colors font-medium shrink-0 font-['Inter',sans-serif] group"
-              >
-                <span className="w-5 h-5 rounded-full bg-[#013aa3] text-white flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#012f86] transition-colors">
+              <div className="inline-flex items-center gap-1.5 text-slate-700 font-medium shrink-0 font-['Inter',sans-serif]">
+                <span className="w-5 h-5 rounded-full bg-[#013aa3] text-white flex items-center justify-center shrink-0 shadow-xs mr-0.5">
                   <Phone className="w-2.5 h-2.5 text-white stroke-[2.5]" />
                 </span>
-                <span className="text-slate-700 font-['Inter',sans-serif] font-medium whitespace-nowrap group-hover:text-[#e31e24] transition-colors">+91 915740 43210</span>
-              </a>
+                <a
+                  href="tel:+919281409674"
+                  className="hover:text-[#e31e24] transition-colors whitespace-nowrap"
+                >
+                  +91 92814 09674
+                </a>
+                <span className="text-slate-400">,</span>
+                <a
+                  href="tel:+919281409672"
+                  className="hover:text-[#e31e24] transition-colors whitespace-nowrap"
+                >
+                  +91 92814 09672
+                </a>
+              </div>
 
               <span className="text-slate-400 hidden md:inline shrink-0">•</span>
 
               <a
-                href="mailto:info@jrsinternationalschool.com"
+                href="mailto:jrsinternationalschool6@gmail.com"
                 className="hidden md:inline-flex items-center gap-2 text-slate-700 hover:text-[#e31e24] transition-colors font-medium shrink truncate max-w-[200px] lg:max-w-none font-['Inter',sans-serif] group"
               >
                 <span className="w-5 h-5 rounded-full bg-[#013aa3] text-white flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#012f86] transition-colors">
                   <Mail className="w-2.5 h-2.5 text-white stroke-[2.5]" />
                 </span>
-                <span className="text-slate-700 font-['Inter',sans-serif] font-medium truncate group-hover:text-[#e31e24] transition-colors">info@jrsinternationalschool.com</span>
+                <span className="text-slate-700 font-['Inter',sans-serif] font-medium truncate group-hover:text-[#e31e24] transition-colors">Jrsinternationalschool6@gmail.com</span>
               </a>
 
               <span className="text-slate-400 hidden xl:inline shrink-0">•</span>
@@ -218,8 +227,10 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                     <div key={link.name} className="relative group">
                       <Link
                         href={link.href}
-                        className={`inline-flex items-center gap-1 text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
-                          isActive ? 'text-red-600 font-semibold' : 'text-slate-700'
+                        className={`relative inline-flex items-center gap-1 text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
+                          isActive
+                            ? 'text-red-600 font-semibold after:content-[""] after:absolute after:bottom-0 after:left-1.5 after:right-1.5 after:h-[2.5px] after:bg-[#e31e24] after:rounded-full'
+                            : 'text-slate-700'
                         }`}
                       >
                         <span>{link.name}</span>
@@ -280,8 +291,10 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
-                      isActive ? 'text-red-600 font-semibold' : 'text-slate-700'
+                    className={`relative text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${
+                      isActive
+                        ? 'text-red-600 font-semibold after:content-[""] after:absolute after:bottom-0 after:left-1.5 after:right-1.5 after:h-[2.5px] after:bg-[#e31e24] after:rounded-full'
+                        : 'text-slate-700'
                     }`}
                   >
                     {link.name}

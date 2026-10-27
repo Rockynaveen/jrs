@@ -4,7 +4,7 @@ import FacilitiesPage from '@/views/FacilitiesPage'
 export const metadata: Metadata = {
   title: 'State-of-the-Art Facilities | JRS International School, Hyderabad',
   description:
-    'Explore the world-class facilities at JRS International School, Narapally, Hyderabad. Athletics track, swimming pool, meditation hall, spacious playgrounds, secure CCTV campus, modern labs, GPS transport, and more.',
+    'Explore the world-class facilities at JRS International School, Narapally, Hyderabad. Athletics track, meditation hall, spacious playgrounds, secure CCTV campus, modern labs, GPS transport, and more.',
 }
 
 export default function Page() {

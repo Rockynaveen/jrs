@@ -28,7 +28,7 @@ export default function AboutPage() {
       <Navbar activePage="about" />
 
       <main className="flex-1">
-        {/* 2. Hero Section with Floating Glassmorphism Stats Bar (2021, 3630478, 1:25, 5 Core Pillars) */}
+        {/* 2. Hero Section with Floating Glassmorphism Stats Bar (2020, 3630478, 1:25, 5 Core Pillars) */}
         <AboutHero />
 
         {/* 3. Our Story / About JRS (A Legacy of Excellence in Education) */}

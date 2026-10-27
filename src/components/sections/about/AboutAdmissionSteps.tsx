@@ -8,9 +8,9 @@ export default function AboutAdmissionSteps() {
     {
       step: '01',
       isEven: false,
-      title: 'Meet the Admission Officer',
+      title: 'Meet the HR',
       description:
-        'Visit the school campus and meet our admission officer for guidance.',
+        'Visit the school campus and meet our HR for guidance.',
       image: '/images/admissions/admission-officer.png',
     },
     {

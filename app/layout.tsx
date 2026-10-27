@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 }
 
 import WhatsAppButton from '@/components/common/WhatsAppButton'
+import AdmissionsPopup from '@/components/common/AdmissionsPopup'
 import Script from 'next/script'
 
 export default function RootLayout({
@@ -30,8 +31,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-white text-slate-800 antialiased font-sans overflow-x-hidden min-h-screen w-full">
+      <body className="bg-white text-slate-800 antialiased font-sans overflow-x-clip min-h-screen w-full">
         {children}
+        <AdmissionsPopup />
         <WhatsAppButton />
 
         {/* Zoho SalesIQ Live Chat Widget */}

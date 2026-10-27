@@ -20,13 +20,13 @@ export default function AboutWhyChoose() {
   const topFeatures = [
     {
       title: 'Academic Excellence',
-      description: 'CBSE/NCERT curriculum with a strong academic foundation.',
+      description: 'CBSE curriculum with a strong academic foundation.',
       badgeBg: 'bg-[#dc2626]',
       icon: <Trophy className="w-5 h-5 text-white" />,
     },
     {
       title: 'Holistic Development',
-      description: 'Balance of academics, values, co-curricular and life skills.',
+      description: 'A balance of academics, values, co-curricular activities, life skills, and AI-powered learning to prepare students for the future.',
       badgeBg: 'bg-[#2563eb]',
       icon: <Share2 className="w-5 h-5 text-white" />,
     },

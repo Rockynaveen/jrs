@@ -10,7 +10,7 @@ export default function AdmissionsHero() {
       title="Admissions at"
       titleHighlight="JRS"
       subtitle="Begin a Confident Learning Journey."
-      description="Begin a confident learning journey with a strong academic foundation, values and a brighter future. Apply early for the academic year 2026 – 2027."
+      description="Begin a confident learning journey with a strong academic foundation, values and a brighter future. Apply early for the academic year 2027 – 2028."
       imageSrc="/images/campus-building.jpg"
       imageAlt="JRS International School Campus"
       primaryButton={{

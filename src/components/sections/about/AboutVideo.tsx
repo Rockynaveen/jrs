@@ -167,7 +167,7 @@ export default function AboutVideo() {
             href="/admissions"
             className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-[#031c3f] bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition-all duration-200 active:scale-95 cursor-pointer"
           >
-            <span>Admissions 2026-27</span>
+            <span>Admissions 2027-28</span>
             <ArrowRight className="w-4 h-4 text-[#e31e24]" />
           </Link>
         </div>

@@ -33,7 +33,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
 
   // Form state
   const [formData, setFormData] = useState({
-    academicYear: '2026-2027',
+    academicYear: '2027-2028',
     branch: 'JRS INTERNATIONAL SCHOOL',
     admissionType: 'DAY SCHOLAR',
     countryCode: '91',
@@ -88,7 +88,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
     setStep(1)
     setErrorMsg('')
     setFormData({
-      academicYear: '2026-2027',
+      academicYear: '2027-2028',
       branch: 'JRS INTERNATIONAL SCHOOL',
       admissionType: 'DAY SCHOLAR',
       countryCode: '91',
@@ -160,7 +160,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                 }`}
               >
                 Admission Open for <br />
-                <span className={isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}>2026 – 2027</span>
+                <span className={isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}>2027 – 2028</span>
               </h2>
               <p
                 className={`text-sm sm:text-[15px] mt-2.5 max-w-xl leading-relaxed ${
@@ -173,19 +173,20 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
 
             {/* Quick Contact Chips */}
             <div className="flex flex-wrap items-center gap-2.5">
-              <a
-                href="tel:+9191574043210"
-                className={`inline-flex items-center gap-2 ${
+              <div
+                className={`inline-flex items-center gap-1.5 ${
                   isWhite
-                    ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700'
-                    : 'bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-slate-100'
+                    ? 'bg-slate-50 border border-slate-200 text-slate-700'
+                    : 'bg-white/10 backdrop-blur-md border border-white/20 text-slate-100'
                 } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
               >
-                <Phone className={`w-3.5 h-3.5 ${isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}`} />
-                <span className="font-medium">+91 915740 43210</span>
-              </a>
+                <Phone className={`w-3.5 h-3.5 mr-0.5 ${isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}`} />
+                <a href="tel:+919281409674" className="font-medium hover:text-[#e31e24] transition-colors">+91 92814 09674</a>
+                <span>,</span>
+                <a href="tel:+919281409672" className="font-medium hover:text-[#e31e24] transition-colors">+91 92814 09672</a>
+              </div>
               <a
-                href="mailto:info@jrsinternationalschool.com"
+                href="mailto:jrsinternationalschool6@gmail.com"
                 className={`inline-flex items-center gap-2 ${
                   isWhite
                     ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700'
@@ -193,7 +194,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                 } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
               >
                 <Mail className={`w-3.5 h-3.5 ${isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}`} />
-                <span className="font-medium">info@jrsinternationalschool.com</span>
+                <span className="font-medium">Jrsinternationalschool6@gmail.com</span>
               </a>
             </div>
 
@@ -356,7 +357,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                       Enquiry Submitted!
                     </h4>
                     <p className={`text-xs sm:text-sm ${isWhite ? 'text-slate-600' : 'text-slate-200'} leading-relaxed max-w-xs mx-auto`}>
-                      Thank you for your interest. Our admissions officer will contact you at{' '}
+                      Thank you for your interest. Our HR team will contact you at{' '}
                       <span className={`font-semibold ${isWhite ? 'text-slate-900' : 'text-white'}`}>
                         +{formData.countryCode} {formData.parentMobile}
                       </span>{' '}
@@ -418,8 +419,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                           }
                           className={selectClass}
                         >
-                          <option value="2026-2027" className={optionClass}>2026-2027</option>
                           <option value="2027-2028" className={optionClass}>2027-2028</option>
+                          <option value="2028-2029" className={optionClass}>2028-2029</option>
                         </Select>
                       </div>
 

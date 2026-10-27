@@ -41,7 +41,7 @@ export default function BeyondClassroomPage() {
             href: '#activities',
           }}
           secondaryButton={{
-            text: 'Admissions 2026-27',
+            text: 'Admissions 2027-28',
             href: '/admissions',
           }}
         />

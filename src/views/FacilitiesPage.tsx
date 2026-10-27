@@ -7,15 +7,15 @@ import Navbar from '@/components/layout/Navbar'
 import PageHero from '@/components/common/PageHero'
 import Footer from '@/components/layout/Footer'
 import {
-  Waves,
+  Activity,
   Trophy,
-  UtensilsCrossed,
   Bus,
   ShieldCheck,
   HeartPulse,
   Building2,
   Wifi,
   ArrowRight,
+  Sparkles,
 } from 'lucide-react'
 
 export default function FacilitiesPage() {
@@ -28,24 +28,28 @@ export default function FacilitiesPage() {
 
   const facilities = [
     {
-      title: 'Athletics Track, Swimming Pool and Meditation Hall',
-      icon: Waves,
+      title: 'Cognospace - Advanced Cognitive Learning & Discovery Zone',
+      icon: Sparkles,
       iconBg: 'bg-[#063ca3] text-white',
+      href: '/facilities/cognospace',
+    },
+    {
+      title: 'Athletics Track and Meditation Hall',
+      icon: Activity,
+      iconBg: 'bg-[#063ca3] text-white',
+      href: '/facilities/sports-facilities',
     },
     {
       title: 'Spacious playgrounds for football, cricket, basketball and volleyball',
       icon: Trophy,
       iconBg: 'bg-[#063ca3] text-white',
-    },
-    {
-      title: 'Canteen for the use of day scholars and staff',
-      icon: UtensilsCrossed,
-      iconBg: 'bg-[#063ca3] text-white',
+      href: '/facilities/sports-facilities',
     },
     {
       title: 'Transport facilities for students and staff',
       icon: Bus,
       iconBg: 'bg-[#063ca3] text-white',
+      href: '/facilities/transport',
     },
     {
       title: 'Secure campus with widespread CCTV coverage',
@@ -61,11 +65,13 @@ export default function FacilitiesPage() {
       title: 'World Class Infrastructure with elegant Ambience',
       icon: Building2,
       iconBg: 'bg-[#063ca3] text-white',
+      href: '/facilities/smart-classrooms',
     },
     {
       title: 'Excellent computing facilities with Internet and Wi-Fi',
       icon: Wifi,
       iconBg: 'bg-[#063ca3] text-white',
+      href: '/facilities/science-computer-labs',
     },
   ]
 
@@ -119,12 +125,11 @@ export default function FacilitiesPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
               {facilities.map((item, index) => {
                 const Icon = item.icon
-                return (
+                const content = (
                   <div
-                    key={index}
                     data-aos="fade-up"
                     data-aos-delay={index * 50}
-                    className="p-4 sm:p-5 rounded-2xl bg-white hover:bg-slate-50/50 border border-slate-200/90 hover:border-blue-200 transition-all duration-200 flex items-center gap-3.5 sm:gap-4 group shadow-xs hover:shadow-md"
+                    className="p-4 sm:p-5 rounded-2xl bg-white hover:bg-slate-50/50 border border-slate-200/90 hover:border-[#e31e24]/40 transition-all duration-200 flex items-center gap-3.5 sm:gap-4 group shadow-xs hover:shadow-md h-full"
                   >
                     <div
                       style={{ backgroundColor: 'rgb(6, 60, 163)' }}
@@ -133,12 +138,28 @@ export default function FacilitiesPage() {
                       <Icon className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.2] text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-[13px] sm:text-[14px] font-medium text-slate-800 group-hover:text-blue-900 transition-colors leading-snug">
+                      <p className="text-[13px] sm:text-[14px] font-medium text-slate-800 group-hover:text-[#e31e24] transition-colors leading-snug">
                         {item.title}
                       </p>
+                      {item.href && (
+                        <span className="text-[11px] font-bold text-[#e31e24] mt-1 inline-flex items-center gap-1 group-hover:underline">
+                          <span>View photos & details</span>
+                          <span>→</span>
+                        </span>
+                      )}
                     </div>
                   </div>
                 )
+
+                if (item.href) {
+                  return (
+                    <Link key={index} href={item.href} className="block h-full">
+                      {content}
+                    </Link>
+                  )
+                }
+
+                return <div key={index} className="block h-full">{content}</div>
               })}
             </div>
 

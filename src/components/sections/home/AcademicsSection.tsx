@@ -37,7 +37,7 @@ export default function AcademicsSection() {
     {
       title: 'Pre-Primary',
       stageTag: 'STAGE 01 • EARLY YEARS',
-      subtitle: 'NURSERY, LKG & UKG',
+      subtitle: 'NURSERY, PP1 & PP2',
       badge: 'Early Years',
       description:
         'Feel grounded and supported in an environment where early learners are encouraged to participate, share ideas, explore phonics, and build confidence through play.',
@@ -93,17 +93,16 @@ export default function AcademicsSection() {
   const currentModal = activeCurriculum !== null ? stages[activeCurriculum] : null
 
   return (
-    <section id="academics" className="py-10 bg-transparent relative scroll-mt-16 text-slate-900">
-
+    <section id="academics" className="py-12 bg-transparent relative scroll-mt-16 text-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="w-6 sm:w-8 h-[2px] bg-[#e31e24]" />
             <span
-              style={{ lineHeight: '26px' }}
-              className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24] leading-[26px] sm:leading-[26px]"
+              style={{ fontSize: '13px', lineHeight: '23px' }}
+              className="text-xs sm:text-[13px] font-bold uppercase tracking-widest text-[#e31e24]"
             >
               ACADEMIC PROGRAMMES
             </span>
@@ -124,21 +123,21 @@ export default function AcademicsSection() {
           </p>
         </div>
 
-        {/* Academic Stage Cards with On-Scroll Sticky Stacking */}
-        <div className="space-y-6 sm:space-y-10 lg:space-y-12 pb-2 sm:pb-4">
+        {/* Academic Stage Cards with On-Scroll Sticky Stacking & Reveal */}
+        <div className="space-y-8 sm:space-y-12 lg:space-y-16 pb-28 sm:pb-36 lg:pb-48">
           {stages.map((stage, index) => (
             <div
               key={index}
-              className="sticky [top:var(--stack-top-mobile)] sm:[top:var(--stack-top-tablet)] lg:[top:var(--stack-top-desktop)] flex flex-col lg:flex-row items-stretch rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden border border-slate-200/90 bg-white text-slate-900 group transition-all duration-300 shadow-[0_12px_36px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.12)]"
+              className="sticky [top:var(--stack-top-mobile)] sm:[top:var(--stack-top-tablet)] lg:[top:var(--stack-top-desktop)] flex flex-col lg:flex-row items-stretch rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden border border-slate-200/90 bg-white text-slate-900 group transition-all duration-300 shadow-[0_16px_48px_rgba(3,28,63,0.12)] hover:shadow-[0_20px_56px_rgba(3,28,63,0.18)]"
               style={{
-                ['--stack-top-mobile' as any]: `${76 + index * 18}px`,
-                ['--stack-top-tablet' as any]: `${96 + index * 24}px`,
-                ['--stack-top-desktop' as any]: `${128 + index * 28}px`,
+                ['--stack-top-mobile' as any]: `${76 + index * 20}px`,
+                ['--stack-top-tablet' as any]: `${96 + index * 26}px`,
+                ['--stack-top-desktop' as any]: `${124 + index * 32}px`,
                 zIndex: index + 10,
               }}
             >
               {/* Left Column: Image */}
-              <div className="w-full lg:w-1/2 min-h-[200px] sm:min-h-[300px] lg:min-h-[460px] relative overflow-hidden bg-slate-950 shrink-0">
+              <div className="w-full lg:w-1/2 min-h-[220px] sm:min-h-[300px] lg:min-h-[460px] relative overflow-hidden bg-slate-950 shrink-0">
                 <SchoolImage
                   src={stage.image}
                   alt={stage.alt}
@@ -204,7 +203,7 @@ export default function AcademicsSection() {
           ))}
         </div>
 
-        </div>
+      </div>
 
       {/* Curriculum Details Modal */}
       {currentModal && (
@@ -276,4 +275,3 @@ export default function AcademicsSection() {
     </section>
   )
 }
-

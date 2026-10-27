@@ -13,7 +13,7 @@ interface StatItem {
 
 const stats: StatItem[] = [
   {
-    value: 2021,
+    value: 2020,
     suffix: '',
     label: 'Year of Establishment',
     icon: GraduationCap,

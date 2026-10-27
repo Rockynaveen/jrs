@@ -249,12 +249,21 @@ export default function Footer() {
                 <div className="w-7 h-7 rounded-lg bg-white/10 border border-white/15 text-white flex items-center justify-center flex-shrink-0">
                   <Phone className="w-3.5 h-3.5" />
                 </div>
-                <a
-                  href="tel:+9191574043210"
-                  className="hover:text-white transition-colors"
-                >
-                  +91 915740 43210
-                </a>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <a
+                    href="tel:+919281409674"
+                    className="hover:text-white transition-colors"
+                  >
+                    +91 92814 09674
+                  </a>
+                  <span className="text-slate-400">,</span>
+                  <a
+                    href="tel:+919281409672"
+                    className="hover:text-white transition-colors"
+                  >
+                    +91 92814 09672
+                  </a>
+                </div>
               </div>
 
               {/* Email */}
@@ -263,10 +272,10 @@ export default function Footer() {
                   <Mail className="w-3.5 h-3.5" />
                 </div>
                 <a
-                  href="mailto:info@jrsinternationalschool.com"
+                  href="mailto:jrsinternationalschool6@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  info@jrsinternationalschool.com
+                  Jrsinternationalschool6@gmail.com
                 </a>
               </div>
             </div>

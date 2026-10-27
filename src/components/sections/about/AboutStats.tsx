@@ -95,7 +95,7 @@ export default function AboutStats() {
   const stats: StatItem[] = [
     {
       icon: <GraduationCap className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-amber-300 stroke-[2]" />,
-      value: 2021,
+      value: 2020,
       prefix: '',
       suffix: '',
       duration: 1800,

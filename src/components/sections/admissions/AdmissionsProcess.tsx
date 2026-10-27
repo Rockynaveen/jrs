@@ -8,9 +8,9 @@ export default function AdmissionsProcess() {
     {
       step: '01',
       isEven: false,
-      title: 'Meet the Admission Officer',
+      title: 'Meet the Admission HR',
       description:
-        'Visit the school campus and meet our admission officer for guidance.',
+        'Visit the school campus and meet our HR for guidance.',
       image: '/images/admissions/admission-officer.png',
     },
     {
@@ -103,9 +103,8 @@ export default function AdmissionsProcess() {
 
               {/* Number Badge at Top Center */}
               <div
-                className={`w-10 h-10 rounded-full ${
-                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                } text-white text-xs sm:text-sm font-black flex items-center justify-center shadow-xs mb-4 border-2 border-white relative z-10 group-hover:scale-105 transition-transform`}
+                className={`w-10 h-10 rounded-full ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                  } text-white text-xs sm:text-sm font-black flex items-center justify-center shadow-xs mb-4 border-2 border-white relative z-10 group-hover:scale-105 transition-transform`}
               >
                 {item.step}
               </div>
@@ -128,9 +127,8 @@ export default function AdmissionsProcess() {
 
               {/* Accent Divider Dash */}
               <div
-                className={`w-8 h-[2px] ${
-                  item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
-                } rounded-full my-3 mx-auto`}
+                className={`w-8 h-[2px] ${item.isEven ? 'bg-[#e31e24]' : 'bg-[#031c3f]'
+                  } rounded-full my-3 mx-auto`}
               />
 
               {/* Description */}

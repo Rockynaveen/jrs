@@ -54,7 +54,7 @@ export default function LandingPage() {
         {/* 9. Latest Events Section */}
         <EventsSection />
 
-        {/* 10. Admission Open 2026-2027 & Enquiry Form */}
+        {/* 10. Admission Open 2027-2028 & Enquiry Form */}
         <AdmissionsCTA />
       </main>
 

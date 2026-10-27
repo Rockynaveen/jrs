@@ -89,7 +89,11 @@ export default function PrincipalPage() {
                           <h3 className="text-xl sm:text-2xl font-extrabold text-[#031c3f] tracking-tight">
                             Mrs. Marlene Mannas
                           </h3>
-                          <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-1">
+                          <div className="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-[11px] font-bold text-slate-700 shadow-2xs">
+                            <span className="text-[#dc2626] font-extrabold">Qualifications:</span>
+                            <span>M.A., B.Ed., PPTC, ECE</span>
+                          </div>
+                          <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-2">
                             Principal, JRS International School
                           </p>
                         </div>
@@ -142,7 +146,7 @@ export default function PrincipalPage() {
                           Official Address
                         </span>
                         <span className="text-[11px] font-medium text-slate-800">
-                          Academic Year 2026 – 2027
+                          Academic Year 2027 – 2028
                         </span>
                       </div>
                     </div>
@@ -210,6 +214,9 @@ export default function PrincipalPage() {
                       <h4 className="text-lg font-extrabold text-[#031c3f]">
                         Mrs. Marlene Mannas
                       </h4>
+                      <p className="text-xs font-bold text-[#dc2626] tracking-wide mt-0.5">
+                        M.A., B.Ed., PPTC, ECE
+                      </p>
                       <p className="text-[13px] font-semibold text-slate-800">
                         Principal, JRS International School
                       </p>

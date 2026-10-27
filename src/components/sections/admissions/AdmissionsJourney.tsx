@@ -15,7 +15,7 @@ export default function AdmissionsJourney() {
   const steps = [
     {
       step: 1,
-      title: 'Meet Admission Officer',
+      title: 'Meet the HR',
       description: 'Get guidance and know more about the school.',
       icon: Users,
     },

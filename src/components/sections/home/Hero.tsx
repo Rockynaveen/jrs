@@ -135,7 +135,7 @@ export default function Hero() {
             <span className="inline-flex items-center gap-6 sm:gap-8 pr-6 sm:pr-8">
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
-                <span>Admissions Open for Academic Year 2026–2027 (Nursery to Grade XII) — Enroll Today!</span>
+                <span>Admissions Open for Academic Year 2027–2028 (Nursery to Grade XII) — Enroll Today!</span>
               </span>
               <span className="text-white/30">•</span>
               <span className="inline-flex items-center gap-2">
@@ -160,14 +160,14 @@ export default function Hero() {
               <span className="text-white/30">•</span>
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
-                <span>Admissions Helpline: +91 91009 55555 / +91 91009 66666 | Email: admissions@jrsinternationalschool.com</span>
+                <span>Admissions Helpline: +91 92814 09674, +91 92814 09672 | Email: Jrsinternationalschool6@gmail.com</span>
               </span>
             </span>
             <span className="text-white/40">•</span>
             <span className="inline-flex items-center gap-6 sm:gap-8 pl-6 sm:pl-8">
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
-                <span>Admissions Open for Academic Year 2026–2027 (Nursery to Grade XII) — Enroll Today!</span>
+                <span>Admissions Open for Academic Year 2027–2028 (Nursery to Grade XII) — Enroll Today!</span>
               </span>
               <span className="text-white/30">•</span>
               <span className="inline-flex items-center gap-2">
@@ -192,7 +192,7 @@ export default function Hero() {
               <span className="text-white/30">•</span>
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
-                <span>Admissions Helpline: +91 91009 55555 / +91 91009 66666 | Email: admissions@jrsinternationalschool.com</span>
+                <span>Admissions Helpline: +91 92814 09674, +91 92814 09672 | Email: Jrsinternationalschool6@gmail.com</span>
               </span>
             </span>
           </marquee>
@@ -236,7 +236,7 @@ export default function Hero() {
                 href="/admissions"
                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/30 transition-all duration-200 text-center"
               >
-                <span>Admissions 2026-27</span>
+                <span>Admissions 2027-28</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 

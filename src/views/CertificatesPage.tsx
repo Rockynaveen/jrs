@@ -27,8 +27,8 @@ interface DocumentItem {
 
 const generalInformation = [
   { sno: 1, info: 'Name of the School', details: 'JRS INTERNATIONAL SCHOOL' },
-  { sno: 2, info: 'Affiliation No. (if applicable)', details: '3630135' },
-  { sno: 3, info: 'School Code (if applicable)', details: '57648' },
+  { sno: 2, info: 'Affiliation No. (if applicable)', details: '3630478' },
+  { sno: 3, info: 'School Code (if applicable)', details: '56725' },
   {
     sno: 4,
     info: 'Complete Address with Pin Code',
@@ -38,13 +38,13 @@ const generalInformation = [
   {
     sno: 5,
     info: 'Principal Name & Qualification',
-    details: 'Mrs. Marlene Mannas, M.Sc., B.Ed., M.A.',
+    details: 'Mrs. Marlene Mannas, M.A., B.Ed., PPTC, ECE',
   },
-  { sno: 6, info: 'School Email ID', details: 'info@jrsinternationalschool.com' },
+  { sno: 6, info: 'School Email ID', details: 'Jrsinternationalschool6@gmail.com' },
   {
     sno: 7,
     info: 'Contact Details (Landline / Mobile)',
-    details: '+91 915740 43210 / 08415-295555',
+    details: '+91 92814 09674, +91 92814 09672 / 08415-295555',
   },
 ]
 
