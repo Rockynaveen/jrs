@@ -141,12 +141,6 @@ export default function FacilitiesPage() {
                       <p className="text-[13px] sm:text-[14px] font-medium text-slate-800 group-hover:text-[#e31e24] transition-colors leading-snug">
                         {item.title}
                       </p>
-                      {item.href && (
-                        <span className="text-[11px] font-bold text-[#e31e24] mt-1 inline-flex items-center gap-1 group-hover:underline">
-                          <span>View photos & details</span>
-                          <span>→</span>
-                        </span>
-                      )}
                     </div>
                   </div>
                 )

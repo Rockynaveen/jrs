@@ -380,12 +380,6 @@ export default function FacilitiesSection() {
                             {facility.subtitle}
                           </p>
                         </div>
-
-                        {/* View Details Action Hint */}
-                        <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#e31e24]">
-                          <span>View Details & Photos</span>
-                          <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                        </div>
                       </div>
                     </Link>
                   </div>

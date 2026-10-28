@@ -100,7 +100,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
       ],
     },
     { name: 'Beyond Classroom', href: '/beyond', id: 'beyond' },
-    { name: 'Facilities', href: '/facilities', id: 'facilities' },
+    { name: 'Amenities', href: '/facilities', id: 'facilities' },
     {
       name: 'Gallery',
       href: '/gallery',

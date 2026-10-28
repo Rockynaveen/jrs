@@ -77,25 +77,39 @@ export default function PageHero({
 
         {overlayType === 'cinematic' ? (
           <>
-            {/* Cinematic dark grading matching reference: uniform atmospheric dark tint across full photo */}
-            <div className="absolute inset-0 bg-[#031c3f]/50 pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/95 via-[#031c3f]/40 to-[#031c3f]/75 pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#031c3f]/90 via-[#031c3f]/55 via-50% to-transparent pointer-events-none" />
+            {/* Cinematic dark grading: full mobile protection + smooth desktop ease with zero line */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/95 via-[#031c3f]/60 to-[#031c3f]/40 md:hidden pointer-events-none" />
+            <div
+              className="hidden md:block absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  'linear-gradient(to right, #031c3f 0%, #031c3f 18%, rgba(3, 28, 63, 0.95) 24%, rgba(3, 28, 63, 0.87) 30%, rgba(3, 28, 63, 0.74) 36%, rgba(3, 28, 63, 0.58) 42%, rgba(3, 28, 63, 0.40) 48%, rgba(3, 28, 63, 0.25) 54%, rgba(3, 28, 63, 0.13) 60%, rgba(3, 28, 63, 0.05) 66%, rgba(3, 28, 63, 0.015) 72%, rgba(3, 28, 63, 0) 78%, rgba(3, 28, 63, 0) 100%)',
+              }}
+            />
           </>
         ) : overlayType === 'logo-blue' ? (
           <>
-            {/* Logo Blue Overlay: Full mobile protection + desktop horizontal fade */}
-            <div className="absolute inset-0 bg-[#013aa3]/50 md:bg-[#013aa3]/40 pointer-events-none" />
+            {/* Logo Blue Overlay: Full mobile protection + smooth desktop ease with zero line */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#013aa3] via-[#013aa3]/80 to-[#013aa3]/50 md:hidden pointer-events-none" />
-            <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#013aa3]/90 via-[#013aa3]/60 via-40% to-transparent pointer-events-none" />
-            <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-[#013aa3]/40 via-transparent to-transparent pointer-events-none" />
+            <div
+              className="hidden md:block absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  'linear-gradient(to right, #013aa3 0%, #013aa3 18%, rgba(1, 58, 163, 0.95) 24%, rgba(1, 58, 163, 0.87) 30%, rgba(1, 58, 163, 0.74) 36%, rgba(1, 58, 163, 0.58) 42%, rgba(1, 58, 163, 0.40) 48%, rgba(1, 58, 163, 0.25) 54%, rgba(1, 58, 163, 0.13) 60%, rgba(1, 58, 163, 0.05) 66%, rgba(1, 58, 163, 0.015) 72%, rgba(1, 58, 163, 0) 78%, rgba(1, 58, 163, 0) 100%)',
+              }}
+            />
           </>
         ) : (
           <>
-            {/* Navy Overlay: Full mobile protection + desktop horizontal fade */}
+            {/* Navy Overlay: Full mobile protection + smooth desktop ease with zero line */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f] via-[#031c3f]/85 to-[#031c3f]/65 md:hidden pointer-events-none" />
-            <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#031c3f] via-[#031c3f]/85 via-35% md:via-45% to-transparent pointer-events-none" />
-            <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-[#031c3f]/30 via-transparent to-transparent pointer-events-none" />
+            <div
+              className="hidden md:block absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  'linear-gradient(to right, #031c3f 0%, #031c3f 18%, rgba(3, 28, 63, 0.95) 24%, rgba(3, 28, 63, 0.87) 30%, rgba(3, 28, 63, 0.74) 36%, rgba(3, 28, 63, 0.58) 42%, rgba(3, 28, 63, 0.40) 48%, rgba(3, 28, 63, 0.25) 54%, rgba(3, 28, 63, 0.13) 60%, rgba(3, 28, 63, 0.05) 66%, rgba(3, 28, 63, 0.015) 72%, rgba(3, 28, 63, 0) 78%, rgba(3, 28, 63, 0) 100%)',
+              }}
+            />
           </>
         )}
       </div>

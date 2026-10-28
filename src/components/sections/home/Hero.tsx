@@ -106,11 +106,14 @@ export default function Hero() {
         {/* Mobile Overlay: Solid/vertical navy gradient protecting full-width text */}
         <div className="md:hidden absolute inset-0 bg-gradient-to-t from-[#031c3f] via-[#031c3f]/90 to-[#031c3f]/75 z-[1] pointer-events-none" />
 
-        {/* Desktop Overlay: Soft navy horizontal gradient fading to showcase campus photography */}
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#031c3f] via-[#031c3f]/85 via-45% to-transparent z-[1] pointer-events-none" />
-
-        {/* Subtle Dark Bottom Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/40 via-transparent to-transparent z-[1] pointer-events-none" />
+        {/* Desktop Overlay: Smoothly feathered gradient with zero banding or visible line */}
+        <div
+          className="hidden md:block absolute inset-0 z-[1] pointer-events-none"
+          style={{
+            background:
+              'linear-gradient(to right, #031c3f 0%, #031c3f 18%, rgba(3, 28, 63, 0.95) 24%, rgba(3, 28, 63, 0.87) 30%, rgba(3, 28, 63, 0.74) 36%, rgba(3, 28, 63, 0.58) 42%, rgba(3, 28, 63, 0.40) 48%, rgba(3, 28, 63, 0.25) 54%, rgba(3, 28, 63, 0.13) 60%, rgba(3, 28, 63, 0.05) 66%, rgba(3, 28, 63, 0.015) 72%, rgba(3, 28, 63, 0) 78%, rgba(3, 28, 63, 0) 100%)',
+          }}
+        />
       </div>
 
       {/* Latest News Marquee Ticker (Below Header, Attached to the End) */}
@@ -211,6 +214,20 @@ export default function Hero() {
 
       {/* Main Hero Slider Content Area */}
       <div className="relative z-10 flex-1 w-full flex items-center">
+        {/* 38 Years of Excellence Emblem Badge - Right Top */}
+        <div className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-6 lg:right-8 z-20 pointer-events-auto animate-fade-in">
+          <div className="group relative select-none">
+            {/* Ambient golden glow behind the emblem */}
+            <div className="absolute -inset-1 rounded-full bg-amber-400/20 blur-lg opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 -z-10" />
+
+            <img
+              src="/images/38-years-excellence.png"
+              alt="38 Years of Excellence - JRS International School"
+              className="w-14 sm:w-16 md:w-20 lg:w-24 h-auto object-contain drop-shadow-[0_6px_16px_rgba(0,0,0,0.55)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
+            />
+          </div>
+        </div>
+
         {/* Hero Content on Clean Solid Navy Left Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-12 md:pt-16 pb-16 sm:pb-8 w-full">
           <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in translate-y-2 sm:translate-y-4">
