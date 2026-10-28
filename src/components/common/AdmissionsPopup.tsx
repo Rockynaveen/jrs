@@ -114,7 +114,7 @@ export default function AdmissionsPopup() {
             </h3>
 
             <p className="text-xs sm:text-[13.5px] text-slate-600 mt-1 leading-relaxed">
-              Enrolling students from <strong>Nursery to Grade XII</strong>. Give your child the foundation for academic excellence, character development, and global leadership.
+              Enrolling students from <strong>Nursery to Grade XII</strong> (Admissions open for <strong>11th &amp; 12th Standard also</strong>). Give your child the foundation for academic excellence, character development, and global leadership.
             </p>
 
             {/* Highlights List */}

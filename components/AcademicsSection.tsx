@@ -93,7 +93,7 @@ export default function AcademicsSection() {
   const currentModal = activeCurriculum !== null ? stages[activeCurriculum] : null
 
   return (
-    <section id="academics" className="py-12 bg-transparent relative scroll-mt-16 text-slate-900">
+    <section id="academics" className="py-10 bg-transparent relative scroll-mt-16 text-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section Header */}
@@ -124,7 +124,7 @@ export default function AcademicsSection() {
         </div>
 
         {/* Academic Stage Cards with On-Scroll Sticky Stacking & Reveal */}
-        <div className="space-y-8 sm:space-y-12 lg:space-y-16 sm:pb-36 ">
+        <div className="space-y-8 sm:space-y-12 lg:space-y-16">
           {stages.map((stage, index) => (
             <div
               key={index}

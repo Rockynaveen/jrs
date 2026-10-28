@@ -140,6 +140,11 @@ export default function Hero() {
               <span className="text-white/30">•</span>
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
+                <span className="font-semibold text-amber-300">Admissions Open for 11th &amp; 12th Standard Also — Enroll Today!</span>
+              </span>
+              <span className="text-white/30">•</span>
+              <span className="inline-flex items-center gap-2">
+                <span className="text-[#f59e0b] font-bold">★</span>
                 <span>CBSE Curriculum with State-of-the-Art STEM, Robotics & AI Labs</span>
               </span>
               <span className="text-white/30">•</span>
@@ -168,6 +173,11 @@ export default function Hero() {
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
                 <span>Admissions Open for Academic Year 2027–2028 (Nursery to Grade XII) — Enroll Today!</span>
+              </span>
+              <span className="text-white/30">•</span>
+              <span className="inline-flex items-center gap-2">
+                <span className="text-[#f59e0b] font-bold">★</span>
+                <span className="font-semibold text-amber-300">Admissions Open for 11th &amp; 12th Standard Also — Enroll Today!</span>
               </span>
               <span className="text-white/30">•</span>
               <span className="inline-flex items-center gap-2">
