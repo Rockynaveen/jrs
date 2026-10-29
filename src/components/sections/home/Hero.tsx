@@ -218,12 +218,12 @@ export default function Hero() {
         <div className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-6 lg:right-8 z-20 pointer-events-auto">
           <div className="group relative select-none animate-float">
             {/* Ambient golden glow behind the emblem */}
-            <div className="absolute -inset-2 rounded-full bg-amber-400/30 blur-xl opacity-70 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 -z-10 pointer-events-none" />
+            <div className="absolute -inset-2.5 rounded-full bg-amber-400/30 blur-xl opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 -z-10 pointer-events-none" />
 
             <img
               src="/images/38-years-excellence.png"
               alt="38 Years of Excellence - JRS International School"
-              className="w-16 sm:w-18 md:w-22 lg:w-26 h-auto object-contain drop-shadow-[0_10px_22px_rgba(0,0,0,0.5)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
+              className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-[120px] h-auto object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.5)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
             />
           </div>
         </div>
