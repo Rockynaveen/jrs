@@ -302,4 +302,19 @@
   animation: topToDown 1.4s ease-in-out infinite;
   display: inline-flex;
 }
+
+/* Floating animation for hero emblems and badges */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3.5s ease-in-out infinite;
+  will-change: transform;
+}
 
