@@ -82,7 +82,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex flex-col justify-center bg-black min-h-[100vh] min-h-[100dvh] h-[100vh] h-[100dvh]"
+      className="relative w-full overflow-hidden flex flex-col justify-between bg-black min-h-[560px] sm:min-h-[620px] md:min-h-[660px] lg:min-h-[700px] h-[100dvh]"
     >
       {/* Background Hero Slider Images (full section width & height) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -108,24 +108,24 @@ export default function Hero() {
 
       {/* Latest News Marquee Ticker (Below Header, Attached to the End) */}
       <div
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
-        className="relative z-20 w-full max-w-full overflow-hidden border-b border-white/15 flex items-stretch shrink-0 pl-0 pr-3 sm:pr-6"
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.45)' }}
+        className="relative z-20 w-full max-w-full overflow-hidden border-b border-white/15 flex items-stretch shrink-0 pl-0 pr-2 sm:pr-6"
       >
-        <div className="flex items-center gap-1.5 shrink-0 bg-[#dc2626] text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider px-2.5 sm:px-3 py-[10px] shadow-sm z-10 self-stretch">
-          <Megaphone className="w-3.5 h-3.5 shrink-0 animate-bounce" />
+        <div className="flex items-center gap-1.5 shrink-0 bg-[#dc2626] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 sm:px-3 py-1.5 sm:py-2 shadow-sm z-10 self-stretch">
+          <Megaphone className="w-3 sm:w-3.5 h-3 sm:h-3.5 shrink-0 animate-bounce" />
           <span>News</span>
         </div>
-        <div className="flex-1 min-w-0 max-w-full overflow-hidden ml-2.5 sm:ml-3 flex items-center py-[10px]">
+        <div className="flex-1 min-w-0 max-w-full overflow-hidden ml-2 sm:ml-3 flex items-center py-1.5 sm:py-2">
           <marquee
             behavior="scroll"
             direction="left"
             scrollamount="6"
-            className="w-full max-w-full text-[13px] sm:text-[14px] font-normal text-white/95 cursor-pointer block leading-normal font-['Inter',sans-serif]"
+            className="w-full max-w-full text-xs sm:text-[13.5px] font-normal text-white/95 cursor-pointer block leading-normal font-['Inter',sans-serif]"
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}
             onMouseEnter={(e: any) => e.currentTarget.stop()}
             onMouseLeave={(e: any) => e.currentTarget.start()}
           >
-            <span className="inline-flex items-center gap-6 sm:gap-8 pr-6 sm:pr-8">
+            <span className="inline-flex items-center gap-5 sm:gap-8 pr-5 sm:pr-8">
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
                 <span>Admissions Open for Academic Year 2027–2028 (Nursery to Grade XII) — Enroll Today!</span>
@@ -162,7 +162,7 @@ export default function Hero() {
               </span>
             </span>
             <span className="text-white/40">•</span>
-            <span className="inline-flex items-center gap-6 sm:gap-8 pl-6 sm:pl-8">
+            <span className="inline-flex items-center gap-5 sm:gap-8 pl-5 sm:pl-8">
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
                 <span>Admissions Open for Academic Year 2027–2028 (Nursery to Grade XII) — Enroll Today!</span>
@@ -213,28 +213,28 @@ export default function Hero() {
             <img
               src="/images/38-years-experience.png"
               alt="38 Years of Experience - JRS International School"
-              className="w-10 sm:w-14 md:w-[72px] lg:w-[86px] xl:w-[94px] h-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
+              className="w-11 sm:w-14 md:w-[72px] lg:w-[86px] xl:w-[94px] h-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
             />
           </div>
         </div>
 
         {/* Hero Content on Clean Solid Navy Left Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full">
-          <div className="max-w-xl lg:max-w-2xl text-left -translate-y-2 sm:-translate-y-3">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 my-auto w-full">
+          <div className="max-w-xl lg:max-w-2xl text-left pr-14 sm:pr-0">
             {/* Single Best-Suited Headline for all slides (Uniform single color) */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[62px] font-extrabold text-white tracking-tight leading-[1.12] mb-6 sm:mb-8 break-words drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
+            <h1 className="text-[27px] xs:text-[31px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[62px] font-extrabold text-white tracking-tight leading-[1.15] mb-5 sm:mb-8 break-words drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
               <span>Empowering Minds,</span>{' '}
-              <span className="block mt-1.5 sm:mt-2 text-white">
+              <span className="block mt-1 sm:mt-2 text-white">
                 Shaping Future Leaders
               </span>
             </h1>
 
             {/* CTA Buttons - Pure Glassmorphism without background */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 w-full sm:w-auto">
               {/* Primary Admissions Button */}
               <Link
                 href="/admissions"
-                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 text-center group cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 text-center group cursor-pointer"
               >
                 <span>Admissions 2027-28</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -245,7 +245,7 @@ export default function Hero() {
                 type="button"
                 onClick={() => setIsVideoModalOpen(true)}
                 aria-label="Play virtual campus tour video"
-                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 group cursor-pointer text-center"
+                className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 group cursor-pointer text-center"
               >
                 <span>Take a Virtual Tour</span>
                 <Play className="w-3.5 h-3.5 fill-white text-white group-hover:scale-110 transition-transform ml-0.5" />
