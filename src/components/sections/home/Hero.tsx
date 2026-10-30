@@ -205,15 +205,15 @@ export default function Hero() {
       {/* Main Hero Slider Content Area */}
       <div className="relative z-10 flex-1 w-full flex items-center">
         {/* 38 Years of Experience Emblem Badge - Right Top Floating */}
-        <div className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-6 lg:right-8 z-20 pointer-events-auto">
+        <div className="absolute top-2.5 sm:top-4 lg:top-6 right-2.5 sm:right-6 lg:right-8 z-20 pointer-events-auto">
           <div className="group relative select-none animate-float">
             {/* Ambient golden glow behind the emblem */}
-            <div className="absolute -inset-2.5 rounded-full bg-amber-400/30 blur-xl opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 -z-10 pointer-events-none" />
+            <div className="absolute -inset-1.5 sm:-inset-2.5 rounded-full bg-amber-400/30 blur-lg sm:blur-xl opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 -z-10 pointer-events-none" />
 
             <img
               src="/images/38-years-experience.png"
               alt="38 Years of Experience - JRS International School"
-              className="w-13 sm:w-16 md:w-20 lg:w-24 xl:w-[98px] h-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
+              className="w-10 sm:w-14 md:w-[72px] lg:w-[86px] xl:w-[94px] h-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
             />
           </div>
         </div>
