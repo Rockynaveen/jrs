@@ -90,7 +90,7 @@ export default function AboutVideo() {
                 key={idx}
                 data-aos="fade-up"
                 data-aos-delay={idx * 80}
-                className="group relative rounded-[22px] sm:rounded-[24px] overflow-hidden bg-slate-900 h-[310px] sm:h-[330px] lg:h-[350px] xl:h-[360px] flex flex-col justify-end transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.22)] shadow-[0_10px_28px_rgba(0,0,0,0.12)]"
+                className="group relative rounded-[22px] sm:rounded-[24px] overflow-hidden bg-slate-900 h-[310px] sm:h-[330px] lg:h-[350px] xl:h-[360px] flex flex-col justify-end transition-all duration-300 hover:-translate-y-1 hover:shadow-none shadow-none"
               >
                 {/* Background Campus Photo with custom imagePosition */}
                 <div className="absolute inset-0 w-full h-full overflow-hidden">

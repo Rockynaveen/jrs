@@ -269,7 +269,7 @@ export default function Campus360Page() {
                     data-aos="fade-up"
                     data-aos-delay={(index % 4) * 80}
                     onClick={() => openLightbox(index)}
-                    className="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer border border-slate-200/80 flex flex-col"
+                    className="group rounded-2xl overflow-hidden bg-white shadow-none hover:shadow-none hover:-translate-y-1 transition-all duration-300 cursor-pointer border border-slate-200 hover:border-slate-300 flex flex-col"
                   >
                     {/* Panoramic Image Frame */}
                     <div className="relative aspect-[16/10] sm:aspect-[2/1] w-full overflow-hidden bg-slate-100">
@@ -292,7 +292,7 @@ export default function Campus360Page() {
                       </div>
 
                       {/* 360 Badge in Top Left */}
-                      <div className="absolute top-3.5 left-3.5 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-slate-800 text-[11px] font-bold tracking-wider uppercase flex items-center gap-1.5 shadow-sm">
+                      <div className="absolute top-3.5 left-3.5 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-slate-800 text-[11px] font-bold tracking-wider uppercase flex items-center gap-1.5 shadow-none">
                         <Compass className="w-3.5 h-3.5 text-[#e31e24] animate-spin-slow" />
                         <span>360° View</span>
                       </div>
@@ -310,7 +310,7 @@ export default function Campus360Page() {
                       </div>
 
                       {/* White Circular Arrow Button */}
-                      <div className="w-8 h-8 rounded-full bg-slate-100 text-[#031c3f] group-hover:bg-[#e31e24] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 group-hover:scale-110">
+                      <div className="w-8 h-8 rounded-full bg-slate-100 text-[#031c3f] group-hover:bg-[#e31e24] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-none shrink-0 group-hover:scale-110">
                         <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                       </div>
                     </div>

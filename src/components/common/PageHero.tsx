@@ -105,17 +105,29 @@ export default function PageHero({
 
       {/* Hero Content Container */}
       <div
-        className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between ${
+        className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center ${
           children
             ? 'pt-3 sm:pt-4 md:pt-6 pb-28 sm:pb-32 md:pb-[130px]'
             : 'pt-3 sm:pt-4 md:pt-6 pb-6 sm:pb-8 md:pb-10'
         }`}
       >
-        {/* Breadcrumb Navigation - at previous left position */}
-        <div className="w-full">
+        {/* Center: Heading, Breadcrumb & Action Buttons */}
+        <div className="my-auto text-center flex flex-col items-center justify-center max-w-4xl mx-auto w-full py-4 sm:py-6" data-aos="fade-up">
+          {/* Main Title */}
+          <h1
+            style={titleStyle}
+            className={`text-2xl sm:text-3xl md:text-[38px] md:leading-[48px] lg:text-[44px] lg:leading-[54px] xl:text-[46px] xl:leading-[56px] font-bold tracking-tight text-white break-words text-center mx-auto ${titleClassName || ''}`}
+          >
+            {title}{' '}
+            {titleHighlight && (
+              <span className="text-[#f59e0b] font-bold" style={{ lineHeight: 'inherit' }}>{titleHighlight}</span>
+            )}
+          </h1>
+
+          {/* Breadcrumb Navigation - Below Heading */}
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300"
+            className="flex items-center justify-center flex-wrap gap-2 text-xs sm:text-sm font-medium text-slate-300 mt-2.5 sm:mt-3.5"
           >
             <Link href="/" className="hover:text-white transition-colors">
               Home
@@ -131,20 +143,6 @@ export default function PageHero({
             <span className="text-slate-400 font-normal">›</span>
             <span className="text-[#f59e0b] font-semibold">{breadcrumb}</span>
           </nav>
-        </div>
-
-        {/* Center: Heading & Buttons ONLY */}
-        <div className="my-auto text-center flex flex-col items-center justify-center max-w-4xl mx-auto w-full py-4 sm:py-6" data-aos="fade-up">
-          {/* Main Title */}
-          <h1
-            style={titleStyle}
-            className={`text-2xl sm:text-3xl md:text-[38px] md:leading-[48px] lg:text-[44px] lg:leading-[54px] xl:text-[46px] xl:leading-[56px] font-bold tracking-tight text-white break-words text-center mx-auto ${titleClassName || ''}`}
-          >
-            {title}{' '}
-            {titleHighlight && (
-              <span className="text-[#f59e0b] font-bold" style={{ lineHeight: 'inherit' }}>{titleHighlight}</span>
-            )}
-          </h1>
 
           {/* Action Buttons */}
           {(primaryButton || secondaryButton) && (

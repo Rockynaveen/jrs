@@ -55,26 +55,27 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
       {/* 2. Main Content Container - Aligned with Navbar Logo & Enquire Now button */}
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16 sm:pb-24">
         
-        {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-[13px] text-slate-500 mb-6">
-          <Link href="/" className="hover:text-[#031c3f] transition-colors">
-            Home
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-slate-400 stroke-[2.2]" />
-          <Link href="/facilities" className="hover:text-[#031c3f] transition-colors">
-            Facilities
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-slate-400 stroke-[2.2]" />
-          <span className="font-semibold text-slate-800">
-            {facility.title}
-          </span>
-        </nav>
-
-        {/* Page Title & Subtitle - Centered */}
+        {/* Page Title, Subtitle & Breadcrumb - Centered */}
         <div className="mb-8 sm:mb-10 text-center max-w-3xl mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#031c3f] tracking-tight leading-tight mb-2.5">
             World-Class Environment for <span className="text-[#e31e24]">{facility.title}</span>
           </h1>
+
+          {/* Breadcrumb below heading */}
+          <nav aria-label="Breadcrumb" className="flex items-center justify-center flex-wrap gap-2 text-xs sm:text-[13px] text-slate-500 mb-3">
+            <Link href="/" className="hover:text-[#031c3f] transition-colors">
+              Home
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400 stroke-[2.2]" />
+            <Link href="/facilities" className="hover:text-[#031c3f] transition-colors">
+              Facilities
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400 stroke-[2.2]" />
+            <span className="font-semibold text-slate-800">
+              {facility.title}
+            </span>
+          </nav>
+
           <p className="text-xs sm:text-sm md:text-[15px] text-[#111] leading-relaxed mx-auto">
             {facility.heroTagline}
           </p>

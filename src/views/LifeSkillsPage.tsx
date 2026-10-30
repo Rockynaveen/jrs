@@ -120,7 +120,7 @@ export default function LifeSkillsPage() {
                   data-aos="fade-up"
                   data-aos-delay={index * 150}
                   onClick={() => setActiveVideo(vid)}
-                  className="group relative aspect-video w-full rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer bg-slate-900"
+                  className="group relative aspect-video w-full rounded-2xl overflow-hidden shadow-none hover:shadow-none hover:-translate-y-1 transition-all duration-300 cursor-pointer bg-slate-900 border border-slate-200 hover:border-slate-300"
                 >
                   <img
                     src={vid.thumbnail}
@@ -135,7 +135,7 @@ export default function LifeSkillsPage() {
 
                   {/* Centered Play Button Icon */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black/60 border-2 border-white/80 group-hover:bg-[#e31e24] group-hover:border-[#e31e24] text-white flex items-center justify-center transition-all duration-300 shadow-2xl group-hover:scale-110">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black/60 border-2 border-white/80 group-hover:bg-[#e31e24] group-hover:border-[#e31e24] text-white flex items-center justify-center transition-all duration-300 shadow-none group-hover:scale-110">
                       <Play className="w-6 h-6 sm:w-7 sm:h-7 fill-current ml-1" />
                     </div>
                   </div>

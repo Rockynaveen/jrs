@@ -28,9 +28,9 @@ export interface MediaArticle {
   publication?: string
 }
 
-const FEATURED_ARTICLES: MediaArticle[] = [
+const MEDIA_ARTICLES: MediaArticle[] = [
   {
-    id: 'featured-1',
+    id: 'media-1',
     category: 'ACHIEVEMENT',
     title: 'విద్యార్థుల నైపుణ్యతను గుర్తించి ప్రోత్సహించాలి - సినీ హీరో, డైరెక్టర్ విశ్వక్ సేన్',
     titleEn: '"Identify and Encourage Students\' Innate Talents" — Actor & Director Vishwak Sen at JRS Annual Day',
@@ -43,7 +43,7 @@ const FEATURED_ARTICLES: MediaArticle[] = [
     publication: 'మన తెలంగాణ (Mana Telangana) • Hyderabad Main, Page 6',
   },
   {
-    id: 'featured-2',
+    id: 'media-2',
     category: 'SCHOOL EVENT',
     title: 'విద్యార్థుల నైపుణ్యతను గుర్తించి ప్రోత్సహించాలి - ప్రముఖ డైరెక్టర్ విశ్వక్ సేన్',
     titleEn: '"Identify and Encourage Student Talents" — Director Vishwak Sen at JRS International School',
@@ -56,7 +56,7 @@ const FEATURED_ARTICLES: MediaArticle[] = [
     publication: 'సూర్య (Surya Daily) • Ghatkesar',
   },
   {
-    id: 'featured-3',
+    id: 'media-3',
     category: 'CELEBRATION',
     title: 'పాఠశాలలో సాంస్కృతిక కార్యక్రమాలు - గణతంత్ర దినోత్సవ వేడుకలు',
     titleEn: 'Patriotic Celebrations & Cultural Performances on Republic Day',
@@ -68,37 +68,8 @@ const FEATURED_ARTICLES: MediaArticle[] = [
     image: '/images/news-vaartha-clipping.png',
     publication: 'వార్త (Vaartha Daily) • Ghatkesar',
   },
-]
-
-const MEDIA_ARTICLES: MediaArticle[] = [
   {
-    id: 'media-1',
-    category: 'SCHOOL EVENT',
-    title: 'విద్యార్థుల నైపుణ్యతను గుర్తించి ప్రోత్సహించాలి - ప్రముఖ డైరెక్టర్ విశ్వక్ సేన్',
-    titleEn: '"Identify and Encourage Student Talents" — Director Vishwak Sen at JRS International School',
-    date: '14 FEB 2023',
-    excerpt:
-      'విద్యార్థులలో దాగి ఉన్న కళానైపుణ్యాలను గుర్తించి ఆ దిశగా ప్రోత్సాహకాలు అందించినపుడే ఉన్నత స్థానాలలో రాణించగలరని ప్రముఖ నటుడు, ప్రొడ్యూసర్ విశ్వక్ సేన్ అన్నారు. వార్షికోత్సవంలో విద్యార్థుల సాంస్కృతిక ప్రదర్శనలు ఆకట్టుకున్నాయి.',
-    fullContent:
-      'ఘట్‌కేసర్ మండలం కొర్రెముల పరిధిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ పాఠశాల వార్షికోత్సవం కార్యక్రమానికి ముఖ్య అతిథిగా ప్రముఖ నటుడు, ప్రొడ్యూసర్ విశ్వక్ సేన్, సినీ గాయకుడు పృథ్వీచంద్ర, పర్వతారోహకురాలు అన్విత రెడ్డి పాల్గొన్నారు. ప్రిన్సిపాల్ జగదీశ్వరి నటరాజ్ చేతుల మీదుగా విశ్వక్ సేన్‌కు మెమెంటో అందజేశారు.',
-    image: '/images/news-surya-clipping.png',
-    publication: 'సూర్య (Surya Daily) • Ghatkesar',
-  },
-  {
-    id: 'media-2',
-    category: 'SCHOOL EVENT',
-    title: 'పాఠశాలలో సాంస్కృతిక కార్యక్రమాలు - గణతంత్ర దినోత్సవ వేడుకలు',
-    titleEn: 'Patriotic Celebrations & Cultural Performances on Republic Day',
-    date: '28 JAN 2023',
-    excerpt:
-      'నారపల్లిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ స్కూల్‌లో గణతంత్ర దినోత్సవ వేడుకలు ఘనంగా జరిగాయి. విద్యార్థులచే నిర్వహించిన దేశభక్తితో కూడిన సాంస్కృతిక జానపద నృత్య ప్రదర్శనలు చూపురులను ఆకట్టుకున్నాయి.',
-    fullContent:
-      'పోచారం మున్సిపల్ నారపల్లిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ స్కూల్‌లో గణతంత్ర దినోత్సవ వేడుకలు గురువారం ఘనంగా జరిగాయి. పలు సాంస్కృతిక నృత్య ప్రదర్శనల్లో విజేతలుగా నిలిచిన విద్యార్థులకు ప్రిన్సిపాల్ జగదీశ్వరి నటరాజ్ చేతుల మీదుగా బహుమతులు అందజేశారు.',
-    image: '/images/news-vaartha-clipping.png',
-    publication: 'వార్త (Vaartha Daily) • Ghatkesar',
-  },
-  {
-    id: 'media-3',
+    id: 'media-4',
     category: 'SCHOOL EVENT',
     title: 'నారపల్లి జేఆర్ఎస్ ఇంటర్నేషనల్ పాఠశాలలో సాంస్కృతిక ప్రదర్శనలు',
     titleEn: 'Vibrant Cultural Celebrations & 74th Republic Day at JRS International School',
@@ -111,7 +82,7 @@ const MEDIA_ARTICLES: MediaArticle[] = [
     publication: 'ఆంధ్రప్రభ (Andhra Prabha) • Rangareddy',
   },
   {
-    id: 'media-4',
+    id: 'media-5',
     category: 'EDUCATION',
     title: 'విద్యార్థులు రాజ్యాంగ స్ఫూర్తిని పెంపొందించుకోవాలి - ప్రిన్సిపల్ జగదీశ్వరి నటరాజ్',
     titleEn: '"Students Should Uphold the Spirit of the Constitution" — Principal Jagadeeshwari Nataraj',
@@ -152,7 +123,7 @@ export default function MediaPage() {
       <Navbar activePage="media" />
 
       <main className="flex-1">
-        {/* 2. Hero Section (70vh as configured in PageHero) */}
+        {/* 2. Hero Section */}
         <PageHero
           breadcrumb="News & Media"
           title="News &"
@@ -171,21 +142,21 @@ export default function MediaPage() {
           }}
         />
 
-        {/* 3. Section 1: Our Achievements in the News (Featured Section) */}
+        {/* 3. Single Unified Media Section (No headings in the middle) */}
         <section
           id="achievements"
-          className="relative py-[50px] bg-white overflow-hidden"
+          className="relative py-12 sm:py-16 bg-white overflow-hidden"
         >
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Section Header */}
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
               <div className="flex items-center justify-center gap-2.5 mb-2.5">
                 <span className="w-8 h-[2px] bg-[#031c3f]" />
                 <span
                   style={{ fontSize: '13px', lineHeight: '23px' }}
                   className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                 >
-                  LATEST UPDATES
+                  PRESS & MEDIA
                 </span>
                 <span className="w-8 h-[2px] bg-[#031c3f]" />
               </div>
@@ -196,39 +167,31 @@ export default function MediaPage() {
                 Our Achievements <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>in the News</span>
               </h2>
               <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                Explore the latest news, achievements, events and special moments from JRS International School.
+                Explore the latest newspaper features, media coverage, achievements, and vibrant happenings from JRS International School.
               </p>
             </div>
 
-            {/* Featured Article Cards Grid (3 cards per row, extensible for more in future) */}
+            {/* All Media Cards Grid - 3 cards per row on desktop */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {FEATURED_ARTICLES.map((article, index) => (
+              {MEDIA_ARTICLES.map((article, index) => (
                 <div
                   key={article.id}
-                  className="bg-white rounded-3xl border-2 border-[#013aa3]/25 hover:border-[#013aa3] overflow-hidden transition-all duration-300 hover:-translate-y-1.5 flex flex-col group cursor-pointer"
+                  className="bg-white rounded-3xl border border-slate-200 hover:border-slate-300 overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col group cursor-pointer shadow-none"
                   data-aos="fade-up"
-                  data-aos-delay={(index + 1) * 100}
+                  data-aos-delay={(index % 3 + 1) * 100}
                   onClick={() => setSelectedArticle(article)}
                 >
                   <div className="relative aspect-[16/11] w-full overflow-hidden bg-slate-100 flex items-center justify-center">
-                    {/* Full Featured Clipping Image */}
+                    {/* Full Clipping Image */}
                     <img
                       src={article.image}
                       alt={article.title}
                       className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => {
                         const target = e.currentTarget
-                        target.src = '/images/annual-day.jpg'
+                        target.src = '/images/campus-building.jpg'
                       }}
                     />
-
-                    {/* Featured News Yellow Badge */}
-                    <div className="absolute top-3.5 left-3.5 z-10">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[10px] sm:text-[11px] font-bold tracking-wider uppercase bg-[#f59e0b] text-slate-950 shadow-md">
-                        <Sparkles className="w-3 h-3 fill-slate-950" />
-                        FEATURED NEWS
-                      </span>
-                    </div>
 
                     {/* Subtle Hover Zoom Overlay */}
                     <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
@@ -241,144 +204,33 @@ export default function MediaPage() {
 
                   {/* Card Info Footer */}
                   <div className="p-5 sm:p-6 flex flex-col flex-1 bg-white border-t border-slate-100">
-                    <div className="flex items-center justify-between gap-2 text-xs text-slate-500 mb-2">
-                      <span className="font-semibold text-[#013aa3] flex items-center gap-1 truncate">
+                    <div className="flex items-center justify-between gap-2 text-xs text-slate-500 mb-2.5">
+                      <span className="font-semibold text-[#031c3f] flex items-center gap-1.5 truncate">
                         <Newspaper className="w-3.5 h-3.5 shrink-0" />
                         <span className="truncate">{article.publication?.split('•')[0] || 'Press Coverage'}</span>
                       </span>
-                      <span className="shrink-0">{article.date}</span>
+                      <span className="shrink-0 font-medium">{article.date}</span>
                     </div>
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#013aa3] transition-colors line-clamp-2 leading-snug mb-2">
+
+                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#e31e24] transition-colors line-clamp-2 leading-snug mb-2">
                       {article.title}
                     </h3>
-                    <p className="text-xs text-[#111] line-clamp-2 leading-relaxed flex-1">
+
+                    <p className="text-xs sm:text-[13px] text-[#111] line-clamp-2 leading-relaxed flex-1 mb-4">
                       {article.titleEn || article.excerpt}
                     </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* 4. Section 2: Latest News Grid (Image Format Designed with "View" CTA) */}
-        <section className="py-[50px] bg-white relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Section Header with Top-Right "View All Media" Button */}
-            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
-              <div className="text-center max-w-2xl lg:max-w-3xl mx-auto px-4">
-                <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                  <span
-                    style={{ fontSize: '13px', lineHeight: '23px' }}
-                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
-                  >
-                    FROM OUR CAMPUS
-                  </span>
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                </div>
-                <h2
-                  style={{ fontSize: '40px', lineHeight: '50px' }}
-                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-                >
-                  Latest <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>News</span>
-                </h2>
-                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-xl mx-auto leading-relaxed">
-                  Catch up on the latest campus stories, events, achievements and press coverage.
-                </p>
-              </div>
-
-              {/* View All Media Button placed at Top Right of Section */}
-              <div className="mt-4 md:mt-0 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 flex justify-center md:justify-end">
-                <Link
-                  href="/gallery"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold text-[#013aa3] border-2 border-[#013aa3]/30 hover:border-[#013aa3] hover:bg-[#013aa3] hover:text-white transition-all duration-200 shadow-sm"
-                >
-                  <span>View All Media</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-
-            {/* 4 Cards Grid (4 Columns on xl, 2 on md/lg, 1 on Mobile) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-7">
-              {MEDIA_ARTICLES.map((article, index) => (
-                <article
-                  key={article.id}
-                  data-aos="fade-up"
-                  data-aos-delay={(index % 4) * 100}
-                  className="bg-white rounded-2xl border-2 border-[#013aa3]/35 hover:border-[#013aa3] hover:-translate-y-1.5 transition-all duration-300 flex flex-col overflow-hidden group cursor-pointer"
-                  onClick={() => setSelectedArticle(article)}
-                >
-                  {/* Card Image Container (Aspect Ratio & Clean Full Image View) */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className={`w-full h-full object-cover ${
-                        article.id === 'media-1'
-                          ? 'object-top'
-                          : article.id === 'media-2'
-                          ? 'object-[center_68%]'
-                          : article.id === 'media-4'
-                          ? 'object-[center_38%]'
-                          : 'object-center'
-                      } group-hover:scale-105 transition-transform duration-500`}
-                      onError={(e) => {
-                        const target = e.currentTarget
-                        target.src = '/images/campus-building.jpg'
-                      }}
-                    />
-
-                    {/* Subtle Hover Overlay */}
-                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                    {/* Hover Zoom Icon Indicator */}
-                    <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <ZoomIn className="w-4 h-4" />
-                    </div>
-                  </div>
-
-                  {/* Card Content */}
-                  <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between">
-                    <div>
-                      {/* Telugu Headline */}
-                      <h3 className="font-extrabold text-base sm:text-lg text-slate-900 group-hover:text-[#013aa3] transition-colors leading-snug line-clamp-2">
-                        {article.title}
-                      </h3>
-
-                      {/* Date Row with Calendar Icon */}
-                      <div className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold my-2.5">
-                        <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                        <span>{article.date}</span>
-                      </div>
-
-                      {/* Excerpt */}
-                      <p className="text-xs sm:text-[13px] text-[#111] leading-relaxed line-clamp-3 mb-4">
-                        {article.excerpt}
-                      </p>
-                    </div>
-
-                    {/* View CTA Button - strictly "View ->" as requested instead of "Read More" */}
-                    <div className="pt-3 border-t border-[#013aa3]/15 flex items-center justify-between">
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          setSelectedArticle(article)
-                        }}
-                        className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-extrabold text-[#013aa3] group-hover:text-[#e31e24] transition-colors cursor-pointer"
-                      >
-                        <span>View</span>
+                    <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                      <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-extrabold text-[#031c3f] group-hover:text-[#e31e24] transition-colors">
+                        <span>View Clipping</span>
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                      </button>
-
-                      <span className="text-[11px] font-medium text-slate-400">
-                        {article.publication}
+                      </span>
+                      <span className="text-[11px] font-medium text-slate-400 truncate max-w-[130px]">
+                        {article.publication?.split('•')[1]?.trim() || ''}
                       </span>
                     </div>
                   </div>
-                </article>
+                </div>
               ))}
             </div>
           </div>
