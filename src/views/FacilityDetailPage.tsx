@@ -52,8 +52,8 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
       {/* 1. Navbar */}
       <Navbar activePage="facilities" />
 
-      {/* 2. Main Content Container */}
-      <main className="flex-1 w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16 sm:pb-24">
+      {/* 2. Main Content Container - Aligned with Navbar Logo & Enquire Now button */}
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16 sm:pb-24">
         
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-[13px] text-slate-500 mb-6">
@@ -80,8 +80,8 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
           </p>
         </div>
 
-        {/* Facility Overview & Key Points (Within container, without background card) */}
-        <div className="w-full max-w-4xl mx-auto mb-10 sm:mb-14">
+        {/* Facility Overview & Key Points (Without background tab/box) */}
+        <div className="w-full mb-10 sm:mb-14">
           <h2 className="text-xl sm:text-2xl font-extrabold text-[#031c3f] tracking-tight mb-3">
             {facility.title} Overview
           </h2>
@@ -91,7 +91,7 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
           </p>
 
           {/* Key Points Checklist */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {facility.keyPoints.map((point, idx) => (
               <div
                 key={idx}
@@ -108,27 +108,42 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
           </div>
         </div>
 
-        {/* Masonry Gallery Section - 3 cards per row */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-6 [column-fill:_balance]">
-          {gallery.map((photo, idx) => (
-            <div
-              key={idx}
-              onClick={() => openLightbox(idx)}
-              className="break-inside-avoid mb-4 sm:mb-6 group relative overflow-hidden cursor-pointer bg-slate-100 rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 block"
-            >
-              <img
-                src={photo.url}
-                alt={photo.title}
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 block"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-5">
-                <span className="text-white text-xs sm:text-sm font-semibold tracking-wide drop-shadow-sm">
-                  {photo.title}
-                </span>
+        {/* Masonry Gallery Section - 3 cards per row (Chunky & deep masonry cards) */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 sm:gap-6 [column-fill:_balance]">
+          {gallery.map((photo, idx) => {
+            const aspectRatios = [
+              'aspect-[4/5]',
+              'aspect-[1/1]',
+              'aspect-[4/5]',
+              'aspect-[1/1]',
+              'aspect-[4/5]',
+              'aspect-[4/3]',
+              'aspect-[1/1]',
+              'aspect-[4/5]',
+              'aspect-[4/3]',
+            ]
+            const aspectClass = aspectRatios[idx % aspectRatios.length]
+
+            return (
+              <div
+                key={idx}
+                onClick={() => openLightbox(idx)}
+                className={`break-inside-avoid mb-5 sm:mb-6 group relative overflow-hidden cursor-pointer bg-slate-100 rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 block w-full ${aspectClass}`}
+              >
+                <img
+                  src={photo.url}
+                  alt={photo.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 block"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+                  <span className="text-white text-sm sm:text-[15px] font-semibold tracking-wide drop-shadow-sm">
+                    {photo.title}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
 
