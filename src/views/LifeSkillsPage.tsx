@@ -64,7 +64,7 @@ export default function LifeSkillsPage() {
   }, [activeVideo])
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-700 antialiased selection:bg-red-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-[#111] antialiased selection:bg-red-500 selection:text-white">
       {/* 1. Header Navigation */}
       <Navbar activePage="videos" />
 
@@ -107,7 +107,7 @@ export default function LifeSkillsPage() {
               >
                 Create <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Life Skills</span>
               </h2>
-              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+              <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                 Watch our students in action developing communication, critical thinking, debate skills, and creative expression.
               </p>
             </div>

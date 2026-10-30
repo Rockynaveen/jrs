@@ -23,7 +23,7 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-700 text-[14px] antialiased selection:bg-red-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-[#111] text-[14px] antialiased selection:bg-red-500 selection:text-white">
       {/* 1. Header / Navbar with active 'about' state */}
       <Navbar activePage="about" />
 

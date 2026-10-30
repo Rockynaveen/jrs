@@ -112,7 +112,7 @@ export default function AboutPTA() {
           >
             Parent Teacher <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Association</span>
           </h2>
-          <p className="mt-2 text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto">
+          <p className="mt-2 text-[#111] text-xs sm:text-sm max-w-2xl mx-auto">
             Promoting continuous collaboration between parents and educators to support the holistic development of our students.
           </p>
         </div>
@@ -189,7 +189,7 @@ export default function AboutPTA() {
                       <MapPin className="w-3.5 h-3.5 text-[#e31e24] shrink-0 mt-0.5" />
                       <span
                         style={{ lineHeight: '23px', fontWeight: 400 }}
-                        className="text-xs sm:text-[12.5px] font-normal text-slate-700 leading-[23px] line-clamp-2"
+                        className="text-xs sm:text-[12.5px] font-normal text-[#111] leading-[23px] line-clamp-2"
                       >
                         {member.address}
                       </span>

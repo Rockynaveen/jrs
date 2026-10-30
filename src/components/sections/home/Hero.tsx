@@ -219,8 +219,8 @@ export default function Hero() {
         </div>
 
         {/* Hero Content on Clean Solid Navy Left Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-14 md:pt-20 pb-16 sm:pb-8 w-full">
-          <div className="max-w-xl lg:max-w-2xl text-left translate-y-2 sm:translate-y-4">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full">
+          <div className="max-w-xl lg:max-w-2xl text-left -translate-y-2 sm:-translate-y-3">
             {/* Single Best-Suited Headline for all slides (Uniform single color) */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[62px] font-extrabold text-white tracking-tight leading-[1.12] mb-6 sm:mb-8 break-words drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
               <span>Empowering Minds,</span>{' '}

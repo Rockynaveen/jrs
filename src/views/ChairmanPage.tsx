@@ -74,7 +74,7 @@ export default function ChairmanPage() {
                           <h3 className="text-2xl font-extrabold text-[#031c3f] mt-1">
                             Chairman of JRS
                           </h3>
-                          <p className="text-xs font-semibold text-slate-700 mt-1">
+                          <p className="text-xs font-semibold text-[#111] mt-1">
                             JRS International School • Hyderabad
                           </p>
 
@@ -109,7 +109,7 @@ export default function ChairmanPage() {
                   </div>
 
                   {/* Body Paragraphs */}
-                  <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+                  <div className="space-y-4 text-[#111] text-sm sm:text-base leading-relaxed">
                     <p>
                       Welcome to <strong className="text-[#031c3f]">JRS International School</strong>. It gives me immense pride to introduce our institution as a place where education transcends the boundaries of textbooks and rote memorization, becoming an exhilarating voyage of curiosity, character formation, and discovery.
                     </p>
@@ -128,13 +128,13 @@ export default function ChairmanPage() {
                   {/* Signoff */}
                   <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
-                      <p className="text-xs uppercase font-extrabold tracking-wider text-slate-700">
+                      <p className="text-xs uppercase font-extrabold tracking-wider text-[#111]">
                         With Warm Wishes & Commitment,
                       </p>
                       <h4 className="text-lg font-extrabold text-[#031c3f] mt-0.5">
                         Chairman
                       </h4>
-                      <p className="text-xs text-slate-700">JRS International School, Hyderabad</p>
+                      <p className="text-xs text-[#111]">JRS International School, Hyderabad</p>
                     </div>
 
                     <div className="flex items-center gap-3">

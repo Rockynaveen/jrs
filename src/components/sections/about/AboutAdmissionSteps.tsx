@@ -77,7 +77,7 @@ export default function AboutAdmissionSteps() {
           </h2>
           <p
             style={{ fontSize: '14px', fontWeight: 400, lineHeight: '24px' }}
-            className="text-slate-600 text-[14px] font-normal leading-[24px] mt-2.5 max-w-xl mx-auto"
+            className="text-[#111] text-[14px] font-normal leading-[24px] mt-2.5 max-w-xl mx-auto"
           >
             Follow these simple steps to complete the admission process at JRS.
           </p>
@@ -136,7 +136,7 @@ export default function AboutAdmissionSteps() {
               {/* Description */}
               <p
                 style={{ fontSize: '14px', fontWeight: 400, lineHeight: '24px' }}
-                className="text-slate-600 text-[14px] font-normal leading-[24px] flex-1"
+                className="text-[#111] text-[14px] font-normal leading-[24px] flex-1"
               >
                 {item.description}
               </p>

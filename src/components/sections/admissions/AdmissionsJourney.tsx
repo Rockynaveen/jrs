@@ -62,7 +62,7 @@ export default function AdmissionsJourney() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#031c3f] tracking-tight">
             Your <span className="text-[#dc2626]">Admission Journey</span>
           </h2>
-          <p className="mt-3 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p className="mt-3 text-[#111] text-sm sm:text-base leading-relaxed">
             A simple and transparent process to welcome your child to JRS.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function AdmissionsJourney() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-700 text-xs sm:text-[13px] leading-relaxed mt-2">
+                  <p className="text-[#111] text-xs sm:text-[13px] leading-relaxed mt-2">
                     {item.description}
                   </p>
                 </div>

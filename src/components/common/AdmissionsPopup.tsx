@@ -60,7 +60,7 @@ export default function AdmissionsPopup() {
           type="button"
           onClick={() => setIsOpen(false)}
           aria-label="Close admissions announcement"
-          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-[#e31e24] text-slate-700 hover:text-white shadow-md flex items-center justify-center transition-all duration-200 cursor-pointer border border-slate-200/60 focus:outline-none"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-[#e31e24] text-[#111] hover:text-white shadow-md flex items-center justify-center transition-all duration-200 cursor-pointer border border-slate-200/60 focus:outline-none"
         >
           <X className="w-5 h-5 stroke-[2.5]" />
         </button>
@@ -113,12 +113,12 @@ export default function AdmissionsPopup() {
               <span className="text-[#e31e24]">2027 – 2028</span>
             </h3>
 
-            <p className="text-xs sm:text-[13.5px] text-slate-600 mt-1 leading-relaxed">
+            <p className="text-xs sm:text-[13.5px] text-[#111] mt-1 leading-relaxed">
               Enrolling students from <strong>Nursery to Grade XII</strong> (Admissions open for <strong>11th &amp; 12th Standard also</strong>). Give your child the foundation for academic excellence, character development, and global leadership.
             </p>
 
             {/* Highlights List */}
-            <div className="mt-4 space-y-2 text-xs sm:text-[13px] text-slate-700">
+            <div className="mt-4 space-y-2 text-xs sm:text-[13px] text-[#111]">
               <div className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                 <span><strong>CBSE Curriculum</strong> with experiential, inquiry-based learning</span>

@@ -107,7 +107,7 @@ export default function CareersPage() {
                 {/* Description Paragraph */}
                 <p
                   style={{ lineHeight: '30px' }}
-                  className="text-slate-700 text-sm sm:text-[15px] leading-[30px] sm:leading-[30px] pt-1"
+                  className="text-[#111] text-sm sm:text-[15px] leading-[30px] sm:leading-[30px] pt-1"
                 >
                   We believe that the teacher community at JRS is our unique asset.
                   Here, teachers are given the push to innovate, create, and approach
@@ -184,7 +184,7 @@ export default function CareersPage() {
                       <h3 className="text-[15px] font-bold text-[#031c3f] leading-snug group-hover:text-[#013aa3] transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-[14px] text-slate-700 leading-relaxed mt-1.5">
+                      <p className="text-[14px] text-[#111] leading-relaxed mt-1.5">
                         {item.description}
                       </p>
                     </div>
@@ -228,7 +228,7 @@ export default function CareersPage() {
                 </div>
 
                 {/* Description */}
-                <p className="text-slate-700 text-sm sm:text-[15px] leading-relaxed pt-1">
+                <p className="text-[#111] text-sm sm:text-[15px] leading-relaxed pt-1">
                   At JRS we are looking for professionals who understand and
                   believe in our philosophy. People who are genuinely interested in
                   creating students who are world-ready, in sync with today&apos;s
@@ -251,7 +251,7 @@ export default function CareersPage() {
                   </h3>
 
                   {/* Instructions */}
-                  <p className="text-[14px] text-slate-700 leading-relaxed">
+                  <p className="text-[14px] text-[#111] leading-relaxed">
                     If you are looking for an opportunity to work at JRS International School,{' '}
                     <span className="inline-flex flex-wrap sm:flex-nowrap items-center gap-1.5 align-middle">
                       <span>please send your resume to:</span>
@@ -275,7 +275,7 @@ export default function CareersPage() {
                       {applicationRequirements.map((req, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2.5 text-[14px] text-slate-700 leading-relaxed"
+                          className="flex items-start gap-2.5 text-[14px] text-[#111] leading-relaxed"
                         >
                           <CheckCircle2 className="w-4 h-4 text-[#013aa3] shrink-0 mt-0.5" />
                           <span>{req}</span>

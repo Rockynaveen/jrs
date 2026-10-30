@@ -122,7 +122,7 @@ export default function EducationalSocietyPage() {
               </h2>
               <p
                 style={{ margin: '10px auto', lineHeight: '26px' }}
-                className="text-slate-600 text-xs sm:text-[15px] my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
+                className="text-[#111] text-xs sm:text-[15px] my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
               >
                 Distinguished governing body steering the vision, academic excellence, statutory compliance, and strategic growth of JRS International School.
               </p>
@@ -196,7 +196,7 @@ export default function EducationalSocietyPage() {
                         {/* Address with Red Location Pin */}
                         <div className="flex items-start gap-1.5 mt-2">
                           <MapPin className="w-3.5 h-3.5 text-[#e31e24] shrink-0 mt-0.5" />
-                          <span className="text-xs sm:text-[12.5px] font-medium text-slate-700 leading-snug line-clamp-2">
+                          <span className="text-xs sm:text-[12.5px] font-medium text-[#111] leading-snug line-clamp-2">
                             {member.address}
                           </span>
                         </div>

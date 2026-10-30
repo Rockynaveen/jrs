@@ -83,7 +83,7 @@ export default function AdmissionsKeyInfo() {
           </h2>
           <p
             style={{ lineHeight: '36px' }}
-            className="text-slate-600 text-sm sm:text-base mt-3 leading-[36px] max-w-2xl mx-auto"
+            className="text-[#111] text-sm sm:text-base mt-3 leading-[36px] max-w-2xl mx-auto"
           >
             Essential guidelines for parents applying to Nursery and Grades 1 through 12, designed to ensure a fair, supportive, and child-centered enrollment process.
           </p>
@@ -133,7 +133,7 @@ export default function AdmissionsKeyInfo() {
 
                     <p
                       style={{ lineHeight: '24px' }}
-                      className="text-slate-700 text-xs sm:text-sm leading-[24px]"
+                      className="text-[#111] text-xs sm:text-sm leading-[24px]"
                     >
                       {item.description}
                     </p>
@@ -153,7 +153,7 @@ export default function AdmissionsKeyInfo() {
                           <li
                             key={pIdx}
                             style={{ fontSize: '14px', fontWeight: 400, lineHeight: '26px' }}
-                            className="flex items-start gap-2 text-[13px] text-slate-600 font-normal leading-[26px]"
+                            className="flex items-start gap-2 text-[13px] text-[#111] font-normal leading-[26px]"
                           >
                             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-[6px] transition-transform duration-300 group-hover:scale-110" />
                             <span style={{ fontSize: '14px', fontWeight: 400, lineHeight: '26px' }} className="text-[13px] font-normal leading-[26px]">{pt}</span>

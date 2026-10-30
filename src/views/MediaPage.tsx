@@ -195,7 +195,7 @@ export default function MediaPage() {
               >
                 Our Achievements <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>in the News</span>
               </h2>
-              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+              <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                 Explore the latest news, achievements, events and special moments from JRS International School.
               </p>
             </div>
@@ -251,7 +251,7 @@ export default function MediaPage() {
                     <h3 className="text-base font-bold text-slate-900 group-hover:text-[#013aa3] transition-colors line-clamp-2 leading-snug mb-2">
                       {article.title}
                     </h3>
-                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed flex-1">
+                    <p className="text-xs text-[#111] line-clamp-2 leading-relaxed flex-1">
                       {article.titleEn || article.excerpt}
                     </p>
                   </div>
@@ -283,7 +283,7 @@ export default function MediaPage() {
                 >
                   Latest <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>News</span>
                 </h2>
-                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-xl mx-auto leading-relaxed">
+                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-xl mx-auto leading-relaxed">
                   Catch up on the latest campus stories, events, achievements and press coverage.
                 </p>
               </div>
@@ -354,7 +354,7 @@ export default function MediaPage() {
                       </div>
 
                       {/* Excerpt */}
-                      <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                      <p className="text-xs sm:text-[13px] text-[#111] leading-relaxed line-clamp-3 mb-4">
                         {article.excerpt}
                       </p>
                     </div>

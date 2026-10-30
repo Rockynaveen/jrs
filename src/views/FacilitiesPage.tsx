@@ -76,7 +76,7 @@ export default function FacilitiesPage() {
   ]
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-700 antialiased selection:bg-red-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-[#111] antialiased selection:bg-red-500 selection:text-white">
       {/* 1. Header */}
       <Navbar activePage="facilities" />
 
@@ -116,7 +116,7 @@ export default function FacilitiesPage() {
               <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
                 State-of-the-Art <span className="text-[#e31e24]">Facilities</span>
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
+              <p className="text-[#111] text-sm sm:text-base mt-2.5 leading-relaxed">
                 The campus boasts of the following unique facilities to make this happen:
               </p>
             </div>
@@ -138,7 +138,7 @@ export default function FacilitiesPage() {
                       <Icon className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.2] text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-[13px] sm:text-[14px] font-medium text-slate-800 group-hover:text-[#e31e24] transition-colors leading-snug">
+                      <p className="text-[13px] sm:text-[14px] font-medium text-[#111] group-hover:text-[#e31e24] transition-colors leading-snug">
                         {item.title}
                       </p>
                     </div>

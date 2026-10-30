@@ -125,7 +125,7 @@ export default function AboutWhyChoose() {
                 </h3>
 
 
-                <p className="text-[14px] text-slate-700 leading-relaxed mt-2.5">
+                <p className="text-[14px] text-[#111] leading-relaxed mt-2.5">
                   {item.description}
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function AboutWhyChoose() {
               className="bg-white rounded-xl border border-slate-100 p-4 sm:p-4.5 text-center shadow-[0_1px_6px_rgba(0,0,0,0.02)] hover:border-slate-300 hover:shadow-sm hover:bg-slate-50/60 transition-all flex flex-col items-center justify-center min-h-[100px]"
             >
               <div className="mb-2.5">{badge.icon}</div>
-              <span className="text-[14px] sm:text-[15px] font-medium text-slate-700 leading-snug">
+              <span className="text-[14px] sm:text-[15px] font-medium text-[#111] leading-snug">
                 {badge.title}
               </span>
             </div>

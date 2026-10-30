@@ -111,7 +111,7 @@ export default function AboutBeyond() {
           </h2>
           <p
             style={{ lineHeight: '24px' }}
-            className="text-slate-600 text-sm sm:text-base mt-3 leading-[24px] max-w-2xl mx-auto"
+            className="text-[#111] text-sm sm:text-base mt-3 leading-[24px] max-w-2xl mx-auto"
           >
             We empower students to explore their passions, build physical stamina, and cultivate artistic talents through a diverse suite of holistic activities designed for all-round growth.
           </p>

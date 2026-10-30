@@ -56,7 +56,7 @@ export default function EventsSection() {
               </h2>
             </div>
 
-            <p className="text-[15px] sm:text-base text-slate-600 leading-relaxed">
+            <p className="text-[15px] sm:text-base text-[#111] leading-relaxed">
               Explore our recent events, celebrations and achievements that make JRS a vibrant place to learn and grow.
             </p>
 
@@ -107,7 +107,7 @@ export default function EventsSection() {
                       <h3 className="text-[15px] sm:text-base font-bold text-[#031c3f] leading-snug group-hover:text-[#e31e24] transition-colors line-clamp-2">
                         {event.title}
                       </h3>
-                      <p className="text-[13px] sm:text-[13.5px] text-slate-600 leading-relaxed mt-2 line-clamp-3">
+                      <p className="text-[13px] sm:text-[13.5px] text-[#111] leading-relaxed mt-2 line-clamp-3">
                         {event.description}
                       </p>
                     </div>

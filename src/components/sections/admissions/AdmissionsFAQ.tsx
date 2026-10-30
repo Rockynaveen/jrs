@@ -104,7 +104,7 @@ export default function AdmissionsFAQ() {
           </h2>
           <p
             style={{ lineHeight: '36px' }}
-            className="text-slate-600 text-sm sm:text-base mt-2 leading-[36px]"
+            className="text-[#111] text-sm sm:text-base mt-2 leading-[36px]"
           >
             Find answers to commonly asked questions about admissions, academics, and life at JRS.
           </p>
@@ -140,13 +140,13 @@ export default function AdmissionsFAQ() {
                     className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-colors duration-200 ${
                       isOpen
                         ? 'bg-red-50 text-[#dc2626]'
-                        : 'bg-slate-100 text-slate-600'
+                        : 'bg-slate-100 text-[#111]'
                     }`}
                   >
                     {isOpen ? (
                       <Minus className="w-4 h-4 text-[#dc2626] stroke-[2.5]" />
                     ) : (
-                      <Plus className="w-4 h-4 text-slate-700 stroke-[2.5]" />
+                      <Plus className="w-4 h-4 text-[#111] stroke-[2.5]" />
                     )}
                   </div>
                 </button>
@@ -154,7 +154,7 @@ export default function AdmissionsFAQ() {
                 {isOpen && (
                   <div
                     style={{ lineHeight: '26px' }}
-                    className="px-4 sm:px-5 pb-5 pt-1 text-slate-700 text-xs sm:text-[14px] leading-[26px] border-t border-slate-100 bg-white"
+                    className="px-4 sm:px-5 pb-5 pt-1 text-[#111] text-xs sm:text-[14px] leading-[26px] border-t border-slate-100 bg-white"
                   >
                     {faq.answer}
                   </div>

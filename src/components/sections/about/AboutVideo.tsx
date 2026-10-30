@@ -76,7 +76,7 @@ export default function AboutVideo() {
             Experience the Spirit of <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>JRS International School</span>
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base mt-2.5 max-w-2xl mx-auto">
+          <p className="text-[#111] text-sm sm:text-base mt-2.5 max-w-2xl mx-auto">
             Explore our state-of-the-art campus, modern facilities, and vibrant learning spaces where every student discovers their unique passions and potential.
           </p>
         </div>

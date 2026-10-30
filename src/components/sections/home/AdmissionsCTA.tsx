@@ -110,7 +110,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
     : 'h-10 text-xs bg-white/10 border-white/20 text-white rounded-lg focus:border-amber-400'
 
   const optionClass = isWhite ? 'bg-white text-slate-900' : 'bg-[#031127] text-white'
-  const labelClass = `text-xs font-semibold ${isWhite ? 'text-slate-700' : 'text-slate-200'}`
+  const labelClass = `text-xs font-semibold ${isWhite ? 'text-[#111]' : 'text-slate-200'}`
 
   return (
     <section
@@ -164,7 +164,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
               </h2>
               <p
                 className={`text-sm sm:text-[15px] mt-2.5 max-w-xl leading-relaxed ${
-                  isWhite ? 'text-slate-600' : 'text-slate-200'
+                  isWhite ? 'text-[#111]' : 'text-slate-200'
                 }`}
               >
                 Give your child the right foundation for a brighter future. Apply early for personalized guidance, campus tour, and direct interaction with academic mentors.
@@ -176,7 +176,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
               <div
                 className={`inline-flex items-center gap-1.5 ${
                   isWhite
-                    ? 'bg-slate-50 border border-slate-200 text-slate-700'
+                    ? 'bg-slate-50 border border-slate-200 text-[#111]'
                     : 'bg-white/10 backdrop-blur-md border border-white/20 text-slate-100'
                 } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
               >
@@ -189,7 +189,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                 href="mailto:jrsinternationalschool6@gmail.com"
                 className={`inline-flex items-center gap-2 ${
                   isWhite
-                    ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700'
+                    ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 text-[#111]'
                     : 'bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-slate-100'
                 } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
               >
@@ -356,7 +356,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                     <h4 className={`text-xl font-bold ${isWhite ? 'text-[#031c3f]' : 'text-white'}`}>
                       Enquiry Submitted!
                     </h4>
-                    <p className={`text-xs sm:text-sm ${isWhite ? 'text-slate-600' : 'text-slate-200'} leading-relaxed max-w-xs mx-auto`}>
+                    <p className={`text-xs sm:text-sm ${isWhite ? 'text-[#111]' : 'text-slate-200'} leading-relaxed max-w-xs mx-auto`}>
                       Thank you for your interest. Our HR team will contact you at{' '}
                       <span className={`font-semibold ${isWhite ? 'text-slate-900' : 'text-white'}`}>
                         +{formData.countryCode} {formData.parentMobile}
@@ -364,7 +364,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                       shortly.
                     </p>
 
-                    <div className={`${isWhite ? 'bg-slate-50 border border-slate-200 text-slate-700' : 'bg-white/10 border border-white/20 text-slate-200'} rounded-xl p-3 text-left text-xs space-y-1.5 mt-3`}>
+                    <div className={`${isWhite ? 'bg-slate-50 border border-slate-200 text-[#111]' : 'bg-white/10 border border-white/20 text-slate-200'} rounded-xl p-3 text-left text-xs space-y-1.5 mt-3`}>
                       <div className="flex justify-between">
                         <span className={isWhite ? 'text-slate-500' : 'text-slate-300'}>Academic Year:</span>
                         <span className={`font-semibold ${isWhite ? 'text-slate-900' : 'text-white'}`}>{formData.academicYear}</span>
@@ -388,7 +388,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                         type="button"
                         onClick={resetForm}
                         variant="outline"
-                        className={`rounded-full inline-flex items-center gap-2 text-xs ${isWhite ? 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
+                        className={`rounded-full inline-flex items-center gap-2 text-xs ${isWhite ? 'bg-slate-100 border-slate-200 text-[#111] hover:bg-slate-200' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'}`}
                       >
                         <RotateCcw className="w-3.5 h-3.5" />
                         Submit Another Enquiry
@@ -578,7 +578,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                     )}
 
                     {/* Summary Pill */}
-                    <div className={`${isWhite ? 'bg-slate-50 border border-slate-200 text-slate-700' : 'bg-white/10 border border-white/20 text-slate-200'} rounded-lg p-2.5 flex items-center justify-between text-xs`}>
+                    <div className={`${isWhite ? 'bg-slate-50 border border-slate-200 text-[#111]' : 'bg-white/10 border border-white/20 text-slate-200'} rounded-lg p-2.5 flex items-center justify-between text-xs`}>
                       <div className="text-xs space-y-0.5">
                         <div>
                           <strong>Class:</strong> {formData.grade} • <strong>Year:</strong> {formData.academicYear}
@@ -655,7 +655,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                         type="button"
                         variant="outline"
                         onClick={() => setStep(1)}
-                        className={`h-10 text-xs px-4 ${isWhite ? 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'} rounded-xl`}
+                        className={`h-10 text-xs px-4 ${isWhite ? 'bg-slate-100 border-slate-200 text-[#111] hover:bg-slate-200' : 'bg-white/10 border-white/20 text-white hover:bg-white/20'} rounded-xl`}
                       >
                         Back
                       </Button>

@@ -89,11 +89,11 @@ export default function PrincipalPage() {
                           <h3 className="text-xl sm:text-2xl font-extrabold text-[#031c3f] tracking-tight">
                             Mrs. Marlene Mannas
                           </h3>
-                          <div className="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-[11px] font-bold text-slate-700 shadow-2xs">
+                          <div className="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-[11px] font-bold text-[#111] shadow-2xs">
                             <span className="text-[#dc2626] font-extrabold">Qualifications:</span>
                             <span>M.A., B.Ed., PPTC, ECE</span>
                           </div>
-                          <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-2">
+                          <p className="text-xs sm:text-sm font-semibold text-[#111] mt-2">
                             Principal, JRS International School
                           </p>
                         </div>
@@ -202,7 +202,7 @@ export default function PrincipalPage() {
                   {/* Formal Paper Sign-Off & Official Seal */}
                   <div className="mt-8 pt-6 border-t border-slate-200/90 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
                     <div>
-                      <p className="text-xs uppercase font-extrabold tracking-wider text-slate-800 mb-1">
+                      <p className="text-xs uppercase font-extrabold tracking-wider text-[#111] mb-1">
                         Warm regards,
                       </p>
                       {/* Stylized Signature */}
@@ -217,7 +217,7 @@ export default function PrincipalPage() {
                       <p className="text-xs font-bold text-[#dc2626] tracking-wide mt-0.5">
                         M.A., B.Ed., PPTC, ECE
                       </p>
-                      <p className="text-[13px] font-semibold text-slate-800">
+                      <p className="text-[13px] font-semibold text-[#111]">
                         Principal, JRS International School
                       </p>
                     </div>

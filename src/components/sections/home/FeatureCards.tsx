@@ -80,7 +80,7 @@ export default function FeatureCards() {
                 </h3>
 
                 {/* Subtitle */}
-                <p className="text-[13px] sm:text-sm text-slate-600 leading-relaxed max-w-[210px] m-0">
+                <p className="text-[13px] sm:text-sm text-[#111] leading-relaxed max-w-[210px] m-0">
                   {item.subtitle}
                 </p>
               </div>

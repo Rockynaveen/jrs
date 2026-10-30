@@ -265,7 +265,7 @@ export default function CertificatesPage() {
               </h2>
               <p
                 style={{ margin: '10px auto', lineHeight: '26px' }}
-                className="text-slate-600 text-xs sm:text-[15px] my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
+                className="text-[#111] text-xs sm:text-[15px] my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
               >
                 In compliance with CBSE regulations, here are the mandatory public disclosures, statutory certificates, infrastructure details, and academic records for JRS International School.
               </p>
@@ -296,7 +296,7 @@ export default function CertificatesPage() {
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-slate-700 font-['Inter',sans-serif]">
+                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-[#111] font-['Inter',sans-serif]">
                       {generalInformation.map((item) => (
                         <tr
                           key={item.sno}
@@ -308,7 +308,7 @@ export default function CertificatesPage() {
                           <td className="py-3.5 px-4 sm:px-6 font-semibold text-[#031c3f] leading-relaxed">
                             {item.info}
                           </td>
-                          <td className="py-3.5 px-4 sm:px-6 text-slate-700 leading-relaxed font-normal">
+                          <td className="py-3.5 px-4 sm:px-6 text-[#111] leading-relaxed font-normal">
                             {item.details}
                           </td>
                         </tr>
@@ -344,7 +344,7 @@ export default function CertificatesPage() {
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-slate-700 font-['Inter',sans-serif]">
+                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-[#111] font-['Inter',sans-serif]">
                       {documentsAndInformation.map((doc) => (
                         <tr
                           key={doc.sno}
@@ -414,7 +414,7 @@ export default function CertificatesPage() {
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-slate-700 font-['Inter',sans-serif]">
+                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-[#111] font-['Inter',sans-serif]">
                       {schoolInfrastructure.map((item) => (
                         <tr
                           key={item.sno}
@@ -426,7 +426,7 @@ export default function CertificatesPage() {
                           <td className="py-3.5 px-4 sm:px-6 text-[#031c3f] font-semibold leading-relaxed">
                             {item.info}
                           </td>
-                          <td className="py-3.5 px-4 sm:px-6 text-slate-700 leading-relaxed font-normal">
+                          <td className="py-3.5 px-4 sm:px-6 text-[#111] leading-relaxed font-normal">
                             {item.docAction ? (
                               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                                 <span>{item.details}</span>
@@ -477,7 +477,7 @@ export default function CertificatesPage() {
               </div>
 
               {/* DataTables-style controls */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 text-xs sm:text-[13px] text-slate-600 font-['Inter',sans-serif]">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3 text-xs sm:text-[13px] text-[#111] font-['Inter',sans-serif]">
                 <div className="flex items-center gap-1.5">
                   <span>Show</span>
                   <select
@@ -530,7 +530,7 @@ export default function CertificatesPage() {
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-slate-700 font-['Inter',sans-serif]">
+                    <tbody className="divide-y divide-slate-100 text-[13.5px] sm:text-[14px] text-[#111] font-['Inter',sans-serif]">
                       {filteredSmc.length > 0 ? (
                         filteredSmc.map((item) => (
                           <tr
@@ -577,7 +577,7 @@ export default function CertificatesPage() {
               </div>
 
               {/* DataTables-style pagination info */}
-              <div className="flex items-center justify-between mt-3 text-xs sm:text-[13px] text-slate-600 font-['Inter',sans-serif]">
+              <div className="flex items-center justify-between mt-3 text-xs sm:text-[13px] text-[#111] font-['Inter',sans-serif]">
                 <div>
                   Showing 1 to {filteredSmc.length} of {filteredSmc.length} entry
                 </div>

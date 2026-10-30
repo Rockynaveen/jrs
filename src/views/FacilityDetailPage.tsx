@@ -82,7 +82,7 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#031c3f] tracking-tight leading-tight mb-2">
             World-Class Environment for <span className="text-[#e31e24]">{facility.title}</span>
           </h1>
-          <p className="text-xs sm:text-sm md:text-[15px] text-slate-500 max-w-3xl leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-[15px] text-[#111] max-w-3xl leading-relaxed">
             {facility.heroTagline}
           </p>
         </div>
@@ -105,7 +105,7 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
               {facility.title} Overview
             </h2>
 
-            <p className="text-slate-600 text-xs sm:text-[13.5px] leading-relaxed mb-6">
+            <p className="text-[#111] text-xs sm:text-[13.5px] leading-relaxed mb-6">
               {facility.overview}
             </p>
 
@@ -116,7 +116,7 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
                   <div className="w-6 h-6 rounded-full bg-[#fde8e8] text-[#e31e24] flex items-center justify-center shrink-0">
                     <Check className="w-3.5 h-3.5 stroke-[2.8]" />
                   </div>
-                  <span className="text-xs sm:text-[13.5px] text-slate-700 font-medium leading-snug">
+                  <span className="text-xs sm:text-[13.5px] text-[#111] font-medium leading-snug">
                     {point}
                   </span>
                 </li>

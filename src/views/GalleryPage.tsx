@@ -364,7 +364,7 @@ export default function GalleryPage() {
               >
                 Amphitheatre <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Open-Air Arena</span>
               </h2>
-              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+              <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                 A serene circular open-air theatre built around the majestic heritage tree, hosting assemblies, student debates, cultural gatherings, and outdoor performances.
               </p>
             </div>
@@ -510,7 +510,7 @@ export default function GalleryPage() {
                 >
                   Feb 17 <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day celebrations 2023-24</span>
                 </h2>
-                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                   Moments from UTSAHA 2K24 — Annual Day celebrations at JRS International School.
                 </p>
               </div>
@@ -583,7 +583,7 @@ export default function GalleryPage() {
                 >
                   Feb 11th <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day Celebrations</span>
                 </h2>
-                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                   Spectacular stage dances, cultural performances, and memorable moments from JRS International School.
                 </p>
               </div>
@@ -656,7 +656,7 @@ export default function GalleryPage() {
                 >
                   Science Experiment & <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Activities…</span>
                 </h2>
-                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                   Hands-on scientific inquiry, sports training, and extracurricular learning at JRS International School.
                 </p>
               </div>
@@ -729,7 +729,7 @@ export default function GalleryPage() {
                 >
                   Republic Day <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Celebrations</span>
                 </h2>
-                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
                   Honoring national pride and constitutional values with student parades, freedom fighter tributes, and ceremonial drills at JRS International School.
                 </p>
               </div>

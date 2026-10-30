@@ -26,7 +26,7 @@ interface MainLayoutProps {
 
 export default function MainLayout({ children, activePage = 'home' }: MainLayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800 antialiased w-full">
+    <div className="min-h-screen flex flex-col bg-white text-[#111] antialiased w-full">
       <Navbar activePage={activePage} />
       <main className="flex-1 w-full">{children}</main>
       <Footer />

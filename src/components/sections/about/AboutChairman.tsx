@@ -17,7 +17,7 @@ export default function AboutChairman() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#031c3f] tracking-tight leading-tight">
             Chairman of <span className="text-[#dc2626]">JRS</span>
           </h2>
-          <p className="text-slate-700 text-sm sm:text-base leading-relaxed mt-4">
+          <p className="text-[#111] text-sm sm:text-base leading-relaxed mt-4">
             Guiding JRS International School towards academic excellence, moral integrity, and holistic student development.
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function AboutChairman() {
                       </div>
                       <span className="text-xs font-bold uppercase tracking-wider text-red-600">Chairman</span>
                       <h4 className="text-xl font-extrabold text-[#031c3f] mt-1">JRS International School</h4>
-                      <p className="text-xs text-slate-700 mt-1">Narapally, Hyderabad</p>
+                      <p className="text-xs text-[#111] mt-1">Narapally, Hyderabad</p>
                     </div>
 
                     {/* Bottom Floating Badge */}
@@ -71,7 +71,7 @@ export default function AboutChairman() {
                 </h3>
               </div>
 
-              <div className="space-y-4 text-slate-700 text-sm sm:text-[15px] leading-relaxed">
+              <div className="space-y-4 text-[#111] text-sm sm:text-[15px] leading-relaxed">
                 <p>
                   At <strong className="text-slate-800">JRS International School</strong>, we believe that education is far more than scholastic achievement; it is a sacred journey of discovering a child&apos;s innate gifts, strengthening their moral compass, and preparing them to thrive in an interconnected global community.
                 </p>
@@ -85,7 +85,7 @@ export default function AboutChairman() {
                 <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col">
                   <Compass className="w-5 h-5 text-red-600 mb-2" />
                   <span className="text-xs font-bold text-slate-900 mb-1">Inquiry-Led Pedagogy</span>
-                  <p className="text-[11px] text-slate-700 leading-normal">
+                  <p className="text-[11px] text-[#111] leading-normal">
                     Fostering curiosity, conceptual mastery, and active thinking.
                   </p>
                 </div>
@@ -93,7 +93,7 @@ export default function AboutChairman() {
                 <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col">
                   <HeartHandshake className="w-5 h-5 text-amber-600 mb-2" />
                   <span className="text-xs font-bold text-slate-900 mb-1">Human Values</span>
-                  <p className="text-[11px] text-slate-700 leading-normal">
+                  <p className="text-[11px] text-[#111] leading-normal">
                     Instilling ethics, respect, empathy, and collaborative spirit.
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export default function AboutChairman() {
                 <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col">
                   <Award className="w-5 h-5 text-blue-900 mb-2" />
                   <span className="text-xs font-bold text-slate-900 mb-1">Global Standard</span>
-                  <p className="text-[11px] text-slate-700 leading-normal">
+                  <p className="text-[11px] text-[#111] leading-normal">
                     World-class campus, smart classrooms, and holistic co-curriculars.
                   </p>
                 </div>
@@ -119,7 +119,7 @@ export default function AboutChairman() {
 
                 <Link
                   href="/#contact"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-[#111] bg-slate-100 hover:bg-slate-200 transition-colors"
                 >
                   <span>Contact School Office</span>
                 </Link>

@@ -56,7 +56,8 @@
   }
 
   body {
-    @apply bg-white text-slate-800 antialiased selection:bg-red-500 selection:text-white;
+    @apply bg-white antialiased selection:bg-red-500 selection:text-white;
+    color: #111111;
     overflow-x: hidden;
     overflow-x: clip;
     max-width: 100%;
@@ -72,8 +73,15 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Body copy across entire website: Inter font with 400 weight and 1.5em line-height */
-  body,
+  /* Body copy across entire website: Inter font with 400 weight and 1.5em line-height, text color #111 */
+  body {
+    color: #111111 !important;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400 !important;
+    line-height: 1.5em;
+    text-wrap: pretty;
+  }
+
   p,
   li,
   dd,
@@ -84,6 +92,17 @@
     font-weight: 400;
     line-height: 1.5em;
     text-wrap: pretty;
+  }
+
+  /* Keep #111 for entire website for body or paragraph (para) */
+  p:not(.text-white):not([class*="text-white"]):not([class*="text-[#fff"]):not([class*="text-amber"]):not([class*="text-emerald"]):not([class*="text-[#e31e24]"]):not([class*="text-red"]):not([class*="text-slate-100"]):not([class*="text-slate-200"]):not([class*="text-slate-300"]) {
+    color: #111111 !important;
+  }
+
+  /* Override text-slate-600 and text-slate-700 to #111 */
+  .text-slate-600,
+  .text-slate-700 {
+    color: #111111 !important;
   }
 
   /* Headings: Manrope font with 600 weight and capitalize */

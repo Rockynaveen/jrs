@@ -275,7 +275,7 @@ export default function FacilitiesSection() {
           {/* Subtitle */}
           <p
             style={{ margin: 0, lineHeight: '24px' }}
-            className="text-slate-600 text-[14.5px] sm:text-[15px] m-0 leading-[24px] sm:leading-[24px] mt-1"
+            className="text-[#111] text-[14.5px] sm:text-[15px] m-0 leading-[24px] sm:leading-[24px] mt-1"
           >
             Modern facilities designed to inspire, explore and grow
           </p>
@@ -378,7 +378,7 @@ export default function FacilitiesSection() {
                           {/* Facility Subtitle */}
                           <p
                             style={{ lineHeight: '24px' }}
-                            className="text-[12.5px] sm:text-[13px] text-slate-600 leading-[24px]"
+                            className="text-[12.5px] sm:text-[13px] text-[#111] leading-[24px]"
                           >
                             {facility.subtitle}
                           </p>

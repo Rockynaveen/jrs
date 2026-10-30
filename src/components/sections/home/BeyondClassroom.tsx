@@ -87,52 +87,53 @@ export default function BeyondClassroom() {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={index * 70}
-                className="group relative rounded-[24px] sm:rounded-[26px] overflow-hidden bg-slate-900 h-[330px] sm:h-[350px] lg:h-[370px] xl:h-[385px] flex flex-col justify-end transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.25)] shadow-[0_10px_28px_rgba(0,0,0,0.12)]"
+                className="group relative rounded-[22px] sm:rounded-[24px] overflow-hidden bg-slate-900 h-[290px] sm:h-[310px] lg:h-[330px] xl:h-[345px] flex flex-col justify-end transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.22)] shadow-[0_10px_28px_rgba(0,0,0,0.12)]"
               >
                 {/* Background Activity Photo */}
                 <div className="absolute inset-0 w-full h-full overflow-hidden">
                   <SchoolImage
                     src={item.image}
                     alt={item.title.replace('\n', ' ')}
-                    className={`w-full h-full object-cover ${item.imagePosition || 'object-center'} group-hover:scale-108 transition-transform duration-700 ease-out`}
+                    className={`w-full h-full object-cover ${item.imagePosition || 'object-center'} group-hover:scale-106 transition-transform duration-700 ease-out`}
                     fallbackText={item.title.replace('\n', ' ')}
                     fallbackBg="from-[#031c3f] to-[#0a2559]"
                   />
-                  {/* Dark gradient for glass contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 via-40% to-transparent pointer-events-none" />
+                  {/* Very light bottom vignette strictly for text legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
                 </div>
 
-                {/* Translucent Glassmorphism Overlay Box - exact match to screenshot */}
-                <div className="relative z-10 mx-3 sm:mx-3.5 mb-3 sm:mb-3.5">
+                {/* Full-width High-Transparency Glassmorphism Overlay */}
+                <div className="relative z-10 w-full m-0">
                   <div
                     style={{
-                      backgroundColor: 'rgba(12, 22, 38, 0.78)',
-                      backdropFilter: 'blur(16px)',
-                      WebkitBackdropFilter: 'blur(16px)',
-                      border: '1px solid rgba(255, 255, 255, 0.16)',
-                      boxShadow: '0 12px 32px rgba(0, 0, 0, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.18)',
+                      backgroundColor: 'rgba(10, 20, 36, 0.15)',
+                      backdropFilter: 'blur(6px)',
+                      WebkitBackdropFilter: 'blur(6px)',
+                      borderTop: '1px solid rgba(255, 255, 255, 0.22)',
+                      boxShadow: '0 4px 16px rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.18)',
                     }}
-                    className="relative rounded-[20px] sm:rounded-[22px] pt-4.5 sm:pt-5 pb-3 sm:pb-3.5 px-2.5 sm:px-3 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[rgba(12,22,38,0.88)] group-hover:border-white/30 w-full"
+                    className="relative rounded-none pt-6 sm:pt-6.5 pb-2.5 sm:pb-3 px-2 sm:px-2.5 flex flex-col items-center text-center min-h-[92px] sm:min-h-[100px] justify-between transition-all duration-300 group-hover:bg-[rgba(10,20,36,0.24)] w-full"
                   >
                     {/* Centered Circular Colored Icon Badge overlapping top edge */}
                     <div className="absolute -top-5 sm:-top-5.5 left-1/2 -translate-x-1/2 flex items-center justify-center">
                       {/* Outer Translucent Glowing Ring */}
                       <div
-                        className={`w-11 h-11 sm:w-11.5 sm:h-11.5 rounded-full border flex items-center justify-center backdrop-blur-md transition-transform duration-300 group-hover:scale-110 ${item.haloBg}`}
+                        className={`w-11 h-11 sm:w-11.5 sm:h-11.5 rounded-full border flex items-center justify-center backdrop-blur-md transition-transform duration-300 group-hover:scale-108 ${item.haloBg}`}
                       >
                         {/* Inner Solid Gradient Circle */}
                         <div
                           className={`w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full flex items-center justify-center ${item.circleBg}`}
                         >
-                          <Icon className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-white" strokeWidth={2.4} />
+                          <Icon className="w-[17px] h-[17px] sm:w-[18px] sm:h-[18px] text-white" strokeWidth={2.3} />
                         </div>
                       </div>
                     </div>
 
-                    {/* Card Heading - single line right below icon */}
-                    <div className="w-full flex items-center justify-center px-0.5 mt-2 sm:mt-2.5">
+                    {/* Card Heading */}
+                    <div className="w-full flex-1 flex items-center justify-center px-1">
                       <h3
-                        className="text-white font-bold text-xs sm:text-[13px] xl:text-[14px] text-center leading-[20px] tracking-tight drop-shadow-sm whitespace-nowrap"
+                        style={{ fontSize: '14px', lineHeight: '22px' }}
+                        className="text-white font-bold text-[13px] sm:text-[14px] text-center leading-[20px] sm:leading-[22px] tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] whitespace-pre-line"
                       >
                         {item.title}
                       </h3>
@@ -140,7 +141,7 @@ export default function BeyondClassroom() {
 
                     {/* Colored Underline matching icon color */}
                     <div
-                      className={`w-8 sm:w-9 h-[3px] rounded-full mt-2 transition-all duration-300 group-hover:w-12 ${item.dashBg}`}
+                      className={`w-8 sm:w-9 h-[3px] rounded-full mt-1.5 transition-all duration-300 group-hover:w-12 ${item.dashBg}`}
                     />
                   </div>
                 </div>

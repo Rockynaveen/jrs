@@ -96,7 +96,7 @@ export default function AboutValues() {
               </h4>
 
               {/* Description */}
-              <p className="text-[11px] text-slate-700 leading-tight mt-1">
+              <p className="text-[11px] text-[#111] leading-tight mt-1">
                 {item.description}
               </p>
             </div>

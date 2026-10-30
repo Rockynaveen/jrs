@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar'
 import Hero from '@/components/sections/home/Hero'
 import FeatureCards from '@/components/sections/home/FeatureCards'
 import AboutSection from '@/components/sections/home/AboutSection'
+import ProgrammesBanner from '@/components/sections/home/ProgrammesBanner'
 import StatsBar from '@/components/sections/home/StatsBar'
 import AcademicsSection from '@/components/sections/home/AcademicsSection'
 import FacilitiesSection from '@/components/sections/home/FacilitiesSection'
@@ -25,7 +26,7 @@ export default function LandingPage() {
     })
   }, [])
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800 antialiased w-full">
+    <div className="min-h-screen flex flex-col bg-white text-[#111] antialiased w-full">
       {/* 1. Header / Navbar */}
       <Navbar />
 
@@ -38,6 +39,9 @@ export default function LandingPage() {
 
         {/* 4. About JRS Section */}
         <AboutSection />
+
+        {/* 4.1. Academic Programmes Banner (IIT/JEE/NEET/Olympiad & XI-XII) */}
+        <ProgrammesBanner />
 
         {/* 5. Academics Section */}
         <AcademicsSection />

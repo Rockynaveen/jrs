@@ -19,7 +19,7 @@ export default function BeyondClassroomPage() {
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-700 antialiased selection:bg-red-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-[#111] antialiased selection:bg-red-500 selection:text-white">
       {/* 1. Navbar */}
       <Navbar activePage="beyond" />
 

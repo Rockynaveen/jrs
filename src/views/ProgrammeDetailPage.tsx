@@ -107,7 +107,7 @@ export default function ProgrammeDetailPage({ programme }: ProgrammeDetailPagePr
                       className={
                         i === 0
                           ? 'text-slate-800 text-[15px] leading-[25px] font-medium border-l-4 border-[#e31e24] pl-4 py-1'
-                          : 'text-slate-600 text-[15px] leading-[25px]'
+                          : 'text-[#111] text-[15px] leading-[25px]'
                       }
                     >
                       {para}
@@ -136,7 +136,7 @@ export default function ProgrammeDetailPage({ programme }: ProgrammeDetailPagePr
                           </div>
                           <span
                             style={{ fontSize: '13.5px', lineHeight: '23.5px' }}
-                            className="text-[13.5px] text-slate-700 leading-snug font-medium"
+                            className="text-[13.5px] text-[#111] leading-snug font-medium"
                           >
                             {highlight}
                           </span>
@@ -158,7 +158,7 @@ export default function ProgrammeDetailPage({ programme }: ProgrammeDetailPagePr
 
                   <Link
                     href="/academics#programmes"
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-slate-700 hover:text-[#031c3f] bg-slate-100 hover:bg-slate-200/80 transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-[#111] hover:text-[#031c3f] bg-slate-100 hover:bg-slate-200/80 transition-colors"
                   >
                     <span>View All Programmes</span>
                   </Link>
@@ -204,12 +204,12 @@ export default function ProgrammeDetailPage({ programme }: ProgrammeDetailPagePr
                     </div>
 
                     {/* Image Footer Details */}
-                    <div className="p-5 bg-white border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
+                    <div className="p-5 bg-white border-t border-slate-100 flex items-center justify-between text-xs text-[#111]">
                       <div className="flex items-center gap-1.5 font-semibold text-slate-800">
                         <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                         <span>Interactive Montessori Methods</span>
                       </div>
-                      <span className="text-[11px] font-medium text-slate-700">JRS Campus</span>
+                      <span className="text-[11px] font-medium text-[#111]">JRS Campus</span>
                     </div>
                   </div>
                 </div>

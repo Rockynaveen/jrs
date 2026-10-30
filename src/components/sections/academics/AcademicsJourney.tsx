@@ -39,7 +39,7 @@ export default function AcademicsJourney() {
             </h2>
             <p
               style={{ fontSize: '16px', lineHeight: '26px' }}
-              className="text-slate-600 text-sm sm:text-base mt-3 max-w-2xl mx-auto leading-[26px]"
+              className="text-[#111] text-sm sm:text-base mt-3 max-w-2xl mx-auto leading-[26px]"
             >
               We provide a nurturing and stimulating environment where every child is encouraged to explore, question, create and grow at their own pace.
             </p>
@@ -105,7 +105,7 @@ export default function AcademicsJourney() {
                     {/* Description with fixed min-height */}
                     <p
                       style={{ fontSize: '14px', lineHeight: '24px' }}
-                      className="text-slate-700 text-[14px] leading-[24px] flex-1 line-clamp-4 min-h-[4.5rem]"
+                      className="text-[#111] text-[14px] leading-[24px] flex-1 line-clamp-4 min-h-[4.5rem]"
                     >
                       {prog.description}
                     </p>
@@ -114,11 +114,11 @@ export default function AcademicsJourney() {
                     <div className="py-2 mt-auto border-t border-slate-100 flex items-center justify-between">
                       <span
                         style={{ fontSize: '14px', lineHeight: '24px' }}
-                        className="text-[14px] font-semibold text-slate-700 group-hover:text-[#0a2559] transition-colors leading-[24px]"
+                        className="text-[14px] font-semibold text-[#111] group-hover:text-[#0a2559] transition-colors leading-[24px]"
                       >
                         Explore details
                       </span>
-                      <div className="w-8 h-8 rounded-full border border-slate-200 group-hover:border-[#0a2559] group-hover:bg-[#0a2559] group-hover:text-white text-slate-700 flex items-center justify-center transition-all duration-200 shadow-2xs">
+                      <div className="w-8 h-8 rounded-full border border-slate-200 group-hover:border-[#0a2559] group-hover:bg-[#0a2559] group-hover:text-white text-[#111] flex items-center justify-center transition-all duration-200 shadow-2xs">
                         <ChevronRight className="w-4 h-4 ml-0.5" />
                       </div>
                     </div>

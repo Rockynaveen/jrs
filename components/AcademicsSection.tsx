@@ -117,7 +117,7 @@ export default function AcademicsSection() {
           </h2>
           <p
             style={{ margin: '10px auto', lineHeight: '26px', textAlign: 'center' }}
-            className="text-slate-600 text-xs sm:text-base my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
+            className="text-[#111] text-xs sm:text-base my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
           >
             Our progressive CBSE curriculum combines academic rigor, experiential STEM learning, and holistic character development from early years to middle school graduation.
           </p>
@@ -151,10 +151,15 @@ export default function AcademicsSection() {
               <div className="w-full lg:w-1/2 bg-white p-5 sm:p-8 lg:p-11 text-slate-900 relative overflow-hidden flex flex-col justify-between">
 
                 <div className="relative z-10 space-y-3 sm:space-y-4">
-                  {/* Stage Tag: Blue background with white text */}
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white bg-[#031c3f] border border-[#031c3f]">
-                    <Sparkles className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-white" />
-                    <span>{stage.stageTag}</span>
+                  {/* Stage Tag: Blue background with pure white text */}
+                  <div
+                    style={{ backgroundColor: '#031c3f', color: '#ffffff' }}
+                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white !text-white bg-[#031c3f] border border-[#031c3f]"
+                  >
+                    <Sparkles className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-white" style={{ color: '#ffffff' }} />
+                    <span className="text-white !text-white" style={{ color: '#ffffff' }}>
+                      {stage.stageTag}
+                    </span>
                   </div>
 
                   {/* Stage Title */}
@@ -170,7 +175,7 @@ export default function AcademicsSection() {
                   {/* Description */}
                   <p
                     style={{ lineHeight: '26px' }}
-                    className="text-slate-600 text-xs sm:text-base leading-[26px] max-w-xl"
+                    className="text-[#111] text-xs sm:text-base leading-[26px] max-w-xl"
                   >
                     {stage.description}
                   </p>
@@ -178,7 +183,7 @@ export default function AcademicsSection() {
                   {/* Curriculum Preview Chips */}
                   <div className="pt-1 sm:pt-2 space-y-2 max-w-lg">
                     {stage.curriculumHighlights.slice(0, 3).map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+                      <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#111] font-medium">
                         <CheckCircle2 className="w-4 h-4 text-[#031c3f] shrink-0" />
                         <span>{item}</span>
                       </div>

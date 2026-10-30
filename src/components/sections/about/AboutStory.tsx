@@ -128,12 +128,12 @@ export default function AboutStory() {
             </div>
 
             {/* Paragraph 1 */}
-            <p className="text-slate-600 text-[15px] sm:text-[16px] sm:leading-[26px] lg:text-[16px] lg:leading-[26px]">
+            <p className="text-[#111] text-[15px] sm:text-[16px] sm:leading-[26px] lg:text-[16px] lg:leading-[26px]">
               JRS International School, Uppal, Hyderabad is committed to providing quality education with a perfect blend of academics, values and co-curricular activities. We focus on developing confident, responsible and compassionate individuals who are prepared for a constantly evolving world.
             </p>
 
             {/* Paragraph 2 */}
-            <p className="text-slate-600 text-[15px] sm:text-[16px] sm:leading-[26px] lg:text-[16px] lg:leading-[26px]">
+            <p className="text-[#111] text-[15px] sm:text-[16px] sm:leading-[26px] lg:text-[16px] lg:leading-[26px]">
               Rooted in rich Indian ethos and empowered by global pedagogical standards, our campus provides modern smart classrooms, advanced robotics and science laboratories, sports coaching, and a holistic environment where every student thrives.
             </p>
 
