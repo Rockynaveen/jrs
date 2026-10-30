@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ArrowRight, ArrowLeft, Play, X, Megaphone } from 'lucide-react'
+import { ArrowRight, Play, X, Megaphone } from 'lucide-react'
 import SchoolImage from '@/components/common/SchoolImage'
 
 export default function Hero() {
@@ -213,7 +213,7 @@ export default function Hero() {
             <img
               src="/images/38-years-experience.png"
               alt="38 Years of Experience - JRS International School"
-              className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-[120px] h-auto object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.5)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
+              className="w-13 sm:w-16 md:w-20 lg:w-24 xl:w-[98px] h-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
             />
           </div>
         </div>
@@ -254,41 +254,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Bottom Right Carousel Controls matching design */}
-        <div className="absolute bottom-3 sm:bottom-5 lg:bottom-6 right-3 sm:right-6 lg:right-12 z-20 flex items-center gap-2 sm:gap-2.5">
-          {/* Previous Button (Glassmorphic) */}
-          <button
-            onClick={prevSlide}
-            aria-label="Previous slide"
-            className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 transition-all duration-300 active:scale-95 cursor-pointer"
-          >
-            <ArrowLeft className="w-4 h-4 text-white" />
-          </button>
-
-          {/* Indicators */}
-          <div className="flex items-center gap-1.5 sm:gap-2 px-1">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActiveSlide(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-                className={`rounded-full transition-all duration-300 cursor-pointer ${activeSlide === idx
-                  ? 'w-6 h-2 sm:h-2.5 bg-white shadow-[0_0_12px_rgba(255,255,255,0.85)]'
-                  : 'w-2 sm:w-2.5 h-2 sm:h-2.5 bg-white/40 hover:bg-white/70'
-                  }`}
-              />
-            ))}
-          </div>
-
-          {/* Next Button (Glassmorphic) */}
-          <button
-            onClick={nextSlide}
-            aria-label="Next slide"
-            className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 transition-all duration-300 active:scale-95 cursor-pointer"
-          >
-            <ArrowRight className="w-4 h-4 text-white" />
-          </button>
-        </div>
       </div>
 
       {/* Magnified Virtual Tour Video Modal Popup */}
