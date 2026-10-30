@@ -82,38 +82,28 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex flex-col justify-center bg-[#031c3f] min-h-[100vh] min-h-[100dvh] h-[100vh] h-[100dvh]"
+      className="relative w-full overflow-hidden flex flex-col justify-center bg-black min-h-[100vh] min-h-[100dvh] h-[100vh] h-[100dvh]"
     >
       {/* Background Hero Slider Images (full section width & height) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {slides.map((slide, idx) => (
           <div
             key={slide.image}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              activeSlide === idx ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${activeSlide === idx ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
           >
             <SchoolImage
               src={slide.image}
               alt={slide.alt}
               className="w-full h-full object-cover object-center"
               fallbackText={slide.image}
-              fallbackBg="from-slate-800 via-[#0d2146] to-[#0a1931]"
+              fallbackBg="from-slate-800 via-slate-900 to-black"
             />
           </div>
         ))}
 
-        {/* Mobile Overlay: Solid/vertical navy gradient protecting full-width text */}
-        <div className="md:hidden absolute inset-0 bg-gradient-to-t from-[#031c3f] via-[#031c3f]/90 to-[#031c3f]/75 z-[1] pointer-events-none" />
-
-        {/* Desktop Overlay: Smoothly feathered gradient with zero banding or visible line */}
-        <div
-          className="hidden md:block absolute inset-0 z-[1] pointer-events-none"
-          style={{
-            background:
-              'linear-gradient(to right, #031c3f 0%, #031c3f 18%, rgba(3, 28, 63, 0.95) 24%, rgba(3, 28, 63, 0.87) 30%, rgba(3, 28, 63, 0.74) 36%, rgba(3, 28, 63, 0.58) 42%, rgba(3, 28, 63, 0.40) 48%, rgba(3, 28, 63, 0.25) 54%, rgba(3, 28, 63, 0.13) 60%, rgba(3, 28, 63, 0.05) 66%, rgba(3, 28, 63, 0.015) 72%, rgba(3, 28, 63, 0) 78%, rgba(3, 28, 63, 0) 100%)',
-          }}
-        />
+        {/* Uniform Overlay across entire hero section (increased to 55% for enhanced contrast) */}
+        <div className="absolute inset-0 bg-black/50 z-[1] pointer-events-none" />
       </div>
 
       {/* Latest News Marquee Ticker (Below Header, Attached to the End) */}
@@ -214,57 +204,40 @@ export default function Hero() {
 
       {/* Main Hero Slider Content Area */}
       <div className="relative z-10 flex-1 w-full flex items-center">
-        {/* 38 Years of Excellence Emblem Badge - Right Top Floating */}
+        {/* 38 Years of Experience Emblem Badge - Right Top Floating */}
         <div className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-6 lg:right-8 z-20 pointer-events-auto">
           <div className="group relative select-none animate-float">
             {/* Ambient golden glow behind the emblem */}
             <div className="absolute -inset-2.5 rounded-full bg-amber-400/30 blur-xl opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 -z-10 pointer-events-none" />
 
             <img
-              src="/images/38-years-excellence.png"
-              alt="38 Years of Excellence - JRS International School"
+              src="/images/38-years-experience.png"
+              alt="38 Years of Experience - JRS International School"
               className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-[120px] h-auto object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.5)] group-hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
             />
           </div>
         </div>
 
         {/* Hero Content on Clean Solid Navy Left Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-12 md:pt-16 pb-16 sm:pb-8 w-full">
-          <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in translate-y-2 sm:translate-y-4">
-            {/* Tagline / Subtitle */}
-            <div className="inline-flex items-center gap-2 mb-2.5 sm:mb-4">
-              <span className="text-white/95 text-xs sm:text-[13px] font-bold tracking-wider uppercase flex flex-wrap items-center gap-x-2 gap-y-1">
-                {current.tagline.split('•').map((part, i) => (
-                  <React.Fragment key={i}>
-                    {i > 0 && <span className="text-[#f59e0b] font-black">•</span>}
-                    <span>{part.trim()}</span>
-                  </React.Fragment>
-                ))}
-              </span>
-            </div>
-
-            {/* Big Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-extrabold text-white tracking-tight leading-[1.14] mb-3 sm:mb-4 lg:mb-5 break-words">
-              <span>{current.titlePart1}</span>{' '}
-              <span className="text-[#ffbe1a] block mt-1 sm:mt-1.5">
-                {current.titlePart2}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-14 md:pt-20 pb-16 sm:pb-8 w-full">
+          <div className="max-w-xl lg:max-w-2xl text-left translate-y-2 sm:translate-y-4">
+            {/* Single Best-Suited Headline for all slides (Uniform single color) */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[62px] font-extrabold text-white tracking-tight leading-[1.12] mb-6 sm:mb-8 break-words drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
+              <span>Empowering Minds,</span>{' '}
+              <span className="block mt-1.5 sm:mt-2 text-white">
+                Shaping Future Leaders
               </span>
             </h1>
 
-            {/* Subtext */}
-            <p className="text-sm sm:text-[15px] lg:text-base text-white/90 leading-relaxed font-normal mb-5 sm:mb-7 max-w-lg lg:max-w-xl">
-              {current.description}
-            </p>
-
-            {/* CTA Buttons */}
+            {/* CTA Buttons - Pure Glassmorphism without background */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               {/* Primary Admissions Button */}
               <Link
                 href="/admissions"
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/30 transition-all duration-200 text-center"
+                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 text-center group cursor-pointer"
               >
                 <span>Admissions 2027-28</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
 
               {/* Secondary Virtual Tour Button */}
@@ -272,10 +245,10 @@ export default function Hero() {
                 type="button"
                 onClick={() => setIsVideoModalOpen(true)}
                 aria-label="Play virtual campus tour video"
-                className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-[#031c3f]/50 hover:bg-[#031c3f]/80 active:scale-95 border border-white/40 backdrop-blur-sm transition-all duration-200 group cursor-pointer text-center"
+                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 group cursor-pointer text-center"
               >
                 <span>Take a Virtual Tour</span>
-                <Play className="w-3 h-3 fill-white text-white group-hover:scale-110 transition-transform ml-0.5" />
+                <Play className="w-3.5 h-3.5 fill-white text-white group-hover:scale-110 transition-transform ml-0.5" />
               </button>
             </div>
           </div>
@@ -283,13 +256,13 @@ export default function Hero() {
 
         {/* Bottom Right Carousel Controls matching design */}
         <div className="absolute bottom-3 sm:bottom-5 lg:bottom-6 right-3 sm:right-6 lg:right-12 z-20 flex items-center gap-2 sm:gap-2.5">
-          {/* Previous Button (Dark) */}
+          {/* Previous Button (Glassmorphic) */}
           <button
             onClick={prevSlide}
             aria-label="Previous slide"
-            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center transition-colors border border-white/10 shadow-lg cursor-pointer"
+            className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 transition-all duration-300 active:scale-95 cursor-pointer"
           >
-            <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            <ArrowLeft className="w-4 h-4 text-white" />
           </button>
 
           {/* Indicators */}
@@ -299,22 +272,21 @@ export default function Hero() {
                 key={idx}
                 onClick={() => setActiveSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`rounded-full transition-all duration-300 cursor-pointer ${
-                  activeSlide === idx
-                    ? 'w-5 sm:w-6 h-2 sm:h-2.5 bg-[#e31e24]'
-                    : 'w-2 sm:w-2.5 h-2 sm:h-2.5 bg-white opacity-85 hover:opacity-100'
-                }`}
+                className={`rounded-full transition-all duration-300 cursor-pointer ${activeSlide === idx
+                  ? 'w-6 h-2 sm:h-2.5 bg-white shadow-[0_0_12px_rgba(255,255,255,0.85)]'
+                  : 'w-2 sm:w-2.5 h-2 sm:h-2.5 bg-white/40 hover:bg-white/70'
+                  }`}
               />
             ))}
           </div>
 
-          {/* Next Button (White) */}
+          {/* Next Button (Glassmorphic) */}
           <button
             onClick={nextSlide}
             aria-label="Next slide"
-            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-slate-100 text-[#031c3f] flex items-center justify-center transition-colors shadow-lg cursor-pointer"
+            className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 transition-all duration-300 active:scale-95 cursor-pointer"
           >
-            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#031c3f]" />
+            <ArrowRight className="w-4 h-4 text-white" />
           </button>
         </div>
       </div>

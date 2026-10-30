@@ -254,28 +254,28 @@ export default function FacilitiesSection() {
     <section id="facilities" className="py-12 bg-transparent relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header Section */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 relative" data-aos="fade-up">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-7 relative" data-aos="fade-up">
           {/* Eyebrow: — OUR FACILITIES — */}
-          <div className="flex items-center justify-center gap-2.5 mb-2.5">
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
-            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+          <div className="flex items-center justify-center gap-2.5 mb-2">
+            <span className="w-8 h-[2px] bg-[#031c3f]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]">
               OUR FACILITIES
             </span>
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="w-8 h-[2px] bg-[#031c3f]" />
           </div>
 
           {/* Heading */}
           <h2
-            style={{ lineHeight: '50px' }}
-            className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+            style={{ lineHeight: '38px' }}
+            className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[38px] sm:leading-[38px] lg:leading-[38px]"
           >
             World-Class <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Infrastructure</span>
           </h2>
 
           {/* Subtitle */}
           <p
-            style={{ margin: 0, lineHeight: '26px' }}
-            className="text-slate-600 text-[15px] sm:text-base m-0 leading-[26px] sm:leading-[26px] mt-1"
+            style={{ margin: 0, lineHeight: '24px' }}
+            className="text-slate-600 text-[14.5px] sm:text-[15px] m-0 leading-[24px] sm:leading-[24px] mt-1"
           >
             Modern facilities designed to inspire, explore and grow
           </p>
@@ -358,25 +358,28 @@ export default function FacilitiesSection() {
                         </div>
                       </div>
 
-                      {/* Floating Circle Icon */}
-                      <div className="relative px-4 sm:px-4.5 z-20 -mt-5">
+                      {/* Floating Circle Icon (Centered on Card, Balanced Medium Size) */}
+                      <div className="relative px-4 sm:px-4.5 z-20 -mt-5 sm:-mt-6 flex justify-center">
                         <div
-                          className={`w-10 h-10 rounded-full ${facility.iconBg} text-white flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110`}
+                          className={`w-11 h-11 sm:w-12 sm:h-12 rounded-full ${facility.iconBg} text-white flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110`}
                         >
-                          <Icon className="w-5 h-5 stroke-[2]" />
+                          <Icon className="w-5.5 h-5.5 sm:w-6 sm:h-6 stroke-[2]" />
                         </div>
                       </div>
 
-                      {/* Card Content Body */}
-                      <div className="pt-2 pb-5 sm:pb-6 px-4 sm:px-4.5 flex flex-col flex-1 justify-between">
-                        <div>
+                      {/* Card Content Body (Tightly unified with minimal gap between heading & text, and compact bottom spacing) */}
+                      <div className="pt-2 pb-3 sm:pb-3.5 px-3.5 sm:px-4 flex flex-col items-center text-center">
+                        <div className="w-full">
                           {/* Facility Title */}
-                          <h3 className="text-[15px] sm:text-[16px] font-bold text-[#031c3f] tracking-tight leading-snug min-h-[44px] flex items-center group-hover:text-[#e31e24] transition-colors">
+                          <h3 className="text-[15px] sm:text-[15.5px] font-bold text-[#031c3f] tracking-tight leading-tight group-hover:text-[#e31e24] transition-colors mb-1">
                             {facility.title}
                           </h3>
 
                           {/* Facility Subtitle */}
-                          <p className="text-[13px] sm:text-[13.5px] text-slate-600 leading-relaxed mt-1">
+                          <p
+                            style={{ lineHeight: '24px' }}
+                            className="text-[12.5px] sm:text-[13px] text-slate-600 leading-[24px]"
+                          >
                             {facility.subtitle}
                           </p>
                         </div>
@@ -389,7 +392,7 @@ export default function FacilitiesSection() {
           </div>
 
           {/* Pagination Indicators / Dots */}
-          <div className="flex items-center justify-center gap-2 mt-8">
+          <div className="flex items-center justify-center gap-2 mt-5 sm:mt-6">
             {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
               <button
                 key={idx}

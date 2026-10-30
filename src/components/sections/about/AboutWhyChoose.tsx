@@ -91,11 +91,11 @@ export default function AboutWhyChoose() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <div className="flex items-center justify-center gap-2.5 mb-2.5">
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
-            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+            <span className="w-8 h-[2px] bg-[#031c3f]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]">
               WHY CHOOSE JRS
             </span>
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="w-8 h-[2px] bg-[#031c3f]" />
           </div>
           <h2
             style={{ lineHeight: '50px' }}
@@ -134,14 +134,14 @@ export default function AboutWhyChoose() {
         </div>
 
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-3.5 mt-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-4.5 mt-6">
           {bottomBadges.map((badge, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl border border-slate-100 p-3 sm:p-3.5 text-center shadow-[0_1px_6px_rgba(0,0,0,0.02)] hover:border-slate-300 hover:bg-slate-50/60 transition-all flex flex-col items-center justify-center min-h-[96px]"
+              className="bg-white rounded-xl border border-slate-100 p-4 sm:p-4.5 text-center shadow-[0_1px_6px_rgba(0,0,0,0.02)] hover:border-slate-300 hover:shadow-sm hover:bg-slate-50/60 transition-all flex flex-col items-center justify-center min-h-[100px]"
             >
-              <div className="mb-2">{badge.icon}</div>
-              <span className="text-[14px] font-normal text-slate-700 leading-[1.5]">
+              <div className="mb-2.5">{badge.icon}</div>
+              <span className="text-[14px] sm:text-[15px] font-medium text-slate-700 leading-snug">
                 {badge.title}
               </span>
             </div>

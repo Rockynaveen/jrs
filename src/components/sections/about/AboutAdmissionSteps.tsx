@@ -62,11 +62,11 @@ export default function AboutAdmissionSteps() {
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           {/* Eyebrow: — STEPS OF — */}
           <div className="flex items-center justify-center gap-2.5 mb-2.5">
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
-            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+            <span className="w-8 h-[2px] bg-[#031c3f]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]">
               STEPS OF
             </span>
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="w-8 h-[2px] bg-[#031c3f]" />
           </div>
 
           <h2

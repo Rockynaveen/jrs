@@ -41,11 +41,11 @@ export default function EventsSection() {
           <div className="lg:col-span-4 space-y-5">
             <div>
               <div className="flex items-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
-                <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
+                <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]">
                   LATEST EVENTS
                 </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
               </div>
               <h2
                 style={{ lineHeight: '50px' }}

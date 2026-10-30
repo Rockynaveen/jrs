@@ -92,14 +92,14 @@ export default function LifeSkillsPage() {
             {/* Centered Heading */}
             <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14" data-aos="fade-up">
               <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
                 <span
                   style={{ fontSize: '13px', lineHeight: '23px' }}
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                 >
                   STUDENT DISCUSSIONS & SESSIONS
                 </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
               </div>
               <h2
                 style={{ fontSize: '40px', lineHeight: '50px' }}

@@ -41,9 +41,9 @@ export default function AcademicsSection() {
       badge: 'Early Years',
       description:
         'Feel grounded and supported in an environment where early learners are encouraged to participate, share ideas, explore phonics, and build confidence through play.',
-      image: '/images/pre-primary-learning.jpg',
-      alt: 'Pre-Primary student engaged in learning activity',
-      imagePosition: 'object-[center_15%]',
+      image: '/images/pre-primary-classroom.jpg',
+      alt: 'Pre-Primary students engaged in colorful classroom activity',
+      imagePosition: 'object-center',
       curriculumHighlights: [
         'Phonics-based English language & early communication',
         'Montessori-inspired sensorial and tactile activities',
@@ -59,9 +59,9 @@ export default function AcademicsSection() {
       badge: 'Primary Wing',
       description:
         'Building strong scholastic foundations through hands-on inquiry, experiential STEM learning, bilingual communication, and well-rounded character development.',
-      image: '/images/primary-school-study.jpg',
-      alt: 'Primary school student studying in classroom',
-      imagePosition: 'object-[center_12%]',
+      image: '/images/primary-school-classroom.jpg',
+      alt: 'Primary school students in classroom with teacher',
+      imagePosition: 'object-[center_30%]',
       curriculumHighlights: [
         'Integrated CBSE-aligned NCERT syllabus framework',
         'Experiential STEM learning and scientific experiments',
@@ -77,9 +77,9 @@ export default function AcademicsSection() {
       badge: 'Middle Wing',
       description:
         'Encouraging independent analytical thinking, teamwork, advanced science laboratory inquiry, and specialized competitive exam readiness.',
-      image: '/images/middle-school-students.jpg',
-      alt: 'Middle school students collaborating over books',
-      imagePosition: 'object-[center_15%]',
+      image: '/images/middle-school-classroom.jpg',
+      alt: 'Middle school students collaborating with laptops and smart board',
+      imagePosition: 'object-[center_35%]',
       curriculumHighlights: [
         'Rigorous CBSE syllabus emphasizing core conceptual depth',
         'Specialized IIT/NIT and Olympiad foundation preparation',
@@ -99,14 +99,14 @@ export default function AcademicsSection() {
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <span className="w-6 sm:w-8 h-[2px] bg-[#e31e24]" />
+            <span className="w-6 sm:w-8 h-[2px] bg-[#031c3f]" />
             <span
               style={{ fontSize: '13px', lineHeight: '23px' }}
-              className="text-xs sm:text-[13px] font-bold uppercase tracking-widest text-[#e31e24]"
+              className="text-xs sm:text-[13px] font-bold uppercase tracking-widest text-[#031c3f]"
             >
               ACADEMIC PROGRAMMES
             </span>
-            <span className="w-6 sm:w-8 h-[2px] bg-[#e31e24]" />
+            <span className="w-6 sm:w-8 h-[2px] bg-[#031c3f]" />
           </div>
 
           <h2
@@ -128,7 +128,7 @@ export default function AcademicsSection() {
           {stages.map((stage, index) => (
             <div
               key={index}
-              className="sticky [top:var(--stack-top-mobile)] sm:[top:var(--stack-top-tablet)] lg:[top:var(--stack-top-desktop)] flex flex-col lg:flex-row items-stretch rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden border border-slate-200/90 bg-white text-slate-900 group transition-all duration-300 shadow-[0_16px_48px_rgba(3,28,63,0.12)] hover:shadow-[0_20px_56px_rgba(3,28,63,0.18)]"
+              className="sticky [top:var(--stack-top-mobile)] sm:[top:var(--stack-top-tablet)] lg:[top:var(--stack-top-desktop)] flex flex-col lg:flex-row items-stretch rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden border border-slate-200/90 bg-white text-slate-900 group transition-all duration-300 shadow-none"
               style={{
                 ['--stack-top-mobile' as any]: `${76 + index * 20}px`,
                 ['--stack-top-tablet' as any]: `${96 + index * 26}px`,
@@ -151,9 +151,9 @@ export default function AcademicsSection() {
               <div className="w-full lg:w-1/2 bg-white p-5 sm:p-8 lg:p-11 text-slate-900 relative overflow-hidden flex flex-col justify-between">
 
                 <div className="relative z-10 space-y-3 sm:space-y-4">
-                  {/* Stage Tag */}
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#e31e24] bg-[#feecee] border border-red-200">
-                    <Sparkles className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#e31e24]" />
+                  {/* Stage Tag: Blue background with white text */}
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white bg-[#031c3f] border border-[#031c3f]">
+                    <Sparkles className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-white" />
                     <span>{stage.stageTag}</span>
                   </div>
 
@@ -179,7 +179,7 @@ export default function AcademicsSection() {
                   <div className="pt-1 sm:pt-2 space-y-2 max-w-lg">
                     {stage.curriculumHighlights.slice(0, 3).map((item, idx) => (
                       <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[#031c3f] shrink-0" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -191,7 +191,7 @@ export default function AcademicsSection() {
                   <button
                     type="button"
                     onClick={() => setActiveCurriculum(index)}
-                    className="w-full sm:w-auto justify-center bg-[#031c3f] hover:bg-[#e31e24] text-white font-extrabold text-sm sm:text-base px-7 py-3 rounded-full transition-all duration-300 shadow-md inline-flex items-center gap-2.5 group/btn cursor-pointer"
+                    className="w-full sm:w-auto justify-center bg-[#e31e24] hover:bg-[#c9181e] text-white font-extrabold text-sm sm:text-base px-7 py-3 rounded-full transition-all duration-300 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 inline-flex items-center gap-2.5 group/btn cursor-pointer"
                   >
                     <span>Explore More</span>
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

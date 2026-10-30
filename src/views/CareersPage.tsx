@@ -84,14 +84,14 @@ export default function CareersPage() {
                 <div>
                   {/* Eyebrow */}
                   <div className="flex items-center gap-2.5 mb-2.5">
-                    <span className="w-8 h-[2px] bg-[#e31e24]" />
+                    <span className="w-8 h-[2px] bg-[#031c3f]" />
                     <span
                       style={{ fontSize: '13px', lineHeight: '23px' }}
-                      className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                      className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                     >
                       TEACHING AT JRS
                     </span>
-                    <span className="w-8 h-[2px] bg-[#e31e24]" />
+                    <span className="w-8 h-[2px] bg-[#031c3f]" />
                   </div>
 
                   <h2
@@ -144,14 +144,14 @@ export default function CareersPage() {
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
               {/* Eyebrow */}
               <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
                 <span
                   style={{ fontSize: '13px', lineHeight: '23px' }}
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                 >
                   WORK CULTURE & BENEFITS
                 </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
               </div>
 
               <h2
@@ -204,14 +204,14 @@ export default function CareersPage() {
                 <div>
                   {/* Eyebrow */}
                   <div className="flex items-center gap-2.5 mb-2.5">
-                    <span className="w-8 h-[2px] bg-[#e31e24]" />
+                    <span className="w-8 h-[2px] bg-[#031c3f]" />
                     <span
                       style={{ fontSize: '13px', lineHeight: '23px' }}
-                      className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                      className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                     >
                       CAREER OPPORTUNITIES
                     </span>
-                    <span className="w-8 h-[2px] bg-[#e31e24]" />
+                    <span className="w-8 h-[2px] bg-[#031c3f]" />
                   </div>
                   <h2
                     style={{ lineHeight: '44px' }}

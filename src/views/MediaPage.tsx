@@ -180,14 +180,14 @@ export default function MediaPage() {
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
               <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
                 <span
                   style={{ fontSize: '13px', lineHeight: '23px' }}
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                 >
                   LATEST UPDATES
                 </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
               </div>
               <h2
                 style={{ fontSize: '40px', lineHeight: '50px' }}
@@ -268,14 +268,14 @@ export default function MediaPage() {
             <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
               <div className="text-center max-w-2xl lg:max-w-3xl mx-auto px-4">
                 <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                  <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
                   <span
                     style={{ fontSize: '13px', lineHeight: '23px' }}
-                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                   >
                     FROM OUR CAMPUS
                   </span>
-                  <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
                 </div>
                 <h2
                   style={{ fontSize: '40px', lineHeight: '50px' }}

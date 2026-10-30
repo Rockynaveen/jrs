@@ -99,11 +99,11 @@ export default function AboutPTA() {
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           {/* Eyebrow: — COMMUNITY & COLLABORATION — */}
           <div className="flex items-center justify-center gap-2.5 mb-2.5">
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
-            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+            <span className="w-8 h-[2px] bg-[#031c3f]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]">
               COMMUNITY & COLLABORATION
             </span>
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="w-8 h-[2px] bg-[#031c3f]" />
           </div>
 
           <h2
@@ -125,7 +125,7 @@ export default function AboutPTA() {
             return (
               <div
                 key={member.sn}
-                className="relative bg-white rounded-[22px] border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
+                className="relative bg-white rounded-[22px] border border-slate-200/90 shadow-none hover:border-slate-300 transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
               >
                 {/* Image Area with Placeholder Headshot & Bottom-Right Frosted Designation Badge */}
                 <div className="relative w-full aspect-[4/3.3] bg-slate-100 overflow-hidden flex-shrink-0">

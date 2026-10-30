@@ -87,14 +87,14 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <div>
                     <div className="flex items-center gap-2.5 mb-2.5">
-                      <span className="w-8 h-[2px] bg-[#e31e24]" />
+                      <span className="w-8 h-[2px] bg-[#031c3f]" />
                       <span
                         style={{ fontSize: '13px', lineHeight: '23px' }}
-                        className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                        className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                       >
                         ONLINE INQUIRY
                       </span>
-                      <span className="w-8 h-[2px] bg-[#e31e24]" />
+                      <span className="w-8 h-[2px] bg-[#031c3f]" />
                     </div>
                     <h2
                       style={{ lineHeight: '42px' }}

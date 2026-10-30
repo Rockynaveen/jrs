@@ -106,11 +106,11 @@ export default function FacilitiesPage() {
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
               {/* Eyebrow: — OUR CAMPUS — */}
               <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
-                <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
+                <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]">
                   OUR CAMPUS
                 </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">

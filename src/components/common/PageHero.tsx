@@ -60,7 +60,7 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className={`relative overflow-hidden bg-[#031c3f] text-white -mt-16 sm:-mt-20 md:-mt-[122px] pt-16 sm:pt-20 md:pt-[122px] h-[70vh] min-h-[70vh] h-[70dvh] min-h-[70dvh] flex flex-col ${children ? 'justify-between' : 'justify-center'} ${className || ''}`}>
+    <section className={`relative overflow-hidden bg-slate-950 text-white -mt-16 sm:-mt-20 md:-mt-[122px] pt-16 sm:pt-20 md:pt-[122px] h-[70vh] min-h-[70vh] h-[70dvh] min-h-[70dvh] flex flex-col ${children ? 'justify-between' : 'justify-center'} ${className || ''}`}>
       {/* Background Campus Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -75,48 +75,14 @@ export default function PageHero({
           }}
         />
 
-        {overlayType === 'cinematic' ? (
-          <>
-            {/* Cinematic dark grading: full mobile protection + smooth desktop ease with zero line */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/95 via-[#031c3f]/60 to-[#031c3f]/40 md:hidden pointer-events-none" />
-            <div
-              className="hidden md:block absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  'linear-gradient(to right, #031c3f 0%, #031c3f 18%, rgba(3, 28, 63, 0.95) 24%, rgba(3, 28, 63, 0.87) 30%, rgba(3, 28, 63, 0.74) 36%, rgba(3, 28, 63, 0.58) 42%, rgba(3, 28, 63, 0.40) 48%, rgba(3, 28, 63, 0.25) 54%, rgba(3, 28, 63, 0.13) 60%, rgba(3, 28, 63, 0.05) 66%, rgba(3, 28, 63, 0.015) 72%, rgba(3, 28, 63, 0) 78%, rgba(3, 28, 63, 0) 100%)',
-              }}
-            />
-          </>
-        ) : overlayType === 'logo-blue' ? (
-          <>
-            {/* Logo Blue Overlay: Full mobile protection + smooth desktop ease with zero line */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#013aa3] via-[#013aa3]/80 to-[#013aa3]/50 md:hidden pointer-events-none" />
-            <div
-              className="hidden md:block absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  'linear-gradient(to right, #013aa3 0%, #013aa3 18%, rgba(1, 58, 163, 0.95) 24%, rgba(1, 58, 163, 0.87) 30%, rgba(1, 58, 163, 0.74) 36%, rgba(1, 58, 163, 0.58) 42%, rgba(1, 58, 163, 0.40) 48%, rgba(1, 58, 163, 0.25) 54%, rgba(1, 58, 163, 0.13) 60%, rgba(1, 58, 163, 0.05) 66%, rgba(1, 58, 163, 0.015) 72%, rgba(1, 58, 163, 0) 78%, rgba(1, 58, 163, 0) 100%)',
-              }}
-            />
-          </>
-        ) : (
-          <>
-            {/* Navy Overlay: Full mobile protection + smooth desktop ease with zero line */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f] via-[#031c3f]/85 to-[#031c3f]/65 md:hidden pointer-events-none" />
-            <div
-              className="hidden md:block absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  'linear-gradient(to right, #031c3f 0%, #031c3f 18%, rgba(3, 28, 63, 0.95) 24%, rgba(3, 28, 63, 0.87) 30%, rgba(3, 28, 63, 0.74) 36%, rgba(3, 28, 63, 0.58) 42%, rgba(3, 28, 63, 0.40) 48%, rgba(3, 28, 63, 0.25) 54%, rgba(3, 28, 63, 0.13) 60%, rgba(3, 28, 63, 0.05) 66%, rgba(3, 28, 63, 0.015) 72%, rgba(3, 28, 63, 0) 78%, rgba(3, 28, 63, 0) 100%)',
-              }}
-            />
-          </>
-        )}
+        {/* Lite Black Overlay */}
+        <div className="absolute inset-0 bg-black/45 md:bg-black/40 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/35 pointer-events-none" />
       </div>
 
       {/* Decorative Red Curved Swoosh in Bottom-Right Corner (optional) */}
       {showDecorativeSwoosh && (
-        <div className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 w-36 sm:w-56 md:w-80 h-36 sm:h-56 md:h-80 pointer-events-none z-10 overflow-hidden opacity-40 sm:opacity-90">
+        <div className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 w-36 sm:w-56 md:w-80 h-36 sm:h-56 md:h-80 pointer-events-none z-10 overflow-hidden opacity-30 sm:opacity-75">
           <svg
             viewBox="0 0 300 300"
             className="w-full h-full"
@@ -137,69 +103,52 @@ export default function PageHero({
         </div>
       )}
 
-      {/* Hero Content Container: Equal top and bottom padding when no children, or tailored padding when stats bar is present */}
+      {/* Hero Content Container */}
       <div
-        className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center ${
+        className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between ${
           children
-            ? 'pt-2 sm:pt-4 md:pt-6 pb-28 sm:pb-32 md:pb-[130px]'
-            : 'py-6 sm:py-8 md:py-10'
+            ? 'pt-3 sm:pt-4 md:pt-6 pb-28 sm:pb-32 md:pb-[130px]'
+            : 'pt-3 sm:pt-4 md:pt-6 pb-6 sm:pb-8 md:pb-10'
         }`}
       >
-        {/* Upper/Middle Content Area */}
-        <div className={`my-auto ${children ? 'pt-2 sm:pt-4' : ''}`}>
-          <div className={rightElement ? "grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center" : ""}>
-            <div className={rightElement ? "lg:col-span-8 max-w-xl md:max-w-2xl" : "max-w-xl md:max-w-2xl"} data-aos="fade-right">
-              {/* Breadcrumb Navigation */}
-              <nav
-                aria-label="Breadcrumb"
-                className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2.5"
-              >
-                <Link href="/" className="hover:text-white transition-colors">
-                  Home
-                </Link>
-                {parentBreadcrumb && (
-                  <>
-                    <span className="text-slate-400 font-normal">›</span>
-                    <Link href={parentBreadcrumb.href} className="hover:text-white transition-colors">
-                      {parentBreadcrumb.label}
-                    </Link>
-                  </>
-                )}
+        {/* Breadcrumb Navigation - at previous left position */}
+        <div className="w-full">
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300"
+          >
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
+            {parentBreadcrumb && (
+              <>
                 <span className="text-slate-400 font-normal">›</span>
-                <span className="text-[#f59e0b] font-semibold">{breadcrumb}</span>
-              </nav>
+                <Link href={parentBreadcrumb.href} className="hover:text-white transition-colors">
+                  {parentBreadcrumb.label}
+                </Link>
+              </>
+            )}
+            <span className="text-slate-400 font-normal">›</span>
+            <span className="text-[#f59e0b] font-semibold">{breadcrumb}</span>
+          </nav>
+        </div>
 
-              {/* Main Title */}
-              <h1
-                style={titleStyle}
-                className={`text-2xl sm:text-3xl md:text-[38px] md:leading-[48px] lg:text-[42px] lg:leading-[52px] xl:text-[42px] xl:leading-[52px] font-bold tracking-tight text-white break-words ${titleClassName || ''}`}
-              >
-                {title}{' '}
-                {titleHighlight && (
-                  <span className="text-[#f59e0b] font-bold" style={{ lineHeight: 'inherit' }}>{titleHighlight}</span>
-                )}
-              </h1>
+        {/* Center: Heading & Buttons ONLY */}
+        <div className="my-auto text-center flex flex-col items-center justify-center max-w-4xl mx-auto w-full py-4 sm:py-6" data-aos="fade-up">
+          {/* Main Title */}
+          <h1
+            style={titleStyle}
+            className={`text-2xl sm:text-3xl md:text-[38px] md:leading-[48px] lg:text-[44px] lg:leading-[54px] xl:text-[46px] xl:leading-[56px] font-bold tracking-tight text-white break-words text-center mx-auto ${titleClassName || ''}`}
+          >
+            {title}{' '}
+            {titleHighlight && (
+              <span className="text-[#f59e0b] font-bold" style={{ lineHeight: 'inherit' }}>{titleHighlight}</span>
+            )}
+          </h1>
 
-              {/* Subtitle */}
-              {subtitle && (
-                <p className="text-sm sm:text-base md:text-lg font-medium text-white/90 mt-1 sm:mt-2 tracking-tight leading-snug">
-                  {subtitle}
-                </p>
-              )}
-
-              {/* Description Paragraph */}
-              {description && (
-                <p
-                  style={{ lineHeight: '24px', ...descriptionStyle }}
-                  className={`text-slate-200 text-xs sm:text-sm md:text-[15px] md:leading-[24px] max-w-xl opacity-90 mt-2 sm:mt-2.5 ${descriptionClassName || ''}`}
-                >
-                  {description}
-                </p>
-              )}
-
-              {/* Action Buttons */}
-              {(primaryButton || secondaryButton) && (
-                <div className="flex flex-row flex-wrap items-center gap-2.5 sm:gap-4 mt-3.5 sm:mt-5">
+          {/* Action Buttons */}
+          {(primaryButton || secondaryButton) && (
+            <div className="flex flex-row flex-wrap items-center justify-center gap-2.5 sm:gap-4 mt-4 sm:mt-6 mx-auto">
                   {/* Primary Button */}
                   {primaryButton &&
                     (primaryButton.href ? (
@@ -207,7 +156,7 @@ export default function PageHero({
                         <a
                           href={primaryButton.href}
                           onClick={primaryButton.onClick}
-                          className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
+                          className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
                         >
                           <span>{primaryButton.text}</span>
                           <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
@@ -216,7 +165,7 @@ export default function PageHero({
                         <Link
                           href={primaryButton.href}
                           onClick={primaryButton.onClick}
-                          className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
+                          className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
                         >
                           <span>{primaryButton.text}</span>
                           <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
@@ -226,7 +175,7 @@ export default function PageHero({
                       <button
                         type="button"
                         onClick={primaryButton.onClick}
-                        className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
+                        className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
                       >
                         <span>{primaryButton.text}</span>
                         <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
@@ -240,7 +189,7 @@ export default function PageHero({
                         <a
                           href={secondaryButton.href}
                           onClick={secondaryButton.onClick}
-                          className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
+                          className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
                         >
                           <span>{secondaryButton.text}</span>
                           {secondaryButton.icon === 'phone' ? (
@@ -255,7 +204,7 @@ export default function PageHero({
                         <Link
                           href={secondaryButton.href}
                           onClick={secondaryButton.onClick}
-                          className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
+                          className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
                         >
                           <span>{secondaryButton.text}</span>
                           {secondaryButton.icon === 'phone' ? (
@@ -271,7 +220,7 @@ export default function PageHero({
                       <button
                         type="button"
                         onClick={secondaryButton.onClick}
-                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center cursor-pointer"
+                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
                       >
                         <span>{secondaryButton.text}</span>
                         {secondaryButton.icon === 'phone' ? (
@@ -289,14 +238,12 @@ export default function PageHero({
 
             {rightElement && (
               <div
-                className="hidden lg:flex lg:col-span-4 justify-end items-center pr-4"
+                className="hidden lg:flex justify-end items-center"
                 data-aos="fade-left"
               >
                 {rightElement}
               </div>
             )}
-          </div>
-        </div>
       </div>
 
       {/* Hero Statistics Bar Slot: Layered inside relative hero section */}

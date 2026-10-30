@@ -68,8 +68,8 @@ export default function AboutValues() {
         {/* Section Header */}
         <div className="text-left mb-8 sm:mb-10">
           <div className="flex items-center gap-2.5 mb-2.5">
-            <span className="w-8 h-[2px] bg-[#e31e24]" />
-            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+            <span className="w-8 h-[2px] bg-[#031c3f]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]">
               OUR VALUES & ATTRIBUTES
             </span>
           </div>

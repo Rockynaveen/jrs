@@ -7,6 +7,7 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
 } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import PageHero from '@/components/common/PageHero'
@@ -248,6 +249,14 @@ export default function GalleryPage() {
   const [lightboxItems, setLightboxItems] = useState<PhotoItem[]>([])
   const [isClosing, setIsClosing] = useState(false)
   const [originStyle, setOriginStyle] = useState<{ x: number; y: number; scale: number } | null>(null)
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({})
+
+  const toggleSection = (key: string) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }))
+  }
 
   useEffect(() => {
     AOS.init({
@@ -466,36 +475,54 @@ export default function GalleryPage() {
         {/* Section 2: Feb 17 Annual Day celebrations 2023-24 */}
         <section id="annual-day-celebrations" className="py-14 sm:py-18 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Heading */}
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
-              <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
-                <span
-                  style={{ fontSize: '13px', lineHeight: '23px' }}
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+            {/* Centered Heading with Top Right View More Button */}
+            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
+              {/* Top Right View More Button */}
+              <div className="mb-4 sm:mb-0 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2 z-10 flex justify-end">
+                <button
+                  type="button"
+                  onClick={() => toggleSection('feb17')}
+                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-md shadow-red-600/20 active:scale-95 transition-all duration-200 cursor-pointer"
                 >
-                  CAMPUS HIGHLIGHTS
-                </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  <span>{expandedSections['feb17'] ? 'View Less' : 'View More'}</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
+                      expandedSections['feb17'] ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
               </div>
-              <h2
-                style={{ fontSize: '40px', lineHeight: '50px' }}
-                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-              >
-                Feb 17 <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day celebrations 2023-24</span>
-              </h2>
-              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                Moments from UTSAHA 2K24 — Annual Day celebrations at JRS International School.
-              </p>
+
+              <div className="text-center max-w-3xl mx-auto px-4">
+                <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
+                  <span
+                    style={{ fontSize: '13px', lineHeight: '23px' }}
+                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
+                  >
+                    CAMPUS HIGHLIGHTS
+                  </span>
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
+                </div>
+                <h2
+                  style={{ fontSize: '40px', lineHeight: '50px' }}
+                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+                >
+                  Feb 17 <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day celebrations 2023-24</span>
+                </h2>
+                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                  Moments from UTSAHA 2K24 — Annual Day celebrations at JRS International School.
+                </p>
+              </div>
             </div>
 
-            {/* 8 Pure Images from feb 17 folder (4 columns x 2 rows) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-              {FEB_17_IMAGES.map((item, index) => (
+            {/* Images from feb 17 folder (5 max initially) */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+              {(expandedSections['feb17'] ? FEB_17_IMAGES : FEB_17_IMAGES.slice(0, 5)).map((item, index) => (
                 <div
                   key={item.id}
                   data-aos="fade-up"
-                  data-aos-delay={(index % 4) * 80}
+                  data-aos-delay={(index % 5) * 80}
                   onClick={(e) => openLightbox(FEB_17_IMAGES, index, e)}
                   className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer aspect-[4/3] bg-slate-100"
                 >
@@ -521,36 +548,54 @@ export default function GalleryPage() {
         {/* 5. Section 2: Feb 11th Annual Day Celebrations */}
         <section id="feb-11-celebrations" className="py-14 sm:py-18 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Heading */}
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
-              <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
-                <span
-                  style={{ fontSize: '13px', lineHeight: '23px' }}
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+            {/* Centered Heading with Top Right View More Button */}
+            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
+              {/* Top Right View More Button */}
+              <div className="mb-4 sm:mb-0 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2 z-10 flex justify-end">
+                <button
+                  type="button"
+                  onClick={() => toggleSection('feb11')}
+                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-md shadow-red-600/20 active:scale-95 transition-all duration-200 cursor-pointer"
                 >
-                  STAGE & CULTURAL HIGHLIGHTS
-                </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  <span>{expandedSections['feb11'] ? 'View Less' : 'View More'}</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
+                      expandedSections['feb11'] ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
               </div>
-              <h2
-                style={{ fontSize: '40px', lineHeight: '50px' }}
-                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-              >
-                Feb 11th <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day Celebrations</span>
-              </h2>
-              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                Spectacular stage dances, cultural performances, and memorable moments from JRS International School.
-              </p>
+
+              <div className="text-center max-w-3xl mx-auto px-4">
+                <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
+                  <span
+                    style={{ fontSize: '13px', lineHeight: '23px' }}
+                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
+                  >
+                    STAGE & CULTURAL HIGHLIGHTS
+                  </span>
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
+                </div>
+                <h2
+                  style={{ fontSize: '40px', lineHeight: '50px' }}
+                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+                >
+                  Feb 11th <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day Celebrations</span>
+                </h2>
+                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                  Spectacular stage dances, cultural performances, and memorable moments from JRS International School.
+                </p>
+              </div>
             </div>
 
-            {/* 17 Pure Images from feb 11 folder (4 columns grid) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-              {FEB_11_IMAGES.map((item, index) => (
+            {/* Images from feb 11 folder (5 max initially) */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+              {(expandedSections['feb11'] ? FEB_11_IMAGES : FEB_11_IMAGES.slice(0, 5)).map((item, index) => (
                 <div
                   key={item.id}
                   data-aos="fade-up"
-                  data-aos-delay={(index % 4) * 80}
+                  data-aos-delay={(index % 5) * 80}
                   onClick={(e) => openLightbox(FEB_11_IMAGES, index, e)}
                   className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer aspect-[4/3] bg-slate-100"
                 >
@@ -576,32 +621,50 @@ export default function GalleryPage() {
         {/* 6. Section 3: Science Experiment & Activities… */}
         <section id="science-activities" className="py-14 sm:py-18 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Heading */}
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
-              <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
-                <span
-                  style={{ fontSize: '13px', lineHeight: '23px' }}
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+            {/* Centered Heading with Top Right View More Button */}
+            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
+              {/* Top Right View More Button */}
+              <div className="mb-4 sm:mb-0 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2 z-10 flex justify-end">
+                <button
+                  type="button"
+                  onClick={() => toggleSection('science')}
+                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-md shadow-red-600/20 active:scale-95 transition-all duration-200 cursor-pointer"
                 >
-                  LABS & BEYOND CLASSROOM
-                </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  <span>{expandedSections['science'] ? 'View Less' : 'View More'}</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
+                      expandedSections['science'] ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
               </div>
-              <h2
-                style={{ fontSize: '40px', lineHeight: '50px' }}
-                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-              >
-                Science Experiment & <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Activities…</span>
-              </h2>
-              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                Hands-on scientific inquiry, sports training, and extracurricular learning at JRS International School.
-              </p>
+
+              <div className="text-center max-w-3xl mx-auto px-4">
+                <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
+                  <span
+                    style={{ fontSize: '13px', lineHeight: '23px' }}
+                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
+                  >
+                    LABS & BEYOND CLASSROOM
+                  </span>
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
+                </div>
+                <h2
+                  style={{ fontSize: '40px', lineHeight: '50px' }}
+                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+                >
+                  Science Experiment & <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Activities…</span>
+                </h2>
+                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                  Hands-on scientific inquiry, sports training, and extracurricular learning at JRS International School.
+                </p>
+              </div>
             </div>
 
-            {/* 5 Pure Images from science-activities folder */}
+            {/* Images from science-activities folder (5 max initially) */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-              {SCIENCE_ACTIVITIES_IMAGES.map((item, index) => (
+              {(expandedSections['science'] ? SCIENCE_ACTIVITIES_IMAGES : SCIENCE_ACTIVITIES_IMAGES.slice(0, 5)).map((item, index) => (
                 <div
                   key={item.id}
                   data-aos="fade-up"
@@ -631,36 +694,54 @@ export default function GalleryPage() {
         {/* 7. Section 4: Republic Day Celebrations */}
         <section id="republic-day-celebrations" className="py-14 sm:py-18 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Heading */}
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
-              <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
-                <span
-                  style={{ fontSize: '13px', lineHeight: '23px' }}
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+            {/* Centered Heading with Top Right View More Button */}
+            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
+              {/* Top Right View More Button */}
+              <div className="mb-4 sm:mb-0 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2 z-10 flex justify-end">
+                <button
+                  type="button"
+                  onClick={() => toggleSection('republic')}
+                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-md shadow-red-600/20 active:scale-95 transition-all duration-200 cursor-pointer"
                 >
-                  PATRIOTIC TRADITIONS
-                </span>
-                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  <span>{expandedSections['republic'] ? 'View Less' : 'View More'}</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
+                      expandedSections['republic'] ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
               </div>
-              <h2
-                style={{ fontSize: '40px', lineHeight: '50px' }}
-                className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-              >
-                Republic Day <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Celebrations</span>
-              </h2>
-              <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                Honoring national pride and constitutional values with student parades, freedom fighter tributes, and ceremonial drills at JRS International School.
-              </p>
+
+              <div className="text-center max-w-3xl mx-auto px-4">
+                <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
+                  <span
+                    style={{ fontSize: '13px', lineHeight: '23px' }}
+                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
+                  >
+                    PATRIOTIC TRADITIONS
+                  </span>
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
+                </div>
+                <h2
+                  style={{ fontSize: '40px', lineHeight: '50px' }}
+                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
+                >
+                  Republic Day <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Celebrations</span>
+                </h2>
+                <p className="mt-2 text-slate-600 text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
+                  Honoring national pride and constitutional values with student parades, freedom fighter tributes, and ceremonial drills at JRS International School.
+                </p>
+              </div>
             </div>
 
-            {/* 21 Pure Images from republicday folder */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-5">
-              {REPUBLIC_DAY_IMAGES.map((item, index) => (
+            {/* Images from republicday folder (5 max initially) */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+              {(expandedSections['republic'] ? REPUBLIC_DAY_IMAGES : REPUBLIC_DAY_IMAGES.slice(0, 5)).map((item, index) => (
                 <div
                   key={item.id}
                   data-aos="fade-up"
-                  data-aos-delay={(index % 6) * 50}
+                  data-aos-delay={(index % 5) * 80}
                   onClick={(e) => openLightbox(REPUBLIC_DAY_IMAGES, index, e)}
                   className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
                 >

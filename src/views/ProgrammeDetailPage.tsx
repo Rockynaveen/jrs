@@ -78,10 +78,10 @@ export default function ProgrammeDetailPage({ programme }: ProgrammeDetailPagePr
               <div className="lg:col-span-7" data-aos="fade-right">
                 {/* Eyebrow */}
                 <div className="flex items-center gap-2.5 mb-3">
-                  <span className="w-8 h-[2px] bg-[#e31e24]" />
+                  <span className="w-8 h-[2px] bg-[#031c3f]" />
                   <span
                     style={{ fontSize: '13px', lineHeight: '23px' }}
-                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                   >
                     ACADEMIC JOURNEY • {programme.ageBadge}
                   </span>
@@ -192,7 +192,8 @@ export default function ProgrammeDetailPage({ programme }: ProgrammeDetailPagePr
                           <ProgIcon className="w-6 h-6 text-white" />
                         </div>
                         <div className="min-w-0 flex-1">
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-400/20 text-amber-300 border border-amber-400/30 backdrop-blur-sm mb-1">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#e31e24] text-white shadow-sm shadow-red-600/30 mb-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                             {programme.ageBadge}
                           </span>
                           <h3 className="text-xl font-bold text-white tracking-tight leading-snug drop-shadow-sm">

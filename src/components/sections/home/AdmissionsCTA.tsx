@@ -199,9 +199,9 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
             </div>
 
             {/* 3 Feature Badges on Left Side */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 max-w-xl">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 pt-2 sm:pt-3 w-full max-w-2xl">
               <div
-                className={`flex items-center gap-2.5 p-3 rounded-xl sm:rounded-2xl ${
+                className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${
                   isWhite
                     ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
                     : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
@@ -212,18 +212,18 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                     isWhite ? 'text-[#031c3f]' : 'text-[#facc15]'
                   } group-hover:scale-110 transition-transform`}
                 >
-                  <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <GraduationCap className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4
-                    className={`text-xs sm:text-[13px] font-semibold ${
+                    className={`text-[11px] sm:text-xs font-normal tracking-wide leading-snug whitespace-nowrap ${
                       isWhite ? 'text-[#031c3f]' : 'text-white'
                     }`}
                   >
                     CBSE Curriculum
                   </h4>
                   <p
-                    className={`text-[11px] sm:text-xs ${
+                    className={`text-[10px] sm:text-[11px] font-light tracking-wide leading-snug mt-0.5 whitespace-nowrap ${
                       isWhite ? 'text-slate-500' : 'text-slate-300'
                     }`}
                   >
@@ -233,7 +233,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
               </div>
 
               <div
-                className={`flex items-center gap-2.5 p-3 rounded-xl sm:rounded-2xl ${
+                className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${
                   isWhite
                     ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
                     : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
@@ -244,18 +244,18 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                     isWhite ? 'text-[#031c3f]' : 'text-[#facc15]'
                   } group-hover:scale-110 transition-transform`}
                 >
-                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <Sparkles className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4
-                    className={`text-xs sm:text-[13px] font-semibold ${
+                    className={`text-[11px] sm:text-xs font-normal tracking-wide leading-snug whitespace-nowrap ${
                       isWhite ? 'text-[#031c3f]' : 'text-white'
                     }`}
                   >
                     Holistic Growth
                   </h4>
                   <p
-                    className={`text-[11px] sm:text-xs ${
+                    className={`text-[10px] sm:text-[11px] font-light tracking-wide leading-snug mt-0.5 whitespace-nowrap ${
                       isWhite ? 'text-slate-500' : 'text-slate-300'
                     }`}
                   >
@@ -265,7 +265,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
               </div>
 
               <div
-                className={`flex items-center gap-2.5 p-3 rounded-xl sm:rounded-2xl ${
+                className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${
                   isWhite
                     ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
                     : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
@@ -276,18 +276,18 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                     isWhite ? 'text-[#031c3f]' : 'text-[#facc15]'
                   } group-hover:scale-110 transition-transform`}
                 >
-                  <Award className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <Award className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4
-                    className={`text-xs sm:text-[13px] font-semibold ${
+                    className={`text-[11px] sm:text-xs font-normal tracking-wide leading-snug whitespace-nowrap ${
                       isWhite ? 'text-[#031c3f]' : 'text-white'
                     }`}
                   >
                     Top Faculty
                   </h4>
                   <p
-                    className={`text-[11px] sm:text-xs ${
+                    className={`text-[10px] sm:text-[11px] font-light tracking-wide leading-snug mt-0.5 whitespace-nowrap ${
                       isWhite ? 'text-slate-500' : 'text-slate-300'
                     }`}
                   >

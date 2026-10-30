@@ -21,14 +21,14 @@ export default function AcademicsJourney() {
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
             {/* Eyebrow */}
             <div className="flex items-center justify-center gap-2.5 mb-2.5">
-              <span className="w-8 h-[2px] bg-[#e31e24]" />
+              <span className="w-8 h-[2px] bg-[#031c3f]" />
               <span
                 style={{ fontSize: '13px', lineHeight: '23px' }}
-                className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
               >
                 ACADEMIC JOURNEY
               </span>
-              <span className="w-8 h-[2px] bg-[#e31e24]" />
+              <span className="w-8 h-[2px] bg-[#031c3f]" />
             </div>
 
             <h2
@@ -92,12 +92,12 @@ export default function AcademicsJourney() {
                       </h3>
                     </div>
 
-                    {/* Badge Row with uniform height and style */}
-                    <div className="h-6 flex items-center mb-2.5">
+                    {/* Badge Row with highlighted tag */}
+                    <div className="min-h-[28px] flex items-center mb-2.5">
                       <span
-                        style={{ fontSize: '11px', lineHeight: '21px' }}
-                        className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-200/60 uppercase tracking-wider leading-[21px]"
+                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#e31e24] text-white shadow-sm shadow-red-600/30 uppercase tracking-wider"
                       >
+                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                         {prog.ageBadge}
                       </span>
                     </div>
