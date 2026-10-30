@@ -17,246 +17,426 @@ import Footer from '@/components/layout/Footer'
 interface PhotoItem {
   id: string
   title: string
-  category: 'Events' | 'Activities' | 'Sports' | 'Competitions' | 'Celebrations'
+  category: 'Celebrations' | 'Activities' | 'Sports' | 'Campus' | 'All'
   image: string
-  subtitle?: string
 }
 
+// Complete Unified Photo Gallery Dataset (All dates stripped)
+const ALL_GALLERY_IMAGES: PhotoItem[] = [
+  // Campus & Infrastructure
+  {
+    id: 'amphi-1',
+    title: 'Amphitheatre - Aerial View with Running Track & Sports Ground',
+    category: 'Campus',
+    image: '/images/amphitheatre/1.jpg',
+  },
+  {
+    id: 'campus-1',
+    title: 'Main Campus Building - State-of-the-Art Academic Block',
+    category: 'Campus',
+    image: '/images/campus/main-building.png',
+  },
+  {
+    id: 'classroom-1',
+    title: 'Modern Smart Classroom with Interactive Digital Learning',
+    category: 'Campus',
+    image: '/images/classrooms/1.png',
+  },
+  {
+    id: 'amphi-2',
+    title: 'Amphitheatre - Open-Air Tiered Seating under Heritage Tree',
+    category: 'Campus',
+    image: '/images/amphitheatre/2.jpg',
+  },
+  {
+    id: 'campus-2',
+    title: 'Main Entrance & Grand Administrative Portico',
+    category: 'Campus',
+    image: '/images/campus/entrance-1.png',
+  },
+  {
+    id: 'classroom-2',
+    title: 'Ergonomic Student Workspaces & Activity Tables',
+    category: 'Campus',
+    image: '/images/classrooms/2.png',
+  },
 
-// 1. Feb 17 Annual Day celebrations 2023-24 (8 images from feb 17 folder)
-const FEB_17_IMAGES: PhotoItem[] = [
+  // Annual Day & Cultural Celebrations
   {
     id: 'feb17-1',
-    title: 'Feb 17 Annual Day celebrations 2023-24 - Student Guard of Honour',
+    title: 'Annual Day Celebrations - Student Guard of Honour',
     category: 'Celebrations',
     image: '/images/feb%2017/1.webp',
   },
   {
-    id: 'feb17-2',
-    title: 'Feb 17 Annual Day celebrations 2023-24 - Honored Guests & Dignitaries',
+    id: 'feb11-1',
+    title: 'Annual Day Celebrations - Stage LED Cultural Showcase',
     category: 'Celebrations',
-    image: '/images/feb%2017/2.webp',
+    image: '/images/feb%2011/1.webp',
   },
   {
     id: 'feb17-3',
-    title: 'Feb 17 Annual Day celebrations 2023-24 - UTSAHA 2K24 Stage',
+    title: 'Annual Day Celebrations - UTSAHA Grand Stage Production',
     category: 'Celebrations',
     image: '/images/feb%2017/3.webp',
   },
   {
+    id: 'feb11-2',
+    title: 'Annual Day Celebrations - Shimmer & Shades Performing Arts',
+    category: 'Celebrations',
+    image: '/images/feb%2011/2.webp',
+  },
+  {
     id: 'feb17-4',
-    title: 'Feb 17 Annual Day celebrations 2023-24 - Primary Students Stage Dance',
+    title: 'Annual Day Celebrations - Primary Students Stage Dance',
     category: 'Celebrations',
     image: '/images/feb%2017/4.webp',
   },
   {
+    id: 'feb11-3',
+    title: 'Annual Day Celebrations - Special Guest & Dignitaries Tribute',
+    category: 'Celebrations',
+    image: '/images/feb%2011/3.webp',
+  },
+  {
     id: 'feb17-5',
-    title: 'Feb 17 Annual Day celebrations 2023-24 - Cultural Dance Group',
+    title: 'Annual Day Celebrations - Cultural Dance Ensemble',
     category: 'Celebrations',
     image: '/images/feb%2017/5.webp',
   },
   {
+    id: 'feb11-4',
+    title: 'Annual Day Celebrations - Cultural Stage Drama & Theatre',
+    category: 'Celebrations',
+    image: '/images/feb%2011/4.webp',
+  },
+  {
     id: 'feb17-6',
-    title: 'Feb 17 Annual Day celebrations 2023-24 - Patriotic Army Drama Presentation',
+    title: 'Annual Day Celebrations - Patriotic Army Drama Presentation',
     category: 'Celebrations',
     image: '/images/feb%2017/6.webp',
   },
-  {
-    id: 'feb17-7',
-    title: 'Feb 17 Annual Day celebrations 2023-24 - Classical & Sparkle Dance Ensemble',
-    category: 'Celebrations',
-    image: '/images/feb%2017/7.webp',
-  },
-  {
-    id: 'feb17-8',
-    title: 'Feb 17 Annual Day celebrations 2023-24 - School Campus & Open Air Venue',
-    category: 'Celebrations',
-    image: '/images/feb%2017/8.webp',
-  },
-]
 
-// 2. Feb 11th Annual Day Celebrations (17 images from feb 11 folder)
-const FEB_11_IMAGES: PhotoItem[] = [
-  { id: 'feb11-1', title: 'Feb 11th Annual Day Celebrations - Stage LED Performance', category: 'Celebrations', image: '/images/feb%2011/1.webp' },
-  { id: 'feb11-2', title: 'Feb 11th Annual Day Celebrations - Shimmer & Shades Dance', category: 'Celebrations', image: '/images/feb%2011/2.webp' },
-  { id: 'feb11-3', title: 'Feb 11th Annual Day Celebrations - Special Guest Vishwak Sen Tribute', category: 'Celebrations', image: '/images/feb%2011/3.webp' },
-  { id: 'feb11-4', title: 'Feb 11th Annual Day Celebrations - Cultural Stage Drama', category: 'Celebrations', image: '/images/feb%2011/4.webp' },
-  { id: 'feb11-5', title: 'Feb 11th Annual Day Celebrations - Student Dance Performance', category: 'Celebrations', image: '/images/feb%2011/5.webp' },
-  { id: 'feb11-7', title: 'Feb 11th Annual Day Celebrations - Thematic Presentation', category: 'Celebrations', image: '/images/feb%2011/7.webp' },
-  { id: 'feb11-8', title: 'Feb 11th Annual Day Celebrations - Traditional Classical Ensemble', category: 'Celebrations', image: '/images/feb%2011/8.webp' },
-  { id: 'feb11-9', title: 'Feb 11th Annual Day Celebrations - Group Dance Choreography', category: 'Celebrations', image: '/images/feb%2011/9.webp' },
-  { id: 'feb11-10', title: 'Feb 11th Annual Day Celebrations - Vibrant Costumes on Stage', category: 'Celebrations', image: '/images/feb%2011/10.webp' },
-  { id: 'feb11-11', title: 'Feb 11th Annual Day Celebrations - Festive Celebration Dance', category: 'Celebrations', image: '/images/feb%2011/11.webp' },
-  { id: 'feb11-12', title: 'Feb 11th Annual Day Celebrations - Senior Students Performance', category: 'Celebrations', image: '/images/feb%2011/12.webp' },
-  { id: 'feb11-13', title: 'Feb 11th Annual Day Celebrations - Grand Finale Dance Act', category: 'Celebrations', image: '/images/feb%2011/13.webp' },
-  { id: 'feb11-14', title: 'Feb 11th Annual Day Celebrations - Rhythm & Beats Showcase', category: 'Celebrations', image: '/images/feb%2011/14.webp' },
-  { id: 'feb11-15', title: 'Feb 11th Annual Day Celebrations - Youth Performing Arts', category: 'Celebrations', image: '/images/feb%2011/15.webp' },
-  { id: 'feb11-16', title: 'Feb 11th Annual Day Celebrations - Colorful Stage Display', category: 'Celebrations', image: '/images/feb%2011/16.webp' },
-  { id: 'feb11-17', title: 'Feb 11th Annual Day Celebrations - Celebration Moments', category: 'Celebrations', image: '/images/feb%2011/17.webp' },
-  { id: 'feb11-18', title: 'Feb 11th Annual Day Celebrations - Students Felicitation & Honors', category: 'Celebrations', image: '/images/feb%2011/18.webp' },
-]
-
-// 3. Science Experiment & Activities… (10 images from science-activities folder)
-const SCIENCE_ACTIVITIES_IMAGES: PhotoItem[] = [
+  // Science & Hands-On Activities
   {
     id: 'sci-1',
-    title: 'Science Experiment & Activities… - Microscope Lab Observation',
+    title: 'Science Experiment - High-Precision Microscope Lab Observation',
     category: 'Activities',
     image: '/images/science-activities/1.jpg',
   },
   {
     id: 'sci-2',
-    title: 'Science Experiment & Activities… - Karate & Martial Arts Training',
+    title: 'Martial Arts Training - Discipline & Karate Techniques',
     category: 'Sports',
     image: '/images/science-activities/2.png',
   },
   {
     id: 'sci-3',
-    title: 'Science Experiment & Activities… - Chemistry Laboratory Experiment',
+    title: 'Chemistry Laboratory - Interactive Chemical Reactions & Analysis',
     category: 'Activities',
     image: '/images/science-activities/3.jpg',
   },
   {
     id: 'sci-4',
-    title: 'Science Experiment & Activities… - Classical Cultural Dance Performance',
-    category: 'Events',
+    title: 'Performing Arts - Classical Cultural Dance Choreography',
+    category: 'Celebrations',
     image: '/images/science-activities/4.jpg',
   },
   {
     id: 'sci-5',
-    title: 'Science Experiment & Activities… - Outdoor Roller Skating Activity',
+    title: 'Sports & Athletics - Professional Outdoor Roller Skating Session',
     category: 'Sports',
     image: '/images/science-activities/5.png',
   },
   {
     id: 'sci-6',
-    title: 'Science Experiment & Activities… - JRS Student Leaders in Blazers',
+    title: 'Student Leadership - JRS Student Council in Official Blazers',
     category: 'Activities',
     image: '/images/science-activities/6.png',
   },
   {
     id: 'sci-7',
-    title: 'Science Experiment & Activities… - Outdoor Martial Arts Splits & Kata Drill',
+    title: 'Martial Arts - Outdoor Flexibility Drills & Kata Focus',
     category: 'Sports',
     image: '/images/science-activities/7.png',
   },
   {
     id: 'sci-8',
-    title: 'Science Experiment & Activities… - Classroom Learning & Desk Writing',
+    title: 'Classroom Academics - Focus, Inquiry & Collaborative Learning',
     category: 'Activities',
     image: '/images/science-activities/8.png',
   },
   {
     id: 'sci-9',
-    title: 'Science Experiment & Activities… - Library English Literature Reading Hour',
+    title: 'School Central Library - Reading Hour & Knowledge Exploration',
     category: 'Activities',
     image: '/images/science-activities/9.jpg',
   },
   {
     id: 'sci-10',
-    title: 'Science Experiment & Activities… - Confident Student Ambassador',
+    title: 'Student Excellence - Confident Academic Achievers',
     category: 'Activities',
     image: '/images/science-activities/10.jpg',
   },
-]
 
-// 4. Republic Day Celebrations (21 images from republicday folder)
-const REPUBLIC_DAY_IMAGES: PhotoItem[] = Array.from({ length: 21 }, (_, i) => ({
-  id: `rep-${i + 1}`,
-  title: 'Republic Day Celebrations',
-  category: 'Celebrations',
-  image: `/images/republicday/${i + 1}.webp`,
-}))
-
-
-// 4. Amphitheatre (3 images from amphitheatre folder)
-const AMPHITHEATRE_IMAGES: PhotoItem[] = [
+  // Republic Day Celebrations
   {
-    id: 'amphi-1',
-    title: 'Amphitheatre - Aerial View with Running Track & Sports Ground',
-    category: 'Activities',
-    image: '/images/amphitheatre/1.jpg',
+    id: 'rep-1',
+    title: 'Republic Day Celebrations - Ceremonial Assembly & March Past',
+    category: 'Celebrations',
+    image: '/images/republicday/1.webp',
   },
   {
-    id: 'amphi-2',
-    title: 'Amphitheatre - Open-Air Tiered Seating under the Grand Bodhi Tree',
-    category: 'Activities',
-    image: '/images/amphitheatre/2.jpg',
+    id: 'rep-2',
+    title: 'Republic Day Celebrations - Tricolor Tribute & Floral Honors',
+    category: 'Celebrations',
+    image: '/images/republicday/2.webp',
+  },
+  {
+    id: 'rep-3',
+    title: 'Republic Day Celebrations - Patriotic Songs & Student Choirs',
+    category: 'Celebrations',
+    image: '/images/republicday/3.webp',
+  },
+  {
+    id: 'rep-4',
+    title: 'Republic Day Celebrations - Freedom Fighter Tribute Tableau',
+    category: 'Celebrations',
+    image: '/images/republicday/4.webp',
+  },
+  {
+    id: 'rep-5',
+    title: 'Republic Day Celebrations - National Pride Cultural Display',
+    category: 'Celebrations',
+    image: '/images/republicday/5.webp',
+  },
+  {
+    id: 'rep-6',
+    title: 'Republic Day Celebrations - Student March Past & Salutation',
+    category: 'Celebrations',
+    image: '/images/republicday/6.webp',
+  },
+  {
+    id: 'rep-7',
+    title: 'Republic Day Celebrations - Flag Hoisting by School Leadership',
+    category: 'Celebrations',
+    image: '/images/republicday/7.webp',
+  },
+  {
+    id: 'rep-8',
+    title: 'Republic Day Celebrations - Student Drill Performance',
+    category: 'Celebrations',
+    image: '/images/republicday/8.webp',
+  },
+  {
+    id: 'rep-9',
+    title: 'Republic Day Celebrations - Synchronized Marching Contingents',
+    category: 'Celebrations',
+    image: '/images/republicday/9.webp',
+  },
+  {
+    id: 'rep-10',
+    title: 'Republic Day Celebrations - National Anthem & Salute',
+    category: 'Celebrations',
+    image: '/images/republicday/10.webp',
+  },
+
+  // Additional Campus & Stage Highlights
+  {
+    id: 'feb11-5',
+    title: 'Annual Day Celebrations - Dynamic Fusion Dance Troupe',
+    category: 'Celebrations',
+    image: '/images/feb%2011/5.webp',
+  },
+  {
+    id: 'feb11-7',
+    title: 'Annual Day Celebrations - Thematic Cultural Choreography',
+    category: 'Celebrations',
+    image: '/images/feb%2011/7.webp',
+  },
+  {
+    id: 'feb11-8',
+    title: 'Annual Day Celebrations - Traditional Classical Ensemble',
+    category: 'Celebrations',
+    image: '/images/feb%2011/8.webp',
+  },
+  {
+    id: 'feb11-9',
+    title: 'Annual Day Celebrations - Rhythm & Beats Group Performance',
+    category: 'Celebrations',
+    image: '/images/feb%2011/9.webp',
+  },
+  {
+    id: 'feb11-10',
+    title: 'Annual Day Celebrations - Vibrant Costumes on Stage',
+    category: 'Celebrations',
+    image: '/images/feb%2011/10.webp',
+  },
+  {
+    id: 'feb11-11',
+    title: 'Annual Day Celebrations - Festive Folk Dance Extravaganza',
+    category: 'Celebrations',
+    image: '/images/feb%2011/11.webp',
+  },
+  {
+    id: 'feb11-12',
+    title: 'Annual Day Celebrations - Senior Students Spotlight Performance',
+    category: 'Celebrations',
+    image: '/images/feb%2011/12.webp',
+  },
+  {
+    id: 'feb11-13',
+    title: 'Annual Day Celebrations - Grand Finale Musical Showcase',
+    category: 'Celebrations',
+    image: '/images/feb%2011/13.webp',
+  },
+  {
+    id: 'feb11-14',
+    title: 'Annual Day Celebrations - Expressive Stage Performance',
+    category: 'Celebrations',
+    image: '/images/feb%2011/14.webp',
+  },
+  {
+    id: 'feb11-15',
+    title: 'Annual Day Celebrations - Youth Performing Arts Talents',
+    category: 'Celebrations',
+    image: '/images/feb%2011/15.webp',
+  },
+  {
+    id: 'feb11-16',
+    title: 'Annual Day Celebrations - Vibrant Lighting & Stage Art',
+    category: 'Celebrations',
+    image: '/images/feb%2011/16.webp',
+  },
+  {
+    id: 'feb11-17',
+    title: 'Annual Day Celebrations - Cheering Audience & Memorable Moments',
+    category: 'Celebrations',
+    image: '/images/feb%2011/17.webp',
+  },
+  {
+    id: 'feb11-18',
+    title: 'Annual Day Celebrations - Meritorious Student Felicitation',
+    category: 'Celebrations',
+    image: '/images/feb%2011/18.webp',
+  },
+  {
+    id: 'feb17-2',
+    title: 'Annual Day Celebrations - Chief Guests & Dignitaries Felicitation',
+    category: 'Celebrations',
+    image: '/images/feb%2017/2.webp',
+  },
+  {
+    id: 'feb17-7',
+    title: 'Annual Day Celebrations - Sparkle Dance Ensemble',
+    category: 'Celebrations',
+    image: '/images/feb%2017/7.webp',
+  },
+  {
+    id: 'feb17-8',
+    title: 'Annual Day Celebrations - Open-Air Arena Assembly Venue',
+    category: 'Campus',
+    image: '/images/feb%2017/8.webp',
   },
   {
     id: 'amphi-3',
-    title: 'Amphitheatre - Overhead Bird\'s Eye View of Circular Stone Tiers & Walkway',
-    category: 'Activities',
+    title: 'Amphitheatre - Stone Tier Architecture & Shaded Greenery',
+    category: 'Campus',
     image: '/images/amphitheatre/3.png',
-  },
-]
-
-// 5. Classroom (4 images from classrooms folder)
-const CLASSROOM_IMAGES: PhotoItem[] = [
-  {
-    id: 'classroom-1',
-    title: 'Classroom',
-    category: 'Activities',
-    image: '/images/classrooms/1.png',
-  },
-  {
-    id: 'classroom-2',
-    title: 'Classroom',
-    category: 'Activities',
-    image: '/images/classrooms/2.png',
   },
   {
     id: 'classroom-3',
-    title: 'Classroom',
-    category: 'Activities',
+    title: 'Digital Classrooms - Modern Interactive Audio-Visual Smart Boards',
+    category: 'Campus',
     image: '/images/classrooms/3.png',
   },
   {
     id: 'classroom-4',
-    title: 'Classroom',
-    category: 'Activities',
+    title: 'Well-Ventilated Classrooms with Natural Light and Comfort',
+    category: 'Campus',
     image: '/images/classrooms/4.png',
-  },
-]
-
-// 6. Campus Building & Entrance (3 images from campus folder)
-const CAMPUS_IMAGES: PhotoItem[] = [
-  {
-    id: 'campus-1',
-    title: 'Main Building',
-    subtitle: 'Main Building',
-    category: 'Activities',
-    image: '/images/campus/main-building.png',
-  },
-  {
-    id: 'campus-2',
-    title: 'Entrance',
-    subtitle: 'Entrance',
-    category: 'Activities',
-    image: '/images/campus/entrance-1.png',
   },
   {
     id: 'campus-3',
-    title: 'Entrance',
-    subtitle: 'Entrance',
-    category: 'Activities',
+    title: 'Campus Front Entrance with Green Landscaped Walkways',
+    category: 'Campus',
     image: '/images/campus/entrance-2.png',
+  },
+  {
+    id: 'rep-11',
+    title: 'Republic Day Celebrations - Ceremonial Student Parade Drill',
+    category: 'Celebrations',
+    image: '/images/republicday/11.webp',
+  },
+  {
+    id: 'rep-12',
+    title: 'Republic Day Celebrations - Cultural Tableau on Heritage',
+    category: 'Celebrations',
+    image: '/images/republicday/12.webp',
+  },
+  {
+    id: 'rep-13',
+    title: 'Republic Day Celebrations - Inspirational Leadership Speeches',
+    category: 'Celebrations',
+    image: '/images/republicday/13.webp',
+  },
+  {
+    id: 'rep-14',
+    title: 'Republic Day Celebrations - Student Choir Musical Presentation',
+    category: 'Celebrations',
+    image: '/images/republicday/14.webp',
+  },
+  {
+    id: 'rep-15',
+    title: 'Republic Day Celebrations - Flag Salutation with Teachers & Staff',
+    category: 'Celebrations',
+    image: '/images/republicday/15.webp',
+  },
+  {
+    id: 'rep-16',
+    title: 'Republic Day Celebrations - Student Leaders March Past',
+    category: 'Celebrations',
+    image: '/images/republicday/16.webp',
+  },
+  {
+    id: 'rep-17',
+    title: 'Republic Day Celebrations - Youth Parade Ceremony',
+    category: 'Celebrations',
+    image: '/images/republicday/17.webp',
+  },
+  {
+    id: 'rep-18',
+    title: 'Republic Day Celebrations - Patriotic Song Choreography',
+    category: 'Celebrations',
+    image: '/images/republicday/18.webp',
+  },
+  {
+    id: 'rep-19',
+    title: 'Republic Day Celebrations - School Band & Percussion Ensemble',
+    category: 'Celebrations',
+    image: '/images/republicday/19.webp',
+  },
+  {
+    id: 'rep-20',
+    title: 'Republic Day Celebrations - Students Holding National Flags',
+    category: 'Celebrations',
+    image: '/images/republicday/20.webp',
+  },
+  {
+    id: 'rep-21',
+    title: 'Republic Day Celebrations - Grand Finale Assembly',
+    category: 'Celebrations',
+    image: '/images/republicday/21.webp',
   },
 ]
 
 export default function GalleryPage() {
+  // Show 15 images initially (multiple of 3, between 12 and 16)
+  const [visibleCount, setVisibleCount] = useState<number>(15)
   const [activeLightboxIndex, setActiveLightboxIndex] = useState<number | null>(null)
   const [lightboxItems, setLightboxItems] = useState<PhotoItem[]>([])
   const [isClosing, setIsClosing] = useState(false)
   const [originStyle, setOriginStyle] = useState<{ x: number; y: number; scale: number } | null>(null)
-  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({})
-
-  const toggleSection = (key: string) => {
-    setExpandedSections((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }))
-  }
 
   useEffect(() => {
     AOS.init({
@@ -266,6 +446,14 @@ export default function GalleryPage() {
       offset: 50,
     })
   }, [])
+
+  // Visible subset for masonry layout
+  const visibleImages = ALL_GALLERY_IMAGES.slice(0, visibleCount)
+
+  const handleViewMore = () => {
+    // Show remaining images in increments of 15
+    setVisibleCount((prev) => Math.min(prev + 15, ALL_GALLERY_IMAGES.length))
+  }
 
   const closeLightbox = () => {
     setIsClosing(true)
@@ -321,457 +509,120 @@ export default function GalleryPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800 antialiased selection:bg-[#f59e0b] selection:text-slate-900">
+    <div className="min-h-screen flex flex-col bg-white text-[#111] antialiased selection:bg-[#e31e24] selection:text-white">
       {/* 1. Navbar */}
       <Navbar activePage="gallery" />
 
       <main className="flex-1">
-        {/* 2. Hero Section (70vh with crisp title & breadcrumb) */}
+        {/* 2. Hero Section */}
         <PageHero
           breadcrumb="Gallery"
           title="Photo & Event"
           titleHighlight="Gallery"
           subtitle="Moments of Excellence, Passion & Achievement"
-          description="Explore the vibrant life, achievements, sports, and cultural milestones celebrated at JRS International School."
+          description="Explore vibrant campus life, extracurricular achievements, sports, and cultural milestones celebrated at JRS International School."
           imageSrc="/images/campus-building.jpg"
           imageAlt="JRS International School Gallery"
           primaryButton={{
             text: 'Explore Gallery',
-            href: '#amphitheatre',
+            href: '#gallery-grid',
           }}
           secondaryButton={{
-            text: 'News & Media',
-            href: '/media',
+            text: 'Admissions 2027-28',
+            href: '/admissions',
           }}
         />
 
-        {/* Section 1: Amphitheatre Open-Air Arena */}
-        <section id="amphitheatre" className="pt-12 sm:pt-16 pb-6 sm:pb-8 bg-white">
+        {/* 3. Unified Masonry Gallery Section */}
+        <section id="gallery-grid" className="py-12 sm:py-16 md:py-20 bg-white scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Heading */}
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
-              <div className="mb-2.5">
+            {/* Centered Section Header (No dates) */}
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14" data-aos="fade-up">
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
                 <span
                   style={{ fontSize: '13px', lineHeight: '23px' }}
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]"
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                 >
-                  CAMPUS INFRASTRUCTURE & OPEN-AIR ARENA
+                  CAMPUS LIFE & MOMENTS
                 </span>
+                <span className="w-8 h-[2px] bg-[#031c3f]" />
               </div>
               <h2
                 style={{ fontSize: '40px', lineHeight: '50px' }}
                 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
               >
-                Amphitheatre <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Open-Air Arena</span>
+                School Life <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>in Action</span>
               </h2>
-              <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                A serene circular open-air theatre built around the majestic heritage tree, hosting assemblies, student debates, cultural gatherings, and outdoor performances.
+              <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed font-normal">
+                A glimpse into our classrooms, laboratories, cultural festivities, sports competitions, and campus celebrations.
               </p>
             </div>
 
-            {/* 3 Pure Images from amphitheatre folder (3 columns on md/lg) */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-              {AMPHITHEATRE_IMAGES.map((item, index) => (
+            {/* 3 Images Per Row Masonry Style Layout without Shadow & without Border Radius */}
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 sm:gap-6 [column-fill:_balance]">
+              {visibleImages.map((item, index) => (
                 <div
                   key={item.id}
                   data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                  onClick={(e) => openLightbox(AMPHITHEATRE_IMAGES, index, e)}
-                  className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
+                  data-aos-delay={(index % 3) * 60}
+                  onClick={(e) => openLightbox(ALL_GALLERY_IMAGES, index, e)}
+                  className="break-inside-avoid mb-5 sm:mb-6 group cursor-pointer block w-full rounded-none shadow-none"
                 >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      const target = e.currentTarget
-                      target.src = '/images/campus-building.jpg'
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ZoomIn className="w-4 h-4" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Section: Classroom (No Section Heading, "Classroom" directly below each image) */}
-        <section id="classroom" className="py-5 sm:py-6 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-              {CLASSROOM_IMAGES.map((item, index) => (
-                <div
-                  key={item.id}
-                  data-aos="fade-up"
-                  data-aos-delay={index * 80}
-                  className="flex flex-col items-center group cursor-pointer"
-                  onClick={(e) => openLightbox(CLASSROOM_IMAGES, index, e)}
-                >
-                  <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
+                  {/* Image Container with No Shadow and No Border Radius */}
+                  <div className="relative overflow-hidden bg-slate-100 rounded-none shadow-none">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      className="w-full h-auto block rounded-none shadow-none group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                       onError={(e) => {
                         const target = e.currentTarget
                         target.src = '/images/campus-building.jpg'
                       }}
                     />
-                    <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <ZoomIn className="w-4 h-4" />
+
+                    {/* Subtle Dark Hover Tint with Centered Zoom Icon */}
+                    <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-none pointer-events-none">
+                      <div className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm text-white flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-md">
+                        <ZoomIn className="w-5 h-5 text-white" />
+                      </div>
                     </div>
                   </div>
-                  {/* Label directly below image */}
-                  <span className="mt-3 text-sm sm:text-base font-bold text-slate-800 tracking-tight group-hover:text-[#e31e24] transition-colors">
-                    Classroom
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Section: Main Building & Entrance (Labels directly below images) */}
-        <section id="campus-entrance" className="pt-6 sm:pt-8 pb-12 sm:pb-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
-              {CAMPUS_IMAGES.map((item, index) => (
-                <div
-                  key={item.id}
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                  className="flex flex-col items-center group cursor-pointer"
-                  onClick={(e) => openLightbox(CAMPUS_IMAGES, index, e)}
-                >
-                  <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => {
-                        const target = e.currentTarget
-                        target.src = '/images/campus-building.jpg'
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <ZoomIn className="w-4 h-4" />
+                  {/* Clean Title without dates */}
+                  {item.title && (
+                    <div className="pt-2 px-0.5">
+                      <p className="text-xs sm:text-[13px] font-medium text-[#111] leading-snug group-hover:text-[#e31e24] transition-colors line-clamp-2">
+                        {item.title}
+                      </p>
                     </div>
-                  </div>
-                  {/* Label directly below image */}
-                  <span className="mt-3 text-sm sm:text-base font-bold text-slate-800 tracking-tight group-hover:text-[#e31e24] transition-colors">
-                    {item.title}
-                  </span>
+                  )}
                 </div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* Section 2: Feb 17 Annual Day celebrations 2023-24 */}
-        <section id="annual-day-celebrations" className="py-14 sm:py-18 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Heading with Top Right View More Button */}
-            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
-              {/* Top Right View More Button */}
-              <div className="mb-4 sm:mb-0 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2 z-10 flex justify-end">
+            {/* Center "View More" Button at bottom */}
+            {visibleCount < ALL_GALLERY_IMAGES.length && (
+              <div className="flex flex-col items-center justify-center mt-10 sm:mt-14" data-aos="fade-up">
                 <button
                   type="button"
-                  onClick={() => toggleSection('feb17')}
-                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-md shadow-red-600/20 active:scale-95 transition-all duration-200 cursor-pointer"
+                  onClick={handleViewMore}
+                  className="inline-flex items-center justify-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 rounded-none text-xs sm:text-sm font-bold uppercase tracking-wider text-white bg-[#e31e24] hover:bg-[#c9181e] transition-all duration-300 active:scale-95 cursor-pointer shadow-none"
                 >
-                  <span>{expandedSections['feb17'] ? 'View Less' : 'View More'}</span>
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
-                      expandedSections['feb17'] ? 'rotate-180' : ''
-                    }`}
-                  />
+                  <span>View More Images</span>
+                  <ChevronDown className="w-4 h-4 animate-bounce" />
                 </button>
+                <span className="text-xs text-[#111] mt-2.5 font-normal">
+                  Showing {visibleImages.length} of {ALL_GALLERY_IMAGES.length} images
+                </span>
               </div>
-
-              <div className="text-center max-w-3xl mx-auto px-4">
-                <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                  <span
-                    style={{ fontSize: '13px', lineHeight: '23px' }}
-                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
-                  >
-                    CAMPUS HIGHLIGHTS
-                  </span>
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                </div>
-                <h2
-                  style={{ fontSize: '40px', lineHeight: '50px' }}
-                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-                >
-                  Feb 17 <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day celebrations 2023-24</span>
-                </h2>
-                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                  Moments from UTSAHA 2K24 — Annual Day celebrations at JRS International School.
-                </p>
-              </div>
-            </div>
-
-            {/* Images from feb 17 folder (5 max initially) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-              {(expandedSections['feb17'] ? FEB_17_IMAGES : FEB_17_IMAGES.slice(0, 5)).map((item, index) => (
-                <div
-                  key={item.id}
-                  data-aos="fade-up"
-                  data-aos-delay={(index % 5) * 80}
-                  onClick={(e) => openLightbox(FEB_17_IMAGES, index, e)}
-                  className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer aspect-[4/3] bg-slate-100"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      const target = e.currentTarget
-                      target.src = '/images/campus-building.jpg'
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ZoomIn className="w-4 h-4" />
-                  </div>
-                </div>
-              ))}
-            </div>
+            )}
           </div>
         </section>
-
-        {/* 5. Section 2: Feb 11th Annual Day Celebrations */}
-        <section id="feb-11-celebrations" className="py-14 sm:py-18 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Heading with Top Right View More Button */}
-            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
-              {/* Top Right View More Button */}
-              <div className="mb-4 sm:mb-0 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2 z-10 flex justify-end">
-                <button
-                  type="button"
-                  onClick={() => toggleSection('feb11')}
-                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-md shadow-red-600/20 active:scale-95 transition-all duration-200 cursor-pointer"
-                >
-                  <span>{expandedSections['feb11'] ? 'View Less' : 'View More'}</span>
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
-                      expandedSections['feb11'] ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-              </div>
-
-              <div className="text-center max-w-3xl mx-auto px-4">
-                <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                  <span
-                    style={{ fontSize: '13px', lineHeight: '23px' }}
-                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
-                  >
-                    STAGE & CULTURAL HIGHLIGHTS
-                  </span>
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                </div>
-                <h2
-                  style={{ fontSize: '40px', lineHeight: '50px' }}
-                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-                >
-                  Feb 11th <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Annual Day Celebrations</span>
-                </h2>
-                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                  Spectacular stage dances, cultural performances, and memorable moments from JRS International School.
-                </p>
-              </div>
-            </div>
-
-            {/* Images from feb 11 folder (5 max initially) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-              {(expandedSections['feb11'] ? FEB_11_IMAGES : FEB_11_IMAGES.slice(0, 5)).map((item, index) => (
-                <div
-                  key={item.id}
-                  data-aos="fade-up"
-                  data-aos-delay={(index % 5) * 80}
-                  onClick={(e) => openLightbox(FEB_11_IMAGES, index, e)}
-                  className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer aspect-[4/3] bg-slate-100"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      const target = e.currentTarget
-                      target.src = '/images/campus-building.jpg'
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ZoomIn className="w-4 h-4" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 6. Section 3: Science Experiment & Activities… */}
-        <section id="science-activities" className="py-14 sm:py-18 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Heading with Top Right View More Button */}
-            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
-              {/* Top Right View More Button */}
-              <div className="mb-4 sm:mb-0 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2 z-10 flex justify-end">
-                <button
-                  type="button"
-                  onClick={() => toggleSection('science')}
-                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-md shadow-red-600/20 active:scale-95 transition-all duration-200 cursor-pointer"
-                >
-                  <span>{expandedSections['science'] ? 'View Less' : 'View More'}</span>
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
-                      expandedSections['science'] ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-              </div>
-
-              <div className="text-center max-w-3xl mx-auto px-4">
-                <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                  <span
-                    style={{ fontSize: '13px', lineHeight: '23px' }}
-                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
-                  >
-                    LABS & BEYOND CLASSROOM
-                  </span>
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                </div>
-                <h2
-                  style={{ fontSize: '40px', lineHeight: '50px' }}
-                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-                >
-                  Science Experiment & <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Activities…</span>
-                </h2>
-                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                  Hands-on scientific inquiry, sports training, and extracurricular learning at JRS International School.
-                </p>
-              </div>
-            </div>
-
-            {/* Images from science-activities folder (5 max initially) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-              {(expandedSections['science'] ? SCIENCE_ACTIVITIES_IMAGES : SCIENCE_ACTIVITIES_IMAGES.slice(0, 5)).map((item, index) => (
-                <div
-                  key={item.id}
-                  data-aos="fade-up"
-                  data-aos-delay={(index % 5) * 80}
-                  onClick={(e) => openLightbox(SCIENCE_ACTIVITIES_IMAGES, index, e)}
-                  className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      const target = e.currentTarget
-                      target.src = '/images/campus-building.jpg'
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ZoomIn className="w-4 h-4" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 7. Section 4: Republic Day Celebrations */}
-        <section id="republic-day-celebrations" className="py-14 sm:py-18 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Centered Heading with Top Right View More Button */}
-            <div className="relative mb-8 sm:mb-10" data-aos="fade-up">
-              {/* Top Right View More Button */}
-              <div className="mb-4 sm:mb-0 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2 z-10 flex justify-end">
-                <button
-                  type="button"
-                  onClick={() => toggleSection('republic')}
-                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-md shadow-red-600/20 active:scale-95 transition-all duration-200 cursor-pointer"
-                >
-                  <span>{expandedSections['republic'] ? 'View Less' : 'View More'}</span>
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
-                      expandedSections['republic'] ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-              </div>
-
-              <div className="text-center max-w-3xl mx-auto px-4">
-                <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                  <span
-                    style={{ fontSize: '13px', lineHeight: '23px' }}
-                    className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
-                  >
-                    PATRIOTIC TRADITIONS
-                  </span>
-                  <span className="w-8 h-[2px] bg-[#031c3f]" />
-                </div>
-                <h2
-                  style={{ fontSize: '40px', lineHeight: '50px' }}
-                  className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[50px] sm:leading-[50px] lg:leading-[50px]"
-                >
-                  Republic Day <span className="text-[#e31e24]" style={{ lineHeight: 'inherit' }}>Celebrations</span>
-                </h2>
-                <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed">
-                  Honoring national pride and constitutional values with student parades, freedom fighter tributes, and ceremonial drills at JRS International School.
-                </p>
-              </div>
-            </div>
-
-            {/* Images from republicday folder (5 max initially) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-              {(expandedSections['republic'] ? REPUBLIC_DAY_IMAGES : REPUBLIC_DAY_IMAGES.slice(0, 5)).map((item, index) => (
-                <div
-                  key={item.id}
-                  data-aos="fade-up"
-                  data-aos-delay={(index % 5) * 80}
-                  onClick={(e) => openLightbox(REPUBLIC_DAY_IMAGES, index, e)}
-                  className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      const target = e.currentTarget
-                      target.src = '/images/campus-building.jpg'
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ZoomIn className="w-3.5 h-3.5" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-
-
-
-
-
       </main>
 
-      {/* 10. Magnified Image Lightbox Modal */}
+      {/* 4. Magnified Image Lightbox Modal */}
       {activeLightboxIndex !== null && lightboxItems[activeLightboxIndex] && (
         <div
           className={`fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/92 backdrop-blur-md transition-opacity duration-200 select-none ${
@@ -843,10 +694,10 @@ export default function GalleryPage() {
               <img
                 src={lightboxItems[activeLightboxIndex].image}
                 alt={lightboxItems[activeLightboxIndex].title}
-                className="max-h-[82vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-white/15 transition-all duration-200"
+                className="max-h-[82vh] max-w-full w-auto h-auto object-contain rounded-none shadow-2xl ring-1 ring-white/15 transition-all duration-200"
               />
-              {/* Title / Counter bar */}
-              <div className="mt-3 flex items-center justify-between w-full max-w-2xl px-4 py-2 rounded-full bg-white/15 backdrop-blur-md text-white text-xs sm:text-sm font-semibold border border-white/20">
+              {/* Title / Counter bar without dates */}
+              <div className="mt-3 flex items-center justify-between w-full max-w-2xl px-4 py-2 rounded-none bg-white/15 backdrop-blur-md text-white text-xs sm:text-sm font-semibold border border-white/20">
                 <span className="truncate">{lightboxItems[activeLightboxIndex].title}</span>
                 <span className="shrink-0 text-amber-400 font-bold ml-4">
                   {activeLightboxIndex + 1} / {lightboxItems.length}
@@ -857,7 +708,7 @@ export default function GalleryPage() {
         </div>
       )}
 
-      {/* 11. Footer */}
+      {/* 5. Footer */}
       <Footer />
     </div>
   )

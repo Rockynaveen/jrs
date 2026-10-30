@@ -45,6 +45,7 @@ export const facilitiesList: FacilityItem[] = [
       { url: '/images/classrooms/2.png', title: 'Digital Collaboration Zone' },
       { url: '/images/classrooms/3.png', title: 'Primary Wing Classroom' },
       { url: '/images/classrooms/4.png', title: 'Well-Ventilated Study Space' },
+      { url: '/images/secondary-school-classroom.jpg', title: 'Secondary Digital Smart Classroom' },
     ],
   },
   {
@@ -71,6 +72,7 @@ export const facilitiesList: FacilityItem[] = [
       { url: '/images/science-activities/1.jpg', title: 'Chemistry Experimental Station' },
       { url: '/images/science-activities/3.jpg', title: 'Microscopy and Biology Research' },
       { url: '/images/science-activities/10.jpg', title: 'STEM & Robotics Lab' },
+      { url: '/images/science-activities/4.jpg', title: 'Physics & Applied Sciences Lab' },
     ],
   },
   {
@@ -97,6 +99,7 @@ export const facilitiesList: FacilityItem[] = [
       { url: '/images/facilities/smart-classroom.jpg', title: 'Interactive Digital Discovery Wall' },
       { url: '/images/pre-primary-learning.jpg', title: 'Early Cognitive Play Arena' },
       { url: '/images/primary-school-study.jpg', title: 'Collaborative Problem-Solving' },
+      { url: '/images/science-activities/2.png', title: 'Creative Innovation Workshop' },
     ],
   },
   {
@@ -119,10 +122,14 @@ export const facilitiesList: FacilityItem[] = [
     ],
     galleryImages: [
       { url: '/images/facilities/library.jpg', title: 'Main Library Reading Hall' },
-      { url: '/images/primary-school-study.jpg', title: 'Guided Literature Circles' },
+      { url: '/images/primary-school-study.jpg', title: 'Guided Literature Circles & Junior Reading' },
       { url: '/images/middle-school-students.jpg', title: 'Quiet Study & Reference Nooks' },
+      { url: '/images/secondary-school-classroom.jpg', title: 'Senior Research & Study Zone' },
       { url: '/images/science-activities/9.jpg', title: 'Scientific Reference Wing' },
       { url: '/images/classrooms/4.png', title: 'Independent Research Terminal' },
+      { url: '/images/classrooms/2.png', title: 'Collaborative Group Study Space' },
+      { url: '/images/facilities/smart-classroom.jpg', title: 'Interactive Media & Knowledge Pods' },
+      { url: '/images/facilities/library.png', title: 'Expansive Literature Stacks' },
     ],
   },
   {
@@ -149,6 +156,7 @@ export const facilitiesList: FacilityItem[] = [
       { url: '/images/skating.jpg', title: 'Skating Rink & Arena' },
       { url: '/images/karate.jpg', title: 'Martial Arts & Self-Defense' },
       { url: '/images/yoga.jpg', title: 'Yoga & Meditation Hall' },
+      { url: '/images/beyond/sports.jpg', title: 'Track & Outdoor Field Sports' },
     ],
   },
   {
@@ -175,6 +183,7 @@ export const facilitiesList: FacilityItem[] = [
       { url: '/images/campus/entrance-1.png', title: 'Gated Security Checkpoint' },
       { url: '/images/campus/main-building.png', title: 'Safe Campus Bus Boarding Area' },
       { url: '/images/facilities/transport.png', title: 'Maintained Transport Infrastructure' },
+      { url: '/images/campus/entrance-2.png', title: 'Main Campus Transit & Pick-up Gate' },
     ],
   },
 ]

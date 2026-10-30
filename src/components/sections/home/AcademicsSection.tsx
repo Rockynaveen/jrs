@@ -88,6 +88,24 @@ export default function AcademicsSection() {
         'Leadership mentoring, ethical values, and co-curricular pursuits',
       ],
     },
+    {
+      title: 'Secondary Education',
+      stageTag: 'STAGE 04 • SECONDARY WING',
+      subtitle: 'CLASSES IX TO XII • CBSE, IIT-JEE & NEET',
+      badge: 'Secondary Wing',
+      description:
+        'Empowering high school students with rigorous academic training, board examination mastery, and dedicated coaching for IIT-JEE, NEET, and Olympiads.',
+      image: '/images/secondary-school-classroom.jpg',
+      alt: 'Secondary Education students in modern computer lab and classroom',
+      imagePosition: 'object-[center_25%]',
+      curriculumHighlights: [
+        'Comprehensive CBSE curriculum for Classes IX, X, XI & XII',
+        'Integrated coaching for IIT-JEE, NEET, Olympiads & CUET',
+        'State-of-the-art Physics, Chemistry, Biology & AI Robotics laboratories',
+        'Specialized stream guidance across Science, Commerce & Humanities',
+        'Personalized mentorship, regular mock test series & career counseling',
+      ],
+    },
   ]
 
   const currentModal = activeCurriculum !== null ? stages[activeCurriculum] : null
@@ -119,7 +137,7 @@ export default function AcademicsSection() {
             style={{ margin: '10px auto', lineHeight: '26px', textAlign: 'center' }}
             className="text-[#111] text-xs sm:text-base my-[10px] mx-auto text-center max-w-2xl leading-[26px] sm:leading-[26px]"
           >
-            Our progressive CBSE curriculum combines academic rigor, experiential STEM learning, and holistic character development from early years to middle school graduation.
+            Our progressive CBSE curriculum combines academic rigor, experiential STEM learning, and competitive exam readiness from early years to senior secondary excellence (Nursery to Grade XII).
           </p>
         </div>
 

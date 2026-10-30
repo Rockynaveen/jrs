@@ -5,7 +5,6 @@ import Link from 'next/link'
 import {
   ChevronRight,
   ChevronLeft,
-  ArrowRight,
   Check,
   X,
 } from 'lucide-react'
@@ -18,14 +17,8 @@ interface FacilityDetailPageProps {
 }
 
 export default function FacilityDetailPage({ facility }: FacilityDetailPageProps) {
-  const [activePhoto, setActivePhoto] = useState<string>(facility.primaryImage)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxIndex, setLightboxIndex] = useState(0)
-
-  // Reset active photo when facility changes
-  useEffect(() => {
-    setActivePhoto(facility.primaryImage)
-  }, [facility.slug, facility.primaryImage])
 
   const gallery = facility.galleryImages || []
 
@@ -63,7 +56,7 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
       <main className="flex-1 w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16 sm:pb-24">
         
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-[13px] text-slate-500 mb-4 sm:mb-5">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-[13px] text-slate-500 mb-6">
           <Link href="/" className="hover:text-[#031c3f] transition-colors">
             Home
           </Link>
@@ -77,102 +70,65 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
           </span>
         </nav>
 
-        {/* Page Title & Subtitle */}
-        <div className="mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#031c3f] tracking-tight leading-tight mb-2">
+        {/* Page Title & Subtitle - Centered */}
+        <div className="mb-8 sm:mb-10 text-center max-w-3xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#031c3f] tracking-tight leading-tight mb-2.5">
             World-Class Environment for <span className="text-[#e31e24]">{facility.title}</span>
           </h1>
-          <p className="text-xs sm:text-sm md:text-[15px] text-[#111] max-w-3xl leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-[15px] text-[#111] leading-relaxed mx-auto">
             {facility.heroTagline}
           </p>
         </div>
 
-        {/* Top Feature Section: Main Image on Left + Overview Card on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-          
-          {/* Main Facility Image (Reduced width & height) */}
-          <div className="lg:col-span-7 w-full h-[260px] sm:h-[320px] lg:h-[360px] rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-100 border border-slate-200/80 shadow-xs relative">
-            <img
-              src={activePhoto}
-              alt={facility.title}
-              className="w-full h-full object-cover transition-opacity duration-300"
-            />
+        {/* Facility Overview & Key Points (Within container, without background card) */}
+        <div className="w-full max-w-4xl mx-auto mb-10 sm:mb-14">
+          <h2 className="text-xl sm:text-2xl font-extrabold text-[#031c3f] tracking-tight mb-3">
+            {facility.title} Overview
+          </h2>
+
+          <p className="text-[#111] text-xs sm:text-sm md:text-[15px] leading-relaxed mb-6 sm:mb-8">
+            {facility.overview}
+          </p>
+
+          {/* Key Points Checklist */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+            {facility.keyPoints.map((point, idx) => (
+              <div
+                key={idx}
+                className="flex items-start gap-3"
+              >
+                <div className="w-6 h-6 rounded-full bg-[#fde8e8] text-[#e31e24] flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+                </div>
+                <span className="text-xs sm:text-[13.5px] text-[#111] font-medium leading-snug">
+                  {point}
+                </span>
+              </div>
+            ))}
           </div>
-
-          {/* Right Overview Card */}
-          <div className="lg:col-span-5 bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-7 lg:p-8 border border-slate-200/90 shadow-xs flex flex-col justify-center">
-            <h2 className="text-xl sm:text-[22px] font-extrabold text-[#031c3f] tracking-tight mb-3">
-              {facility.title} Overview
-            </h2>
-
-            <p className="text-[#111] text-xs sm:text-[13.5px] leading-relaxed mb-6">
-              {facility.overview}
-            </p>
-
-            {/* Checklist with soft red circles & checkmarks */}
-            <ul className="space-y-3.5">
-              {facility.keyPoints.map((point, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#fde8e8] text-[#e31e24] flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 stroke-[2.8]" />
-                  </div>
-                  <span className="text-xs sm:text-[13.5px] text-[#111] font-medium leading-snug">
-                    {point}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
         </div>
 
-        {/* Photo Gallery Section */}
-        <div className="mt-12 sm:mt-16">
-          <div className="flex items-center justify-between mb-4 sm:mb-5">
-            <div className="flex items-center gap-2.5">
-              <span className="w-5 h-[2.5px] bg-[#e31e24] rounded-full" />
-              <h3 className="text-base sm:text-lg font-bold text-[#031c3f] tracking-tight">
-                Photo Gallery
-              </h3>
-            </div>
-
-            <button
-              type="button"
-              onClick={() => openLightbox(0)}
-              className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-semibold text-[#e31e24] hover:text-[#b9151b] transition-colors cursor-pointer"
+        {/* Masonry Gallery Section - 3 cards per row */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-6 [column-fill:_balance]">
+          {gallery.map((photo, idx) => (
+            <div
+              key={idx}
+              onClick={() => openLightbox(idx)}
+              className="break-inside-avoid mb-4 sm:mb-6 group relative overflow-hidden cursor-pointer bg-slate-100 rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 block"
             >
-              <span>View All Photos</span>
-              <ArrowRight className="w-3.5 h-3.5 stroke-[2.2]" />
-            </button>
-          </div>
-
-          {/* 5 Photos in a Row */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
-            {gallery.map((photo, idx) => {
-              const isSelected = activePhoto === photo.url
-              return (
-                <div
-                  key={idx}
-                  onClick={() => {
-                    setActivePhoto(photo.url)
-                    setLightboxIndex(idx)
-                  }}
-                  className={`group relative aspect-[16/10] rounded-2xl overflow-hidden cursor-pointer bg-slate-100 transition-all duration-300 ${
-                    isSelected
-                      ? 'ring-2 ring-[#e31e24] ring-offset-2 border-transparent scale-[1.02] shadow-sm'
-                      : 'border border-slate-200/90 hover:scale-[1.03] hover:shadow-md'
-                  }`}
-                >
-                  <img
-                    src={photo.url}
-                    alt={photo.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              )
-            })}
-          </div>
+              <img
+                src={photo.url}
+                alt={photo.title}
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 block"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-5">
+                <span className="text-white text-xs sm:text-sm font-semibold tracking-wide drop-shadow-sm">
+                  {photo.title}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
 
 
