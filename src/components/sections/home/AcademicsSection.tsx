@@ -35,7 +35,7 @@ export default function AcademicsSection() {
 
   const stages = [
     {
-      title: 'Pre-Primary',
+      title: 'Pre-Primary School Programme',
       stageTag: 'STAGE 01 • EARLY YEARS',
       subtitle: 'NURSERY, PP1 & PP2',
       badge: 'Early Years',
@@ -53,7 +53,7 @@ export default function AcademicsSection() {
       ],
     },
     {
-      title: 'Primary School',
+      title: 'Primary School Programme',
       stageTag: 'STAGE 02 • PRIMARY WING',
       subtitle: 'CLASSES I TO V • CBSE / NCERT',
       badge: 'Primary Wing',
@@ -71,7 +71,7 @@ export default function AcademicsSection() {
       ],
     },
     {
-      title: 'Middle School',
+      title: 'Middle School Programme',
       stageTag: 'STAGE 03 • MIDDLE WING',
       subtitle: 'CLASSES VI TO VIII • CBSE & IIT/NIT FOUNDATION',
       badge: 'Middle Wing',
@@ -89,7 +89,7 @@ export default function AcademicsSection() {
       ],
     },
     {
-      title: 'Secondary Education',
+      title: 'Secondary School Programme',
       stageTag: 'STAGE 04 • SECONDARY WING',
       subtitle: 'CLASSES IX TO XII • CBSE, IIT-JEE & NEET',
       badge: 'Secondary Wing',
@@ -109,13 +109,13 @@ export default function AcademicsSection() {
     {
       title: 'IIT Foundation',
       stageTag: 'STAGE 05 • COMPETITIVE EXCELLENCE',
-      subtitle: 'CLASSES VI TO X • IIT-JEE, NEET & OLYMPIAD FOUNDATION',
+      subtitle: 'CLASSES VI TO IX • IIT-JEE, NEET & OLYMPIAD FOUNDATION',
       badge: 'Competitive Edge',
       description:
         'A comprehensive early-start curriculum designed to build robust conceptual depth, higher-order problem-solving skills, and competitive aptitude in Mathematics, Physics, Chemistry, and Logical Reasoning.',
-      image: '/images/science.jpg',
-      alt: 'Students engaged in advanced IIT Foundation science and mathematics learning',
-      imagePosition: 'object-[center_30%]',
+      image: '/images/iit-foundation.jpg',
+      alt: 'Students engaged in advanced IIT Foundation robotics, science and mathematics learning',
+      imagePosition: 'object-[center_25%]',
       curriculumHighlights: [
         'Comprehensive analytical depth in Mathematics, Physics & Chemistry',
         'Early-start preparation for IIT-JEE, NEET, NTSE & National Olympiads',
@@ -199,7 +199,7 @@ export default function AcademicsSection() {
                   </div>
 
                   {/* Stage Title */}
-                  <h3 className="text-2xl sm:text-3xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
+                  <h3 className="text-xl sm:text-2xl lg:text-[32px] font-extrabold text-[#031c3f] tracking-tight leading-[1.25]">
                     {stage.title}
                   </h3>
 
