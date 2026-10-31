@@ -1,16 +1,122 @@
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
-import Link from 'next/link'
 import {
   ChevronRight,
   ChevronLeft,
-  Check,
   X,
+  FlaskConical,
+  Brain,
+  Laptop,
+  ShieldCheck,
+  Sparkles,
+  Lightbulb,
+  Layers,
+  Monitor,
+  Users,
+  Cpu,
+  BookOpen,
+  Compass,
+  GraduationCap,
+  Trophy,
+  Activity,
+  Target,
+  Award,
+  MapPin,
+  Video,
+  UserCheck,
+  Bus,
 } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { FacilityItem } from '@/data/facilitiesData'
+
+function getPointIcon(slug: string, idx: number, point: string) {
+  if (slug === 'science-computer-labs') {
+    switch (idx) {
+      case 0:
+        return FlaskConical
+      case 1:
+        return Brain
+      case 2:
+        return Laptop
+      case 3:
+        return ShieldCheck
+    }
+  }
+  if (slug === 'smart-classrooms') {
+    switch (idx) {
+      case 0:
+        return Sparkles
+      case 1:
+        return Lightbulb
+      case 2:
+        return Layers
+      case 3:
+        return Monitor
+    }
+  }
+  if (slug === 'cognospace') {
+    switch (idx) {
+      case 0:
+        return Sparkles
+      case 1:
+        return Lightbulb
+      case 2:
+        return Users
+      case 3:
+        return Cpu
+    }
+  }
+  if (slug === 'library') {
+    switch (idx) {
+      case 0:
+        return BookOpen
+      case 1:
+        return Compass
+      case 2:
+        return Users
+      case 3:
+        return GraduationCap
+    }
+  }
+  if (slug === 'sports') {
+    switch (idx) {
+      case 0:
+        return Trophy
+      case 1:
+        return Activity
+      case 2:
+        return Target
+      case 3:
+        return Award
+    }
+  }
+  if (slug === 'transport') {
+    switch (idx) {
+      case 0:
+        return MapPin
+      case 1:
+        return Video
+      case 2:
+        return UserCheck
+      case 3:
+        return Bus
+    }
+  }
+
+  const lower = point.toLowerCase()
+  if (lower.includes('lab') || lower.includes('experiment')) return FlaskConical
+  if (lower.includes('curiosity') || lower.includes('logic') || lower.includes('brain')) return Brain
+  if (lower.includes('apparatus') || lower.includes('workstation') || lower.includes('computer')) return Laptop
+  if (lower.includes('safety') || lower.includes('supervision')) return ShieldCheck
+  if (lower.includes('creat') || lower.includes('innovat')) return Lightbulb
+  if (lower.includes('book') || lower.includes('read') || lower.includes('library')) return BookOpen
+  if (lower.includes('sport') || lower.includes('athletic')) return Trophy
+  if (lower.includes('gps') || lower.includes('bus') || lower.includes('transport')) return Bus
+
+  return Sparkles
+}
 
 interface FacilityDetailPageProps {
   facility: FacilityItem
@@ -55,57 +161,47 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
       {/* 2. Main Content Container - Aligned with Navbar Logo & Enquire Now button */}
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16 sm:pb-24">
         
-        {/* Page Title, Subtitle & Breadcrumb - Centered */}
+        {/* Page Title & Subtitle - Centered */}
         <div className="mb-8 sm:mb-10 text-center max-w-3xl mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#031c3f] tracking-tight leading-tight mb-2.5">
             World-Class Environment for <span className="text-[#e31e24]">{facility.title}</span>
           </h1>
-
-          {/* Breadcrumb below heading */}
-          <nav aria-label="Breadcrumb" className="flex items-center justify-center flex-wrap gap-2 text-xs sm:text-[13px] text-slate-500 mb-3">
-            <Link href="/" className="hover:text-[#031c3f] transition-colors">
-              Home
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400 stroke-[2.2]" />
-            <Link href="/facilities" className="hover:text-[#031c3f] transition-colors">
-              Facilities
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400 stroke-[2.2]" />
-            <span className="font-semibold text-slate-800">
-              {facility.title}
-            </span>
-          </nav>
 
           <p className="text-xs sm:text-sm md:text-[15px] text-[#111] leading-relaxed mx-auto">
             {facility.heroTagline}
           </p>
         </div>
 
-        {/* Facility Overview & Key Points (Without background tab/box) */}
+        {/* Facility Overview & Key Points */}
         <div className="w-full mb-10 sm:mb-14">
-          <h2 className="text-xl sm:text-2xl font-extrabold text-[#031c3f] tracking-tight mb-3">
-            {facility.title} Overview
-          </h2>
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-[#031c3f] tracking-tight mb-3">
+              {facility.title} Overview
+            </h2>
 
-          <p className="text-[#111] text-xs sm:text-sm md:text-[15px] leading-relaxed mb-6 sm:mb-8">
-            {facility.overview}
-          </p>
+            <p className="text-[#111] text-xs sm:text-sm md:text-[15px] leading-relaxed">
+              {facility.overview}
+            </p>
+          </div>
 
-          {/* Key Points Checklist */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {facility.keyPoints.map((point, idx) => (
-              <div
-                key={idx}
-                className="flex items-start gap-3"
-              >
-                <div className="w-6 h-6 rounded-full bg-[#fde8e8] text-[#e31e24] flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+          {/* Key Points Cards with Icons */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {facility.keyPoints.map((point, idx) => {
+              const IconComponent = getPointIcon(facility.slug, idx, point)
+              return (
+                <div
+                  key={idx}
+                  className="group relative bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 hover:border-[#031c3f]/40 transition-all duration-300 flex flex-col items-center text-center hover:-translate-y-1"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-[#031c3f] text-white group-hover:bg-[#0b2959] group-hover:scale-105 flex items-center justify-center mb-4 transition-all duration-300 shrink-0">
+                    <IconComponent className="w-6 h-6 stroke-[2] text-white" />
+                  </div>
+                  <h3 className="text-xs sm:text-[13.5px] md:text-sm font-semibold text-[#031c3f] leading-snug text-center">
+                    {point}
+                  </h3>
                 </div>
-                <span className="text-xs sm:text-[13.5px] text-[#111] font-medium leading-snug">
-                  {point}
-                </span>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
 

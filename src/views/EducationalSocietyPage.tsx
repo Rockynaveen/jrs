@@ -93,7 +93,7 @@ export default function EducationalSocietyPage() {
         {/* 2. Hero Banner */}
         <PageHero
           breadcrumb="Educational Society"
-          title="Educational Society —"
+          title="Educational Society â€”"
           titleHighlight="Managing Committee"
           subtitle="Distinguished Governing Body & Leadership"
           description="Distinguished governing body steering the vision, academic excellence, statutory compliance, and strategic growth of JRS International School."

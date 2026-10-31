@@ -106,24 +106,6 @@ export default function AcademicsSection() {
         'Personalized mentorship, regular mock test series & career counseling',
       ],
     },
-    {
-      title: 'IIT Foundation',
-      stageTag: 'STAGE 05 • COMPETITIVE EXCELLENCE',
-      subtitle: 'CLASSES VI TO IX • IIT-JEE, NEET & OLYMPIAD FOUNDATION',
-      badge: 'Competitive Edge',
-      description:
-        'A comprehensive early-start curriculum designed to build robust conceptual depth, higher-order problem-solving skills, and competitive aptitude in Mathematics, Physics, Chemistry, and Logical Reasoning.',
-      image: '/images/iit-foundation.jpg',
-      alt: 'Students engaged in advanced IIT Foundation robotics, science and mathematics learning',
-      imagePosition: 'object-[center_25%]',
-      curriculumHighlights: [
-        'Comprehensive analytical depth in Mathematics, Physics & Chemistry',
-        'Early-start preparation for IIT-JEE, NEET, NTSE & National Olympiads',
-        'Daily practice problems (DPPs) with structured speed and accuracy drills',
-        'Regular national benchmarking tests, error analysis & doubt clearance',
-        'Specialized faculty mentoring from premier coaching backgrounds',
-      ],
-    },
   ]
 
   const currentModal = activeCurriculum !== null ? stages[activeCurriculum] : null
@@ -199,7 +181,7 @@ export default function AcademicsSection() {
                   </div>
 
                   {/* Stage Title */}
-                  <h3 className="text-xl sm:text-2xl lg:text-[32px] font-extrabold text-[#031c3f] tracking-tight leading-[1.25]">
+                  <h3 className="text-2xl sm:text-3xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
                     {stage.title}
                   </h3>
 

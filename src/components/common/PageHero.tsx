@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight, Play, PhoneCall } from 'lucide-react'
+
 
 export interface PageHeroButton {
   text: string
@@ -49,8 +49,6 @@ export default function PageHero({
   imagePosition,
   overlayType = 'default',
   showDecorativeSwoosh = true,
-  primaryButton,
-  secondaryButton,
   rightElement,
   className,
   titleClassName,
@@ -143,96 +141,7 @@ export default function PageHero({
             <span className="text-slate-400 font-normal">›</span>
             <span className="text-[#f59e0b] font-semibold">{breadcrumb}</span>
           </nav>
-
-          {/* Action Buttons */}
-          {(primaryButton || secondaryButton) && (
-            <div className="flex flex-row flex-wrap items-center justify-center gap-2.5 sm:gap-4 mt-4 sm:mt-6 mx-auto">
-                  {/* Primary Button */}
-                  {primaryButton &&
-                    (primaryButton.href ? (
-                      primaryButton.href.startsWith('http') || primaryButton.href.startsWith('tel:') ? (
-                        <a
-                          href={primaryButton.href}
-                          onClick={primaryButton.onClick}
-                          className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
-                        >
-                          <span>{primaryButton.text}</span>
-                          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-                        </a>
-                      ) : (
-                        <Link
-                          href={primaryButton.href}
-                          onClick={primaryButton.onClick}
-                          className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
-                        >
-                          <span>{primaryButton.text}</span>
-                          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-                        </Link>
-                      )
-                    ) : (
-                      <button
-                        type="button"
-                        onClick={primaryButton.onClick}
-                        className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
-                      >
-                        <span>{primaryButton.text}</span>
-                        <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-                      </button>
-                    ))}
-
-                  {/* Secondary Button */}
-                  {secondaryButton &&
-                    (secondaryButton.href ? (
-                      secondaryButton.href.startsWith('http') || secondaryButton.href.startsWith('tel:') ? (
-                        <a
-                          href={secondaryButton.href}
-                          onClick={secondaryButton.onClick}
-                          className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
-                        >
-                          <span>{secondaryButton.text}</span>
-                          {secondaryButton.icon === 'phone' ? (
-                            <PhoneCall className="w-3.5 h-3.5 text-[#f59e0b]" />
-                          ) : (
-                            <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white flex items-center justify-center">
-                              <Play className="w-1.5 h-1.5 sm:w-2 sm:h-2 fill-white ml-0.5" />
-                            </div>
-                          )}
-                        </a>
-                      ) : (
-                        <Link
-                          href={secondaryButton.href}
-                          onClick={secondaryButton.onClick}
-                          className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
-                        >
-                          <span>{secondaryButton.text}</span>
-                          {secondaryButton.icon === 'phone' ? (
-                            <PhoneCall className="w-3.5 h-3.5 text-[#f59e0b]" />
-                          ) : (
-                            <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white flex items-center justify-center">
-                              <Play className="w-1.5 h-1.5 sm:w-2 sm:h-2 fill-white ml-0.5" />
-                            </div>
-                          )}
-                        </Link>
-                      )
-                    ) : (
-                      <button
-                        type="button"
-                        onClick={secondaryButton.onClick}
-                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white/60 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-200 active:scale-95 text-center cursor-pointer"
-                      >
-                        <span>{secondaryButton.text}</span>
-                        {secondaryButton.icon === 'phone' ? (
-                          <PhoneCall className="w-3.5 h-3.5 text-[#f59e0b]" />
-                        ) : (
-                          <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border border-white flex items-center justify-center">
-                            <Play className="w-1.5 h-1.5 sm:w-2 sm:h-2 fill-white ml-0.5" />
-                          </div>
-                        )}
-                      </button>
-                    ))}
-                </div>
-              )}
-            </div>
+        </div>
 
             {rightElement && (
               <div

@@ -89,14 +89,6 @@ export default function FacilitiesPage() {
           subtitle="World Class Infrastructure with Elegant Ambience."
           imageSrc="/images/campus-building.jpg"
           imageAlt="JRS International School Facilities"
-          primaryButton={{
-            text: 'View Facilities',
-            href: '#facilities-list',
-          }}
-          secondaryButton={{
-            text: 'Contact Us',
-            href: '/#contact',
-          }}
         />
 
         {/* 3. Simple & Clean Facilities Section */}
@@ -104,7 +96,7 @@ export default function FacilitiesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
-              {/* Eyebrow: — OUR CAMPUS — */}
+              {/* Eyebrow: â€” OUR CAMPUS â€” */}
               <div className="flex items-center justify-center gap-2.5 mb-2.5">
                 <span className="w-8 h-[2px] bg-[#031c3f]" />
                 <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]">

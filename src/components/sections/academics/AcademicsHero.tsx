@@ -17,15 +17,6 @@ export default function AcademicsHero() {
       descriptionClassName="leading-[26px] sm:leading-[26px]"
       imageSrc="/images/campus-building.jpg"
       imageAlt="JRS International School Campus"
-      primaryButton={{
-        text: 'Explore Programmes',
-        href: '#programmes',
-      }}
-      secondaryButton={{
-        text: 'Apply for Admission',
-        href: '/admissions',
-        icon: 'arrow',
-      }}
     />
   )
 }

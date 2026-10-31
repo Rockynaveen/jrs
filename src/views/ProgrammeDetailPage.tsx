@@ -60,14 +60,6 @@ export default function ProgrammeDetailPage({ programme }: ProgrammeDetailPagePr
           descriptionClassName="leading-[26px] sm:leading-[26px]"
           imageSrc={programme.image}
           imageAlt={programme.title}
-          primaryButton={{
-            text: 'Apply for Admission',
-            href: '/admissions',
-          }}
-          secondaryButton={{
-            text: 'All Programmes',
-            href: '/academics#programmes',
-          }}
         />
 
         {/* 3. Detailed Programme Section: Left Side Content & Right Side Image */}
@@ -83,7 +75,7 @@ export default function ProgrammeDetailPage({ programme }: ProgrammeDetailPagePr
                     style={{ fontSize: '13px', lineHeight: '23px' }}
                     className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                   >
-                    ACADEMIC JOURNEY • {programme.ageBadge}
+                    ACADEMIC JOURNEY â€¢ {programme.ageBadge}
                   </span>
                 </div>
 

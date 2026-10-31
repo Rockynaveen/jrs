@@ -431,7 +431,6 @@ const ALL_GALLERY_IMAGES: PhotoItem[] = [
 ]
 
 export default function GalleryPage() {
-  // Show 15 images initially (multiple of 3, between 12 and 16)
   const [visibleCount, setVisibleCount] = useState<number>(15)
   const [activeLightboxIndex, setActiveLightboxIndex] = useState<number | null>(null)
   const [lightboxItems, setLightboxItems] = useState<PhotoItem[]>([])
@@ -451,7 +450,6 @@ export default function GalleryPage() {
   const visibleImages = ALL_GALLERY_IMAGES.slice(0, visibleCount)
 
   const handleViewMore = () => {
-    // Show remaining images in increments of 15
     setVisibleCount((prev) => Math.min(prev + 15, ALL_GALLERY_IMAGES.length))
   }
 
@@ -523,14 +521,6 @@ export default function GalleryPage() {
           description="Explore vibrant campus life, extracurricular achievements, sports, and cultural milestones celebrated at JRS International School."
           imageSrc="/images/campus-building.jpg"
           imageAlt="JRS International School Gallery"
-          primaryButton={{
-            text: 'Explore Gallery',
-            href: '#gallery-grid',
-          }}
-          secondaryButton={{
-            text: 'Admissions 2027-28',
-            href: '/admissions',
-          }}
         />
 
         {/* 3. Unified Masonry Gallery Section */}
@@ -559,47 +549,57 @@ export default function GalleryPage() {
               </p>
             </div>
 
-            {/* 3 Images Per Row Masonry Style Layout without Shadow & without Border Radius */}
+            {/* Masonry Style Gallery Grid */}
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 sm:gap-6 [column-fill:_balance]">
-              {visibleImages.map((item, index) => (
-                <div
-                  key={item.id}
-                  data-aos="fade-up"
-                  data-aos-delay={(index % 3) * 60}
-                  onClick={(e) => openLightbox(ALL_GALLERY_IMAGES, index, e)}
-                  className="break-inside-avoid mb-5 sm:mb-6 group cursor-pointer block w-full rounded-none shadow-none"
-                >
-                  {/* Image Container with No Shadow and No Border Radius */}
-                  <div className="relative overflow-hidden bg-slate-100 rounded-none shadow-none">
+              {visibleImages.map((item, index) => {
+                const aspectRatios = [
+                  'aspect-[4/5]',
+                  'aspect-[1/1]',
+                  'aspect-[4/5]',
+                  'aspect-[1/1]',
+                  'aspect-[4/5]',
+                  'aspect-[4/3]',
+                  'aspect-[1/1]',
+                  'aspect-[4/5]',
+                  'aspect-[4/3]',
+                ]
+                const aspectClass = aspectRatios[index % aspectRatios.length]
+
+                return (
+                  <div
+                    key={item.id}
+                    data-aos="fade-up"
+                    data-aos-delay={(index % 3) * 60}
+                    onClick={(e) => openLightbox(ALL_GALLERY_IMAGES, index, e)}
+                    className={`break-inside-avoid mb-5 sm:mb-6 group relative overflow-hidden cursor-pointer bg-slate-100 rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 block w-full ${aspectClass}`}
+                  >
                     <img
                       src={item.image}
                       alt={item.title}
                       loading="lazy"
-                      className="w-full h-auto block rounded-none shadow-none group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out block"
                       onError={(e) => {
                         const target = e.currentTarget
                         target.src = '/images/campus-building.jpg'
                       }}
                     />
 
-                    {/* Subtle Dark Hover Tint with Centered Zoom Icon */}
-                    <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-none pointer-events-none">
-                      <div className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm text-white flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-md">
-                        <ZoomIn className="w-5 h-5 text-white" />
+                    {/* Gradient Overlay with Title & Zoom Icon */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                      <div className="flex justify-end">
+                        <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-md">
+                          <ZoomIn className="w-4 h-4 text-white stroke-[2.2]" />
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-white text-xs sm:text-[13.5px] font-semibold tracking-wide drop-shadow-sm leading-snug line-clamp-2">
+                          {item.title}
+                        </p>
                       </div>
                     </div>
                   </div>
-
-                  {/* Clean Title without dates */}
-                  {item.title && (
-                    <div className="pt-2 px-0.5">
-                      <p className="text-xs sm:text-[13px] font-medium text-[#111] leading-snug group-hover:text-[#e31e24] transition-colors line-clamp-2">
-                        {item.title}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ))}
+                )
+              })}
             </div>
 
             {/* Center "View More" Button at bottom */}
@@ -608,12 +608,12 @@ export default function GalleryPage() {
                 <button
                   type="button"
                   onClick={handleViewMore}
-                  className="inline-flex items-center justify-center gap-2.5 px-8 sm:px-10 py-3.5 sm:py-4 rounded-none text-xs sm:text-sm font-bold uppercase tracking-wider text-white bg-[#e31e24] hover:bg-[#c9181e] transition-all duration-300 active:scale-95 cursor-pointer shadow-none"
+                  className="inline-flex items-center justify-center gap-2.5 px-8 sm:px-10 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider text-white bg-[#e31e24] hover:bg-[#c9181e] transition-all duration-300 active:scale-95 cursor-pointer shadow-lg hover:shadow-red-500/25"
                 >
                   <span>View More Images</span>
                   <ChevronDown className="w-4 h-4 animate-bounce" />
                 </button>
-                <span className="text-xs text-[#111] mt-2.5 font-normal">
+                <span className="text-xs text-slate-500 mt-2.5 font-medium">
                   Showing {visibleImages.length} of {ALL_GALLERY_IMAGES.length} images
                 </span>
               </div>
@@ -694,10 +694,10 @@ export default function GalleryPage() {
               <img
                 src={lightboxItems[activeLightboxIndex].image}
                 alt={lightboxItems[activeLightboxIndex].title}
-                className="max-h-[82vh] max-w-full w-auto h-auto object-contain rounded-none shadow-2xl ring-1 ring-white/15 transition-all duration-200"
+                className="max-h-[82vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-white/15 transition-all duration-200"
               />
               {/* Title / Counter bar without dates */}
-              <div className="mt-3 flex items-center justify-between w-full max-w-2xl px-4 py-2 rounded-none bg-white/15 backdrop-blur-md text-white text-xs sm:text-sm font-semibold border border-white/20">
+              <div className="mt-3 flex items-center justify-between w-full max-w-2xl px-4 py-2.5 rounded-xl bg-white/15 backdrop-blur-md text-white text-xs sm:text-sm font-semibold border border-white/20">
                 <span className="truncate">{lightboxItems[activeLightboxIndex].title}</span>
                 <span className="shrink-0 text-amber-400 font-bold ml-4">
                   {activeLightboxIndex + 1} / {lightboxItems.length}

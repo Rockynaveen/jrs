@@ -65,14 +65,6 @@ export default function ContactPage() {
           description="Have questions about admissions, CBSE curriculum, campus tours, or school transport? Reach out to our admissions team or visit our Narapally campus."
           imageSrc="/images/campus-building.jpg"
           imageAlt="JRS International School Campus Building"
-          primaryButton={{
-            text: 'Send a Message',
-            href: '#contact-form',
-          }}
-          secondaryButton={{
-            text: 'View Campus Map',
-            href: '#campus-map',
-          }}
         />
 
 

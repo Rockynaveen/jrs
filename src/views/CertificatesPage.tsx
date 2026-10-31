@@ -587,7 +587,7 @@ export default function CertificatesPage() {
                     disabled
                     className="border border-slate-300 rounded px-2.5 py-0.5 text-xs text-slate-400 bg-slate-50 cursor-not-allowed"
                   >
-                    ‹
+                    â€¹
                   </button>
                   <span className="border border-[#013aa3] bg-[#013aa3]/10 text-[#013aa3] rounded px-2.5 py-0.5 text-xs font-semibold">
                     1
@@ -597,7 +597,7 @@ export default function CertificatesPage() {
                     disabled
                     className="border border-slate-300 rounded px-2.5 py-0.5 text-xs text-slate-400 bg-slate-50 cursor-not-allowed"
                   >
-                    ›
+                    â€º
                   </button>
                 </div>
               </div>

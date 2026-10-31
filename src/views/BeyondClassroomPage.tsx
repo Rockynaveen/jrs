@@ -36,14 +36,6 @@ export default function BeyondClassroomPage() {
           imageSrc="/images/beyond-hero.png"
           imageAlt="JRS International School Beyond Classroom Activities"
           imagePosition="object-cover object-center md:object-[center_35%]"
-          primaryButton={{
-            text: 'Explore Activities',
-            href: '#activities',
-          }}
-          secondaryButton={{
-            text: 'Admissions 2027-28',
-            href: '/admissions',
-          }}
         />
 
         {/* 3. Co-Curricular Excellence Section (10 Detailed Activity Cards) */}
