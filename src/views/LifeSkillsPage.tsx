@@ -19,14 +19,14 @@ const VIDEOS: VideoItem[] = [
   {
     id: 'vid-1',
     title: 'Grade-IX JRSIS English Activity: Debate on Technology Replacing Teachers',
-    date: 'Create Life Skills â€¢ Debate',
+    date: 'Create Life Skills • Debate',
     thumbnail: '/images/video-life-skills-1.jpg',
     videoUrl: 'https://www.youtube.com/embed/qm7Klq9kTZI',
   },
   {
     id: 'vid-2',
     title: 'Grade-8 English: Debate On Using Gadgets In School',
-    date: 'Create Life Skills â€¢ Communication',
+    date: 'Create Life Skills • Communication',
     thumbnail: '/images/video-life-skills-2.jpg',
     videoUrl: 'https://www.youtube.com/embed/ZNgiOdt-8pg',
   },

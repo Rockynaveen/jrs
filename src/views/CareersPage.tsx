@@ -217,7 +217,7 @@ export default function CareersPage() {
                     style={{ lineHeight: '44px' }}
                     className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#031c3f] tracking-tight leading-[44px] sm:leading-[44px] lg:leading-[44px]"
                   >
-                    Who are passionate about their field â€“
+                    Who are passionate about their field –
                     <span
                       style={{ lineHeight: '44px' }}
                       className="text-[#e31e24] block mt-1.5 leading-[44px]"

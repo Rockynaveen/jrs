@@ -67,7 +67,7 @@ export default function ChairmanPage() {
                             Chairman of JRS
                           </h3>
                           <p className="text-xs font-semibold text-[#111] mt-1">
-                            JRS International School â€¢ Hyderabad
+                            JRS International School • Hyderabad
                           </p>
 
                           {/* Floating Motto Badge */}
@@ -109,7 +109,7 @@ export default function ChairmanPage() {
                       In today&apos;s dynamic global landscape, the role of schooling is not merely to prepare students for examinations, but to equip them with the resilience, creativity, critical thinking, and ethical depth necessary to solve real-world problems.
                     </p>
                     <p>
-                      At JRS, we have seamlessly woven the timeless values of Indian ethosâ€”respect, empathy, integrity, and mindfulnessâ€”with world-class pedagogical frameworks, smart interactive classrooms, and advanced science and computer laboratories.
+                      At JRS, we have seamlessly woven the timeless values of Indian ethos—respect, empathy, integrity, and mindfulness—with world-class pedagogical frameworks, smart interactive classrooms, and advanced science and computer laboratories.
                     </p>
                     <p>
                       Every child is uniquely gifted. Through personalized mentoring, an optimal 1:25 student-teacher ratio, and a vibrant co-curricular curriculum spanning skating, karate, music, arts, and robotics, we foster an environment where every young learner blossoms with joy and confidence.

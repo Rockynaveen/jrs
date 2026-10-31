@@ -29,8 +29,8 @@ export default function PrincipalPage() {
       <main className="flex-1">
         {/* 2. Hero Section */}
         <PageHero
-          breadcrumb="Principalâ€™s Message"
-          title="Principalâ€™s"
+          breadcrumb="Principal's Message"
+          title="Principal's"
           titleHighlight="Message"
           subtitle="Empowering Minds and Enriching Lives."
           description="At JRS International School, we believe that every child has unique potential, and meaningful education is about discovering, nurturing and transforming that potential into purpose."
@@ -138,7 +138,7 @@ export default function PrincipalPage() {
                           Official Address
                         </span>
                         <span className="text-[11px] font-medium text-slate-800">
-                          Academic Year 2027 â€“ 2028
+                          Academic Year 2027 – 2028
                         </span>
                       </div>
                     </div>
@@ -151,7 +151,7 @@ export default function PrincipalPage() {
                   <div className="mb-6">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-[#dc2626] text-xs font-extrabold uppercase tracking-wider mb-2">
                       <Quote className="w-3.5 h-3.5" />
-                      <span>PRINCIPALâ€™S MESSAGE</span>
+                      <span>PRINCIPAL'S MESSAGE</span>
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-extrabold text-[#031c3f] tracking-tight">
                       Empowering Minds and Enriching Lives
@@ -168,7 +168,7 @@ export default function PrincipalPage() {
                   {/* Official Letter Body Text */}
                   <div className="space-y-4 text-slate-800 text-[14px] sm:text-[14.5px] leading-[1.8] text-justify sm:text-left">
                     <p>
-                      Welcome to <strong className="text-[#031c3f] font-bold">JRS International School</strong>, where we are committed to <em>â€œEmpowering Minds and Enriching Lives.â€</em> We believe that every child has unique potential, and meaningful education is about discovering, nurturing and transforming that potential into purpose.
+                      Welcome to <strong className="text-[#031c3f] font-bold">JRS International School</strong>, where we are committed to <em>“Empowering Minds and Enriching Lives.”</em> We believe that every child has unique potential, and meaningful education is about discovering, nurturing and transforming that potential into purpose.
                     </p>
 
                     <p>
@@ -186,7 +186,7 @@ export default function PrincipalPage() {
                     {/* Pull Quote Highlight on Paper */}
                     <div className="my-6 p-4 sm:p-5 rounded-xl bg-amber-50/60 border-l-4 border-[#dc2626] shadow-2xs">
                       <p className="text-[15px] sm:text-[16px] font-extrabold text-[#031c3f] italic leading-relaxed">
-                        &ldquo;At JRS, we donâ€™t just prepare students for the futureâ€”we empower them to shape it.&rdquo;
+                        &ldquo;At JRS, we don't just prepare students for the future—we empower them to shape it.&rdquo;
                       </p>
                     </div>
                   </div>

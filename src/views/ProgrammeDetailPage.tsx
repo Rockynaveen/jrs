@@ -75,7 +75,7 @@ export default function ProgrammeDetailPage({ programme }: ProgrammeDetailPagePr
                     style={{ fontSize: '13px', lineHeight: '23px' }}
                     className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#031c3f]"
                   >
-                    ACADEMIC JOURNEY â€¢ {programme.ageBadge}
+                    ACADEMIC JOURNEY • {programme.ageBadge}
                   </span>
                 </div>
 
