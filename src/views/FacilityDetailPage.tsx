@@ -159,25 +159,13 @@ export default function FacilityDetailPage({ facility }: FacilityDetailPageProps
       <Navbar activePage="facilities" />
 
       {/* 2. Main Content Container - Aligned with Navbar Logo & Enquire Now button */}
-      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16 sm:pb-24">
-        
-        {/* Page Title & Subtitle - Centered */}
-        <div className="mb-8 sm:mb-10 text-center max-w-3xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#031c3f] tracking-tight leading-tight mb-2.5">
-            World-Class Environment for <span className="text-[#e31e24]">{facility.title}</span>
-          </h1>
-
-          <p className="text-xs sm:text-sm md:text-[15px] text-[#111] leading-relaxed mx-auto">
-            {facility.heroTagline}
-          </p>
-        </div>
-
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 pb-16 sm:pb-24">
         {/* Facility Overview & Key Points */}
         <div className="w-full mb-10 sm:mb-14">
           <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-            <h2 className="text-xl sm:text-2xl font-extrabold text-[#031c3f] tracking-tight mb-3">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#031c3f] tracking-tight mb-3">
               {facility.title} Overview
-            </h2>
+            </h1>
 
             <p className="text-[#111] text-xs sm:text-sm md:text-[15px] leading-relaxed">
               {facility.overview}
