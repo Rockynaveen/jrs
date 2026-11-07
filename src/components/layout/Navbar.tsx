@@ -93,7 +93,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
         { name: 'Admissions Overview', href: '/admissions' },
         {
           name: 'Download Brochure',
-          href: 'https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf',
+          href: '/documents/jrs-school-brochure.pdf',
           target: '_blank',
           rel: 'noopener noreferrer',
         },
@@ -182,7 +182,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
               <span className="text-slate-400 hidden sm:inline shrink-0">•</span>
 
               <a
-                href="https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf"
+                href="/documents/jrs-school-brochure.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:inline-flex items-center gap-2 font-medium text-[#111] hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif] whitespace-nowrap group"

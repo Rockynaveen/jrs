@@ -44,7 +44,7 @@ export default function Footer() {
   const importantLinks = [
     {
       name: 'School Prospectus',
-      href: '/certificates/',
+      href: '/documents/jrs-school-brochure.pdf',
       target: '_blank',
       rel: 'noopener noreferrer',
     },

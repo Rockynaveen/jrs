@@ -11,8 +11,7 @@ export const SITE_CONFIG = {
   affiliation: 'CBSE Affiliated School',
   affiliationNo: '3630478',
   schoolCode: '56725',
-  prospectusUrl:
-    'https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf',
+  prospectusUrl: '/documents/jrs-school-brochure.pdf',
   socialLinks: {
     facebook: 'https://www.facebook.com/AtJRSSchool/',
     twitter: 'https://x.com/AtJRSSchool',

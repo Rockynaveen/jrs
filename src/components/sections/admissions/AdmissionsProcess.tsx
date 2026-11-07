@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { GraduationCap } from 'lucide-react'
+import { GraduationCap, Download } from 'lucide-react'
 
 export default function AdmissionsProcess() {
   const steps = [
@@ -139,6 +139,20 @@ export default function AdmissionsProcess() {
               >
                 {item.description}
               </p>
+
+              {item.step === '02' && (
+                <div className="mt-3 pt-2">
+                  <a
+                    href="/documents/jrs-school-brochure.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#e31e24] hover:underline"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Download Brochure (PDF)</span>
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>

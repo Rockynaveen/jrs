@@ -136,7 +136,7 @@ export default function Hero() {
               </span>
               <span className="text-white/30">•</span>
               <a
-                href="https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf"
+                href="/documents/jrs-school-brochure.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 underline underline-offset-2 hover:text-[#f59e0b] transition-colors"
@@ -173,7 +173,7 @@ export default function Hero() {
               </span>
               <span className="text-white/30">•</span>
               <a
-                href="https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf"
+                href="/documents/jrs-school-brochure.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 underline underline-offset-2 hover:text-[#f59e0b] transition-colors"
