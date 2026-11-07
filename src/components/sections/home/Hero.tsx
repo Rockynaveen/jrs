@@ -11,27 +11,21 @@ export default function Hero() {
 
   const slides = [
     {
-      titlePart1: 'Empowering',
-      titlePart2: 'Future Leaders',
-      tagline: 'NURTURING BRIGHT MINDS • BUILDING A BETTER TOMORROW',
+
       description:
         'At JRS International School, we inspire curiosity, creativity and compassion. A place where every child discovers their potential and shines in their own unique way.',
       image: '/images/hero image.png',
       alt: 'JRS International School Campus Building and Assembly',
     },
     {
-      titlePart1: 'Inspiring',
-      titlePart2: 'Excellence & Values',
-      tagline: 'WORLD-CLASS EDUCATION • ROOTED IN ETHOS',
+
       description:
         'Providing an innovative curriculum and a nurturing environment where students develop leadership, critical thinking, and lifelong values.',
       image: '/images/heroslider3.png',
       alt: 'JRS International School Students',
     },
     {
-      titlePart1: 'Holistic & Global',
-      titlePart2: 'Future-Ready Education',
-      tagline: 'SHAPING MINDS • FOSTERING CREATIVITY',
+
       description:
         'Empowering students with 21st-century skills, digital classrooms, sports excellence, and a lifelong passion for knowledge.',
       image: '/images/campus-building.jpg',

@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'JRS International School | Empowering Future Leaders',
+
   description:
     'JRS International School, Uppal, Hyderabad. Committed to providing quality education with CBSE curriculum, world-class infrastructure, and holistic development.',
 }

@@ -62,8 +62,8 @@ const documentsAndInformation: DocumentItem[] = [
     title:
       'Copies of Societies/Trust/Company Registration/Renewal Certificate, as applicable',
     btnLabel: 'Society Registration',
-    pdfUrl: '/certificates/ARvf.pdf',
-    authority: 'Registrar of Societies, Govt. of Telangana',
+    pdfUrl: '/certificates/society-registration.pdf',
+    authority: 'Registrar of Societies / Sub-Registrar Narapally, Govt. of Telangana',
   },
   {
     sno: 3,
