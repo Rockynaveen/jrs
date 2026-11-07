@@ -44,7 +44,7 @@ const generalInformation = [
   {
     sno: 7,
     info: 'Contact Details (Landline / Mobile)',
-    details: '+91 92814 09674, +91 92814 09672 / 08415-295555',
+    details: '+91 92814 09671, +91 92814 09672 / 08415-295555',
   },
 ]
 
@@ -138,7 +138,7 @@ const schoolInfrastructure = [
   {
     sno: 2,
     info: 'No. and Size of Classrooms (Sq. Mtr.)',
-    details: '22 Classrooms (48 Sq. Mtr. each)',
+    details: '44 Classrooms',
   },
   {
     sno: 3,

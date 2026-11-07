@@ -110,13 +110,14 @@ export default function AboutAdmissionSteps() {
                 {item.step}
               </div>
 
-              {/* 3D Flat Icon with transparent background */}
-              <div className="mb-4 flex items-center justify-center h-20 sm:h-24 w-full">
+              {/* 3D Flat Icon with transparent background - compact and cleanly contained */}
+              <div className="mb-4 flex items-center justify-center h-16 sm:h-20 w-full">
                 <img
                   src={item.image}
                   alt=""
                   aria-hidden="true"
-                  className="w-18 h-18 sm:w-20 sm:h-20 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.12)] group-hover:scale-110 transition-transform duration-300 pointer-events-none"
+                  className="w-14 h-14 sm:w-16 sm:h-16 max-w-[64px] max-h-[64px] object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] group-hover:scale-110 transition-transform duration-300 pointer-events-none"
+                  style={{ width: '64px', height: '64px', maxWidth: '64px', maxHeight: '64px', objectFit: 'contain' }}
                   loading="lazy"
                 />
               </div>

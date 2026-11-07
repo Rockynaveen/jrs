@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   description:
     'JRS International School, Uppal, Hyderabad. Committed to providing quality education with CBSE curriculum, world-class infrastructure, and holistic development.',
   address: 'Narapally, Near Uppal Depot, Hyderabad, Telangana',
-  phone: '+91 92814 09674, +91 92814 09672',
+  phone: '+91 92814 09671, +91 92814 09672',
   phoneHref: 'tel:+919281409674',
   email: 'Jrsinternationalschool6@gmail.com',
   emailHref: 'mailto:jrsinternationalschool6@gmail.com',

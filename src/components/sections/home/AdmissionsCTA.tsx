@@ -115,9 +115,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
   return (
     <section
       id="contact"
-      className={`relative ${
-        isWhite ? 'bg-white text-slate-800' : 'bg-[#030d1d] text-white'
-      } py-[50px] overflow-hidden scroll-mt-24`}
+      className={`relative ${isWhite ? 'bg-white text-slate-800' : 'bg-[#030d1d] text-white'
+        } py-[50px] overflow-hidden scroll-mt-24`}
     >
       <span id="enquire" className="absolute -top-24" />
       <span id="admissions" className="absolute -top-24" />
@@ -145,27 +144,24 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
           <div className="lg:col-span-6 space-y-4 sm:space-y-5" data-aos="fade-right">
             <div>
               <div
-                className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2.5 ${
-                  isWhite
+                className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2.5 ${isWhite
                     ? 'text-[#e31e24] bg-red-50 border border-red-200/80'
                     : 'text-amber-300 bg-amber-400/10 border border-amber-400/20'
-                }`}
+                  }`}
               >
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Narapally, Hyderabad</span>
               </div>
               <h2
-                className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight ${
-                  isWhite ? 'text-[#031c3f]' : 'text-white'
-                }`}
+                className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight ${isWhite ? 'text-[#031c3f]' : 'text-white'
+                  }`}
               >
                 Admission Open for <br />
                 <span className={isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}>2027 – 2028</span>
               </h2>
               <p
-                className={`text-sm sm:text-[15px] mt-2.5 max-w-xl leading-relaxed ${
-                  isWhite ? 'text-[#111]' : 'text-slate-200'
-                }`}
+                className={`text-sm sm:text-[15px] mt-2.5 max-w-xl leading-relaxed ${isWhite ? 'text-[#111]' : 'text-slate-200'
+                  }`}
               >
                 Give your child the right foundation for a brighter future. Apply early for personalized guidance, campus tour, and direct interaction with academic mentors.
               </p>
@@ -174,24 +170,22 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
             {/* Quick Contact Chips */}
             <div className="flex flex-wrap items-center gap-2.5">
               <div
-                className={`inline-flex items-center gap-1.5 ${
-                  isWhite
+                className={`inline-flex items-center gap-1.5 ${isWhite
                     ? 'bg-slate-50 border border-slate-200 text-[#111]'
                     : 'bg-white/10 backdrop-blur-md border border-white/20 text-slate-100'
-                } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
+                  } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
               >
                 <Phone className={`w-3.5 h-3.5 mr-0.5 ${isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}`} />
-                <a href="tel:+919281409674" className="font-medium hover:text-[#e31e24] transition-colors">+91 92814 09674</a>
+                <a href="tel:+919281409674" className="font-medium hover:text-[#e31e24] transition-colors">+91 92814 09671</a>
                 <span>,</span>
                 <a href="tel:+919281409672" className="font-medium hover:text-[#e31e24] transition-colors">+91 92814 09672</a>
               </div>
               <a
                 href="mailto:jrsinternationalschool6@gmail.com"
-                className={`inline-flex items-center gap-2 ${
-                  isWhite
+                className={`inline-flex items-center gap-2 ${isWhite
                     ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 text-[#111]'
                     : 'bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-slate-100'
-                } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
+                  } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
               >
                 <Mail className={`w-3.5 h-3.5 ${isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}`} />
                 <span className="font-medium">Jrsinternationalschool6@gmail.com</span>
@@ -201,31 +195,27 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
             {/* 3 Feature Badges on Left Side */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 pt-2 sm:pt-3 w-full max-w-2xl">
               <div
-                className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${
-                  isWhite
+                className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${isWhite
                     ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
                     : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
-                } transition-all duration-300 group`}
+                  } transition-all duration-300 group`}
               >
                 <div
-                  className={`shrink-0 ${
-                    isWhite ? 'text-[#031c3f]' : 'text-[#facc15]'
-                  } group-hover:scale-110 transition-transform`}
+                  className={`shrink-0 ${isWhite ? 'text-[#031c3f]' : 'text-[#facc15]'
+                    } group-hover:scale-110 transition-transform`}
                 >
                   <GraduationCap className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
                 </div>
                 <div className="min-w-0">
                   <h4
-                    className={`text-[11px] sm:text-xs font-normal tracking-wide leading-snug whitespace-nowrap ${
-                      isWhite ? 'text-[#031c3f]' : 'text-white'
-                    }`}
+                    className={`text-[11px] sm:text-xs font-normal tracking-wide leading-snug whitespace-nowrap ${isWhite ? 'text-[#031c3f]' : 'text-white'
+                      }`}
                   >
                     CBSE Curriculum
                   </h4>
                   <p
-                    className={`text-[10px] sm:text-[11px] font-light tracking-wide leading-snug mt-0.5 whitespace-nowrap ${
-                      isWhite ? 'text-slate-500' : 'text-slate-300'
-                    }`}
+                    className={`text-[10px] sm:text-[11px] font-light tracking-wide leading-snug mt-0.5 whitespace-nowrap ${isWhite ? 'text-slate-500' : 'text-slate-300'
+                      }`}
                   >
                     National standards
                   </p>
@@ -233,31 +223,27 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
               </div>
 
               <div
-                className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${
-                  isWhite
+                className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${isWhite
                     ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
                     : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
-                } transition-all duration-300 group`}
+                  } transition-all duration-300 group`}
               >
                 <div
-                  className={`shrink-0 ${
-                    isWhite ? 'text-[#031c3f]' : 'text-[#facc15]'
-                  } group-hover:scale-110 transition-transform`}
+                  className={`shrink-0 ${isWhite ? 'text-[#031c3f]' : 'text-[#facc15]'
+                    } group-hover:scale-110 transition-transform`}
                 >
                   <Sparkles className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
                 </div>
                 <div className="min-w-0">
                   <h4
-                    className={`text-[11px] sm:text-xs font-normal tracking-wide leading-snug whitespace-nowrap ${
-                      isWhite ? 'text-[#031c3f]' : 'text-white'
-                    }`}
+                    className={`text-[11px] sm:text-xs font-normal tracking-wide leading-snug whitespace-nowrap ${isWhite ? 'text-[#031c3f]' : 'text-white'
+                      }`}
                   >
                     Holistic Growth
                   </h4>
                   <p
-                    className={`text-[10px] sm:text-[11px] font-light tracking-wide leading-snug mt-0.5 whitespace-nowrap ${
-                      isWhite ? 'text-slate-500' : 'text-slate-300'
-                    }`}
+                    className={`text-[10px] sm:text-[11px] font-light tracking-wide leading-snug mt-0.5 whitespace-nowrap ${isWhite ? 'text-slate-500' : 'text-slate-300'
+                      }`}
                   >
                     Arts, sports & STEM
                   </p>
@@ -265,31 +251,27 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
               </div>
 
               <div
-                className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${
-                  isWhite
+                className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${isWhite
                     ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
                     : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
-                } transition-all duration-300 group`}
+                  } transition-all duration-300 group`}
               >
                 <div
-                  className={`shrink-0 ${
-                    isWhite ? 'text-[#031c3f]' : 'text-[#facc15]'
-                  } group-hover:scale-110 transition-transform`}
+                  className={`shrink-0 ${isWhite ? 'text-[#031c3f]' : 'text-[#facc15]'
+                    } group-hover:scale-110 transition-transform`}
                 >
                   <Award className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
                 </div>
                 <div className="min-w-0">
                   <h4
-                    className={`text-[11px] sm:text-xs font-normal tracking-wide leading-snug whitespace-nowrap ${
-                      isWhite ? 'text-[#031c3f]' : 'text-white'
-                    }`}
+                    className={`text-[11px] sm:text-xs font-normal tracking-wide leading-snug whitespace-nowrap ${isWhite ? 'text-[#031c3f]' : 'text-white'
+                      }`}
                   >
                     Top Faculty
                   </h4>
                   <p
-                    className={`text-[10px] sm:text-[11px] font-light tracking-wide leading-snug mt-0.5 whitespace-nowrap ${
-                      isWhite ? 'text-slate-500' : 'text-slate-300'
-                    }`}
+                    className={`text-[10px] sm:text-[11px] font-light tracking-wide leading-snug mt-0.5 whitespace-nowrap ${isWhite ? 'text-slate-500' : 'text-slate-300'
+                      }`}
                   >
                     Caring mentorship
                   </p>
@@ -299,9 +281,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
 
             {/* Micro reassurance line */}
             <div
-              className={`flex items-center gap-5 pt-0.5 text-xs sm:text-[13px] ${
-                isWhite ? 'text-slate-500' : 'text-slate-300'
-              }`}
+              className={`flex items-center gap-5 pt-0.5 text-xs sm:text-[13px] ${isWhite ? 'text-slate-500' : 'text-slate-300'
+                }`}
             >
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
@@ -317,31 +298,27 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
           {/* Right Column: Enquiry Form Container */}
           <div className="lg:col-span-6" data-aos="fade-left">
             <Card
-              className={`${
-                isWhite
+              className={`${isWhite
                   ? 'bg-white border border-slate-200/90 shadow-xl text-slate-900'
                   : 'bg-white/[0.08] hover:bg-white/[0.12] backdrop-blur-md border border-white/20 shadow-2xl text-white'
-              } rounded-2xl p-5 sm:p-6 transition-all duration-300`}
+                } rounded-2xl p-5 sm:p-6 transition-all duration-300`}
             >
               <CardContent className="p-0">
 
                 {/* Form Title */}
                 <div
-                  className={`mb-3.5 pb-2.5 border-b ${
-                    isWhite ? 'border-slate-100' : 'border-white/15'
-                  }`}
+                  className={`mb-3.5 pb-2.5 border-b ${isWhite ? 'border-slate-100' : 'border-white/15'
+                    }`}
                 >
                   <h3
-                    className={`text-lg sm:text-xl font-bold tracking-tight ${
-                      isWhite ? 'text-[#031c3f]' : 'text-white'
-                    }`}
+                    className={`text-lg sm:text-xl font-bold tracking-tight ${isWhite ? 'text-[#031c3f]' : 'text-white'
+                      }`}
                   >
                     Enquiry Form
                   </h3>
                   <p
-                    className={`text-[13px] mt-1 ${
-                      isWhite ? 'text-slate-500' : 'text-slate-200'
-                    }`}
+                    className={`text-[13px] mt-1 ${isWhite ? 'text-slate-500' : 'text-slate-200'
+                      }`}
                   >
                     Fill in the details below to enquire for admissions.
                   </p>
@@ -555,11 +532,10 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                       <div className="sm:col-span-2 pt-2 flex justify-end">
                         <Button
                           type="submit"
-                          className={`w-full sm:w-auto h-10 px-7 ${
-                            isWhite
+                          className={`w-full sm:w-auto h-10 px-7 ${isWhite
                               ? 'bg-[#e31e24] hover:bg-[#c9181e] text-white shadow-red-600/20'
                               : 'bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-amber-500/20'
-                          } font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2 group`}
+                            } font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2 group`}
                         >
                           <span>Enquire Now</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -661,11 +637,10 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                       </Button>
                       <Button
                         type="submit"
-                        className={`h-10 px-6 ${
-                          isWhite
+                        className={`h-10 px-6 ${isWhite
                             ? 'bg-[#e31e24] hover:bg-[#c9181e] text-white shadow-red-600/20'
                             : 'bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-amber-500/20'
-                        } font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2 group`}
+                          } font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2 group`}
                       >
                         <span>Submit Enquiry</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

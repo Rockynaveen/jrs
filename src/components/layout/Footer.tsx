@@ -254,7 +254,7 @@ export default function Footer() {
                     href="tel:+919281409674"
                     className="hover:text-white transition-colors"
                   >
-                    +91 92814 09674
+                    +91 92814 09671
                   </a>
                   <span className="text-slate-400">,</span>
                   <a
@@ -303,8 +303,8 @@ export default function Footer() {
         onClick={scrollToTop}
         aria-label="Scroll to top"
         className={`fixed bottom-[148px] right-[25px] sm:bottom-[168px] sm:right-[32px] z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${showScrollTop
-            ? 'opacity-100 translate-y-0 pointer-events-auto'
-            : 'opacity-0 translate-y-4 pointer-events-none'
+          ? 'opacity-100 translate-y-0 pointer-events-auto'
+          : 'opacity-0 translate-y-4 pointer-events-none'
           }`}
       >
         <ChevronUp className="w-5 h-5 stroke-[2.5]" />
