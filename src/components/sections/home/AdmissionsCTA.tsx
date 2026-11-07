@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import {
   GraduationCap,
   Sparkles,
@@ -14,6 +14,10 @@ import {
   ArrowRight,
   ShieldCheck,
   Clock,
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+  X,
 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
@@ -87,6 +91,9 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
     setSubmitted(false)
     setStep(1)
     setErrorMsg('')
+    setDobSelectedYear(null)
+    setDobSelectedMonth(null)
+    setDobSelectedDay(null)
     setFormData({
       academicYear: '2027-2028',
       branch: 'JRS INTERNATIONAL SCHOOL',
@@ -100,6 +107,116 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
       emailAddress: '',
     })
   }
+
+  // Custom DOB Picker State
+  const [dobPickerOpen, setDobPickerOpen] = useState(false)
+  const [dobPickerView, setDobPickerView] = useState<'year' | 'month' | 'day'>('year')
+  const [dobSelectedYear, setDobSelectedYear] = useState<number | null>(null)
+  const [dobSelectedMonth, setDobSelectedMonth] = useState<number | null>(null) // 1 - 12
+  const [dobSelectedDay, setDobSelectedDay] = useState<number | null>(null)
+  const [dobYearPage, setDobYearPage] = useState(2002)
+  const dobPickerRef = useRef<HTMLDivElement>(null)
+
+  const monthsList = [
+    { num: 1, name: 'Jan', full: 'January' },
+    { num: 2, name: 'Feb', full: 'February' },
+    { num: 3, name: 'Mar', full: 'March' },
+    { num: 4, name: 'Apr', full: 'April' },
+    { num: 5, name: 'May', full: 'May' },
+    { num: 6, name: 'Jun', full: 'June' },
+    { num: 7, name: 'Jul', full: 'July' },
+    { num: 8, name: 'Aug', full: 'August' },
+    { num: 9, name: 'Sep', full: 'September' },
+    { num: 10, name: 'Oct', full: 'October' },
+    { num: 11, name: 'Nov', full: 'November' },
+    { num: 12, name: 'Dec', full: 'December' },
+  ]
+
+  // 24 years starting from dobYearPage (e.g. 2002 to 2025)
+  const yearsList = Array.from({ length: 24 }, (_, i) => dobYearPage + i)
+
+  const getDaysInMonth = (year: number, month: number) => {
+    return new Date(year, month, 0).getDate()
+  }
+
+  const getFirstDayOffset = (year: number, month: number) => {
+    return new Date(year, month - 1, 1).getDay()
+  }
+
+  const openDobPicker = () => {
+    if (formData.studentDob) {
+      const parts = formData.studentDob.split('-')
+      if (parts.length === 3) {
+        const y = parseInt(parts[0], 10)
+        const m = parseInt(parts[1], 10)
+        const d = parseInt(parts[2], 10)
+        setDobSelectedYear(y)
+        setDobSelectedMonth(m)
+        setDobSelectedDay(d)
+        if (y < dobYearPage || y >= dobYearPage + 24) {
+          setDobYearPage(Math.floor((y - 2002) / 12) * 12 + 2002)
+        }
+      }
+    }
+    setDobPickerView('year')
+    setDobPickerOpen(true)
+  }
+
+  const handleSelectYear = (yr: number) => {
+    setDobSelectedYear(yr)
+    setDobPickerView('month')
+  }
+
+  const handleSelectMonth = (m: number) => {
+    setDobSelectedMonth(m)
+    setDobPickerView('day')
+  }
+
+  const handleSelectDay = (d: number) => {
+    if (!dobSelectedYear || !dobSelectedMonth) return
+    setDobSelectedDay(d)
+    const yStr = dobSelectedYear.toString()
+    const mStr = String(dobSelectedMonth).padStart(2, '0')
+    const dStr = String(d).padStart(2, '0')
+    const formatted = `${yStr}-${mStr}-${dStr}`
+    setFormData((prev) => ({ ...prev, studentDob: formatted }))
+    setErrorMsg('')
+    setDobPickerOpen(false)
+  }
+
+  const formatDobDisplay = (isoStr: string) => {
+    if (!isoStr) return ''
+    const parts = isoStr.split('-')
+    if (parts.length === 3) {
+      const [y, m, d] = parts
+      const mIdx = parseInt(m, 10) - 1
+      const mName = monthsList[mIdx]?.name || m
+      return `${d} ${mName} ${y}`
+    }
+    return isoStr
+  }
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dobPickerRef.current && !dobPickerRef.current.contains(e.target as Node)) {
+        setDobPickerOpen(false)
+      }
+    }
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setDobPickerOpen(false)
+      }
+    }
+
+    if (dobPickerOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener('keydown', handleKeyDown)
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [dobPickerOpen])
 
   const inputClass = isWhite
     ? 'h-10 text-xs bg-slate-50 border-slate-200 text-slate-900 placeholder-slate-400 rounded-lg focus:bg-white focus:border-[#e31e24]'
@@ -116,7 +233,7 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
     <section
       id="contact"
       className={`relative ${isWhite ? 'bg-white text-slate-800' : 'bg-[#030d1d] text-white'
-        } py-[50px] overflow-hidden scroll-mt-24`}
+        } py-[50px] overflow-x-clip scroll-mt-24`}
     >
       <span id="enquire" className="absolute -top-24" />
       <span id="admissions" className="absolute -top-24" />
@@ -511,21 +628,266 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                         </div>
                       </div>
 
-                      {/* Row 3 - Field 6: Student DOB */}
-                      <div className="space-y-1">
-                        <Label htmlFor="studentDob" className={labelClass}>
+                      {/* Row 3 - Field 6: Student DOB with Custom Grid Picker */}
+                      <div className="space-y-1 relative" ref={dobPickerRef}>
+                        <Label htmlFor="studentDobTrigger" className={labelClass}>
                           Student DOB
                         </Label>
-                        <Input
-                          id="studentDob"
-                          type="date"
-                          value={formData.studentDob}
-                          onChange={(e) =>
-                            setFormData({ ...formData, studentDob: e.target.value })
-                          }
-                          className={`cursor-pointer ${inputClass} ${isWhite ? '[color-scheme:light]' : '[color-scheme:dark]'}`}
-                          required
-                        />
+                        <button
+                          id="studentDobTrigger"
+                          type="button"
+                          onClick={openDobPicker}
+                          className={`w-full flex items-center justify-between text-left px-3 cursor-pointer ${inputClass}`}
+                        >
+                          <span className={formData.studentDob ? (isWhite ? 'text-slate-900 font-medium' : 'text-white font-medium') : 'text-slate-400'}>
+                            {formatDobDisplay(formData.studentDob) || 'DD / MM / YYYY'}
+                          </span>
+                          <Calendar className={`w-4 h-4 shrink-0 ${isWhite ? 'text-[#013aa3]' : 'text-amber-400'}`} />
+                        </button>
+                        <input type="hidden" name="studentDob" value={formData.studentDob} />
+
+                        {/* Interactive Grid Popover - Opens ABOVE field so it never extends below footer */}
+                        {dobPickerOpen && (
+                          <div
+                            className={`absolute right-0 bottom-full mb-2 z-50 w-full sm:w-[310px] p-3 rounded-2xl shadow-2xl border transition-all animate-scale-up ${
+                              isWhite
+                                ? 'bg-white border-slate-200 text-slate-900 shadow-slate-900/15'
+                                : 'bg-[#041633] border-white/20 text-white shadow-black/70'
+                            }`}
+                          >
+                            {/* Breadcrumb Header */}
+                            <div className="flex items-center justify-between gap-1 pb-2 mb-2 border-b border-white/10 border-slate-200/80">
+                              <div className="flex items-center gap-1 text-xs">
+                                <button
+                                  type="button"
+                                  onClick={() => setDobPickerView('year')}
+                                  className={`px-2 py-0.5 rounded-md font-bold text-xs transition-colors cursor-pointer ${
+                                    dobPickerView === 'year'
+                                      ? isWhite
+                                        ? 'bg-[#013aa3] text-white shadow-xs'
+                                        : 'bg-amber-400 text-slate-950 shadow-xs'
+                                      : dobSelectedYear
+                                      ? isWhite
+                                        ? 'bg-slate-100 text-[#013aa3] hover:bg-slate-200'
+                                        : 'bg-white/10 text-amber-300 hover:bg-white/20'
+                                      : 'text-slate-400'
+                                  }`}
+                                >
+                                  {dobSelectedYear || 'Year'}
+                                </button>
+                                <span className="text-slate-400 text-[10px]">/</span>
+                                <button
+                                  type="button"
+                                  disabled={!dobSelectedYear}
+                                  onClick={() => setDobPickerView('month')}
+                                  className={`px-2 py-0.5 rounded-md font-bold text-xs transition-colors cursor-pointer ${
+                                    dobPickerView === 'month'
+                                      ? isWhite
+                                        ? 'bg-[#013aa3] text-white shadow-xs'
+                                        : 'bg-amber-400 text-slate-950 shadow-xs'
+                                      : dobSelectedMonth
+                                      ? isWhite
+                                        ? 'bg-slate-100 text-[#013aa3] hover:bg-slate-200'
+                                        : 'bg-white/10 text-amber-300 hover:bg-white/20'
+                                      : 'text-slate-400 opacity-50 cursor-not-allowed'
+                                  }`}
+                                >
+                                  {dobSelectedMonth ? monthsList[dobSelectedMonth - 1]?.name : 'Month'}
+                                </button>
+                                <span className="text-slate-400 text-[10px]">/</span>
+                                <button
+                                  type="button"
+                                  disabled={!dobSelectedYear || !dobSelectedMonth}
+                                  onClick={() => setDobPickerView('day')}
+                                  className={`px-2 py-0.5 rounded-md font-bold text-xs transition-colors cursor-pointer ${
+                                    dobPickerView === 'day'
+                                      ? isWhite
+                                        ? 'bg-[#013aa3] text-white shadow-xs'
+                                        : 'bg-amber-400 text-slate-950 shadow-xs'
+                                      : dobSelectedDay
+                                      ? isWhite
+                                        ? 'bg-slate-100 text-[#013aa3] hover:bg-slate-200'
+                                        : 'bg-white/10 text-amber-300 hover:bg-white/20'
+                                      : 'text-slate-400 opacity-50 cursor-not-allowed'
+                                  }`}
+                                >
+                                  {dobSelectedDay || 'Day'}
+                                </button>
+                              </div>
+
+                              <button
+                                type="button"
+                                onClick={() => setDobPickerOpen(false)}
+                                className="p-1 rounded-md text-slate-400 hover:text-white hover:text-slate-700 transition-colors cursor-pointer"
+                                aria-label="Close"
+                              >
+                                <X className="w-3.5 h-3.5" />
+                              </button>
+                            </div>
+
+                            {/* View 1: 3-Column Year Grid (2002 2003 2004 / 2005 ...) */}
+                            {dobPickerView === 'year' && (
+                              <div>
+                                <div className="flex items-center justify-between mb-1.5 px-0.5 text-xs">
+                                  <button
+                                    type="button"
+                                    onClick={() => setDobYearPage((prev) => Math.max(1990, prev - 12))}
+                                    className={`p-1 rounded flex items-center gap-0.5 text-[11px] font-semibold cursor-pointer ${
+                                      isWhite ? 'hover:bg-slate-100 text-slate-600' : 'hover:bg-white/10 text-slate-300'
+                                    }`}
+                                  >
+                                    <ChevronLeft className="w-3 h-3" />
+                                    <span>Older</span>
+                                  </button>
+                                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                                    Select Year
+                                  </span>
+                                  <button
+                                    type="button"
+                                    onClick={() => setDobYearPage((prev) => Math.min(2010, prev + 12))}
+                                    className={`p-1 rounded flex items-center gap-0.5 text-[11px] font-semibold cursor-pointer ${
+                                      isWhite ? 'hover:bg-slate-100 text-slate-600' : 'hover:bg-white/10 text-slate-300'
+                                    }`}
+                                  >
+                                    <span>Newer</span>
+                                    <ChevronRight className="w-3 h-3" />
+                                  </button>
+                                </div>
+
+                                <div className="grid grid-cols-3 gap-1.5 max-h-[190px] overflow-y-auto pr-1">
+                                  {yearsList.map((yr) => {
+                                    const isSelected = dobSelectedYear === yr
+                                    return (
+                                      <button
+                                        key={yr}
+                                        type="button"
+                                        onClick={() => handleSelectYear(yr)}
+                                        className={`py-1.5 px-1 text-xs font-bold rounded-lg text-center transition-all cursor-pointer ${
+                                          isSelected
+                                            ? isWhite
+                                              ? 'bg-[#013aa3] text-white shadow-xs'
+                                              : 'bg-amber-400 text-slate-950 shadow-xs'
+                                            : isWhite
+                                            ? 'bg-slate-50 hover:bg-[#013aa3]/10 text-slate-800 hover:text-[#013aa3] border border-slate-200'
+                                            : 'bg-white/5 hover:bg-white/15 text-slate-200 hover:text-white border border-white/10'
+                                        }`}
+                                      >
+                                        {yr}
+                                      </button>
+                                    )
+                                  })}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* View 2: Month Grid */}
+                            {dobPickerView === 'month' && (
+                              <div>
+                                <div className="flex items-center justify-between mb-1.5 px-0.5">
+                                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                                    Month • {dobSelectedYear}
+                                  </span>
+                                  <button
+                                    type="button"
+                                    onClick={() => setDobPickerView('year')}
+                                    className={`text-[11px] font-semibold underline cursor-pointer ${
+                                      isWhite ? 'text-[#013aa3]' : 'text-amber-400'
+                                    }`}
+                                  >
+                                    Change Year
+                                  </button>
+                                </div>
+
+                                <div className="grid grid-cols-3 gap-1.5">
+                                  {monthsList.map((m) => {
+                                    const isSelected = dobSelectedMonth === m.num
+                                    return (
+                                      <button
+                                        key={m.num}
+                                        type="button"
+                                        onClick={() => handleSelectMonth(m.num)}
+                                        className={`py-2 px-1 text-xs font-bold rounded-lg text-center transition-all cursor-pointer ${
+                                          isSelected
+                                            ? isWhite
+                                              ? 'bg-[#013aa3] text-white shadow-xs'
+                                              : 'bg-amber-400 text-slate-950 shadow-xs'
+                                            : isWhite
+                                            ? 'bg-slate-50 hover:bg-[#013aa3]/10 text-slate-800 hover:text-[#013aa3] border border-slate-200'
+                                            : 'bg-white/5 hover:bg-white/15 text-slate-200 hover:text-white border border-white/10'
+                                        }`}
+                                      >
+                                        {m.name}
+                                      </button>
+                                    )
+                                  })}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* View 3: Day Grid */}
+                            {dobPickerView === 'day' && dobSelectedYear && dobSelectedMonth && (
+                              <div>
+                                <div className="flex items-center justify-between mb-1.5 px-0.5">
+                                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                                    Day • {monthsList[dobSelectedMonth - 1]?.name} {dobSelectedYear}
+                                  </span>
+                                  <button
+                                    type="button"
+                                    onClick={() => setDobPickerView('month')}
+                                    className={`text-[11px] font-semibold underline cursor-pointer ${
+                                      isWhite ? 'text-[#013aa3]' : 'text-amber-400'
+                                    }`}
+                                  >
+                                    Change Month
+                                  </button>
+                                </div>
+
+                                <div className="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-slate-400 mb-1">
+                                  <span>Su</span>
+                                  <span>Mo</span>
+                                  <span>Tu</span>
+                                  <span>We</span>
+                                  <span>Th</span>
+                                  <span>Fr</span>
+                                  <span>Sa</span>
+                                </div>
+
+                                <div className="grid grid-cols-7 gap-1">
+                                  {Array.from({ length: getFirstDayOffset(dobSelectedYear, dobSelectedMonth) }).map(
+                                    (_, i) => (
+                                      <div key={`offset-${i}`} className="h-7 w-7" />
+                                    )
+                                  )}
+
+                                  {Array.from({
+                                    length: getDaysInMonth(dobSelectedYear, dobSelectedMonth),
+                                  }).map((_, i) => {
+                                    const dayNum = i + 1
+                                    const isSelected = dobSelectedDay === dayNum
+                                    return (
+                                      <button
+                                        key={dayNum}
+                                        type="button"
+                                        onClick={() => handleSelectDay(dayNum)}
+                                        className={`h-7 w-7 mx-auto text-xs font-bold rounded-lg flex items-center justify-center transition-all cursor-pointer ${
+                                          isSelected
+                                            ? isWhite
+                                              ? 'bg-[#013aa3] text-white shadow-xs'
+                                              : 'bg-amber-400 text-slate-950 shadow-xs'
+                                            : isWhite
+                                            ? 'hover:bg-[#013aa3]/10 text-slate-800 hover:text-[#013aa3]'
+                                            : 'hover:bg-white/15 text-slate-200 hover:text-white'
+                                        }`}
+                                      >
+                                        {dayNum}
+                                      </button>
+                                    )
+                                  })}
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
 
                       {/* Row 4 - Premium Enquiry Action Button */}

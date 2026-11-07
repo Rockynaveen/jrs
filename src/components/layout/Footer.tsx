@@ -44,7 +44,7 @@ export default function Footer() {
   const importantLinks = [
     {
       name: 'School Prospectus',
-      href: 'https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf',
+      href: '/certificates/',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
