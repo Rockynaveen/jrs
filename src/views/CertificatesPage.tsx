@@ -62,7 +62,7 @@ const documentsAndInformation: DocumentItem[] = [
     title:
       'Copies of Societies/Trust/Company Registration/Renewal Certificate, as applicable',
     btnLabel: 'Society Registration',
-    pdfUrl: '/certificates/ARvf',
+    pdfUrl: '/certificates/ARvf.pdf',
     authority: 'Registrar of Societies, Govt. of Telangana',
   },
   {
