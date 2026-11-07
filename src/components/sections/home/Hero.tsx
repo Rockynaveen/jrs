@@ -215,14 +215,6 @@ export default function Hero() {
         {/* Hero Content on Clean Solid Navy Left Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-6 my-auto w-full">
           <div className="max-w-xl lg:max-w-2xl text-left pr-14 sm:pr-0">
-            {/* Single Best-Suited Headline for all slides (Uniform single color) */}
-            <h1 className="text-[27px] xs:text-[31px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[62px] font-extrabold text-white tracking-tight leading-[1.15] mb-4 sm:mb-6 break-words drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
-              <span>Empowering Minds,</span>{' '}
-              <span className="block mt-1 sm:mt-2 text-white">
-                Shaping Future Leaders
-              </span>
-            </h1>
-
             {/* CTA Buttons - Pure Glassmorphism without background */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 w-full sm:w-auto">
               {/* Primary Admissions Button */}
