@@ -281,17 +281,40 @@ export default function CertificatesPage() {
               </div>
 
               <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
-                <div className="overflow-x-auto">
+                {/* Mobile Card View (No horizontal scrolling on phones) */}
+                <div className="block md:hidden divide-y divide-slate-100">
+                  {generalInformation.map((item) => (
+                    <div
+                      key={item.sno}
+                      className="p-3.5 sm:p-4 hover:bg-slate-50/60 transition-colors"
+                    >
+                      <div className="flex items-start gap-2.5 mb-1.5">
+                        <span className="w-5 h-5 rounded-md bg-[#031c3f]/10 text-[#031c3f] font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">
+                          {item.sno}
+                        </span>
+                        <h4 className="text-xs font-bold text-[#031c3f] uppercase tracking-wider leading-snug">
+                          {item.info}
+                        </h4>
+                      </div>
+                      <p className="pl-7.5 text-xs sm:text-[13.5px] text-[#111] leading-relaxed font-medium">
+                        {item.details}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Desktop & Tablet Table View */}
+                <div className="hidden md:block overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="bg-[#f0f5fc] border-b border-slate-200 text-xs sm:text-[13px] font-bold text-[#031c3f] uppercase tracking-wider font-['Manrope',sans-serif]">
-                        <th scope="col" className="py-3 px-4 sm:px-6 w-20 text-left">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-16 text-left">
                           S.NO.
                         </th>
-                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[280px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-5/12">
                           INFORMATION
                         </th>
-                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[320px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-7/12">
                           DETAILS
                         </th>
                       </tr>
@@ -329,17 +352,69 @@ export default function CertificatesPage() {
               </div>
 
               <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
-                <div className="overflow-x-auto">
+                {/* Mobile Card View (No horizontal scrolling on phones) */}
+                <div className="block md:hidden divide-y divide-slate-100">
+                  {documentsAndInformation.map((doc) => (
+                    <div
+                      key={doc.sno}
+                      className="p-3.5 sm:p-4 space-y-2.5 hover:bg-slate-50/60 transition-colors"
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <span className="w-6 h-6 rounded-md bg-[#031c3f]/10 text-[#031c3f] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                          {doc.sno}
+                        </span>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-xs sm:text-[13px] font-semibold text-[#031c3f] leading-snug">
+                            {doc.title}
+                          </h4>
+                          {doc.authority && (
+                            <p className="text-[11px] text-slate-500 mt-1 leading-tight">
+                              {doc.authority}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                      <div className="pl-8.5">
+                        {doc.pdfUrl ? (
+                          <button
+                            type="button"
+                            onClick={() => handleDocumentClick(doc)}
+                            className="w-full bg-[#013aa3]/10 hover:bg-[#013aa3] text-[#013aa3] hover:text-white border border-[#013aa3]/20 font-semibold text-xs py-2 px-3 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-98 cursor-pointer inline-flex items-center justify-center gap-1.5 font-['Inter',sans-serif]"
+                          >
+                            <FileText className="w-3.5 h-3.5 shrink-0" />
+                            <span>{doc.btnLabel}</span>
+                          </button>
+                        ) : doc.href ? (
+                          <Link
+                            href={doc.href}
+                            className="w-full bg-[#013aa3]/10 hover:bg-[#013aa3] text-[#013aa3] hover:text-white border border-[#013aa3]/20 font-semibold text-xs py-2 px-3 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-98 cursor-pointer inline-flex items-center justify-center gap-1.5 font-['Inter',sans-serif]"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                            <span>{doc.btnLabel}</span>
+                          </Link>
+                        ) : (
+                          <span className="w-full bg-[#013aa3]/10 text-[#013aa3] border border-[#013aa3]/20 font-semibold text-xs py-2 px-3 rounded-lg tracking-wide inline-flex items-center justify-center gap-1.5 font-['Inter',sans-serif]">
+                            <FileText className="w-3.5 h-3.5 shrink-0" />
+                            <span>{doc.btnLabel}</span>
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Desktop & Tablet Table View */}
+                <div className="hidden md:block overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="bg-[#f0f5fc] border-b border-slate-200 text-xs sm:text-[13px] font-bold text-[#031c3f] uppercase tracking-wider font-['Manrope',sans-serif]">
-                        <th scope="col" className="py-3 px-4 sm:px-6 w-20 text-left">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-16 text-left">
                           S.NO.
                         </th>
-                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[380px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6">
                           DOCUMENTS / INFORMATION
                         </th>
-                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[240px] text-center sm:text-left">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-[230px] text-center sm:text-left">
                           UPLOAD DOCUMENTS
                         </th>
                       </tr>
@@ -399,17 +474,70 @@ export default function CertificatesPage() {
               </div>
 
               <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
-                <div className="overflow-x-auto">
+                {/* Mobile Card View (No horizontal scrolling on phones) */}
+                <div className="block md:hidden divide-y divide-slate-100">
+                  {schoolInfrastructure.map((item) => (
+                    <div
+                      key={item.sno}
+                      className="p-3.5 sm:p-4 space-y-2 hover:bg-slate-50/60 transition-colors"
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <span className="w-5 h-5 rounded-md bg-[#031c3f]/10 text-[#031c3f] font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">
+                          {item.sno}
+                        </span>
+                        <h4 className="text-xs sm:text-[13px] font-bold text-[#031c3f] leading-snug">
+                          {item.info}
+                        </h4>
+                      </div>
+                      <div className="pl-7.5 text-xs text-[#111]">
+                        {item.docAction ? (
+                          <div className="space-y-2">
+                            <span className="block font-medium text-slate-800">{item.details}</span>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                setSelectedPdf({
+                                  title: item.docAction!.title,
+                                  pdfUrl: item.docAction!.pdfUrl,
+                                  authority: item.docAction!.authority,
+                                })
+                              }
+                              className="w-full bg-[#013aa3]/10 hover:bg-[#013aa3] text-[#013aa3] hover:text-white border border-[#013aa3]/20 font-semibold text-xs py-2 px-3 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-98 cursor-pointer inline-flex items-center justify-center gap-1.5 font-['Inter',sans-serif]"
+                            >
+                              <FileText className="w-3.5 h-3.5 shrink-0" />
+                              <span>{item.docAction.label}</span>
+                            </button>
+                          </div>
+                        ) : item.action ? (
+                          <a
+                            href={item.action.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full bg-[#e31e24]/10 hover:bg-[#e31e24] text-[#e31e24] hover:text-white border border-[#e31e24]/20 font-semibold text-xs py-2 px-3 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-98 cursor-pointer inline-flex items-center justify-center gap-1.5 font-['Inter',sans-serif]"
+                          >
+                            <Play className="w-3.5 h-3.5 fill-current shrink-0" />
+                            <span>{item.action.label}</span>
+                          </a>
+                        ) : (
+                          <span className="font-medium text-slate-800">{item.details}</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Desktop & Tablet Table View */}
+                <div className="hidden md:block overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="bg-[#f0f5fc] border-b border-slate-200 text-xs sm:text-[13px] font-bold text-[#031c3f] uppercase tracking-wider font-['Manrope',sans-serif]">
-                        <th scope="col" className="py-3 px-4 sm:px-6 w-20 text-left">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-16 text-left">
                           S.NO.
                         </th>
-                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[340px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-1/2">
                           INFORMATION
                         </th>
-                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[280px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-1/2">
                           DETAILS
                         </th>
                       </tr>
@@ -504,25 +632,74 @@ export default function CertificatesPage() {
                 </div>
               </div>
 
-              {/* SMC Table */}
+              {/* SMC Table & Cards */}
               <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden">
-                <div className="overflow-x-auto">
+                {/* Mobile Card View (No horizontal scrolling on phones) */}
+                <div className="block md:hidden divide-y divide-slate-100">
+                  {filteredSmc.length > 0 ? (
+                    filteredSmc.map((item) => (
+                      <div
+                        key={item.sno}
+                        className="p-3.5 sm:p-4 space-y-2.5 hover:bg-slate-50/60 transition-colors"
+                      >
+                        <div className="flex items-start gap-2.5">
+                          <span className="w-6 h-6 rounded-md bg-[#031c3f]/10 text-[#031c3f] font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                            {item.sno}
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="text-xs sm:text-[13px] font-semibold text-[#031c3f] leading-snug">
+                              {item.title}
+                            </h4>
+                            {item.authority && (
+                              <p className="text-[11px] text-slate-500 mt-1 leading-tight">
+                                {item.authority}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                        <div className="pl-8.5">
+                          {item.href ? (
+                            <Link
+                              href={item.href}
+                              className="w-full bg-[#013aa3]/10 hover:bg-[#013aa3] text-[#013aa3] hover:text-white border border-[#013aa3]/20 font-semibold text-xs py-2 px-3 rounded-lg tracking-wide shadow-2xs hover:shadow-xs transition-all active:scale-98 cursor-pointer inline-flex items-center justify-center gap-1.5 font-['Inter',sans-serif]"
+                            >
+                              <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                              <span>{item.btnLabel}</span>
+                            </Link>
+                          ) : (
+                            <span className="w-full bg-[#013aa3]/10 text-[#013aa3] border border-[#013aa3]/20 font-semibold text-xs py-2 px-3 rounded-lg tracking-wide inline-flex items-center justify-center gap-1.5 font-['Inter',sans-serif]">
+                              <FileText className="w-3.5 h-3.5 shrink-0" />
+                              <span>{item.btnLabel}</span>
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="p-6 text-center text-slate-500 text-xs italic">
+                      No matching records found
+                    </div>
+                  )}
+                </div>
+
+                {/* Desktop & Tablet Table View */}
+                <div className="hidden md:block overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="bg-[#f0f5fc] border-b border-slate-200 text-xs sm:text-[13px] font-bold text-[#031c3f] uppercase tracking-wider font-['Manrope',sans-serif]">
-                        <th scope="col" className="py-3 px-4 sm:px-6 w-24 text-left">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-16 text-left">
                           <div className="inline-flex items-center gap-1 cursor-pointer select-none">
                             <span>S.NO.</span>
                             <ArrowUpDown className="w-3 h-3 text-slate-400" />
                           </div>
                         </th>
-                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[380px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6">
                           <div className="inline-flex items-center gap-1 cursor-pointer select-none">
                             <span>DOCUMENTS / INFORMATION</span>
                             <ArrowUpDown className="w-3 h-3 text-slate-400" />
                           </div>
                         </th>
-                        <th scope="col" className="py-3 px-4 sm:px-6 min-w-[240px]">
+                        <th scope="col" className="py-3 px-4 sm:px-6 w-[230px]">
                           <div className="inline-flex items-center gap-1 cursor-pointer select-none">
                             <span>UPLOAD DOCUMENTS</span>
                             <ArrowUpDown className="w-3 h-3 text-slate-400" />
