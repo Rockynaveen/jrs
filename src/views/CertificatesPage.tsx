@@ -44,7 +44,7 @@ const generalInformation = [
   {
     sno: 7,
     info: 'Contact Details (Landline / Mobile)',
-    details: '+91 92814 09671, +91 92814 09672 / 08415-295555',
+    details: '+91 92814 09672, +91 92814 09675 ',
   },
 ]
 

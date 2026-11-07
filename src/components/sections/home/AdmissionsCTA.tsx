@@ -145,8 +145,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
             <div>
               <div
                 className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2.5 ${isWhite
-                    ? 'text-[#e31e24] bg-red-50 border border-red-200/80'
-                    : 'text-amber-300 bg-amber-400/10 border border-amber-400/20'
+                  ? 'text-[#e31e24] bg-red-50 border border-red-200/80'
+                  : 'text-amber-300 bg-amber-400/10 border border-amber-400/20'
                   }`}
               >
                 <MapPin className="w-3.5 h-3.5" />
@@ -171,20 +171,20 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
             <div className="flex flex-wrap items-center gap-2.5">
               <div
                 className={`inline-flex items-center gap-1.5 ${isWhite
-                    ? 'bg-slate-50 border border-slate-200 text-[#111]'
-                    : 'bg-white/10 backdrop-blur-md border border-white/20 text-slate-100'
+                  ? 'bg-slate-50 border border-slate-200 text-[#111]'
+                  : 'bg-white/10 backdrop-blur-md border border-white/20 text-slate-100'
                   } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
               >
                 <Phone className={`w-3.5 h-3.5 mr-0.5 ${isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}`} />
-                <a href="tel:+919281409674" className="font-medium hover:text-[#e31e24] transition-colors">+91 92814 09671</a>
-                <span>,</span>
                 <a href="tel:+919281409672" className="font-medium hover:text-[#e31e24] transition-colors">+91 92814 09672</a>
+                <span>,</span>
+                <a href="tel:+919281409675" className="font-medium hover:text-[#e31e24] transition-colors">+91 92814 09675</a>
               </div>
               <a
                 href="mailto:jrsinternationalschool6@gmail.com"
                 className={`inline-flex items-center gap-2 ${isWhite
-                    ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 text-[#111]'
-                    : 'bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-slate-100'
+                  ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 text-[#111]'
+                  : 'bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-slate-100'
                   } px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] transition-colors`}
               >
                 <Mail className={`w-3.5 h-3.5 ${isWhite ? 'text-[#e31e24]' : 'text-[#facc15]'}`} />
@@ -196,8 +196,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 pt-2 sm:pt-3 w-full max-w-2xl">
               <div
                 className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${isWhite
-                    ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
-                    : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
+                  ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
+                  : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
                   } transition-all duration-300 group`}
               >
                 <div
@@ -224,8 +224,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
 
               <div
                 className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${isWhite
-                    ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
-                    : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
+                  ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
+                  : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
                   } transition-all duration-300 group`}
               >
                 <div
@@ -252,8 +252,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
 
               <div
                 className={`flex items-center gap-3 sm:gap-3.5 p-3.5 sm:px-4 sm:py-3.5 rounded-xl sm:rounded-2xl ${isWhite
-                    ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
-                    : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
+                  ? 'bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-xs'
+                  : 'bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md shadow-lg'
                   } transition-all duration-300 group`}
               >
                 <div
@@ -299,8 +299,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
           <div className="lg:col-span-6" data-aos="fade-left">
             <Card
               className={`${isWhite
-                  ? 'bg-white border border-slate-200/90 shadow-xl text-slate-900'
-                  : 'bg-white/[0.08] hover:bg-white/[0.12] backdrop-blur-md border border-white/20 shadow-2xl text-white'
+                ? 'bg-white border border-slate-200/90 shadow-xl text-slate-900'
+                : 'bg-white/[0.08] hover:bg-white/[0.12] backdrop-blur-md border border-white/20 shadow-2xl text-white'
                 } rounded-2xl p-5 sm:p-6 transition-all duration-300`}
             >
               <CardContent className="p-0">
@@ -533,8 +533,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                         <Button
                           type="submit"
                           className={`w-full sm:w-auto h-10 px-7 ${isWhite
-                              ? 'bg-[#e31e24] hover:bg-[#c9181e] text-white shadow-red-600/20'
-                              : 'bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-amber-500/20'
+                            ? 'bg-[#e31e24] hover:bg-[#c9181e] text-white shadow-red-600/20'
+                            : 'bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-amber-500/20'
                             } font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2 group`}
                         >
                           <span>Enquire Now</span>
@@ -638,8 +638,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                       <Button
                         type="submit"
                         className={`h-10 px-6 ${isWhite
-                            ? 'bg-[#e31e24] hover:bg-[#c9181e] text-white shadow-red-600/20'
-                            : 'bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-amber-500/20'
+                          ? 'bg-[#e31e24] hover:bg-[#c9181e] text-white shadow-red-600/20'
+                          : 'bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-amber-500/20'
                           } font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2 group`}
                       >
                         <span>Submit Enquiry</span>

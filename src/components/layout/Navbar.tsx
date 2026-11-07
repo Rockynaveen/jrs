@@ -134,14 +134,14 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                   href="tel:+919281409674"
                   className="hover:text-[#e31e24] transition-colors whitespace-nowrap"
                 >
-                  +91 92814 09671
+                  +91 92814 09672
                 </a>
                 <span className="text-slate-400">,</span>
                 <a
                   href="tel:+919281409672"
                   className="hover:text-[#e31e24] transition-colors whitespace-nowrap"
                 >
-                  +91 92814 09672
+                  +91 92814 09675
                 </a>
               </div>
 
@@ -233,8 +233,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                       <Link
                         href={link.href}
                         className={`relative inline-flex items-center gap-1 text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${isActive
-                            ? 'text-red-600 font-semibold after:content-[""] after:absolute after:bottom-0 after:left-1.5 after:right-1.5 after:h-[2.5px] after:bg-[#e31e24] after:rounded-full'
-                            : 'text-[#111]'
+                          ? 'text-red-600 font-semibold after:content-[""] after:absolute after:bottom-0 after:left-1.5 after:right-1.5 after:h-[2.5px] after:bg-[#e31e24] after:rounded-full'
+                          : 'text-[#111]'
                           }`}
                       >
                         <span>{link.name}</span>
@@ -296,8 +296,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                     key={link.name}
                     href={link.href}
                     className={`relative text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors hover:text-red-600 py-1.5 px-1.5 xl:px-2 rounded-md whitespace-nowrap ${isActive
-                        ? 'text-red-600 font-semibold after:content-[""] after:absolute after:bottom-0 after:left-1.5 after:right-1.5 after:h-[2.5px] after:bg-[#e31e24] after:rounded-full'
-                        : 'text-[#111]'
+                      ? 'text-red-600 font-semibold after:content-[""] after:absolute after:bottom-0 after:left-1.5 after:right-1.5 after:h-[2.5px] after:bg-[#e31e24] after:rounded-full'
+                      : 'text-[#111]'
                       }`}
                   >
                     {link.name}
@@ -438,8 +438,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block px-3 py-2 rounded-md text-[15px] font-medium transition-colors ${isActive
-                      ? 'bg-red-50 text-red-600 font-semibold'
-                      : 'text-[#111] hover:bg-slate-50 hover:text-red-600'
+                    ? 'bg-red-50 text-red-600 font-semibold'
+                    : 'text-[#111] hover:bg-slate-50 hover:text-red-600'
                     }`}
                 >
                   {link.name}

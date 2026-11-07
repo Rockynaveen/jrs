@@ -152,7 +152,7 @@ export default function Hero() {
               <span className="text-white/30">•</span>
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
-                <span>Admissions Helpline: +91 92814 09671, +91 92814 09672 | Email: Jrsinternationalschool6@gmail.com</span>
+                <span>Admissions Helpline: +91 92814 09672, +91 92814 09675 | Email: Jrsinternationalschool6@gmail.com</span>
               </span>
             </span>
             <span className="text-white/40">•</span>
@@ -189,7 +189,7 @@ export default function Hero() {
               <span className="text-white/30">•</span>
               <span className="inline-flex items-center gap-2">
                 <span className="text-[#f59e0b] font-bold">★</span>
-                <span>Admissions Helpline: +91 92814 09671, +91 92814 09672 | Email: Jrsinternationalschool6@gmail.com</span>
+                <span>Admissions Helpline: +91 92814 09672, +91 92814 09675 | Email: Jrsinternationalschool6@gmail.com</span>
               </span>
             </span>
           </marquee>
