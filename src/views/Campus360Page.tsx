@@ -158,7 +158,7 @@ export default function Campus360Page() {
                     data-aos="fade-up"
                     data-aos-delay={index * 80}
                     onClick={() => setActiveLightboxIndex(index)}
-                    className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-slate-900 ${
+                    className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-none hover:shadow-none transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-slate-900 ${
                       isWide ? 'lg:col-span-3' : 'lg:col-span-2'
                     }`}
                   >
@@ -177,17 +177,17 @@ export default function Campus360Page() {
 
                       {/* Top Badges */}
                       <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
-                        <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#031c3f] font-bold text-[11px] shadow-sm uppercase tracking-wider">
+                        <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#031c3f] font-bold text-[11px] uppercase tracking-wider">
                           {item.category}
                         </span>
-                        <div className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                        <div className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           <ZoomIn className="w-4 h-4 stroke-[2.5]" />
                         </div>
                       </div>
 
                       {/* Dark Gradient Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/90 via-[#031c3f]/25 to-transparent flex flex-col justify-end p-4 sm:p-5 text-white transition-opacity duration-300">
-                        <h3 className="text-base sm:text-lg font-bold tracking-tight text-white leading-snug drop-shadow-xs">
+                        <h3 className="text-base sm:text-lg font-bold tracking-tight text-white leading-snug">
                           {item.title}
                         </h3>
                       </div>
@@ -232,7 +232,7 @@ export default function Campus360Page() {
             </div>
 
             {/* Main Image Frame with Navigation */}
-            <div className="relative w-full overflow-hidden rounded-2xl bg-black/60 shadow-2xl flex items-center justify-center max-h-[72vh]">
+            <div className="relative w-full overflow-hidden rounded-2xl bg-black/60 shadow-none border border-white/10 flex items-center justify-center max-h-[72vh]">
               <img
                 src={CAMPUS_360_VIEWS[activeLightboxIndex].image}
                 alt={CAMPUS_360_VIEWS[activeLightboxIndex].title}

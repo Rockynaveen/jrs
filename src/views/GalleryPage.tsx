@@ -630,7 +630,7 @@ export default function GalleryPage() {
                     data-aos="fade-up"
                     data-aos-delay={(index % 3) * 60}
                     onClick={(e) => openLightbox(ALL_GALLERY_IMAGES, index, e)}
-                    className={`break-inside-avoid mb-5 sm:mb-6 group relative overflow-hidden cursor-pointer bg-slate-100 rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 block w-full ${aspectClass}`}
+                    className={`break-inside-avoid mb-5 sm:mb-6 group relative overflow-hidden cursor-pointer bg-slate-100 rounded-2xl border border-slate-200/90 shadow-none hover:shadow-none hover:-translate-y-1 transition-all duration-300 block w-full ${aspectClass}`}
                   >
                     <img
                       src={item.image}
@@ -646,12 +646,12 @@ export default function GalleryPage() {
                     {/* Gradient Overlay with Title & Zoom Icon */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
                       <div className="flex justify-end">
-                        <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-md">
+                        <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
                           <ZoomIn className="w-4 h-4 text-white stroke-[2.2]" />
                         </div>
                       </div>
                       <div>
-                        <p className="text-white text-xs sm:text-[13.5px] font-semibold tracking-wide drop-shadow-sm leading-snug line-clamp-2">
+                        <p className="text-white text-xs sm:text-[13.5px] font-semibold tracking-wide leading-snug line-clamp-2">
                           {item.title}
                         </p>
                       </div>
@@ -753,7 +753,7 @@ export default function GalleryPage() {
               <img
                 src={lightboxItems[activeLightboxIndex].image}
                 alt={lightboxItems[activeLightboxIndex].title}
-                className="max-h-[82vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-white/15 transition-all duration-200"
+                className="max-h-[82vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-none ring-1 ring-white/15 transition-all duration-200"
               />
               {/* Title / Counter bar without dates */}
               <div className="mt-3 flex items-center justify-between w-full max-w-2xl px-4 py-2.5 rounded-xl bg-white/15 backdrop-blur-md text-white text-xs sm:text-sm font-semibold border border-white/20">
