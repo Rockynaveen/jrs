@@ -2,12 +2,15 @@
 
 import React, { useState, useEffect } from 'react'
 import AOS from 'aos'
+import Link from 'next/link'
 import {
   ZoomIn,
   X,
   ChevronLeft,
   ChevronRight,
   ChevronDown,
+  Compass,
+  ArrowRight,
 } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import PageHero from '@/components/common/PageHero'
@@ -23,6 +26,50 @@ interface PhotoItem {
 
 // Complete Unified Photo Gallery Dataset (All dates stripped)
 const ALL_GALLERY_IMAGES: PhotoItem[] = [
+  // Signature Campus Views & Infrastructure
+  {
+    id: 'campus-building-front',
+    title: 'Main Academic Campus - Architectural Elevation & Entrance Portico',
+    category: 'Campus',
+    image: '/images/campus/main-building-front.jpg',
+  },
+  {
+    id: 'campus-panoramic-view',
+    title: 'Expansive Campus Panorama & Running Track',
+    category: 'Campus',
+    image: '/images/campus/campus-panoramic-view.jpg',
+  },
+  {
+    id: 'campus-sports-court',
+    title: 'Multi-Sport Court - Basketball & Volleyball Arena with Campus View',
+    category: 'Sports',
+    image: '/images/campus/sports-court.jpg',
+  },
+  {
+    id: 'campus-athletic-track',
+    title: 'Athletics & Sports - Synthetic Running Track & Training Drills',
+    category: 'Sports',
+    image: '/images/campus/athletic-running-track.jpg',
+  },
+  {
+    id: 'campus-kids-playground',
+    title: 'Primary & Kindergarten Fun Station - Safe Outdoor Play Area',
+    category: 'Campus',
+    image: '/images/campus/kids-playground.jpg',
+  },
+  {
+    id: 'campus-library-reading',
+    title: 'Central Library - Knowledge Resource Center & Reading Hall',
+    category: 'Activities',
+    image: '/images/campus/library-reading.jpg',
+  },
+  {
+    id: 'student-innovation-lab',
+    title: 'STEM & Design Thinking Innovation Lab',
+    category: 'Activities',
+    image: '/images/campus/student-innovation-lab.jpg',
+  },
+
   // Campus & Infrastructure
   {
     id: 'amphi-1',
@@ -547,6 +594,18 @@ export default function GalleryPage() {
               <p className="mt-2 text-[#111] text-sm sm:text-[15px] max-w-2xl mx-auto leading-relaxed font-normal">
                 A glimpse into our classrooms, laboratories, cultural festivities, sports competitions, and campus celebrations.
               </p>
+
+              {/* 360 Degree Tour Quick Pill */}
+              <div className="mt-5 flex items-center justify-center">
+                <Link
+                  href="/gallery/360-degree-campus"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-50 hover:bg-[#e31e24] text-[#e31e24] hover:text-white border border-red-200/80 transition-all duration-300 text-xs sm:text-sm font-bold shadow-xs hover:shadow-md group cursor-pointer"
+                >
+                  <Compass className="w-4 h-4 text-[#e31e24] group-hover:text-white animate-spin-slow" />
+                  <span>Explore 360° Campus Highlights</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
 
             {/* Masonry Style Gallery Grid */}
