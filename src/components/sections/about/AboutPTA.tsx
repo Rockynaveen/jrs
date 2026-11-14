@@ -14,8 +14,8 @@ interface PTAMember {
 const ptaMembers: PTAMember[] = [
   {
     sn: 1,
-    name: 'Mrs. Jagadishwari Nataraj',
-    designation: 'Chairman',
+    name: 'Mrs. Marlene Mannas',
+    designation: 'Principal',
     address: 'Divya Enclave Vijaypuri Tarnaka, Hyderabad',
     contact: '9160300046',
   },
@@ -35,59 +35,17 @@ const ptaMembers: PTAMember[] = [
   },
   {
     sn: 4,
-    name: 'Mrs Nagasunitha',
-    designation: 'Member',
-    address: 'Muthvelliguda Hyderabad',
-    contact: '8897503215',
-  },
-  {
-    sn: 5,
-    name: 'Mrs B Sheetal',
-    designation: 'Member',
-    address: 'Venkatadri Township Chowdariguda',
-    contact: '8309981778',
-  },
-  {
-    sn: 6,
-    name: 'Mr Satyam',
-    designation: 'Member',
-    address: 'L.B Nagar Hyderabad',
-    contact: '8520047067',
-  },
-  {
-    sn: 7,
-    name: 'Mr Yashwanth',
-    designation: 'Member',
-    address: 'Tarnaka Hyderabad',
-    contact: '8885262483',
-  },
-  {
-    sn: 8,
     name: 'Mr Vijay Bhaskar',
     designation: 'Member',
     address: '306, Venkatadri Township Chowdarguda',
     contact: '9908330490',
   },
   {
-    sn: 9,
+    sn: 5,
     name: 'Mr Ashok',
     designation: 'Member',
     address: 'Sai Enclave, Narapally Hyderabad',
     contact: '9949845482',
-  },
-  {
-    sn: 10,
-    name: 'Mrs Deepika',
-    designation: 'Member',
-    address: 'Plot No.187, Sheshadri Enclave Chowdariguda',
-    contact: '8688246412',
-  },
-  {
-    sn: 11,
-    name: 'Mrs Harika',
-    designation: 'Member',
-    address: 'Plot No.42, Sai Sri Enclave Narapally',
-    contact: '7674995822',
   },
 ]
 

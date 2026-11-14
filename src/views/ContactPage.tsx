@@ -73,7 +73,7 @@ export default function ContactPage() {
         <section id="contact-form" className="py-10 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-              
+
               {/* Left Column: Contact Form (5 cols) */}
               <div className="lg:col-span-5" data-aos="fade-right">
                 <div className="space-y-4">
@@ -98,116 +98,70 @@ export default function ContactPage() {
                       Fill in your details and our admissions counselor will get back to you within 24 hours.
                     </p>
                   </div>
-                    {submitted ? (
-                      <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3 animate-fade-in">
-                        <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
-                        <h3 className="text-lg font-bold text-emerald-900">
-                          Message Received!
-                        </h3>
-                        <p className="text-sm text-emerald-700">
-                          Thank you for contacting JRS International School. Our team will reach out to you shortly.
-                        </p>
-                        <Button
-                          variant="ghost"
-                          onClick={() => {
-                            setSubmitted(false)
-                            setFormData({
-                              parentName: '',
-                              phone: '',
-                              email: '',
-                              grade: '',
-                              message: '',
-                            })
-                          }}
-                          className="text-xs font-bold text-emerald-800 underline hover:text-emerald-950 pt-2"
+                  {submitted ? (
+                    <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3 animate-fade-in">
+                      <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
+                      <h3 className="text-lg font-bold text-emerald-900">
+                        Message Received!
+                      </h3>
+                      <p className="text-sm text-emerald-700">
+                        Thank you for contacting JRS International School. Our team will reach out to you shortly.
+                      </p>
+                      <Button
+                        variant="ghost"
+                        onClick={() => {
+                          setSubmitted(false)
+                          setFormData({
+                            parentName: '',
+                            phone: '',
+                            email: '',
+                            grade: '',
+                            message: '',
+                          })
+                        }}
+                        className="text-xs font-bold text-emerald-800 underline hover:text-emerald-950 pt-2"
+                      >
+                        Send another message
+                      </Button>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div className="space-y-1.5">
+                        <Label
+                          htmlFor="parentName"
+                          className="text-xs sm:text-[13px] font-bold text-[#111] uppercase tracking-wider"
                         >
-                          Send another message
-                        </Button>
+                          Parent / Guardian Name *
+                        </Label>
+                        <Input
+                          id="parentName"
+                          type="text"
+                          required
+                          placeholder="e.g. Ramesh Reddy"
+                          value={formData.parentName}
+                          onChange={(e) =>
+                            setFormData({ ...formData, parentName: e.target.value })
+                          }
+                          className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
+                        />
                       </div>
-                    ) : (
-                      <form onSubmit={handleSubmit} className="space-y-4">
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-1.5">
                           <Label
-                            htmlFor="parentName"
+                            htmlFor="phone"
                             className="text-xs sm:text-[13px] font-bold text-[#111] uppercase tracking-wider"
                           >
-                            Parent / Guardian Name *
+                            Phone Number *
                           </Label>
                           <Input
-                            id="parentName"
-                            type="text"
+                            id="phone"
+                            type="tel"
                             required
-                            placeholder="e.g. Ramesh Reddy"
-                            value={formData.parentName}
+                            placeholder="+91 98765 43210"
+                            value={formData.phone}
                             onChange={(e) =>
-                              setFormData({ ...formData, parentName: e.target.value })
-                            }
-                            className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
-                          />
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          <div className="space-y-1.5">
-                            <Label
-                              htmlFor="phone"
-                              className="text-xs sm:text-[13px] font-bold text-[#111] uppercase tracking-wider"
-                            >
-                              Phone Number *
-                            </Label>
-                            <Input
-                              id="phone"
-                              type="tel"
-                              required
-                              placeholder="+91 98765 43210"
-                              value={formData.phone}
-                              onChange={(e) =>
-                                setFormData({ ...formData, phone: e.target.value })
-                              }
-                              className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
-                            />
-                          </div>
-
-                          <div className="space-y-1.5">
-                            <Label
-                              htmlFor="grade"
-                              className="text-xs sm:text-[13px] font-bold text-[#111] uppercase tracking-wider"
-                            >
-                              Grade of Child
-                            </Label>
-                            <Select
-                              id="grade"
-                              value={formData.grade}
-                              onChange={(e) =>
-                                setFormData({ ...formData, grade: e.target.value })
-                              }
-                              className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
-                            >
-                              <option value="">Select Grade</option>
-                              <option value="Nursery / Pre-KG">Nursery / Pre-KG</option>
-                              <option value="LKG">LKG</option>
-                              <option value="UKG">UKG</option>
-                              <option value="Grade 1 to 5">Grade 1 to 5 (Primary)</option>
-                              <option value="Grade 6 to 8">Grade 6 to 8 (Middle)</option>
-                              <option value="Grade 9 to 10">Grade 9 to 10 (Secondary)</option>
-                              <option value="Grade 11 to 12">Grade 11 to 12 (Senior)</option>
-                            </Select>
-                          </div>
-                        </div>
-
-                        <div className="space-y-1.5">
-                          <Label
-                            htmlFor="email"
-                            className="text-xs sm:text-[13px] font-bold text-[#111] uppercase tracking-wider"
-                          >
-                            Email Address
-                          </Label>
-                          <Input
-                            id="email"
-                            type="email"
-                            placeholder="e.g. name@example.com"
-                            value={formData.email}
-                            onChange={(e) =>
-                              setFormData({ ...formData, email: e.target.value })
+                              setFormData({ ...formData, phone: e.target.value })
                             }
                             className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
                           />
@@ -215,42 +169,88 @@ export default function ContactPage() {
 
                         <div className="space-y-1.5">
                           <Label
-                            htmlFor="message"
+                            htmlFor="grade"
                             className="text-xs sm:text-[13px] font-bold text-[#111] uppercase tracking-wider"
                           >
-                            Your Query or Message *
+                            Grade of Child
                           </Label>
-                          <Textarea
-                            id="message"
-                            required
-                            rows={4}
-                            placeholder="Tell us what you'd like to know about JRS..."
-                            value={formData.message}
+                          <Select
+                            id="grade"
+                            value={formData.grade}
                             onChange={(e) =>
-                              setFormData({ ...formData, message: e.target.value })
+                              setFormData({ ...formData, grade: e.target.value })
                             }
-                            className="rounded-xl border border-slate-300 bg-white p-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500 min-h-[110px]"
-                          />
+                            className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
+                          >
+                            <option value="">Select Grade</option>
+                            <option value="Nursery / Pre-KG">Nursery / Pre-KG</option>
+                            <option value="PP1">PP1</option>
+                            <option value="PP2">PP2</option>
+                            <option value="Grade 1 to 5">Grade 1 to 5 (Primary)</option>
+                            <option value="Grade 6 to 8">Grade 6 to 8 (Middle)</option>
+                            <option value="Grade 9 to 10">Grade 9 to 10 (Secondary)</option>
+                            <option value="Grade 11 to 12">Grade 11 to 12 (Senior)</option>
+                          </Select>
                         </div>
+                      </div>
 
-                        <Button
-                          type="submit"
-                          variant="red"
-                          size="lg"
-                          disabled={isSubmitting}
-                          className="w-full rounded-full shadow-md shadow-red-500/20 text-sm sm:text-base font-semibold"
+                      <div className="space-y-1.5">
+                        <Label
+                          htmlFor="email"
+                          className="text-xs sm:text-[13px] font-bold text-[#111] uppercase tracking-wider"
                         >
-                          {isSubmitting ? (
-                            <span>Sending message...</span>
-                          ) : (
-                            <>
-                              <span>Submit Inquiry</span>
-                              <Send className="w-4 h-4 ml-1" />
-                            </>
-                          )}
-                        </Button>
-                      </form>
-                    )}
+                          Email Address
+                        </Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="e.g. name@example.com"
+                          value={formData.email}
+                          onChange={(e) =>
+                            setFormData({ ...formData, email: e.target.value })
+                          }
+                          className="h-12 sm:h-[48px] rounded-xl border border-slate-300 bg-white px-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500"
+                        />
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <Label
+                          htmlFor="message"
+                          className="text-xs sm:text-[13px] font-bold text-[#111] uppercase tracking-wider"
+                        >
+                          Your Query or Message *
+                        </Label>
+                        <Textarea
+                          id="message"
+                          required
+                          rows={4}
+                          placeholder="Tell us what you'd like to know about JRS..."
+                          value={formData.message}
+                          onChange={(e) =>
+                            setFormData({ ...formData, message: e.target.value })
+                          }
+                          className="rounded-xl border border-slate-300 bg-white p-4 text-sm sm:text-[15px] focus-visible:ring-1 focus-visible:ring-red-500 focus-visible:border-red-500 min-h-[110px]"
+                        />
+                      </div>
+
+                      <Button
+                        type="submit"
+                        variant="red"
+                        size="lg"
+                        disabled={isSubmitting}
+                        className="w-full rounded-full shadow-md shadow-red-500/20 text-sm sm:text-base font-semibold"
+                      >
+                        {isSubmitting ? (
+                          <span>Sending message...</span>
+                        ) : (
+                          <>
+                            <span>Submit Inquiry</span>
+                            <Send className="w-4 h-4 ml-1" />
+                          </>
+                        )}
+                      </Button>
+                    </form>
+                  )}
                 </div>
               </div>
 

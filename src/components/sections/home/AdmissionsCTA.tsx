@@ -572,8 +572,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                         >
                           <option value="" className={optionClass}>-SELECT CLASS-</option>
                           <option value="Nursery" className={optionClass}>Nursery</option>
-                          <option value="LKG" className={optionClass}>LKG</option>
-                          <option value="UKG" className={optionClass}>UKG</option>
+                          <option value="PP1" className={optionClass}>PP1</option>
+                          <option value="PP2" className={optionClass}>PP2</option>
                           <option value="Class 1" className={optionClass}>Class 1</option>
                           <option value="Class 2" className={optionClass}>Class 2</option>
                           <option value="Class 3" className={optionClass}>Class 3</option>
@@ -649,11 +649,10 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                         {/* Interactive Grid Popover - Opens ABOVE field so it never extends below footer */}
                         {dobPickerOpen && (
                           <div
-                            className={`absolute right-0 bottom-full mb-2 z-50 w-full sm:w-[310px] p-3 rounded-2xl shadow-2xl border transition-all animate-scale-up ${
-                              isWhite
+                            className={`absolute right-0 bottom-full mb-2 z-50 w-full sm:w-[310px] p-3 rounded-2xl shadow-2xl border transition-all animate-scale-up ${isWhite
                                 ? 'bg-white border-slate-200 text-slate-900 shadow-slate-900/15'
                                 : 'bg-[#041633] border-white/20 text-white shadow-black/70'
-                            }`}
+                              }`}
                           >
                             {/* Breadcrumb Header */}
                             <div className="flex items-center justify-between gap-1 pb-2 mb-2 border-b border-white/10 border-slate-200/80">
@@ -661,17 +660,16 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                 <button
                                   type="button"
                                   onClick={() => setDobPickerView('year')}
-                                  className={`px-2 py-0.5 rounded-md font-bold text-xs transition-colors cursor-pointer ${
-                                    dobPickerView === 'year'
+                                  className={`px-2 py-0.5 rounded-md font-bold text-xs transition-colors cursor-pointer ${dobPickerView === 'year'
                                       ? isWhite
                                         ? 'bg-[#013aa3] text-white shadow-xs'
                                         : 'bg-amber-400 text-slate-950 shadow-xs'
                                       : dobSelectedYear
-                                      ? isWhite
-                                        ? 'bg-slate-100 text-[#013aa3] hover:bg-slate-200'
-                                        : 'bg-white/10 text-amber-300 hover:bg-white/20'
-                                      : 'text-slate-400'
-                                  }`}
+                                        ? isWhite
+                                          ? 'bg-slate-100 text-[#013aa3] hover:bg-slate-200'
+                                          : 'bg-white/10 text-amber-300 hover:bg-white/20'
+                                        : 'text-slate-400'
+                                    }`}
                                 >
                                   {dobSelectedYear || 'Year'}
                                 </button>
@@ -680,17 +678,16 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                   type="button"
                                   disabled={!dobSelectedYear}
                                   onClick={() => setDobPickerView('month')}
-                                  className={`px-2 py-0.5 rounded-md font-bold text-xs transition-colors cursor-pointer ${
-                                    dobPickerView === 'month'
+                                  className={`px-2 py-0.5 rounded-md font-bold text-xs transition-colors cursor-pointer ${dobPickerView === 'month'
                                       ? isWhite
                                         ? 'bg-[#013aa3] text-white shadow-xs'
                                         : 'bg-amber-400 text-slate-950 shadow-xs'
                                       : dobSelectedMonth
-                                      ? isWhite
-                                        ? 'bg-slate-100 text-[#013aa3] hover:bg-slate-200'
-                                        : 'bg-white/10 text-amber-300 hover:bg-white/20'
-                                      : 'text-slate-400 opacity-50 cursor-not-allowed'
-                                  }`}
+                                        ? isWhite
+                                          ? 'bg-slate-100 text-[#013aa3] hover:bg-slate-200'
+                                          : 'bg-white/10 text-amber-300 hover:bg-white/20'
+                                        : 'text-slate-400 opacity-50 cursor-not-allowed'
+                                    }`}
                                 >
                                   {dobSelectedMonth ? monthsList[dobSelectedMonth - 1]?.name : 'Month'}
                                 </button>
@@ -699,17 +696,16 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                   type="button"
                                   disabled={!dobSelectedYear || !dobSelectedMonth}
                                   onClick={() => setDobPickerView('day')}
-                                  className={`px-2 py-0.5 rounded-md font-bold text-xs transition-colors cursor-pointer ${
-                                    dobPickerView === 'day'
+                                  className={`px-2 py-0.5 rounded-md font-bold text-xs transition-colors cursor-pointer ${dobPickerView === 'day'
                                       ? isWhite
                                         ? 'bg-[#013aa3] text-white shadow-xs'
                                         : 'bg-amber-400 text-slate-950 shadow-xs'
                                       : dobSelectedDay
-                                      ? isWhite
-                                        ? 'bg-slate-100 text-[#013aa3] hover:bg-slate-200'
-                                        : 'bg-white/10 text-amber-300 hover:bg-white/20'
-                                      : 'text-slate-400 opacity-50 cursor-not-allowed'
-                                  }`}
+                                        ? isWhite
+                                          ? 'bg-slate-100 text-[#013aa3] hover:bg-slate-200'
+                                          : 'bg-white/10 text-amber-300 hover:bg-white/20'
+                                        : 'text-slate-400 opacity-50 cursor-not-allowed'
+                                    }`}
                                 >
                                   {dobSelectedDay || 'Day'}
                                 </button>
@@ -732,9 +728,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                   <button
                                     type="button"
                                     onClick={() => setDobYearPage((prev) => Math.max(1990, prev - 12))}
-                                    className={`p-1 rounded flex items-center gap-0.5 text-[11px] font-semibold cursor-pointer ${
-                                      isWhite ? 'hover:bg-slate-100 text-slate-600' : 'hover:bg-white/10 text-slate-300'
-                                    }`}
+                                    className={`p-1 rounded flex items-center gap-0.5 text-[11px] font-semibold cursor-pointer ${isWhite ? 'hover:bg-slate-100 text-slate-600' : 'hover:bg-white/10 text-slate-300'
+                                      }`}
                                   >
                                     <ChevronLeft className="w-3 h-3" />
                                     <span>Older</span>
@@ -745,9 +740,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                   <button
                                     type="button"
                                     onClick={() => setDobYearPage((prev) => Math.min(2010, prev + 12))}
-                                    className={`p-1 rounded flex items-center gap-0.5 text-[11px] font-semibold cursor-pointer ${
-                                      isWhite ? 'hover:bg-slate-100 text-slate-600' : 'hover:bg-white/10 text-slate-300'
-                                    }`}
+                                    className={`p-1 rounded flex items-center gap-0.5 text-[11px] font-semibold cursor-pointer ${isWhite ? 'hover:bg-slate-100 text-slate-600' : 'hover:bg-white/10 text-slate-300'
+                                      }`}
                                   >
                                     <span>Newer</span>
                                     <ChevronRight className="w-3 h-3" />
@@ -762,15 +756,14 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                         key={yr}
                                         type="button"
                                         onClick={() => handleSelectYear(yr)}
-                                        className={`py-1.5 px-1 text-xs font-bold rounded-lg text-center transition-all cursor-pointer ${
-                                          isSelected
+                                        className={`py-1.5 px-1 text-xs font-bold rounded-lg text-center transition-all cursor-pointer ${isSelected
                                             ? isWhite
                                               ? 'bg-[#013aa3] text-white shadow-xs'
                                               : 'bg-amber-400 text-slate-950 shadow-xs'
                                             : isWhite
-                                            ? 'bg-slate-50 hover:bg-[#013aa3]/10 text-slate-800 hover:text-[#013aa3] border border-slate-200'
-                                            : 'bg-white/5 hover:bg-white/15 text-slate-200 hover:text-white border border-white/10'
-                                        }`}
+                                              ? 'bg-slate-50 hover:bg-[#013aa3]/10 text-slate-800 hover:text-[#013aa3] border border-slate-200'
+                                              : 'bg-white/5 hover:bg-white/15 text-slate-200 hover:text-white border border-white/10'
+                                          }`}
                                       >
                                         {yr}
                                       </button>
@@ -790,9 +783,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                   <button
                                     type="button"
                                     onClick={() => setDobPickerView('year')}
-                                    className={`text-[11px] font-semibold underline cursor-pointer ${
-                                      isWhite ? 'text-[#013aa3]' : 'text-amber-400'
-                                    }`}
+                                    className={`text-[11px] font-semibold underline cursor-pointer ${isWhite ? 'text-[#013aa3]' : 'text-amber-400'
+                                      }`}
                                   >
                                     Change Year
                                   </button>
@@ -806,15 +798,14 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                         key={m.num}
                                         type="button"
                                         onClick={() => handleSelectMonth(m.num)}
-                                        className={`py-2 px-1 text-xs font-bold rounded-lg text-center transition-all cursor-pointer ${
-                                          isSelected
+                                        className={`py-2 px-1 text-xs font-bold rounded-lg text-center transition-all cursor-pointer ${isSelected
                                             ? isWhite
                                               ? 'bg-[#013aa3] text-white shadow-xs'
                                               : 'bg-amber-400 text-slate-950 shadow-xs'
                                             : isWhite
-                                            ? 'bg-slate-50 hover:bg-[#013aa3]/10 text-slate-800 hover:text-[#013aa3] border border-slate-200'
-                                            : 'bg-white/5 hover:bg-white/15 text-slate-200 hover:text-white border border-white/10'
-                                        }`}
+                                              ? 'bg-slate-50 hover:bg-[#013aa3]/10 text-slate-800 hover:text-[#013aa3] border border-slate-200'
+                                              : 'bg-white/5 hover:bg-white/15 text-slate-200 hover:text-white border border-white/10'
+                                          }`}
                                       >
                                         {m.name}
                                       </button>
@@ -834,9 +825,8 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                   <button
                                     type="button"
                                     onClick={() => setDobPickerView('month')}
-                                    className={`text-[11px] font-semibold underline cursor-pointer ${
-                                      isWhite ? 'text-[#013aa3]' : 'text-amber-400'
-                                    }`}
+                                    className={`text-[11px] font-semibold underline cursor-pointer ${isWhite ? 'text-[#013aa3]' : 'text-amber-400'
+                                      }`}
                                   >
                                     Change Month
                                   </button>
@@ -869,15 +859,14 @@ export default function AdmissionsCTA({ variant = 'dark' }: AdmissionsCTAProps) 
                                         key={dayNum}
                                         type="button"
                                         onClick={() => handleSelectDay(dayNum)}
-                                        className={`h-7 w-7 mx-auto text-xs font-bold rounded-lg flex items-center justify-center transition-all cursor-pointer ${
-                                          isSelected
+                                        className={`h-7 w-7 mx-auto text-xs font-bold rounded-lg flex items-center justify-center transition-all cursor-pointer ${isSelected
                                             ? isWhite
                                               ? 'bg-[#013aa3] text-white shadow-xs'
                                               : 'bg-amber-400 text-slate-950 shadow-xs'
                                             : isWhite
-                                            ? 'hover:bg-[#013aa3]/10 text-slate-800 hover:text-[#013aa3]'
-                                            : 'hover:bg-white/15 text-slate-200 hover:text-white'
-                                        }`}
+                                              ? 'hover:bg-[#013aa3]/10 text-slate-800 hover:text-[#013aa3]'
+                                              : 'hover:bg-white/15 text-slate-200 hover:text-white'
+                                          }`}
                                       >
                                         {dayNum}
                                       </button>

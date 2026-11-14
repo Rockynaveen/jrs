@@ -12,6 +12,7 @@ import {
   Lightbulb,
   Compass,
   Users,
+  BrainCircuit,
 } from 'lucide-react'
 import SchoolImage from '@/components/common/SchoolImage'
 
@@ -23,6 +24,13 @@ export default function AboutBeyond() {
       icon: Palette,
       src: '/images/primary-school-study.jpg',
       accent: 'from-pink-500 to-rose-600',
+    },
+    {
+      title: 'Cognospace ',
+      category: 'Cognospace Central Zone ',
+      icon: BrainCircuit,
+      src: '/images/facilities/cognospace.jpg',
+      accent: 'from-emerald-500 to-teal-600',
     },
     {
       title: 'Music',

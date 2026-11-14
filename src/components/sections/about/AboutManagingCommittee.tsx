@@ -108,7 +108,7 @@ export default function AboutManagingCommittee() {
             return (
               <div
                 key={member.sn}
-                className="relative bg-white rounded-[22px] border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
+                className="relative bg-white rounded-[22px] border border-slate-200/90 shadow-none hover:border-slate-300 transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
               >
                 {/* Image Area with Placeholder Headshot & Bottom-Right Glassmorphism Designation Badge */}
                 <div className="relative w-full aspect-[4/3.3] bg-slate-100 overflow-hidden flex-shrink-0">

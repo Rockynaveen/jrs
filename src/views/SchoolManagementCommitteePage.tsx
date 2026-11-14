@@ -18,8 +18,8 @@ interface SMCMember {
 const smcMembers: SMCMember[] = [
   {
     sno: 1,
-    name: 'Mrs. Jagadishwari Nataraj',
-    designation: 'Chairman',
+    name: 'Mrs. Marlene Mannas',
+    designation: 'Principal',
     address: 'Divya Enclave Vijaypuri Tarnaka, Hyderabad',
     contact: '9160300046',
   },
@@ -53,41 +53,27 @@ const smcMembers: SMCMember[] = [
   },
   {
     sno: 6,
-    name: 'Mrs B. Sheetal',
-    designation: 'Member',
-    address: 'Venkatadri Township Chowdarguda, Hyderabad',
-    contact: '8309981778',
-  },
-  {
-    sno: 7,
-    name: 'Mrs Nagasunitha',
-    designation: 'Member',
-    address: 'Muthvelliguda, Hyderabad',
-    contact: '8897503215',
-  },
-  {
-    sno: 8,
     name: 'Dr. VinayShree',
     designation: 'Member',
     address: 'Siddhartha School Boduppal, Hyderabad',
     contact: '9502499979',
   },
   {
-    sno: 9,
+    sno: 7,
     name: 'Mr. Narsing Rao',
     designation: 'Member',
     address: 'Sivaji Vidya Peeth School, Hyderabad',
     contact: '9963701615',
   },
   {
-    sno: 10,
+    sno: 8,
     name: 'Dr Srinivas',
     designation: 'Member',
     address: 'Venkatadri Township Chowdarguda, Hyderabad',
     contact: '9912712798',
   },
   {
-    sno: 11,
+    sno: 9,
     name: 'Dr. Anil Kumar',
     designation: 'Member',
     address: 'Boduppal, Hyderabad',
@@ -158,7 +144,7 @@ export default function SchoolManagementCommitteePage() {
                   <div
                     key={member.sno}
                     data-aos="fade-up"
-                    className="relative bg-white rounded-[22px] border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
+                    className="relative bg-white rounded-[22px] border border-slate-200/90 shadow-none hover:border-slate-300 transition-all duration-300 hover:-translate-y-1.5 flex flex-col overflow-hidden h-full group"
                   >
                     {/* Image Area with Placeholder Headshot & Bottom-Right Glassmorphism Designation Badge */}
                     <div className="relative w-full aspect-[4/3.3] bg-slate-100 overflow-hidden flex-shrink-0">
@@ -174,23 +160,23 @@ export default function SchoolManagementCommitteePage() {
                           style={
                             isChairman
                               ? {
-                                  background:
-                                    'linear-gradient(135deg, rgba(255, 255, 255, 0.38) 0%, rgba(254, 243, 199, 0.22) 100%)',
-                                  backdropFilter: 'blur(12px) saturate(190%)',
-                                  WebkitBackdropFilter: 'blur(12px) saturate(190%)',
-                                  border: '1.5px solid rgba(245, 158, 11, 0.65)',
-                                  boxShadow:
-                                    '0 8px 24px -4px rgba(0, 0, 0, 0.12), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.06)',
-                                }
+                                background:
+                                  'linear-gradient(135deg, rgba(255, 255, 255, 0.38) 0%, rgba(254, 243, 199, 0.22) 100%)',
+                                backdropFilter: 'blur(12px) saturate(190%)',
+                                WebkitBackdropFilter: 'blur(12px) saturate(190%)',
+                                border: '1.5px solid rgba(245, 158, 11, 0.65)',
+                                boxShadow:
+                                  '0 8px 24px -4px rgba(0, 0, 0, 0.12), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.06)',
+                              }
                               : {
-                                  background:
-                                    'linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.12) 100%)',
-                                  backdropFilter: 'blur(12px) saturate(190%)',
-                                  WebkitBackdropFilter: 'blur(12px) saturate(190%)',
-                                  border: '1.5px solid rgba(255, 255, 255, 0.85)',
-                                  boxShadow:
-                                    '0 8px 24px -4px rgba(0, 0, 0, 0.12), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.06)',
-                                }
+                                background:
+                                  'linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.12) 100%)',
+                                backdropFilter: 'blur(12px) saturate(190%)',
+                                WebkitBackdropFilter: 'blur(12px) saturate(190%)',
+                                border: '1.5px solid rgba(255, 255, 255, 0.85)',
+                                boxShadow:
+                                  '0 8px 24px -4px rgba(0, 0, 0, 0.12), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.06)',
+                              }
                           }
                           className="px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-md transition-all duration-300 hover:scale-105"
                         >

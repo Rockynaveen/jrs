@@ -197,7 +197,7 @@ export default function Hero() {
       </div>
 
       {/* Main Hero Slider Content Area */}
-      <div className="relative z-10 flex-1 w-full flex items-center">
+      <div className="relative z-10 flex-1 w-full flex items-end">
         {/* 38 Years of Experience Emblem Badge - Right Top Floating */}
         <div className="absolute top-2.5 sm:top-4 lg:top-6 right-2.5 sm:right-6 lg:right-8 z-20 pointer-events-auto">
           <div className="group relative select-none animate-float">
@@ -212,9 +212,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Hero Content on Clean Solid Navy Left Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-6 my-auto w-full">
-          <div className="max-w-xl lg:max-w-2xl text-left pr-14 sm:pr-0">
+        {/* Hero CTA Buttons at Bottom of Hero Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8 lg:pb-10 pt-4 w-full">
+          <div className="max-w-xl lg:max-w-2xl text-left">
             {/* CTA Buttons - Pure Glassmorphism without background */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 w-full sm:w-auto">
               {/* Primary Admissions Button */}

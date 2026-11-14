@@ -5,6 +5,7 @@ import AOS from 'aos'
 import Navbar from '@/components/layout/Navbar'
 import PageHero from '@/components/common/PageHero'
 import Footer from '@/components/layout/Footer'
+import { FaWhatsapp } from "react-icons/fa";
 import {
   Users,
   GraduationCap,
@@ -13,6 +14,7 @@ import {
   Mail,
   CheckCircle2,
   Send,
+
 } from 'lucide-react'
 
 export default function CareersPage() {
@@ -251,19 +253,38 @@ export default function CareersPage() {
                   </h3>
 
                   {/* Instructions */}
+
+
                   <p className="text-[14px] text-[#111] leading-relaxed">
-                    If you are looking for an opportunity to work at JRS International School,{' '}
-                    <span className="inline-flex flex-wrap sm:flex-nowrap items-center gap-1.5 align-middle">
-                      <span>please send your resume to:</span>
+                    If you are looking for an opportunity to work at JRS International School,{" "}
+                    <span className="inline-flex flex-wrap items-center gap-1.5 align-middle">
+                      <span>Please send your resume to:</span>
+
+                      {/* Email */}
                       <a
-                        href="mailto:hrjrshyd@gmail.com"
+                        href="mailto:Jrsinternationalschool6@gmail.com"
                         className="inline-flex items-center gap-1.5 font-bold text-[#013aa3] hover:text-[#e31e24] hover:underline transition-colors whitespace-nowrap"
                       >
-                        <Mail className="w-4 h-4 text-[#013aa3] shrink-0" />
-                        <span>hrjrshyd@gmail.com</span>
+                        <Mail className="w-4 h-4 shrink-0" />
+                        <span>Jrsinternationalschool6@gmail.com</span>
+                      </a>
+
+                      <span className="mx-1">or contact us on:</span>
+
+                      {/* WhatsApp */}
+                      <a
+                        href="https://wa.me/919281409672"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-bold text-[#25D366] hover:text-[#128C7E] hover:underline transition-colors whitespace-nowrap"
+                      >
+                        <FaWhatsapp className="w-4 h-4 shrink-0" />
+                        <span>+91 92814 09672</span>
                       </a>
                     </span>
                   </p>
+
+
 
                   {/* What to mention */}
                   <div className="mt-5 pt-4 border-t border-slate-100">
