@@ -42,7 +42,7 @@ export default function AdmissionsPopup() {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Festive Greeting - Happy Diwali"
+      aria-label="Festive Greeting - Happy Children's Day"
       className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-5 md:p-8 bg-black/75 backdrop-blur-sm animate-fade-in"
       onClick={() => setIsOpen(false)}
     >
@@ -51,7 +51,7 @@ export default function AdmissionsPopup() {
         onClick={(e) => e.stopPropagation()}
         className="relative w-auto max-w-[92vw] sm:max-w-xl md:max-w-2xl lg:max-w-3xl max-h-[90vh] bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-white/20 animate-scale-up flex items-center justify-center"
         style={{
-          boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 50px rgba(245, 158, 11, 0.25)',
+          boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 50px rgba(59, 130, 246, 0.25)',
         }}
       >
         {/* Floating Close Button */}
@@ -66,8 +66,8 @@ export default function AdmissionsPopup() {
 
         {/* Festive Greeting Image */}
         <img
-          src="/images/diwali-popup.jpg"
-          alt="Happy Diwali - JRS International School"
+          src="/images/childrens-day.jpg"
+          alt="Happy Children's Day - JRS International School"
           className="w-full h-auto max-h-[90vh] object-contain block select-none rounded-2xl sm:rounded-3xl"
           loading="eager"
         />
