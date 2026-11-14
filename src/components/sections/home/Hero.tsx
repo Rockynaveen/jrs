@@ -76,7 +76,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex flex-col justify-between bg-black min-h-[440px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[540px] h-[65vh] sm:h-[70vh] lg:h-[72vh]"
+      className="relative w-full overflow-hidden flex flex-col justify-between bg-black min-h-[360px] sm:min-h-[400px] h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] md:h-[calc(100vh-122px)] [height:calc(100dvh-4rem)] sm:[height:calc(100dvh-5rem)] md:[height:calc(100dvh-122px)]"
     >
       {/* Background Hero Slider Images (full section width & height) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -213,14 +213,14 @@ export default function Hero() {
         </div>
 
         {/* Hero CTA Buttons at Bottom of Hero Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8 lg:pb-10 pt-4 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4 sm:pb-5 md:pb-6 lg:pb-8 pt-2 sm:pt-4 w-full">
           <div className="max-w-xl lg:max-w-2xl text-left">
             {/* CTA Buttons - Pure Glassmorphism without background */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3.5 lg:gap-4 w-full sm:w-auto">
               {/* Primary Admissions Button */}
               <Link
                 href="/admissions"
-                className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 text-center group cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 lg:py-3 rounded-full text-xs sm:text-[13px] lg:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 text-center group cursor-pointer"
               >
                 <span>Admissions 2027-28</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -231,7 +231,7 @@ export default function Hero() {
                 type="button"
                 onClick={() => setIsVideoModalOpen(true)}
                 aria-label="Play virtual campus tour video"
-                className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 group cursor-pointer text-center"
+                className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 lg:py-3 rounded-full text-xs sm:text-[13px] lg:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 hover:border-white/50 shadow-lg shadow-black/20 active:scale-95 transition-all duration-300 group cursor-pointer text-center"
               >
                 <span>Take a Virtual Tour</span>
                 <Play className="w-3.5 h-3.5 fill-white text-white group-hover:scale-110 transition-transform ml-0.5" />
